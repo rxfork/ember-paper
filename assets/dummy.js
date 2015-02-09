@@ -122,27 +122,27 @@ define('dummy/controllers/lists', ['exports', 'ember'], function (exports, Ember
 
   exports['default'] = Ember['default'].Controller.extend({
     listData: [{
-      face: '/tomster.png',
+      face: 'tomster.png',
       who: 'tomster',
       what: 'a message for you',
       notes: 'this is a message for you about ember'
     },{
-      face: '/tomster.png',
+      face: 'tomster.png',
       who: 'tomster',
       what: 'a message for you',
       notes: 'this is a message for you about ember'
     },{
-      face: '/tomster.png',
+      face: 'tomster.png',
       who: 'tomster',
       what: 'a message for you',
       notes: 'this is a message for you about ember'
     },{
-      face: '/tomster.png',
+      face: 'tomster.png',
       who: 'tomster',
       what: 'a message for you',
       notes: 'this is a message for you about ember'
     },{
-      face: '/tomster.png',
+      face: 'tomster.png',
       who: 'tomster',
       what: 'a message for you',
       notes: 'this is a message for you about ember'

@@ -117,7 +117,7 @@ var runningTests = false;
 })();
 
 ;/*!
- * jQuery JavaScript Library v1.11.1
+ * jQuery JavaScript Library v1.11.2
  * http://jquery.com/
  *
  * Includes Sizzle.js
@@ -127,7 +127,7 @@ var runningTests = false;
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2014-05-01T17:42Z
+ * Date: 2014-12-17T15:27Z
  */
 
 (function( global, factory ) {
@@ -182,7 +182,7 @@ var support = {};
 
 
 var
-	version = "1.11.1",
+	version = "1.11.2",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -387,7 +387,8 @@ jQuery.extend({
 		// parseFloat NaNs numeric-cast false positives (null|true|false|"")
 		// ...but misinterprets leading-number strings, particularly hex literals ("0x...")
 		// subtraction forces infinities to NaN
-		return !jQuery.isArray( obj ) && obj - parseFloat( obj ) >= 0;
+		// adding 1 corrects loss of precision from parseFloat (#15100)
+		return !jQuery.isArray( obj ) && (obj - parseFloat( obj ) + 1) >= 0;
 	},
 
 	isEmptyObject: function( obj ) {
@@ -702,14 +703,14 @@ function isArraylike( obj ) {
 }
 var Sizzle =
 /*!
- * Sizzle CSS Selector Engine v1.10.19
+ * Sizzle CSS Selector Engine v2.2.0-pre
  * http://sizzlejs.com/
  *
- * Copyright 2013 jQuery Foundation, Inc. and other contributors
+ * Copyright 2008, 2014 jQuery Foundation, Inc. and other contributors
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2014-04-18
+ * Date: 2014-12-16
  */
 (function( window ) {
 
@@ -736,7 +737,7 @@ var i,
 	contains,
 
 	// Instance-specific data
-	expando = "sizzle" + -(new Date()),
+	expando = "sizzle" + 1 * new Date(),
 	preferredDoc = window.document,
 	dirruns = 0,
 	done = 0,
@@ -751,7 +752,6 @@ var i,
 	},
 
 	// General-purpose constants
-	strundefined = typeof undefined,
 	MAX_NEGATIVE = 1 << 31,
 
 	// Instance methods
@@ -761,12 +761,13 @@ var i,
 	push_native = arr.push,
 	push = arr.push,
 	slice = arr.slice,
-	// Use a stripped-down indexOf if we can't use a native one
-	indexOf = arr.indexOf || function( elem ) {
+	// Use a stripped-down indexOf as it's faster than native
+	// http://jsperf.com/thor-indexof-vs-for/5
+	indexOf = function( list, elem ) {
 		var i = 0,
-			len = this.length;
+			len = list.length;
 		for ( ; i < len; i++ ) {
-			if ( this[i] === elem ) {
+			if ( list[i] === elem ) {
 				return i;
 			}
 		}
@@ -806,6 +807,7 @@ var i,
 		")\\)|)",
 
 	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
+	rwhitespace = new RegExp( whitespace + "+", "g" ),
 	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
 
 	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
@@ -857,6 +859,14 @@ var i,
 				String.fromCharCode( high + 0x10000 ) :
 				// Supplemental Plane codepoint (surrogate pair)
 				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
+	},
+
+	// Used for iframes
+	// See setDocument()
+	// Removing the function wrapper causes a "Permission Denied"
+	// error in IE
+	unloadHandler = function() {
+		setDocument();
 	};
 
 // Optimize for push.apply( _, NodeList )
@@ -899,19 +909,18 @@ function Sizzle( selector, context, results, seed ) {
 
 	context = context || document;
 	results = results || [];
+	nodeType = context.nodeType;
 
-	if ( !selector || typeof selector !== "string" ) {
+	if ( typeof selector !== "string" || !selector ||
+		nodeType !== 1 && nodeType !== 9 && nodeType !== 11 ) {
+
 		return results;
 	}
 
-	if ( (nodeType = context.nodeType) !== 1 && nodeType !== 9 ) {
-		return [];
-	}
+	if ( !seed && documentIsHTML ) {
 
-	if ( documentIsHTML && !seed ) {
-
-		// Shortcuts
-		if ( (match = rquickExpr.exec( selector )) ) {
+		// Try to shortcut find operations when possible (e.g., not under DocumentFragment)
+		if ( nodeType !== 11 && (match = rquickExpr.exec( selector )) ) {
 			// Speed-up: Sizzle("#ID")
 			if ( (m = match[1]) ) {
 				if ( nodeType === 9 ) {
@@ -943,7 +952,7 @@ function Sizzle( selector, context, results, seed ) {
 				return results;
 
 			// Speed-up: Sizzle(".CLASS")
-			} else if ( (m = match[3]) && support.getElementsByClassName && context.getElementsByClassName ) {
+			} else if ( (m = match[3]) && support.getElementsByClassName ) {
 				push.apply( results, context.getElementsByClassName( m ) );
 				return results;
 			}
@@ -953,7 +962,7 @@ function Sizzle( selector, context, results, seed ) {
 		if ( support.qsa && (!rbuggyQSA || !rbuggyQSA.test( selector )) ) {
 			nid = old = expando;
 			newContext = context;
-			newSelector = nodeType === 9 && selector;
+			newSelector = nodeType !== 1 && selector;
 
 			// qSA works strangely on Element-rooted queries
 			// We can work around this by specifying an extra ID on the root
@@ -1140,7 +1149,7 @@ function createPositionalPseudo( fn ) {
  * @returns {Element|Object|Boolean} The input node if acceptable, otherwise a falsy value
  */
 function testContext( context ) {
-	return context && typeof context.getElementsByTagName !== strundefined && context;
+	return context && typeof context.getElementsByTagName !== "undefined" && context;
 }
 
 // Expose support vars for convenience
@@ -1164,9 +1173,8 @@ isXML = Sizzle.isXML = function( elem ) {
  * @returns {Object} Returns the current document
  */
 setDocument = Sizzle.setDocument = function( node ) {
-	var hasCompare,
-		doc = node ? node.ownerDocument || node : preferredDoc,
-		parent = doc.defaultView;
+	var hasCompare, parent,
+		doc = node ? node.ownerDocument || node : preferredDoc;
 
 	// If no document and documentElement is available, return
 	if ( doc === document || doc.nodeType !== 9 || !doc.documentElement ) {
@@ -1176,9 +1184,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Set our document
 	document = doc;
 	docElem = doc.documentElement;
-
-	// Support tests
-	documentIsHTML = !isXML( doc );
+	parent = doc.defaultView;
 
 	// Support: IE>8
 	// If iframe document is assigned to "document" variable and if iframe has been reloaded,
@@ -1187,21 +1193,22 @@ setDocument = Sizzle.setDocument = function( node ) {
 	if ( parent && parent !== parent.top ) {
 		// IE11 does not have attachEvent, so all must suffer
 		if ( parent.addEventListener ) {
-			parent.addEventListener( "unload", function() {
-				setDocument();
-			}, false );
+			parent.addEventListener( "unload", unloadHandler, false );
 		} else if ( parent.attachEvent ) {
-			parent.attachEvent( "onunload", function() {
-				setDocument();
-			});
+			parent.attachEvent( "onunload", unloadHandler );
 		}
 	}
+
+	/* Support tests
+	---------------------------------------------------------------------- */
+	documentIsHTML = !isXML( doc );
 
 	/* Attributes
 	---------------------------------------------------------------------- */
 
 	// Support: IE<8
-	// Verify that getAttribute really returns attributes and not properties (excepting IE8 booleans)
+	// Verify that getAttribute really returns attributes and not properties
+	// (excepting IE8 booleans)
 	support.attributes = assert(function( div ) {
 		div.className = "i";
 		return !div.getAttribute("className");
@@ -1216,17 +1223,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 		return !div.getElementsByTagName("*").length;
 	});
 
-	// Check if getElementsByClassName can be trusted
-	support.getElementsByClassName = rnative.test( doc.getElementsByClassName ) && assert(function( div ) {
-		div.innerHTML = "<div class='a'></div><div class='a i'></div>";
-
-		// Support: Safari<4
-		// Catch class over-caching
-		div.firstChild.className = "i";
-		// Support: Opera<10
-		// Catch gEBCN failure to find non-leading classes
-		return div.getElementsByClassName("i").length === 2;
-	});
+	// Support: IE<9
+	support.getElementsByClassName = rnative.test( doc.getElementsByClassName );
 
 	// Support: IE<10
 	// Check if getElementById returns elements by name
@@ -1240,7 +1238,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// ID find and filter
 	if ( support.getById ) {
 		Expr.find["ID"] = function( id, context ) {
-			if ( typeof context.getElementById !== strundefined && documentIsHTML ) {
+			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var m = context.getElementById( id );
 				// Check parentNode to catch when Blackberry 4.6 returns
 				// nodes that are no longer in the document #6963
@@ -1261,7 +1259,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		Expr.filter["ID"] =  function( id ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
-				var node = typeof elem.getAttributeNode !== strundefined && elem.getAttributeNode("id");
+				var node = typeof elem.getAttributeNode !== "undefined" && elem.getAttributeNode("id");
 				return node && node.value === attrId;
 			};
 		};
@@ -1270,14 +1268,20 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Tag
 	Expr.find["TAG"] = support.getElementsByTagName ?
 		function( tag, context ) {
-			if ( typeof context.getElementsByTagName !== strundefined ) {
+			if ( typeof context.getElementsByTagName !== "undefined" ) {
 				return context.getElementsByTagName( tag );
+
+			// DocumentFragment nodes don't have gEBTN
+			} else if ( support.qsa ) {
+				return context.querySelectorAll( tag );
 			}
 		} :
+
 		function( tag, context ) {
 			var elem,
 				tmp = [],
 				i = 0,
+				// By happy coincidence, a (broken) gEBTN appears on DocumentFragment nodes too
 				results = context.getElementsByTagName( tag );
 
 			// Filter out possible comments
@@ -1295,7 +1299,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// Class
 	Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
-		if ( typeof context.getElementsByClassName !== strundefined && documentIsHTML ) {
+		if ( documentIsHTML ) {
 			return context.getElementsByClassName( className );
 		}
 	};
@@ -1324,13 +1328,15 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// setting a boolean content attribute,
 			// since its presence should be enough
 			// http://bugs.jquery.com/ticket/12359
-			div.innerHTML = "<select msallowclip=''><option selected=''></option></select>";
+			docElem.appendChild( div ).innerHTML = "<a id='" + expando + "'></a>" +
+				"<select id='" + expando + "-\f]' msallowcapture=''>" +
+				"<option selected=''></option></select>";
 
 			// Support: IE8, Opera 11-12.16
 			// Nothing should be selected when empty strings follow ^= or $= or *=
 			// The test attribute must be unknown in Opera but "safe" for WinRT
 			// http://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
-			if ( div.querySelectorAll("[msallowclip^='']").length ) {
+			if ( div.querySelectorAll("[msallowcapture^='']").length ) {
 				rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
 			}
 
@@ -1340,11 +1346,23 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
 
+			// Support: Chrome<29, Android<4.2+, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.7+
+			if ( !div.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
+				rbuggyQSA.push("~=");
+			}
+
 			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			// IE8 throws error here and will not see later tests
 			if ( !div.querySelectorAll(":checked").length ) {
 				rbuggyQSA.push(":checked");
+			}
+
+			// Support: Safari 8+, iOS 8+
+			// https://bugs.webkit.org/show_bug.cgi?id=136851
+			// In-page `selector#id sibing-combinator selector` fails
+			if ( !div.querySelectorAll( "a#" + expando + "+*" ).length ) {
+				rbuggyQSA.push(".#.+[+~]");
 			}
 		});
 
@@ -1462,7 +1480,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Maintain original order
 			return sortInput ?
-				( indexOf.call( sortInput, a ) - indexOf.call( sortInput, b ) ) :
+				( indexOf( sortInput, a ) - indexOf( sortInput, b ) ) :
 				0;
 		}
 
@@ -1489,7 +1507,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				aup ? -1 :
 				bup ? 1 :
 				sortInput ?
-				( indexOf.call( sortInput, a ) - indexOf.call( sortInput, b ) ) :
+				( indexOf( sortInput, a ) - indexOf( sortInput, b ) ) :
 				0;
 
 		// If the nodes are siblings, we can do a quick check
@@ -1552,7 +1570,7 @@ Sizzle.matchesSelector = function( elem, expr ) {
 					elem.document && elem.document.nodeType !== 11 ) {
 				return ret;
 			}
-		} catch(e) {}
+		} catch (e) {}
 	}
 
 	return Sizzle( expr, document, null, [ elem ] ).length > 0;
@@ -1771,7 +1789,7 @@ Expr = Sizzle.selectors = {
 			return pattern ||
 				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
 				classCache( className, function( elem ) {
-					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== strundefined && elem.getAttribute("class") || "" );
+					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
 				});
 		},
 
@@ -1793,7 +1811,7 @@ Expr = Sizzle.selectors = {
 					operator === "^=" ? check && result.indexOf( check ) === 0 :
 					operator === "*=" ? check && result.indexOf( check ) > -1 :
 					operator === "$=" ? check && result.slice( -check.length ) === check :
-					operator === "~=" ? ( " " + result + " " ).indexOf( check ) > -1 :
+					operator === "~=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
 					operator === "|=" ? result === check || result.slice( 0, check.length + 1 ) === check + "-" :
 					false;
 			};
@@ -1913,7 +1931,7 @@ Expr = Sizzle.selectors = {
 							matched = fn( seed, argument ),
 							i = matched.length;
 						while ( i-- ) {
-							idx = indexOf.call( seed, matched[i] );
+							idx = indexOf( seed, matched[i] );
 							seed[ idx ] = !( matches[ idx ] = matched[i] );
 						}
 					}) :
@@ -1952,6 +1970,8 @@ Expr = Sizzle.selectors = {
 				function( elem, context, xml ) {
 					input[0] = elem;
 					matcher( input, null, xml, results );
+					// Don't keep the element (issue #299)
+					input[0] = null;
 					return !results.pop();
 				};
 		}),
@@ -1963,6 +1983,7 @@ Expr = Sizzle.selectors = {
 		}),
 
 		"contains": markFunction(function( text ) {
+			text = text.replace( runescape, funescape );
 			return function( elem ) {
 				return ( elem.textContent || elem.innerText || getText( elem ) ).indexOf( text ) > -1;
 			};
@@ -2384,7 +2405,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				i = matcherOut.length;
 				while ( i-- ) {
 					if ( (elem = matcherOut[i]) &&
-						(temp = postFinder ? indexOf.call( seed, elem ) : preMap[i]) > -1 ) {
+						(temp = postFinder ? indexOf( seed, elem ) : preMap[i]) > -1 ) {
 
 						seed[temp] = !(results[temp] = elem);
 					}
@@ -2419,13 +2440,16 @@ function matcherFromTokens( tokens ) {
 			return elem === checkContext;
 		}, implicitRelative, true ),
 		matchAnyContext = addCombinator( function( elem ) {
-			return indexOf.call( checkContext, elem ) > -1;
+			return indexOf( checkContext, elem ) > -1;
 		}, implicitRelative, true ),
 		matchers = [ function( elem, context, xml ) {
-			return ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
+			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
 				(checkContext = context).nodeType ?
 					matchContext( elem, context, xml ) :
 					matchAnyContext( elem, context, xml ) );
+			// Avoid hanging onto element (issue #299)
+			checkContext = null;
+			return ret;
 		} ];
 
 	for ( ; i < len; i++ ) {
@@ -2675,7 +2699,7 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 // Sort stability
 support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
 
-// Support: Chrome<14
+// Support: Chrome 14-35+
 // Always assume duplicates if they aren't passed to the comparison function
 support.detectDuplicates = !!hasDuplicate;
 
@@ -6233,7 +6257,14 @@ var getStyles, curCSS,
 
 if ( window.getComputedStyle ) {
 	getStyles = function( elem ) {
-		return elem.ownerDocument.defaultView.getComputedStyle( elem, null );
+		// Support: IE<=11+, Firefox<=30+ (#15098, #14150)
+		// IE throws on elements created in popups
+		// FF meanwhile throws on frame elements through "defaultView.getComputedStyle"
+		if ( elem.ownerDocument.defaultView.opener ) {
+			return elem.ownerDocument.defaultView.getComputedStyle( elem, null );
+		}
+
+		return window.getComputedStyle( elem, null );
 	};
 
 	curCSS = function( elem, name, computed ) {
@@ -6481,6 +6512,8 @@ function addGetHookIf( conditionFn, hookFn ) {
 
 			reliableMarginRightVal =
 				!parseFloat( ( window.getComputedStyle( contents, null ) || {} ).marginRight );
+
+			div.removeChild( contents );
 		}
 
 		// Support: IE8
@@ -9188,7 +9221,8 @@ jQuery.extend({
 		}
 
 		// We can fire global events as of now if asked to
-		fireGlobals = s.global;
+		// Don't fire events if jQuery.event is undefined in an AMD-usage scenario (#15118)
+		fireGlobals = jQuery.event && s.global;
 
 		// Watch for a new set of requests
 		if ( fireGlobals && jQuery.active++ === 0 ) {
@@ -9447,13 +9481,6 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 	};
 });
 
-// Attach a bunch of functions for handling common AJAX events
-jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend" ], function( i, type ) {
-	jQuery.fn[ type ] = function( fn ) {
-		return this.on( type, fn );
-	};
-});
-
 
 jQuery._evalUrl = function( url ) {
 	return jQuery.ajax({
@@ -9679,8 +9706,9 @@ var xhrId = 0,
 
 // Support: IE<10
 // Open requests must be manually aborted on unload (#5280)
-if ( window.ActiveXObject ) {
-	jQuery( window ).on( "unload", function() {
+// See https://support.microsoft.com/kb/2856746 for more info
+if ( window.attachEvent ) {
+	window.attachEvent( "onunload", function() {
 		for ( var key in xhrCallbacks ) {
 			xhrCallbacks[ key ]( undefined, true );
 		}
@@ -10110,6 +10138,16 @@ jQuery.fn.load = function( url, params, callback ) {
 
 	return this;
 };
+
+
+
+
+// Attach a bunch of functions for handling common AJAX events
+jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend" ], function( i, type ) {
+	jQuery.fn[ type ] = function( fn ) {
+		return this.on( type, fn );
+	};
+});
 
 
 
@@ -63057,7 +63095,7 @@ define("ember/resolver",
   function resolveOther(parsedName) {
     /*jshint validthis:true */
 
-    Ember.assert('module prefix must be defined', this.namespace.modulePrefix);
+    Ember.assert('`modulePrefix` must be defined', this.namespace.modulePrefix);
 
     var normalizedModuleName = this.findModuleName(parsedName);
 
@@ -63095,6 +63133,7 @@ define("ember/resolver",
     },
     init: function() {
       this._super();
+      this.moduleBasedResolver = true;
       this._normalizeCache = makeDictionary();
 
       this.pluralizedTypes = this.pluralizedTypes || makeDictionary();
@@ -63255,6 +63294,7 @@ define("ember/resolver",
     }
   });
 
+  Resolver.moduleBasedResolver = true;
   Resolver['default'] = Resolver;
   return Resolver;
 });
@@ -63414,134 +63454,6 @@ define("ember/load-initializers",
 );
 })();
 
-;define("ic-ajax",
-  ["ember","exports"],
-  function(__dependency1__, __exports__) {
-    "use strict";
-    /*!
-     * ic-ajax
-     *
-     * - (c) 2013 Instructure, Inc
-     * - please see license at https://github.com/instructure/ic-ajax/blob/master/LICENSE
-     * - inspired by discourse ajax: https://github.com/discourse/discourse/blob/master/app/assets/javascripts/discourse/mixins/ajax.js#L19
-     */
-
-    var Ember = __dependency1__["default"] || __dependency1__;
-
-    /*
-     * jQuery.ajax wrapper, supports the same signature except providing
-     * `success` and `error` handlers will throw an error (use promises instead)
-     * and it resolves only the response (no access to jqXHR or textStatus).
-     */
-
-    function request() {
-      return raw.apply(null, arguments).then(function(result) {
-        return result.response;
-      }, null, 'ic-ajax: unwrap raw ajax response');
-    }
-
-    __exports__.request = request;__exports__["default"] = request;
-
-    /*
-     * Same as `request` except it resolves an object with `{response, textStatus,
-     * jqXHR}`, useful if you need access to the jqXHR object for headers, etc.
-     */
-
-    function raw() {
-      return makePromise(parseArgs.apply(null, arguments));
-    }
-
-    __exports__.raw = raw;var __fixtures__ = {};
-    __exports__.__fixtures__ = __fixtures__;
-    /*
-     * Defines a fixture that will be used instead of an actual ajax
-     * request to a given url. This is useful for testing, allowing you to
-     * stub out responses your application will send without requiring
-     * libraries like sinon or mockjax, etc.
-     *
-     * For example:
-     *
-     *    defineFixture('/self', {
-     *      response: { firstName: 'Ryan', lastName: 'Florence' },
-     *      textStatus: 'success'
-     *      jqXHR: {}
-     *    });
-     *
-     * @param {String} url
-     * @param {Object} fixture
-     */
-
-    function defineFixture(url, fixture) {
-      if (fixture.response) {
-        fixture.response = JSON.parse(JSON.stringify(fixture.response));
-      }
-      __fixtures__[url] = fixture;
-    }
-
-    __exports__.defineFixture = defineFixture;/*
-     * Looks up a fixture by url.
-     *
-     * @param {String} url
-     */
-
-    function lookupFixture (url) {
-      return __fixtures__ && __fixtures__[url];
-    }
-
-    __exports__.lookupFixture = lookupFixture;function makePromise(settings) {
-      return new Ember.RSVP.Promise(function(resolve, reject) {
-        var fixture = lookupFixture(settings.url);
-        if (fixture) {
-          if (fixture.textStatus === 'success' || fixture.textStatus == null) {
-            return Ember.run.later(null, resolve, fixture);
-          } else {
-            return Ember.run.later(null, reject, fixture);
-          }
-        }
-        settings.success = makeSuccess(resolve);
-        settings.error = makeError(reject);
-        Ember.$.ajax(settings);
-      }, 'ic-ajax: ' + (settings.type || 'GET') + ' to ' + settings.url);
-    };
-
-    function parseArgs() {
-      var settings = {};
-      if (arguments.length === 1) {
-        if (typeof arguments[0] === "string") {
-          settings.url = arguments[0];
-        } else {
-          settings = arguments[0];
-        }
-      } else if (arguments.length === 2) {
-        settings = arguments[1];
-        settings.url = arguments[0];
-      }
-      if (settings.success || settings.error) {
-        throw new Ember.Error("ajax should use promises, received 'success' or 'error' callback");
-      }
-      return settings;
-    }
-
-    function makeSuccess(resolve) {
-      return function(response, textStatus, jqXHR) {
-        Ember.run(null, resolve, {
-          response: response,
-          textStatus: textStatus,
-          jqXHR: jqXHR
-        });
-      }
-    }
-
-    function makeError(reject) {
-      return function(jqXHR, textStatus, errorThrown) {
-        Ember.run(null, reject, {
-          jqXHR: jqXHR,
-          textStatus: textStatus,
-          errorThrown: errorThrown
-        });
-      };
-    }
-  });
 ;/*! Hammer.JS - v2.0.4 - 2014-09-28
  * http://hammerjs.github.io/
  *
@@ -66006,28 +65918,772 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
 
 })(window, document, 'Hammer');
 
-;eval("define(\"ember-paper/components/base-focusable\", \n  [\"ember\",\"ember-paper/mixins/events-mixin\",\"exports\"],\n  function(__dependency1__, __dependency2__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var EventsMixin = __dependency2__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Component.extend(EventsMixin,{\n      disabled:false,\n      pressed:false,\n      active:false,\n      focus:false,\n      hover:false,\n      attributeBindings: [\'disabledAttr:disabled\'],\n\n      /*\n       * Not binding boolean values in Ember 1.8.1?\n       * https://github.com/emberjs/ember.js/issues/9595\n       */\n      disabledAttr:function(){\n        return this.get(\'disabled\') ? \'disabled\' : null;\n      }.property(\'disabled\'),\n\n      toggle:false,\n\n      /*\n       * Listen to `focusIn` and `focusOut` events instead of `focus` and `blur`.\n       * This way we don\'t need to explicitly bubble the events.\n       */\n      focusIn: function() {\n        if (!this.get(\'pressed\')){\n          // Only render the \"focused\" state if the element gains focus due to\n          // keyboard navigation.\n          this.set(\'focus\',true);\n        }\n      },\n      focusOut: function(){\n        this.set(\'focus\',false);\n      },\n      mouseEnter:function(){\n        this.set(\'hover\',true);\n      },\n      mouseLeave:function(e){\n        this.set(\'hover\',false);\n        this._super(e);\n      },\n\n      down:function(){\n        this.set(\'pressed\',true);\n        if (this.toggle) {\n          this.toggleProperty(\'active\');\n        } else {\n          this.set(\'active\',true);\n        }\n      },\n      up:function(){\n        this.set(\'pressed\',false);\n\n        if (!this.toggle) {\n          this.set(\'active\',false);\n        }\n      }\n    });\n  });//# sourceURL=ember-paper/components/base-focusable.js");
+;define("ic-ajax",
+  ["ember","exports"],
+  function(__dependency1__, __exports__) {
+    "use strict";
+    /*!
+     * ic-ajax
+     *
+     * - (c) 2013 Instructure, Inc
+     * - please see license at https://github.com/instructure/ic-ajax/blob/master/LICENSE
+     * - inspired by discourse ajax: https://github.com/discourse/discourse/blob/master/app/assets/javascripts/discourse/mixins/ajax.js#L19
+     */
 
-;eval("define(\"ember-paper/mixins/events-mixin\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Mixin.create({\n      touchStart: function(e){\n        return this.down(e);\n      },\n      mouseDown: function(e){\n        this.down(e);\n      },\n      touchEnd: function(e){\n        return this.up(e);\n      },\n      mouseUp: function(e){\n        return this.up(e);\n      },\n      touchCancel: function(e){\n        return this.up(e);\n      },\n      mouseLeave: function(e){\n        return this.up(e);\n      },\n      up: Ember.K,\n      down: Ember.K,\n      contextMenu: Ember.K\n    });\n  });//# sourceURL=ember-paper/mixins/events-mixin.js");
+    var Ember = __dependency1__["default"] || __dependency1__;
 
-;eval("define(\"ember-paper/components/paper-button\", \n  [\"ember\",\"ember-paper/components/base-focusable\",\"ember-paper/mixins/shadow-mixin\",\"ember-paper/mixins/ripple-mixin\",\"exports\"],\n  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var BaseFocusable = __dependency2__[\"default\"];\n    var ShadowMixin = __dependency3__[\"default\"];\n    var RippleMixin = __dependency4__[\"default\"];\n\n    __exports__[\"default\"] = BaseFocusable.extend(ShadowMixin,RippleMixin,{\n      tagName:\'button\',\n      classNames:[\'md-button\',\'md-default-theme\'],\n\n      /* RippleMixin overrides */\n      center: false,\n      dimBackground: true,\n\n      /* ShadowMixin properties */\n      z:1,\n\n      defaultZ:1,\n      activeZ:2,\n      disabledZ:0,\n\n      /*\n       * Function that handles button state changes.\n       * Changes z and sends action.\n       */\n      stateDidChange:Ember.observer(\'active\',\'focus\',\'disabled\',\'hover\',function(){\n        var active = this.get(\'active\'),\n          disabled = this.get(\'disabled\'),\n          hover = this.get(\'hover\'),\n          focus = this.get(\'focus\');\n        if (active || focus || hover) {\n          this.set(\'z\',this.get(\'activeZ\'));\n        } else if (disabled) {\n          this.set(\'z\',this.get(\'disabledZ\'));\n        } else {\n          this.set(\'z\',this.get(\'defaultZ\'));\n        }\n      }),\n\n      click:function(){\n        this.sendAction();\n      }\n    });\n  });//# sourceURL=ember-paper/components/paper-button.js");
+    /*
+     * jQuery.ajax wrapper, supports the same signature except providing
+     * `success` and `error` handlers will throw an error (use promises instead)
+     * and it resolves only the response (no access to jqXHR or textStatus).
+     */
 
-;eval("define(\"ember-paper/mixins/shadow-mixin\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Mixin.create({\n      classNameBindings:[\n        \'raised:md-raised\'\n      ],\n      raised:false,\n      animatedShadow:true,\n      bottomShadowCSS:Ember.computed(\'z\',function(){\n        var raised = this.get(\'raised\'),\n          disabled = this.get(\'disabled\');\n        if(!raised || disabled){\n          return;\n        }\n        var z = this.get(\'z\');\n        return z?\'paper-shadow-bottom-z-\'+z:\'\';\n      })\n    });\n  });//# sourceURL=ember-paper/mixins/shadow-mixin.js");
+    function request() {
+      return raw.apply(null, arguments).then(function(result) {
+        return result.response;
+      }, null, 'ic-ajax: unwrap raw ajax response');
+    }
 
-;eval("define(\"ember-paper/mixins/ripple-mixin\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    /* global Hammer */\n\n    __exports__[\"default\"] = Ember.Mixin.create({\n      mousedown: true,\n      hover: true,\n      focus: true,\n      center: false,\n      mousedownPauseTime: 150,\n      dimBackground: false,\n      outline: false,\n      isFAB: false,\n      isMenuItem: false,\n\n      isActive: false,\n      isHeld: false,\n      counter:0,\n\n      ripples:[],\n      rippleStates:[],\n\n      rippleContainerSelector:\'\',\n\n      onDidInsertElement:function(){\n        if(!this.noink){\n          this.element = this.$();\n          this.colorElement = this.$();\n          this.node = this.element[0];\n          this.hammertime = new Hammer(this.node);\n          this.color = this.parseColor(this.element.attr(\'md-ink-ripple\')) || this.parseColor(window.getComputedStyle(this.colorElement[0]).color || \'rgb(0, 0, 0)\');\n          if(this.mousedown){\n            this.hammertime.on(\'hammer.input\', Ember.$.proxy(this.onInput,this));\n          }\n        }\n      }.on(\'didInsertElement\'),\n\n      onWillDestroyElement:function(){\n        if(this.rippleContainer){\n          this.rippleContainer.remove();\n        }\n        if(this.hammertime){\n          this.hammertime.destroy();\n        }\n      }.on(\'willDestroyElement\'),\n\n      onInput:function(ev){\n        var ripple, index;\n        if (ev.eventType === Hammer.INPUT_START && ev.isFirst && !this.get(\'disabled\')) {\n          ripple = this.createRipple(ev.center.x, ev.center.y);\n          this.isHeld = true;\n        } else if (ev.eventType === Hammer.INPUT_END && ev.isFinal) {\n          this.isHeld = false;\n          index = this.ripples.length - 1;\n          ripple = this.ripples[index];\n          Ember.run.later(this,function(){\n            this.updateElement(ripple);\n          }, 0);\n        }\n      },\n      /**\n      * Gets the current ripple container\n      * If there is no ripple container, it creates one and returns it\n      *\n      * @returns {angular.element} ripple container element\n      */\n      getRippleContainer: function() {\n        if (this.rippleContainer){\n          return this.rippleContainer;\n        }\n        this.rippleContainer = Ember.$(\'<div class=\"md-ripple-container\">\');\n        this.$(this.rippleContainerSelector).append(this.rippleContainer);\n        return this.rippleContainer;\n      },\n      /**\n      * Creates the ripple element with the provided css\n      *\n      * @param {object} css properties to be applied\n      *\n      * @returns {angular.element} the generated ripple element\n      */\n      getRippleElement: function(css) {\n        var elem = Ember.$(\'<div class=\"md-ripple\" data-counter=\"\' + this.counter++ + \'\">\');\n        this.ripples.unshift(elem);\n        this.rippleStates.unshift({ animating: true });\n        this.rippleContainer.append(elem);\n        if(css){\n          elem.css(css);\n        }\n        return elem;\n      },\n      /**\n      * Calculate the ripple size\n      *\n      * @returns {number} calculated ripple diameter\n      */\n      getRippleSize: function(left, top) {\n        var width = this.rippleContainer.prop(\'offsetWidth\'),\n        height = this.rippleContainer.prop(\'offsetHeight\'),\n        multiplier, size, rect;\n        if (this.isMenuItem) {\n          size = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));\n        } else if (this.outline) {\n          rect = this.node.getBoundingClientRect();\n          left -= rect.left;\n          top -= rect.top;\n          width = Math.max(left, width - left);\n          height = Math.max(top, height - top);\n          size = 2 * Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));\n        } else {\n          multiplier = this.isFAB ? 1.1 : 0.8;\n          size = Math.max(width, height) * multiplier;\n        }\n        return size;\n      },\n      parseColor: function(color) {\n        if (!color){ return; }\n        if (color.indexOf(\'rgba\') === 0){ return color; }\n        if (color.indexOf(\'rgb\')  === 0){ return rgbToRGBA(color); }\n        if (color.indexOf(\'#\')    === 0){ return hexToRGBA(color); }\n\n        /**\n        * Converts a hex value to an rgba string\n        *\n        * @param {string} hex value (3 or 6 digits) to be converted\n        *\n        * @returns {string} rgba color with 0.1 alpha\n        */\n        function hexToRGBA(color) {\n          var hex = color.charAt(0) === \'#\' ? color.substr(1) : color,\n          dig = hex.length / 3,\n          red = hex.substr(0, dig),\n          grn = hex.substr(dig, dig),\n          blu = hex.substr(dig * 2);\n          if (dig === 1) {\n            red += red;\n            grn += grn;\n            blu += blu;\n          }\n          return \'rgba(\' + parseInt(red, 16) + \',\' + parseInt(grn, 16) + \',\' + parseInt(blu, 16) + \',0.1)\';\n        }\n\n        /**\n        * Converts rgb value to rgba string\n        *\n        * @param {string} rgb color string\n        *\n        * @returns {string} rgba color with 0.1 alpha\n        */\n        function rgbToRGBA(color) {\n          return color.replace(\')\', \', 0.1)\').replace(\'(\', \'a(\');\n        }\n\n      },\n      /**\n      * Creates a ripple at the provided coordinates\n      *\n      * @param {number} left cursor position\n      * @param {number} top cursor position\n      *\n      * @returns {angular.element} the generated ripple element\n      */\n      createRipple:function(left, top){\n        var color = this.color = this.parseColor(this.element.attr(\'md-ink-ripple\')) || this.parseColor(window.getComputedStyle(this.colorElement[0]).color || \'rgb(0, 0, 0)\');\n\n        var container = this.getRippleContainer(),\n          size = this.getRippleSize(left, top),\n          css = this.getRippleCss(size, left, top),\n          elem = this.getRippleElement(css),\n          index = this.ripples.indexOf(elem),\n          state = this.rippleStates[index] || {};\n\n        this.rippleSize = size;\n\n        state.animating = true;\n\n        Ember.run.later(this,function () {\n          if (this.dimBackground) {\n            container.css({ backgroundColor: color });\n          }\n          elem.addClass(\'md-ripple-placed md-ripple-scaled\');\n          if (this.outline) {\n            elem.css({\n              borderWidth: (size * 0.5) + \'px\',\n              marginLeft: (size * -0.5) + \'px\',\n              marginTop: (size * -0.5) + \'px\'\n            });\n          } else {\n            elem.css({ left: \'50%\', top: \'50%\' });\n          }\n          this.updateElement(elem);\n          Ember.run.later(this,function () {\n            state.animating = false;\n            this.updateElement(elem);\n          }, (this.outline ? 450 : 225));\n        }, 0);\n\n        return elem;\n      },\n      removeElement: function(elem, wait) {\n        var ripples = this.ripples;\n        ripples.splice(ripples.indexOf(elem), 1);\n        if (ripples.length === 0 && this.rippleContainer) {\n          this.rippleContainer.css({ backgroundColor: \'\' });\n        }\n        Ember.run.later(this,function(){\n          elem.remove();\n        }, wait);\n      },\n      updateElement: function(elem) {\n        var index = this.ripples.indexOf(elem),\n        state = this.rippleStates[index] || {},\n        elemIsActive = this.ripples.length > 1 ? false : this.isActive,\n        elemIsHeld   = this.ripples.length > 1 ? false : this.isHeld;\n        if (elemIsActive || state.animating || elemIsHeld) {\n          elem.addClass(\'md-ripple-visible\');\n        } else if (elem) {\n          elem.removeClass(\'md-ripple-visible\');\n          if (this.outline) {\n            elem.css({\n              width: this.rippleSize + \'px\',\n              height: this.rippleSize + \'px\',\n              marginLeft: (this.rippleSize * -1) + \'px\',\n              marginTop: (this.rippleSize * -1) + \'px\'\n            });\n          }\n          this.removeElement(elem, this.outline ? 450 : 650);\n        }\n      },\n      /**\n      * Generates the ripple css\n      *\n      * @param {number} the diameter of the ripple\n      * @param {number} the left cursor offset\n      * @param {number} the top cursor offset\n      *\n      * @returns {{backgroundColor: *, width: string, height: string, marginLeft: string, marginTop: string}}\n      */\n      getRippleCss: function(size, left, top) {\n        var rect,\n        css = {\n          backgroundColor: rgbaToRGB(this.color),\n          borderColor: rgbaToRGB(this.color),\n          width: size + \'px\',\n          height: size + \'px\'\n        };\n\n        if (this.outline) {\n          css.width = 0;\n          css.height = 0;\n        } else {\n          css.marginLeft = css.marginTop = (size * -0.5) + \'px\';\n        }\n\n        if (this.center) {\n          css.left = css.top = \'50%\';\n        } else {\n          rect = this.node.getBoundingClientRect();\n          css.left = Math.round((left - rect.left) / this.rippleContainer.prop(\'offsetWidth\') * 100) + \'%\';\n          css.top = Math.round((top - rect.top) / this.rippleContainer.prop(\'offsetHeight\') * 100) + \'%\';\n        }\n\n        return css;\n\n        /**\n        * Converts rgba string to rgb, removing the alpha value\n        *\n        * @param {string} rgba color\n        *\n        * @returns {string} rgb color\n        */\n        function rgbaToRGB(color) {\n          return color.replace(\'rgba\', \'rgb\').replace(/,[^\\)\\,]+\\)/, \')\');\n        }\n      }\n\n    });\n  });//# sourceURL=ember-paper/mixins/ripple-mixin.js");
+    __exports__.request = request;__exports__["default"] = request;
 
-;eval("define(\"ember-paper/components/paper-checkbox\", \n  [\"ember-paper/components/base-focusable\",\"ember-paper/mixins/ripple-mixin\",\"exports\"],\n  function(__dependency1__, __dependency2__, __exports__) {\n    \"use strict\";\n    var BaseFocusable = __dependency1__[\"default\"];\n    var RippleMixin = __dependency2__[\"default\"];\n\n    var KEY_CODE_SPACE = 32;\n\n    __exports__[\"default\"] = BaseFocusable.extend(RippleMixin,{\n      tagName:\'md-checkbox\',\n      classNames:[\'md-checkbox\',\'md-default-theme\'],\n      classNameBindings:[\'checked:md-checked\'],\n\n      /* RippleMixin overrides */\n      center: true,\n      dimBackground: false,\n      rippleContainerSelector:\'.md-container\',\n\n      //Alow element to be focusable by supplying a tabindex 0\n      attributeBindings:[\'tabindex\'],\n      tabindex:function(){\n        return this.get(\'disabled\') ? \'-1\' : \'0\';\n      }.property(\'disabled\'),\n      checked:false,\n\n      toggle:true,\n\n      click:function(){\n        if(!this.get(\'disabled\')){\n          this.toggleProperty(\'checked\');\n        }\n      },\n      keyPress:function(ev){\n        if(ev.which === KEY_CODE_SPACE) {\n          this.click();\n        }\n      }\n    });\n  });//# sourceURL=ember-paper/components/paper-checkbox.js");
+    /*
+     * Same as `request` except it resolves an object with `{response, textStatus,
+     * jqXHR}`, useful if you need access to the jqXHR object for headers, etc.
+     */
 
-;eval("define(\"ember-paper/components/paper-content\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Component.extend({\n      tagName:\'md-content\',\n      classNames:[\'md-content\']\n    });\n  });//# sourceURL=ember-paper/components/paper-content.js");
+    function raw() {
+      return makePromise(parseArgs.apply(null, arguments));
+    }
 
-;eval("define(\"ember-paper/components/paper-drawer\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Component.extend({\n      classNames:[\'paper-drawer\',\'sidenav\', \'sidenav-static\',\'animatable\'],\n      classNameBindings:[\'open:visible\'],\n      open:Ember.computed.alias(\'parentView.drawerOpen\')\n    });\n  });//# sourceURL=ember-paper/components/paper-drawer.js");
+    __exports__.raw = raw;var __fixtures__ = {};
+    __exports__.__fixtures__ = __fixtures__;
+    /*
+     * Defines a fixture that will be used instead of an actual ajax
+     * request to a given url. This is useful for testing, allowing you to
+     * stub out responses your application will send without requiring
+     * libraries like sinon or mockjax, etc.
+     *
+     * For example:
+     *
+     *    defineFixture('/self', {
+     *      response: { firstName: 'Ryan', lastName: 'Florence' },
+     *      textStatus: 'success'
+     *      jqXHR: {}
+     *    });
+     *
+     * @param {String} url
+     * @param {Object} fixture
+     */
 
-;eval("define(\"ember-paper/components/paper-radio\", \n  [\"ember\",\"ember-paper/components/base-focusable\",\"ember-paper/mixins/ripple-mixin\",\"exports\"],\n  function(__dependency1__, __dependency2__, __dependency3__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var BaseFocusable = __dependency2__[\"default\"];\n    var RippleMixin = __dependency3__[\"default\"];\n\n    __exports__[\"default\"] = BaseFocusable.extend(RippleMixin,{\n      tagName:\'md-radio-button\',\n      classNames:[\'md-radio-button\',\'md-default-theme\'],\n      classNameBindings:[\'checked:md-checked\'],\n      toggle:false,\n\n      center: true,\n      rippleContainerSelector:\'.md-container\',\n\n      checked: function() {\n        return this.get(\'value\') === this.get(\'selected\');\n      }.property(\'value\', \'selected\'),\n\n      checkedDidChange: Ember.observer(\'checked\',function() {\n        if(this.get(\'checked\')){\n          this.set(\'selected\', this.get(\'value\'));\n        }\n      }),\n\n      click:function(){\n        if(this.toggle){\n          this.set(\'selected\', this.get(\'checked\')?null:this.get(\'value\'));\n        } else {\n          this.set(\'selected\', this.get(\'value\'));\n        }\n      }\n    });\n  });//# sourceURL=ember-paper/components/paper-radio.js");
+    function defineFixture(url, fixture) {
+      if (fixture.response) {
+        fixture.response = JSON.parse(JSON.stringify(fixture.response));
+      }
+      __fixtures__[url] = fixture;
+    }
 
-;eval("define(\"ember-paper/components/paper-sidenav\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Component.extend({\n      classNames:[\'paper-sidenav\'],\n      actions:{\n        toggleDrawer:function(){\n          this.toggleProperty(\'drawerOpen\');\n        },\n        closeDrawer:function(){\n          this.set(\'drawerOpen\',false);\n        }\n      }\n    });\n  });//# sourceURL=ember-paper/components/paper-sidenav.js");
+    __exports__.defineFixture = defineFixture;/*
+     * Looks up a fixture by url.
+     *
+     * @param {String} url
+     */
 
-;eval("define(\"ember-paper/components/paper-text\", \n  [\"ember\",\"ember-paper/components/base-focusable\",\"exports\"],\n  function(__dependency1__, __dependency2__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var BaseFocusable = __dependency2__[\"default\"];\n\n    __exports__[\"default\"] = BaseFocusable.extend({\n      tagName:\'md-input-group\',\n      classNames:[\'md-default-theme\'],\n      classNameBindings:[\'hasValue:md-input-has-value\',\'focus:md-input-focused\'],\n      type:\'text\',\n      hasValue: Ember.computed.notEmpty(\'value\'),\n      inputElementId: function(){\n        return \'input-\' + this.get(\'elementId\');\n      }.property(\'elementId\'),\n      actions:{\n        focusIn:function(){\n          this.set(\'focus\',true);\n        },\n        focusOut:function(){\n          this.set(\'focus\',false);\n        }\n      }\n    });\n  });//# sourceURL=ember-paper/components/paper-text.js");
+    function lookupFixture (url) {
+      return __fixtures__ && __fixtures__[url];
+    }
 
-;eval("define(\"ember-paper/components/paper-toggle\", \n  [\"ember-paper/components/base-focusable\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var BaseFocusable = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = BaseFocusable.extend({\n      tagName:\'md-switch\',\n      classNames:[\'md-switch\',\'md-default-theme\'],\n      toggle:true,\n\n      click:function(){\n        if(!this.get(\'disabled\')){\n          this.toggleProperty(\'value\');\n        }\n      }\n    });\n  });//# sourceURL=ember-paper/components/paper-toggle.js");
+    __exports__.lookupFixture = lookupFixture;function makePromise(settings) {
+      return new Ember.RSVP.Promise(function(resolve, reject) {
+        var fixture = lookupFixture(settings.url);
+        if (fixture) {
+          if (fixture.textStatus === 'success' || fixture.textStatus == null) {
+            return Ember.run.later(null, resolve, fixture);
+          } else {
+            return Ember.run.later(null, reject, fixture);
+          }
+        }
+        settings.success = makeSuccess(resolve);
+        settings.error = makeError(reject);
+        Ember.$.ajax(settings);
+      }, 'ic-ajax: ' + (settings.type || 'GET') + ' to ' + settings.url);
+    };
 
-;eval("define(\"ember-paper\", [\"ember-paper/index\",\"exports\"], function(__index__, __exports__) {\n  \"use strict\";\n  Object.keys(__index__).forEach(function(key){\n    __exports__[key] = __index__[key];\n  });\n});\n//# sourceURL=__reexport.js");
+    function parseArgs() {
+      var settings = {};
+      if (arguments.length === 1) {
+        if (typeof arguments[0] === "string") {
+          settings.url = arguments[0];
+        } else {
+          settings = arguments[0];
+        }
+      } else if (arguments.length === 2) {
+        settings = arguments[1];
+        settings.url = arguments[0];
+      }
+      if (settings.success || settings.error) {
+        throw new Ember.Error("ajax should use promises, received 'success' or 'error' callback");
+      }
+      return settings;
+    }
+
+    function makeSuccess(resolve) {
+      return function(response, textStatus, jqXHR) {
+        Ember.run(null, resolve, {
+          response: response,
+          textStatus: textStatus,
+          jqXHR: jqXHR
+        });
+      }
+    }
+
+    function makeError(reject) {
+      return function(jqXHR, textStatus, errorThrown) {
+        Ember.run(null, reject, {
+          jqXHR: jqXHR,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
+      };
+    }
+  });
+;define('ember-paper/components/base-focusable', ['exports', 'ember', 'ember-paper/mixins/events-mixin'], function (exports, Ember, EventsMixin) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend(EventsMixin['default'],{
+    disabled:false,
+    pressed:false,
+    active:false,
+    focus:false,
+    hover:false,
+    attributeBindings: ['disabledAttr:disabled'],
+
+    /*
+     * Not binding boolean values in Ember 1.8.1?
+     * https://github.com/emberjs/ember.js/issues/9595
+     */
+    disabledAttr:function(){
+      return this.get('disabled') ? 'disabled' : null;
+    }.property('disabled'),
+
+    toggle:false,
+
+    /*
+     * Listen to `focusIn` and `focusOut` events instead of `focus` and `blur`.
+     * This way we don't need to explicitly bubble the events.
+     */
+    focusIn: function() {
+      if (!this.get('pressed')){
+        // Only render the "focused" state if the element gains focus due to
+        // keyboard navigation.
+        this.set('focus',true);
+      }
+    },
+    focusOut: function(){
+      this.set('focus',false);
+    },
+    mouseEnter:function(){
+      this.set('hover',true);
+    },
+    mouseLeave:function(e){
+      this.set('hover',false);
+      this._super(e);
+    },
+
+    down:function(){
+      this.set('pressed',true);
+      if (this.toggle) {
+        this.toggleProperty('active');
+      } else {
+        this.set('active',true);
+      }
+    },
+    up:function(){
+      this.set('pressed',false);
+
+      if (!this.toggle) {
+        this.set('active',false);
+      }
+    }
+  });
+
+});
+define('ember-paper/components/paper-button', ['exports', 'ember', 'ember-paper/components/base-focusable', 'ember-paper/mixins/shadow-mixin', 'ember-paper/mixins/ripple-mixin'], function (exports, Ember, BaseFocusable, ShadowMixin, RippleMixin) {
+
+  'use strict';
+
+  exports['default'] = BaseFocusable['default'].extend(ShadowMixin['default'],RippleMixin['default'],{
+    attributeBindings: ['target', 'action'],
+    tagName:'button',
+    classNames:['md-button','md-default-theme'],
+
+    /* RippleMixin overrides */
+    center: false,
+    dimBackground: true,
+
+    /* ShadowMixin properties */
+    z:1,
+
+    defaultZ:1,
+    activeZ:2,
+    disabledZ:0,
+
+    /*
+     * Function that handles button state changes.
+     * Changes z and sends action.
+     */
+    stateDidChange:Ember['default'].observer('active','focus','disabled','hover',function(){
+      var active = this.get('active'),
+        disabled = this.get('disabled'),
+        hover = this.get('hover'),
+        focus = this.get('focus');
+      if (active || focus || hover) {
+        this.set('z',this.get('activeZ'));
+      } else if (disabled) {
+        this.set('z',this.get('disabledZ'));
+      } else {
+        this.set('z',this.get('defaultZ'));
+      }
+    }),
+
+    click:function(){
+      var target = this.get('target');
+
+      if (target) {
+        this.get('target').send(this.get('action'));
+
+        if (typeof this.get('bubbles') !== 'undefined' && !this.get('bubbles')) {
+          return;
+        }
+      }
+
+      this.sendAction();
+    }
+  });
+
+});
+define('ember-paper/components/paper-checkbox', ['exports', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, BaseFocusable, RippleMixin) {
+
+  'use strict';
+
+  var KEY_CODE_SPACE = 32;
+
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
+    tagName:'md-checkbox',
+    classNames:['md-checkbox','md-default-theme'],
+    classNameBindings:['checked:md-checked'],
+
+    /* RippleMixin overrides */
+    center: true,
+    dimBackground: false,
+    rippleContainerSelector:'.md-container',
+
+    //Alow element to be focusable by supplying a tabindex 0
+    attributeBindings:['tabindex'],
+    tabindex:function(){
+      return this.get('disabled') ? '-1' : '0';
+    }.property('disabled'),
+    checked:false,
+
+    toggle:true,
+
+    click:function(){
+      if(!this.get('disabled')){
+        this.toggleProperty('checked');
+      }
+    },
+    keyPress:function(ev){
+      if(ev.which === KEY_CODE_SPACE) {
+        this.click();
+      }
+    }
+  });
+
+});
+define('ember-paper/components/paper-content', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName:'md-content',
+    classNames:['md-content']
+  });
+
+});
+define('ember-paper/components/paper-drawer', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    classNames:['paper-drawer','sidenav', 'sidenav-static','animatable'],
+    classNameBindings:['open:visible'],
+    open:Ember['default'].computed.alias('parentView.drawerOpen')
+  });
+
+});
+define('ember-paper/components/paper-item', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName:'md-item-content',
+    classNames:['paper-item']
+  });
+
+});
+define('ember-paper/components/paper-list', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName:'md-list',
+    classNames:['paper-list']
+  });
+
+});
+define('ember-paper/components/paper-radio', ['exports', 'ember', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, Ember, BaseFocusable, RippleMixin) {
+
+  'use strict';
+
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
+    tagName:'md-radio-button',
+    classNames:['md-radio-button','md-default-theme'],
+    classNameBindings:['checked:md-checked'],
+    toggle:false,
+
+    center: true,
+    rippleContainerSelector:'.md-container',
+
+    checked: function() {
+      return this.get('value') === this.get('selected');
+    }.property('value', 'selected'),
+
+    checkedDidChange: Ember['default'].observer('checked',function() {
+      if(this.get('checked')){
+        this.set('selected', this.get('value'));
+      }
+    }),
+
+    click:function(){
+      if(this.toggle){
+        this.set('selected', this.get('checked')?null:this.get('value'));
+      } else {
+        this.set('selected', this.get('value'));
+      }
+    }
+  });
+
+});
+define('ember-paper/components/paper-sidenav', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    classNames:['paper-sidenav'],
+    actions:{
+      toggleDrawer:function(){
+        this.toggleProperty('drawerOpen');
+      },
+      closeDrawer:function(){
+        this.set('drawerOpen',false);
+      }
+    }
+  });
+
+});
+define('ember-paper/components/paper-text', ['exports', 'ember', 'ember-paper/components/base-focusable'], function (exports, Ember, BaseFocusable) {
+
+  'use strict';
+
+  exports['default'] = BaseFocusable['default'].extend({
+    tagName:'md-input-group',
+    classNames:['md-default-theme'],
+    classNameBindings:['hasValue:md-input-has-value','focus:md-input-focused'],
+    type:'text',
+    hasValue: Ember['default'].computed.notEmpty('value'),
+    inputElementId: function(){
+      return 'input-' + this.get('elementId');
+    }.property('elementId'),
+    actions:{
+      focusIn:function(){
+        this.set('focus',true);
+      },
+      focusOut:function(){
+        this.set('focus',false);
+      }
+    }
+  });
+
+});
+define('ember-paper/components/paper-tile-content', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    classNames:['md-tile-content']
+  });
+
+});
+define('ember-paper/components/paper-tile-left', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    classNames:['md-tile-left']
+  });
+
+});
+define('ember-paper/components/paper-toggle', ['exports', 'ember-paper/components/base-focusable'], function (exports, BaseFocusable) {
+
+  'use strict';
+
+  exports['default'] = BaseFocusable['default'].extend({
+    tagName:'md-switch',
+    classNames:['md-switch','md-default-theme'],
+    toggle:true,
+
+    click:function(){
+      if(!this.get('disabled')){
+        this.toggleProperty('value');
+      }
+    }
+  });
+
+});
+define('ember-paper/mixins/events-mixin', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Mixin.create({
+    touchStart: function(e){
+      return this.down(e);
+    },
+    mouseDown: function(e){
+      this.down(e);
+    },
+    touchEnd: function(e){
+      return this.up(e);
+    },
+    mouseUp: function(e){
+      return this.up(e);
+    },
+    touchCancel: function(e){
+      return this.up(e);
+    },
+    mouseLeave: function(e){
+      return this.up(e);
+    },
+    up: Ember['default'].K,
+    down: Ember['default'].K,
+    contextMenu: Ember['default'].K
+  });
+
+});
+define('ember-paper/mixins/ripple-mixin', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Mixin.create({
+    mousedown: true,
+    hover: true,
+    focus: true,
+    center: false,
+    mousedownPauseTime: 150,
+    dimBackground: false,
+    outline: false,
+    isFAB: false,
+    isMenuItem: false,
+
+    isActive: false,
+    isHeld: false,
+    counter:0,
+
+    ripples:[],
+    rippleStates:[],
+
+    rippleContainerSelector:'',
+
+    onDidInsertElement:function(){
+      if(!this.noink){
+        this.element = this.$();
+        this.colorElement = this.$();
+        this.node = this.element[0];
+        this.hammertime = new Hammer(this.node);
+        this.color = this.parseColor(this.element.attr('md-ink-ripple')) || this.parseColor(window.getComputedStyle(this.colorElement[0]).color || 'rgb(0, 0, 0)');
+        if(this.mousedown){
+          this.hammertime.on('hammer.input', Ember['default'].$.proxy(this.onInput,this));
+        }
+      }
+    }.on('didInsertElement'),
+
+    onWillDestroyElement:function(){
+      if(this.rippleContainer){
+        this.rippleContainer.remove();
+      }
+      if(this.hammertime){
+        this.hammertime.destroy();
+      }
+    }.on('willDestroyElement'),
+
+    onInput:function(ev){
+      var ripple, index;
+      if (ev.eventType === Hammer.INPUT_START && ev.isFirst && !this.get('disabled')) {
+        ripple = this.createRipple(ev.center.x, ev.center.y);
+        this.isHeld = true;
+      } else if (ev.eventType === Hammer.INPUT_END && ev.isFinal) {
+        this.isHeld = false;
+        index = this.ripples.length - 1;
+        ripple = this.ripples[index];
+        Ember['default'].run.later(this,function(){
+          this.updateElement(ripple);
+        }, 0);
+      }
+    },
+    /**
+    * Gets the current ripple container
+    * If there is no ripple container, it creates one and returns it
+    *
+    * @returns {angular.element} ripple container element
+    */
+    getRippleContainer: function() {
+      if (this.rippleContainer){
+        return this.rippleContainer;
+      }
+      this.rippleContainer = Ember['default'].$('<div class="md-ripple-container">');
+      this.$(this.rippleContainerSelector).append(this.rippleContainer);
+      return this.rippleContainer;
+    },
+    /**
+    * Creates the ripple element with the provided css
+    *
+    * @param {object} css properties to be applied
+    *
+    * @returns {angular.element} the generated ripple element
+    */
+    getRippleElement: function(css) {
+      var elem = Ember['default'].$('<div class="md-ripple" data-counter="' + this.counter++ + '">');
+      this.ripples.unshift(elem);
+      this.rippleStates.unshift({ animating: true });
+      this.rippleContainer.append(elem);
+      if(css){
+        elem.css(css);
+      }
+      return elem;
+    },
+    /**
+    * Calculate the ripple size
+    *
+    * @returns {number} calculated ripple diameter
+    */
+    getRippleSize: function(left, top) {
+      var width = this.rippleContainer.prop('offsetWidth'),
+      height = this.rippleContainer.prop('offsetHeight'),
+      multiplier, size, rect;
+      if (this.isMenuItem) {
+        size = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+      } else if (this.outline) {
+        rect = this.node.getBoundingClientRect();
+        left -= rect.left;
+        top -= rect.top;
+        width = Math.max(left, width - left);
+        height = Math.max(top, height - top);
+        size = 2 * Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+      } else {
+        multiplier = this.isFAB ? 1.1 : 0.8;
+        size = Math.max(width, height) * multiplier;
+      }
+      return size;
+    },
+    parseColor: function(color) {
+      if (!color){ return; }
+      if (color.indexOf('rgba') === 0){ return color; }
+      if (color.indexOf('rgb')  === 0){ return rgbToRGBA(color); }
+      if (color.indexOf('#')    === 0){ return hexToRGBA(color); }
+
+      /**
+      * Converts a hex value to an rgba string
+      *
+      * @param {string} hex value (3 or 6 digits) to be converted
+      *
+      * @returns {string} rgba color with 0.1 alpha
+      */
+      function hexToRGBA(color) {
+        var hex = color.charAt(0) === '#' ? color.substr(1) : color,
+        dig = hex.length / 3,
+        red = hex.substr(0, dig),
+        grn = hex.substr(dig, dig),
+        blu = hex.substr(dig * 2);
+        if (dig === 1) {
+          red += red;
+          grn += grn;
+          blu += blu;
+        }
+        return 'rgba(' + parseInt(red, 16) + ',' + parseInt(grn, 16) + ',' + parseInt(blu, 16) + ',0.1)';
+      }
+
+      /**
+      * Converts rgb value to rgba string
+      *
+      * @param {string} rgb color string
+      *
+      * @returns {string} rgba color with 0.1 alpha
+      */
+      function rgbToRGBA(color) {
+        return color.replace(')', ', 0.1)').replace('(', 'a(');
+      }
+
+    },
+    /**
+    * Creates a ripple at the provided coordinates
+    *
+    * @param {number} left cursor position
+    * @param {number} top cursor position
+    *
+    * @returns {angular.element} the generated ripple element
+    */
+    createRipple:function(left, top){
+      var color = this.color = this.parseColor(this.element.attr('md-ink-ripple')) || this.parseColor(window.getComputedStyle(this.colorElement[0]).color || 'rgb(0, 0, 0)');
+
+      var container = this.getRippleContainer(),
+        size = this.getRippleSize(left, top),
+        css = this.getRippleCss(size, left, top),
+        elem = this.getRippleElement(css),
+        index = this.ripples.indexOf(elem),
+        state = this.rippleStates[index] || {};
+
+      this.rippleSize = size;
+
+      state.animating = true;
+
+      Ember['default'].run.later(this,function () {
+        if (this.dimBackground) {
+          container.css({ backgroundColor: color });
+        }
+        elem.addClass('md-ripple-placed md-ripple-scaled');
+        if (this.outline) {
+          elem.css({
+            borderWidth: (size * 0.5) + 'px',
+            marginLeft: (size * -0.5) + 'px',
+            marginTop: (size * -0.5) + 'px'
+          });
+        } else {
+          elem.css({ left: '50%', top: '50%' });
+        }
+        this.updateElement(elem);
+        Ember['default'].run.later(this,function () {
+          state.animating = false;
+          this.updateElement(elem);
+        }, (this.outline ? 450 : 225));
+      }, 0);
+
+      return elem;
+    },
+    removeElement: function(elem, wait) {
+      var ripples = this.ripples;
+      ripples.splice(ripples.indexOf(elem), 1);
+      if (ripples.length === 0 && this.rippleContainer) {
+        this.rippleContainer.css({ backgroundColor: '' });
+      }
+      Ember['default'].run.later(this,function(){
+        elem.remove();
+      }, wait);
+    },
+    updateElement: function(elem) {
+      var index = this.ripples.indexOf(elem),
+      state = this.rippleStates[index] || {},
+      elemIsActive = this.ripples.length > 1 ? false : this.isActive,
+      elemIsHeld   = this.ripples.length > 1 ? false : this.isHeld;
+      if (elemIsActive || state.animating || elemIsHeld) {
+        elem.addClass('md-ripple-visible');
+      } else if (elem) {
+        elem.removeClass('md-ripple-visible');
+        if (this.outline) {
+          elem.css({
+            width: this.rippleSize + 'px',
+            height: this.rippleSize + 'px',
+            marginLeft: (this.rippleSize * -1) + 'px',
+            marginTop: (this.rippleSize * -1) + 'px'
+          });
+        }
+        this.removeElement(elem, this.outline ? 450 : 650);
+      }
+    },
+    /**
+    * Generates the ripple css
+    *
+    * @param {number} the diameter of the ripple
+    * @param {number} the left cursor offset
+    * @param {number} the top cursor offset
+    *
+    * @returns {{backgroundColor: *, width: string, height: string, marginLeft: string, marginTop: string}}
+    */
+    getRippleCss: function(size, left, top) {
+      var rect,
+      css = {
+        backgroundColor: rgbaToRGB(this.color),
+        borderColor: rgbaToRGB(this.color),
+        width: size + 'px',
+        height: size + 'px'
+      };
+
+      if (this.outline) {
+        css.width = 0;
+        css.height = 0;
+      } else {
+        css.marginLeft = css.marginTop = (size * -0.5) + 'px';
+      }
+
+      if (this.center) {
+        css.left = css.top = '50%';
+      } else {
+        rect = this.node.getBoundingClientRect();
+        css.left = Math.round((left - rect.left) / this.rippleContainer.prop('offsetWidth') * 100) + '%';
+        css.top = Math.round((top - rect.top) / this.rippleContainer.prop('offsetHeight') * 100) + '%';
+      }
+
+      return css;
+
+      /**
+      * Converts rgba string to rgb, removing the alpha value
+      *
+      * @param {string} rgba color
+      *
+      * @returns {string} rgb color
+      */
+      function rgbaToRGB(color) {
+        return color.replace('rgba', 'rgb').replace(/,[^\)\,]+\)/, ')');
+      }
+    }
+
+  });
+
+});
+define('ember-paper/mixins/shadow-mixin', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Mixin.create({
+    classNameBindings:[
+      'raised:md-raised'
+    ],
+    raised:false,
+    animatedShadow:true,
+    bottomShadowCSS:Ember['default'].computed('z',function(){
+      var raised = this.get('raised'),
+        disabled = this.get('disabled');
+      if(!raised || disabled){
+        return;
+      }
+      var z = this.get('z');
+      return z?'paper-shadow-bottom-z-'+z:'';
+    })
+  });
+
+});
+define("ember-paper", ["ember-paper/index","exports"], function(__index__, __exports__) {
+  "use strict";
+  Object.keys(__index__).forEach(function(key){
+    __exports__[key] = __index__[key];
+  });
+});
+//# sourceMappingURL=vendor.map

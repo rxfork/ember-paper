@@ -1373,7 +1373,7 @@ html, body {
   height: 100%;
   color: rgba(0, 0, 0, 0.73);
   background: #ffffff;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -1528,8 +1528,7 @@ md-content {
 
 @media (min-width: 600px) {
   .md-content.md-padding {
-    padding: 16px; }
- }
+    padding: 16px; } }
 
 /**
 * Position a FAB button.
@@ -1939,7 +1938,50 @@ md-input-group.md-default-theme.md-input-has-value:not(.md-input-focused) label 
 md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme[disabled] textarea {
   border-bottom-color: rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.26);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, rgba(0, 0, 0, 0) 0%); }
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, transparent 0%); }
+
+md-list {
+  padding: 8px 0px 8px 0px; }
+
+md-item-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0px 0px 0px 0px; }
+
+/**
+ * The left tile for a list item.
+ */
+.md-tile-left {
+  min-width: 56px;
+  margin-right: -16px; }
+
+/**
+ * The center content tile for a list item.
+ */
+.md-tile-content {
+  flex: 1;
+  padding: 16px;
+  text-overflow: ellipsis; }
+  .md-tile-content h3 {
+    margin: 0 0 3px 0;
+    font-weight: 400;
+    font-size: 1.1em; }
+  .md-tile-content h4 {
+    margin: 0 0 3px 0;
+    font-weight: 400;
+    font-size: 0.9em; }
+  .md-tile-content p {
+    margin: 0 0 3px 0;
+    font-size: 0.75em; }
+
+/**
+ * The right tile for a list item.
+ */
+.md-tile-right {
+  padding-right: 0px; }
 
 /* SIDE NAV */
 .sidenav {
@@ -2021,7 +2063,7 @@ md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme
   top: 0;
   left: 0;
   will-change: opacity;
-  opacity: 0;
+  opacity: 0.0;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
   z-index: 3; }
@@ -2042,11 +2084,9 @@ md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme
 @media screen and (min-width: 850px) {
   .nav-button {
     display: none; }
-
   .sidenav-modal-bg.visible {
     opacity: 0.1;
-    pointer-events: none; }
- }
+    pointer-events: none; } }
 
 .sidenav-static {
   display: -webkit-box;
@@ -2071,26 +2111,18 @@ md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme
     -webkit-transform: translateX(0px);
     -ms-transform: translateX(0px);
     transform: translateX(0px); }
-
   .sidenav ul li a {
     padding: 1.1em 1.6em; }
-
   .sidenav-static.transparent {
     background: none;
     box-shadow: none;
     border-right: none; }
-
   .sidenav-static.transparent h1 {
     color: #fafafa; }
-
   .sidenav-static.transparent .sidenav-nav ul li a {
     color: #eeeeee; }
-
   .sidenav-static.transparent .sidenav-nav ul li a:hover {
     background-color: rgba(97, 97, 97, 0.6); }
-
   .sidenav-static-content {
-    padding: 16px 264px; }
- }
+    padding: 16px 264px; } }
 
-/*# sourceMappingURL=ember-paper.css.map */

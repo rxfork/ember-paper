@@ -1,235 +1,1451 @@
-eval("//# sourceURL=vendor/ember-cli/loader.js");
+define('dummy/app', ['exports', 'ember', 'ember/resolver', 'ember/load-initializers', 'dummy/config/environment'], function (exports, Ember, Resolver, loadInitializers, config) {
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/base-focusable.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/base-focusable.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/base-focusable.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/base-focusable.jshint.js");
+  'use strict';
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-button.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-button.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-button.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-button.jshint.js");
+  Ember['default'].MODEL_FACTORY_INJECTIONS = true;
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-checkbox.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-checkbox.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-checkbox.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-checkbox.jshint.js");
+  var App = Ember['default'].Application.extend({
+    modulePrefix: config['default'].modulePrefix,
+    podModulePrefix: config['default'].podModulePrefix,
+    Resolver: Resolver['default']
+  });
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-content.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-content.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-content.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-content.jshint.js");
+  loadInitializers['default'](App, config['default'].modulePrefix);
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-drawer.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-drawer.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-drawer.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-drawer.jshint.js");
+  exports['default'] = App;
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-radio.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-radio.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-radio.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-radio.jshint.js");
+});
+define('dummy/components/base-focusable', ['exports', 'ember-paper/components/base-focusable'], function (exports, BaseFocusable) {
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-sidenav.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-sidenav.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-sidenav.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-sidenav.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-text.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-text.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-text.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-text.jshint.js");
+	exports['default'] = BaseFocusable['default'];
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-toggle.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/components\');\n    test(\'ember-cli-qunit/components/paper-toggle.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/components/paper-toggle.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/components/paper-toggle.jshint.js");
+});
+define('dummy/components/paper-button', ['exports', 'ember-paper/components/paper-button'], function (exports, PaperButton) {
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/mixins/events-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/mixins\');\n    test(\'ember-cli-qunit/mixins/events-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/mixins/events-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/mixins/events-mixin.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/mixins/ripple-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/mixins\');\n    test(\'ember-cli-qunit/mixins/ripple-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/mixins/ripple-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/mixins/ripple-mixin.jshint.js");
+	exports['default'] = PaperButton['default'];
 
-;eval("define(\"dummy/Ember CLI QUnit/tests/ember-cli-qunit/mixins/shadow-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-cli-qunit/mixins\');\n    test(\'ember-cli-qunit/mixins/shadow-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-cli-qunit/mixins/shadow-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/Ember CLI QUnit/tests/ember-cli-qunit/mixins/shadow-mixin.jshint.js");
+});
+define('dummy/components/paper-checkbox', ['exports', 'ember-paper/components/paper-checkbox'], function (exports, PaperCheckbox) {
 
-;eval("define(\"dummy/app\", \n  [\"ember\",\"ember/resolver\",\"ember/load-initializers\",\"dummy/config/environment\",\"exports\"],\n  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var Resolver = __dependency2__[\"default\"];\n    var loadInitializers = __dependency3__[\"default\"];\n    var config = __dependency4__[\"default\"];\n\n    Ember.MODEL_FACTORY_INJECTIONS = true;\n\n    var App = Ember.Application.extend({\n      modulePrefix: config.modulePrefix,\n      podModulePrefix: config.podModulePrefix,\n      Resolver: Resolver\n    });\n\n    loadInitializers(App, config.modulePrefix);\n\n    __exports__[\"default\"] = App;\n  });//# sourceURL=dummy/app.js");
+	'use strict';
 
-;eval("define(\"dummy/components/base-focusable\", \n  [\"ember-paper/components/base-focusable\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var BaseFocusable = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = BaseFocusable;\n  });//# sourceURL=dummy/components/base-focusable.js");
+	exports['default'] = PaperCheckbox['default'];
 
-;eval("define(\"dummy/components/paper-button\", \n  [\"ember-paper/components/paper-button\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperButton = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperButton;\n  });//# sourceURL=dummy/components/paper-button.js");
+});
+define('dummy/components/paper-content', ['exports', 'ember-paper/components/paper-content'], function (exports, PaperContent) {
 
-;eval("define(\"dummy/components/paper-checkbox\", \n  [\"ember-paper/components/paper-checkbox\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperCheckbox = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperCheckbox;\n  });//# sourceURL=dummy/components/paper-checkbox.js");
+	'use strict';
 
-;eval("define(\"dummy/components/paper-content\", \n  [\"ember-paper/components/paper-content\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperContent = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperContent;\n  });//# sourceURL=dummy/components/paper-content.js");
+	exports['default'] = PaperContent['default'];
 
-;eval("define(\"dummy/components/paper-drawer\", \n  [\"ember-paper/components/paper-drawer\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperDrawer = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperDrawer;\n  });//# sourceURL=dummy/components/paper-drawer.js");
+});
+define('dummy/components/paper-drawer', ['exports', 'ember-paper/components/paper-drawer'], function (exports, PaperDrawer) {
 
-;eval("define(\"dummy/components/paper-radio\", \n  [\"ember-paper/components/paper-radio\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperRadio = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperRadio;\n  });//# sourceURL=dummy/components/paper-radio.js");
+	'use strict';
 
-;eval("define(\"dummy/components/paper-sidenav\", \n  [\"ember-paper/components/paper-sidenav\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperSidenav = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperSidenav;\n  });//# sourceURL=dummy/components/paper-sidenav.js");
+	exports['default'] = PaperDrawer['default'];
 
-;eval("define(\"dummy/components/paper-text\", \n  [\"ember-paper/components/paper-text\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperText = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperText;\n  });//# sourceURL=dummy/components/paper-text.js");
+});
+define('dummy/components/paper-item', ['exports', 'ember-paper/components/paper-item'], function (exports, PaperItem) {
 
-;eval("define(\"dummy/components/paper-toggle\", \n  [\"ember-paper/components/paper-toggle\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var PaperToggle = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = PaperToggle;\n  });//# sourceURL=dummy/components/paper-toggle.js");
+	'use strict';
 
-;eval("define(\"dummy/controllers/checkbox\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Controller.extend({\n      value1:true,\n      value2:false\n    });\n  });//# sourceURL=dummy/controllers/checkbox.js");
+	exports['default'] = PaperItem['default'];
 
-;eval("define(\"dummy/controllers/toggle\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Controller.extend({\n      booleanProp1:true,\n      booleanProp2:false\n    });\n  });//# sourceURL=dummy/controllers/toggle.js");
+});
+define('dummy/components/paper-list', ['exports', 'ember-paper/components/paper-list'], function (exports, PaperList) {
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/base-focusable.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/base-focusable.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/base-focusable.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/base-focusable.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-button.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-button.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-button.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-button.jshint.js");
+	exports['default'] = PaperList['default'];
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-checkbox.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-checkbox.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-checkbox.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-checkbox.jshint.js");
+});
+define('dummy/components/paper-radio', ['exports', 'ember-paper/components/paper-radio'], function (exports, PaperRadio) {
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-content.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-content.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-content.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-content.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-drawer.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-drawer.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-drawer.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-drawer.jshint.js");
+	exports['default'] = PaperRadio['default'];
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-radio.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-radio.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-radio.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-radio.jshint.js");
+});
+define('dummy/components/paper-sidenav', ['exports', 'ember-paper/components/paper-sidenav'], function (exports, PaperSidenav) {
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-sidenav.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-sidenav.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-sidenav.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-sidenav.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-text.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-text.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-text.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-text.jshint.js");
+	exports['default'] = PaperSidenav['default'];
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-toggle.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/components\');\n    test(\'ember-export-application-global/components/paper-toggle.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/components/paper-toggle.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/components/paper-toggle.jshint.js");
+});
+define('dummy/components/paper-text', ['exports', 'ember-paper/components/paper-text'], function (exports, PaperText) {
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/mixins/events-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/mixins\');\n    test(\'ember-export-application-global/mixins/events-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/mixins/events-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/mixins/events-mixin.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/mixins/ripple-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/mixins\');\n    test(\'ember-export-application-global/mixins/ripple-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/mixins/ripple-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/mixins/ripple-mixin.jshint.js");
+	exports['default'] = PaperText['default'];
 
-;eval("define(\"dummy/ember-export-application-global/tests/ember-export-application-global/mixins/shadow-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-export-application-global/mixins\');\n    test(\'ember-export-application-global/mixins/shadow-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-export-application-global/mixins/shadow-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-export-application-global/tests/ember-export-application-global/mixins/shadow-mixin.jshint.js");
+});
+define('dummy/components/paper-tile-content', ['exports', 'ember-paper/components/paper-tile-content'], function (exports, PaperTileContent) {
 
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/base-focusable.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/base-focusable.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/base-focusable.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/base-focusable.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-button.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-button.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-button.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-button.jshint.js");
+	exports['default'] = PaperTileContent['default'];
 
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-checkbox.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-checkbox.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-checkbox.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-checkbox.jshint.js");
+});
+define('dummy/components/paper-tile-left', ['exports', 'ember-paper/components/paper-tile-left'], function (exports, PaperTileLeft) {
 
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-content.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-content.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-content.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-content.jshint.js");
+	'use strict';
 
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-drawer.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-drawer.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-drawer.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-drawer.jshint.js");
+	exports['default'] = PaperTileLeft['default'];
 
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-radio.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-radio.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-radio.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-radio.jshint.js");
-
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-sidenav.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-sidenav.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-sidenav.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-sidenav.jshint.js");
-
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-text.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-text.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-text.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-text.jshint.js");
-
-;eval("define(\"dummy/ember-paper/tests/ember-paper/components/paper-toggle.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/components\');\n    test(\'ember-paper/components/paper-toggle.js should pass jshint\', function() { \n      ok(true, \'ember-paper/components/paper-toggle.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/components/paper-toggle.jshint.js");
-
-;eval("define(\"dummy/ember-paper/tests/ember-paper/mixins/events-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/mixins\');\n    test(\'ember-paper/mixins/events-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-paper/mixins/events-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/mixins/events-mixin.jshint.js");
-
-;eval("define(\"dummy/ember-paper/tests/ember-paper/mixins/ripple-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/mixins\');\n    test(\'ember-paper/mixins/ripple-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-paper/mixins/ripple-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/mixins/ripple-mixin.jshint.js");
-
-;eval("define(\"dummy/ember-paper/tests/ember-paper/mixins/shadow-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - ember-paper/mixins\');\n    test(\'ember-paper/mixins/shadow-mixin.js should pass jshint\', function() { \n      ok(true, \'ember-paper/mixins/shadow-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/ember-paper/tests/ember-paper/mixins/shadow-mixin.jshint.js");
-
-;eval("define(\"dummy/initializers/export-application-global\", \n  [\"ember\",\"dummy/config/environment\",\"exports\"],\n  function(__dependency1__, __dependency2__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var config = __dependency2__[\"default\"];\n\n    function initialize(container, application) {\n      var classifiedName = Ember.String.classify(config.modulePrefix);\n\n      if (config.exportApplicationGlobal) {\n        window[classifiedName] = application;\n      }\n    };\n    __exports__.initialize = initialize;\n    __exports__[\"default\"] = {\n      name: \'export-application-global\',\n\n      initialize: initialize\n    };\n  });//# sourceURL=dummy/initializers/export-application-global.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/base-focusable.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/base-focusable.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/base-focusable.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/base-focusable.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-button.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-button.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-button.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-button.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-checkbox.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-checkbox.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-checkbox.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-checkbox.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-content.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-content.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-content.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-content.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-drawer.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-drawer.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-drawer.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-drawer.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-radio.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-radio.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-radio.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-radio.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-sidenav.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-sidenav.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-sidenav.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-sidenav.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-text.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-text.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-text.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-text.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-toggle.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/components\');\n    test(\'live-reload-middleware/components/paper-toggle.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/components/paper-toggle.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/components/paper-toggle.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/mixins/events-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/mixins\');\n    test(\'live-reload-middleware/mixins/events-mixin.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/mixins/events-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/mixins/events-mixin.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/mixins/ripple-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/mixins\');\n    test(\'live-reload-middleware/mixins/ripple-mixin.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/mixins/ripple-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/mixins/ripple-mixin.jshint.js");
-
-;eval("define(\"dummy/live-reload-middleware/tests/live-reload-middleware/mixins/shadow-mixin.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - live-reload-middleware/mixins\');\n    test(\'live-reload-middleware/mixins/shadow-mixin.js should pass jshint\', function() { \n      ok(true, \'live-reload-middleware/mixins/shadow-mixin.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/live-reload-middleware/tests/live-reload-middleware/mixins/shadow-mixin.jshint.js");
-
-;eval("define(\"dummy/router\", \n  [\"ember\",\"dummy/config/environment\",\"exports\"],\n  function(__dependency1__, __dependency2__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var config = __dependency2__[\"default\"];\n\n    var Router = Ember.Router.extend({\n      location: config.locationType\n    });\n\n    Router.map(function() {\n      this.route(\'introduction\');\n      this.route(\'button\');\n      this.route(\'checkbox\');\n      this.route(\'radio\');\n      this.route(\'toggle\');\n      this.route(\'typography\');\n      this.route(\'lists\');\n      this.route(\'navigation\');\n      this.route(\'textfield\');\n      //this.route(\'index\',);\n    });\n\n    __exports__[\"default\"] = Router;\n  });//# sourceURL=dummy/router.js");
-
-;eval("define(\"dummy/routes/application\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n\n    __exports__[\"default\"] = Ember.Route.extend({\n      actions:{\n        raisedButton:function(){\n          alert(\'You pressed a raised button.\');\n        },\n        flatButton:function(){\n          alert(\'You pressed a flat button.\');\n        }\n      }\n    });\n  });//# sourceURL=dummy/routes/application.js");
-
-;eval("define(\"dummy/templates/application\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, functionType=\"function\", blockHelperMissing=helpers.blockHelperMissing;\n\n    function program1(depth0,data) {\n      \n      var buffer = \'\', stack1, helper, options;\n      data.buffer.push(\"\\n  \");\n      options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}\n      if (helper = helpers[\'paper-drawer\']) { stack1 = helper.call(depth0, options); }\n      else { helper = (depth0 && depth0[\'paper-drawer\']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }\n      if (!helpers[\'paper-drawer\']) { stack1 = blockHelperMissing.call(depth0, \'paper-drawer\', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}); }\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-content\'] || (depth0 && depth0[\'paper-content\']),options={hash:{\n        \'classNames\': (\"sidenav-static-content\")\n      },hashTypes:{\'classNames\': \"STRING\"},hashContexts:{\'classNames\': depth0},inverse:self.noop,fn:self.program(22, program22, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-content\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      }\n    function program2(depth0,data) {\n      \n      var buffer = \'\', stack1, helper, options;\n      data.buffer.push(\"\\n    <h1 class=\\\"logo\\\"><img src=\\\"ember-logo.png\\\" height=\\\"30\\\"/>&nbsp;&nbsp;<strong>Paper</strong></h1>\\n    \");\n      options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}\n      if (helper = helpers[\'paper-content\']) { stack1 = helper.call(depth0, options); }\n      else { helper = (depth0 && depth0[\'paper-content\']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }\n      if (!helpers[\'paper-content\']) { stack1 = blockHelperMissing.call(depth0, \'paper-content\', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}); }\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      return buffer;\n      }\n    function program3(depth0,data) {\n      \n      var buffer = \'\', stack1, helper, options;\n      data.buffer.push(\"\\n      <nav class=\\\"sidenav-nav\\\">\\n        <ul>\\n        <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"index\", options) : helperMissing.call(depth0, \"link-to\", \"index\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"typography\", options) : helperMissing.call(depth0, \"link-to\", \"typography\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"lists\", options) : helperMissing.call(depth0, \"link-to\", \"lists\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"button\", options) : helperMissing.call(depth0, \"link-to\", \"button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(12, program12, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"checkbox\", options) : helperMissing.call(depth0, \"link-to\", \"checkbox\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"toggle\", options) : helperMissing.call(depth0, \"link-to\", \"toggle\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"radio\", options) : helperMissing.call(depth0, \"link-to\", \"radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"textfield\", options) : helperMissing.call(depth0, \"link-to\", \"textfield\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n          <li>\");\n      stack1 = (helper = helpers[\'link-to\'] || (depth0 && depth0[\'link-to\']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:[\"STRING\"],data:data},helper ? helper.call(depth0, \"navigation\", options) : helperMissing.call(depth0, \"link-to\", \"navigation\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n        </ul>\\n      </nav>\\n    \");\n      return buffer;\n      }\n    function program4(depth0,data) {\n      \n      \n      data.buffer.push(\"Introduction\");\n      }\n\n    function program6(depth0,data) {\n      \n      \n      data.buffer.push(\"Typography\");\n      }\n\n    function program8(depth0,data) {\n      \n      \n      data.buffer.push(\"Lists\");\n      }\n\n    function program10(depth0,data) {\n      \n      \n      data.buffer.push(\"Button\");\n      }\n\n    function program12(depth0,data) {\n      \n      \n      data.buffer.push(\"Checkbox\");\n      }\n\n    function program14(depth0,data) {\n      \n      \n      data.buffer.push(\"Toggle\");\n      }\n\n    function program16(depth0,data) {\n      \n      \n      data.buffer.push(\"Radio\");\n      }\n\n    function program18(depth0,data) {\n      \n      \n      data.buffer.push(\"Text Field\");\n      }\n\n    function program20(depth0,data) {\n      \n      \n      data.buffer.push(\"Navigation\");\n      }\n\n    function program22(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\"\\n    \");\n      stack1 = helpers._triageMustache.call(depth0, \"outlet\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      return buffer;\n      }\n\n      options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}\n      if (helper = helpers[\'paper-sidenav\']) { stack1 = helper.call(depth0, options); }\n      else { helper = (depth0 && depth0[\'paper-sidenav\']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }\n      if (!helpers[\'paper-sidenav\']) { stack1 = blockHelperMissing.call(depth0, \'paper-sidenav\', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n<!-- Place this tag right after the last button or just before your close body tag. -->\\n<script async defer id=\\\"github-bjs\\\" src=\\\"https://buttons.github.io/buttons.js\\\"></script>\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/application.js");
-
-;eval("define(\"dummy/templates/button\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;\n\n    function program1(depth0,data) {\n      \n      \n      data.buffer.push(\"Button with action\");\n      }\n\n    function program3(depth0,data) {\n      \n      \n      data.buffer.push(\"Primary (noink)\");\n      }\n\n    function program5(depth0,data) {\n      \n      \n      data.buffer.push(\"disabled\");\n      }\n\n    function program7(depth0,data) {\n      \n      \n      data.buffer.push(\"warn\");\n      }\n\n    function program9(depth0,data) {\n      \n      \n      data.buffer.push(\"Primary\");\n      }\n\n      data.buffer.push(\"<h3>Buttons</h3>\\n<p>\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'action\': (\"flatButton\")\n      },hashTypes:{\'action\': \"STRING\"},hashContexts:{\'action\': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'noink\': (true),\n        \'classNames\': (\"md-primary\")\n      },hashTypes:{\'noink\': \"BOOLEAN\",\'classNames\': \"STRING\"},hashContexts:{\'noink\': depth0,\'classNames\': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'disabled\': (true)\n      },hashTypes:{\'disabled\': \"BOOLEAN\"},hashContexts:{\'disabled\': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'classNames\': (\"md-warn\")\n      },hashTypes:{\'classNames\': \"STRING\"},hashContexts:{\'classNames\': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n</p>\\n<p>\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'raised\': (true),\n        \'action\': (\"raisedButton\")\n      },hashTypes:{\'raised\': \"BOOLEAN\",\'action\': \"STRING\"},hashContexts:{\'raised\': depth0,\'action\': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'raised\': (true),\n        \'classNames\': (\"md-primary\")\n      },hashTypes:{\'raised\': \"BOOLEAN\",\'classNames\': \"STRING\"},hashContexts:{\'raised\': depth0,\'classNames\': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'raised\': (true),\n        \'disabled\': (true)\n      },hashTypes:{\'raised\': \"BOOLEAN\",\'disabled\': \"BOOLEAN\"},hashContexts:{\'raised\': depth0,\'disabled\': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-button\'] || (depth0 && depth0[\'paper-button\']),options={hash:{\n        \'raised\': (true),\n        \'classNames\': (\"md-warn\")\n      },hashTypes:{\'raised\': \"BOOLEAN\",\'classNames\': \"STRING\"},hashContexts:{\'raised\': depth0,\'classNames\': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-button\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n</p>\\n<h3>Template</h3>\\n<pre>\\n&lt;p&gt;\\n  {{#paper-button action=\\\"flatButton\\\"}}Button with action{{/paper-button}}\\n  {{#paper-button noink=true classNames=\\\"paper-primary\\\"}}Primary (noink){{/paper-button}}\\n  {{#paper-button disabled=true}}disabled{{/paper-button}}\\n  {{#paper-button classNames=\\\"paper-warn\\\"}}warn{{/paper-button}}\\n&lt;/p&gt;\\n&lt;p&gt;\\n  {{#paper-button raised=true action=\\\"raisedButton\\\"}}Button with action{{/paper-button}}\\n  {{#paper-button raised=true classNames=\\\"paper-primary\\\"}}Primary{{/paper-button}}\\n  {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\\n  {{#paper-button raised=true classNames=\\\"paper-warn\\\"}}warn{{/paper-button}}\\n&lt;/p&gt;\\n</pre>\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/button.js");
-
-;eval("define(\"dummy/templates/checkbox\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;\n\n    function program1(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\"A checkbox: \");\n      stack1 = helpers._triageMustache.call(depth0, \"value1\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      return buffer;\n      }\n\n    function program3(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\"A checkbox: \");\n      stack1 = helpers[\'if\'].call(depth0, \"value2\", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      return buffer;\n      }\n    function program4(depth0,data) {\n      \n      \n      data.buffer.push(\"yep\");\n      }\n\n    function program6(depth0,data) {\n      \n      \n      data.buffer.push(\"nope\");\n      }\n\n    function program8(depth0,data) {\n      \n      \n      data.buffer.push(\"Checkbox (disabled)\");\n      }\n\n    function program10(depth0,data) {\n      \n      \n      data.buffer.push(\"Checkbox (disabled and checked)\");\n      }\n\n    function program12(depth0,data) {\n      \n      \n      data.buffer.push(\"Checkbox (no ink)\");\n      }\n\n      data.buffer.push(\"<h3>Checkboxes</h3>\\n\");\n      stack1 = (helper = helpers[\'paper-checkbox\'] || (depth0 && depth0[\'paper-checkbox\']),options={hash:{\n        \'checked\': (\"value1\")\n      },hashTypes:{\'checked\': \"ID\"},hashContexts:{\'checked\': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-checkbox\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      stack1 = (helper = helpers[\'paper-checkbox\'] || (depth0 && depth0[\'paper-checkbox\']),options={hash:{\n        \'checked\': (\"value2\")\n      },hashTypes:{\'checked\': \"ID\"},hashContexts:{\'checked\': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-checkbox\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      stack1 = (helper = helpers[\'paper-checkbox\'] || (depth0 && depth0[\'paper-checkbox\']),options={hash:{\n        \'disabled\': (true)\n      },hashTypes:{\'disabled\': \"BOOLEAN\"},hashContexts:{\'disabled\': depth0},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-checkbox\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      stack1 = (helper = helpers[\'paper-checkbox\'] || (depth0 && depth0[\'paper-checkbox\']),options={hash:{\n        \'disabled\': (true),\n        \'checked\': (true)\n      },hashTypes:{\'disabled\': \"BOOLEAN\",\'checked\': \"BOOLEAN\"},hashContexts:{\'disabled\': depth0,\'checked\': depth0},inverse:self.noop,fn:self.program(10, program10, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-checkbox\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      stack1 = (helper = helpers[\'paper-checkbox\'] || (depth0 && depth0[\'paper-checkbox\']),options={hash:{\n        \'noink\': (true)\n      },hashTypes:{\'noink\': \"BOOLEAN\"},hashContexts:{\'noink\': depth0},inverse:self.noop,fn:self.program(12, program12, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-checkbox\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\\n<h3>Template</h3>\\n<pre>\\n  {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\\n  {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\\n  {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\\n  {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\\n  {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\\n</pre>\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/checkbox.js");
-
-;eval("define(\"dummy/templates/components/base-focusable\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1;\n\n\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/base-focusable.js");
-
-;eval("define(\"dummy/templates/components/paper-button\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, escapeExpression=this.escapeExpression;\n\n\n      data.buffer.push(\"<span \");\n      data.buffer.push(escapeExpression(helpers[\'bind-attr\'].call(depth0, {hash:{\n        \'type\': (\"type\"),\n        \'disabled\': (\"disabled\")\n      },hashTypes:{\'type\': \"ID\",\'disabled\': \"ID\"},hashContexts:{\'type\': depth0,\'disabled\': depth0},contexts:[],types:[],data:data})));\n      data.buffer.push(\">\\n  \");\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n</span>\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-button.js");
-
-;eval("define(\"dummy/templates/components/paper-checkbox\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, self=this;\n\n    function program1(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\"\\n  <div class=\\\"md-label\\\">\\n    \");\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  </div>\\n\");\n      return buffer;\n      }\n\n      data.buffer.push(\"<div class=\\\"md-container\\\">\\n  <div class=\\\"md-icon\\\"></div>\\n</div>\\n\");\n      stack1 = helpers[\'if\'].call(depth0, \"template\", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-checkbox.js");
-
-;eval("define(\"dummy/templates/components/paper-content\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1;\n\n\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-content.js");
-
-;eval("define(\"dummy/templates/components/paper-drawer\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1;\n\n\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-drawer.js");
-
-;eval("define(\"dummy/templates/components/paper-radio\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, self=this;\n\n    function program1(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\"\\n  <div class=\\\"md-label\\\">\\n    \");\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  </div>\\n\");\n      return buffer;\n      }\n\n      data.buffer.push(\"<div class=\\\"md-container\\\">\\n  <div class=\\\"md-off\\\"></div>\\n  <div class=\\\"md-on\\\"></div>\\n</div>\\n\");\n      stack1 = helpers[\'if\'].call(depth0, \"template\", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-radio.js");
-
-;eval("define(\"dummy/templates/components/paper-sidenav\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, escapeExpression=this.escapeExpression;\n\n\n      data.buffer.push(\"<div class=\\\"icon ic-menu nav-button\\\" \");\n      data.buffer.push(escapeExpression(helpers.action.call(depth0, \"toggleDrawer\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"STRING\"],data:data})));\n      data.buffer.push(\"></div>\\n\");\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n<div \");\n      data.buffer.push(escapeExpression(helpers[\'bind-attr\'].call(depth0, {hash:{\n        \'class\': (\":animatable drawerOpen:visible :sidenav-modal-bg\")\n      },hashTypes:{\'class\': \"STRING\"},hashContexts:{\'class\': depth0},contexts:[],types:[],data:data})));\n      data.buffer.push(\" \");\n      data.buffer.push(escapeExpression(helpers.action.call(depth0, \"closeDrawer\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"STRING\"],data:data})));\n      data.buffer.push(\"></div>\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-sidenav.js");
-
-;eval("define(\"dummy/templates/components/paper-text\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;\n\n\n      data.buffer.push(\"<label \");\n      data.buffer.push(escapeExpression(helpers[\'bind-attr\'].call(depth0, {hash:{\n        \'for\': (\"inputElementId\")\n      },hashTypes:{\'for\': \"ID\"},hashContexts:{\'for\': depth0},contexts:[],types:[],data:data})));\n      data.buffer.push(\">\");\n      stack1 = helpers._triageMustache.call(depth0, \"label\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</label>\\n\");\n      data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{\n        \'id\': (\"inputElementId\"),\n        \'type\': (\"type\"),\n        \'value\': (\"value\"),\n        \'focus-in\': (\"focusIn\"),\n        \'focus-out\': (\"focusOut\"),\n        \'disabled\': (\"disabled\")\n      },hashTypes:{\'id\': \"ID\",\'type\': \"ID\",\'value\': \"ID\",\'focus-in\': \"STRING\",\'focus-out\': \"STRING\",\'disabled\': \"ID\"},hashContexts:{\'id\': depth0,\'type\': depth0,\'value\': depth0,\'focus-in\': depth0,\'focus-out\': depth0,\'disabled\': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"input\", options))));\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-text.js");
-
-;eval("define(\"dummy/templates/components/paper-toggle\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;\n\n    function program1(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\"\\n  \");\n      stack1 = helpers._triageMustache.call(depth0, \"yield\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      }\n\n      data.buffer.push(\"<div class=\\\"md-switch-bar\\\"></div>\\n\");\n      stack1 = (helper = helpers[\'paper-radio\'] || (depth0 && depth0[\'paper-radio\']),options={hash:{\n        \'classNames\': (\"md-switch-thumb\"),\n        \'checked\': (\"value\"),\n        \'disabled\': (\"disabled\"),\n        \'noink\': (\"noink\")\n      },hashTypes:{\'classNames\': \"STRING\",\'checked\': \"ID\",\'disabled\': \"ID\",\'noink\': \"ID\"},hashContexts:{\'classNames\': depth0,\'checked\': depth0,\'disabled\': depth0,\'noink\': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/components/paper-toggle.js");
-
-;eval("define(\"dummy/templates/index\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      \n\n\n      data.buffer.push(\"<h3>Introduction <small>Welcome to Ember Paper.</small></h3>\\n<p><br>This project aims to bring Google\'s new <a href=\\\"https://www.google.com/design/spec/material-design/introduction.html\\\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\\\"http://www.ember-cli.com/\\\">Ember-cli</a> addon. This allows a much nicer \\\"plug and play\\\" experience, as you can see for yourself in the \\\"Installation\\\" section.</p>\\n\\n<h3>Installation</h3>\\n<p>Install the ember-cli addon in your ember-cli project:</p>\\n<div class=\\\"preview-block\\\">\\n  <pre style=\\\"margin:0\\\">$ npm install --save-dev ember-paper</pre>\\n  <pre style=\\\"margin:0\\\">$ ember g ember-paper</pre>\\n</div>\\n<p>All the components and styles are ready to use in your application templates.</p>\\n<p>Navigate through the docs to understand how to use each component.</p>\\n\\n<h3>Contribution</h3>\\n<p><p>This is a very ambitious project. Google\'s design specs are extensive, and not trivial to implement. I\'ve been porting <a href=\\\"https://github.com/angular/material\\\">Angular Material</a> to Ember. This seems to be the most useful resource at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\\n<p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\\n<p>\\n<strong>Help us on Github!</strong>\\n<!-- Place this tag where you want the button to render. -->\\n</p>\\n<p>\\n<a class=\\\"github-button\\\" href=\\\"https://github.com/miguelcobain/ember-paper\\\" data-style=\\\"mega\\\" data-count-href=\\\"/miguelcobain/ember-paper/network\\\" data-count-api=\\\"/repos/miguelcobain/ember-paper#forks_count\\\">Fork</a>\\n</p>\\n\");\n      \n    });\n  });//# sourceURL=dummy/templates/index.js");
-
-;eval("define(\"dummy/templates/lists\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      \n\n\n      data.buffer.push(\"<h3>Lists</h3>\\n<div class=\\\"preview-block\\\">\\n\\n  <h3>Ordered</h3>\\n  <ol>\\n    <li>Item 1</li>\\n    <li>Item 2</li>\\n    <li>Item 3</li>\\n    <li>Item 4</li>\\n    <li>Item 5</li>\\n  </ol>\\n  <h3>Unordered</h3>\\n  <ul>\\n    <li>Item 1</li>\\n    <li>Item 2</li>\\n    <li>Item 3</li>\\n    <li>Item 4</li>\\n    <li>Item 5</li>\\n  </ul>\\n  <h3>Inlined</h3>\\n  <ul class=\\\"paper-list-inline\\\">\\n    <li>Item 1</li>\\n    <li>Item 2</li>\\n    <li>Item 3</li>\\n    <li>Item 4</li>\\n    <li>Item 5</li>\\n  </ul>\\n\\n</div>\");\n      \n    });\n  });//# sourceURL=dummy/templates/lists.js");
-
-;eval("define(\"dummy/templates/navigation\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\';\n\n\n      data.buffer.push(\"<h3>Navigation</h3>\\n<p>Try to resize this webpage.</p>\\n<h3>Template</h3>\\n<pre>\\n  {{#paper-sidenav}}\\n    {{#paper-drawer}}\\n\\n      &lt;h1 class=\\\"logo\\\"&gt;&lt;img src=\\\"ember-logo.png\\\" height=\\\"30\\\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;&lt;/h1&gt;\\n      &lt;nav class=\\\"sidenav-nav\\\"&gt;\\n        &lt;ul&gt;\\n          &lt;li&gt;{{#link-to \\\"typography\\\"}}Typography{{/link-to}}&lt;/li&gt;\\n          &lt;li&gt;{{#link-to \\\"lists\\\"}}Lists{{/link-to}}&lt;/li&gt;\\n          &lt;li&gt;{{#link-to \\\"button\\\"}}Button{{/link-to}}&lt;/li&gt;\\n          &lt;li&gt;{{#link-to \\\"checkbox\\\"}}Checkbox{{/link-to}}&lt;/li&gt;\\n          &lt;li&gt;{{#link-to \\\"toggle\\\"}}Toggle{{/link-to}}&lt;/li&gt;\\n          &lt;li&gt;{{#link-to \\\"radio\\\"}}Radio{{/link-to}}&lt;/li&gt;\\n        &lt;/ul&gt;\\n      &lt;/nav&gt;\\n\\n    {{/paper-drawer}}\\n    {{#paper-content}}\\n\\n      {{outlet}}\\n\\n    {{/paper-content}}\\n  {{/paper-sidenav}}\\n</pre>\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/navigation.js");
-
-;eval("define(\"dummy/templates/radio\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, self=this, functionType=\"function\", blockHelperMissing=helpers.blockHelperMissing, helperMissing=helpers.helperMissing;\n\n    function program1(depth0,data) {\n      \n      \n      data.buffer.push(\"A radio button\");\n      }\n\n    function program3(depth0,data) {\n      \n      \n      data.buffer.push(\"Toggable radio button\");\n      }\n\n    function program5(depth0,data) {\n      \n      \n      data.buffer.push(\"Disabled radio button\");\n      }\n\n    function program7(depth0,data) {\n      \n      \n      data.buffer.push(\"Radio button 1\");\n      }\n\n    function program9(depth0,data) {\n      \n      \n      data.buffer.push(\"Radio button 2\");\n      }\n\n    function program11(depth0,data) {\n      \n      \n      data.buffer.push(\"Radio button 3\");\n      }\n\n      data.buffer.push(\"<h3>Radio Buttons</h3>\\n<ul class=\\\"paper-list-inline\\\">\\n  <li>\");\n      options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}\n      if (helper = helpers[\'paper-radio\']) { stack1 = helper.call(depth0, options); }\n      else { helper = (depth0 && depth0[\'paper-radio\']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }\n      if (!helpers[\'paper-radio\']) { stack1 = blockHelperMissing.call(depth0, \'paper-radio\', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n  <li>\");\n      stack1 = (helper = helpers[\'paper-radio\'] || (depth0 && depth0[\'paper-radio\']),options={hash:{\n        \'toggle\': (true)\n      },hashTypes:{\'toggle\': \"BOOLEAN\"},hashContexts:{\'toggle\': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n  <li>\");\n      stack1 = (helper = helpers[\'paper-radio\'] || (depth0 && depth0[\'paper-radio\']),options={hash:{\n        \'disabled\': (true)\n      },hashTypes:{\'disabled\': \"BOOLEAN\"},hashContexts:{\'disabled\': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n</ul>\\n<h3>Radio Button Group</h3>\\n<ul class=\\\"paper-list-inline\\\">\\n  <li>\");\n      stack1 = (helper = helpers[\'paper-radio\'] || (depth0 && depth0[\'paper-radio\']),options={hash:{\n        \'value\': (\"1\"),\n        \'selected\': (\"selectedValue\")\n      },hashTypes:{\'value\': \"STRING\",\'selected\': \"ID\"},hashContexts:{\'value\': depth0,\'selected\': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n  <li>\");\n      stack1 = (helper = helpers[\'paper-radio\'] || (depth0 && depth0[\'paper-radio\']),options={hash:{\n        \'value\': (\"2\"),\n        \'selected\': (\"selectedValue\")\n      },hashTypes:{\'value\': \"STRING\",\'selected\': \"ID\"},hashContexts:{\'value\': depth0,\'selected\': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n  <li>\");\n      stack1 = (helper = helpers[\'paper-radio\'] || (depth0 && depth0[\'paper-radio\']),options={hash:{\n        \'value\': (\"3\"),\n        \'selected\': (\"selectedValue\")\n      },hashTypes:{\'value\': \"STRING\",\'selected\': \"ID\"},hashContexts:{\'value\': depth0,\'selected\': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-radio\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</li>\\n</ul>\\n<p>Selected value: \");\n      stack1 = helpers._triageMustache.call(depth0, \"selectedValue\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</p>\\n<h3>Template</h3>\\n<pre>\\n  {{#paper-radio}}A radio button{{/paper-radio}}\\n  {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\\n  {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\\n\\n  {{#paper-radio value=\\\"1\\\" selected=selectedValue}}Radio button 1{{/paper-radio}}\\n  {{#paper-radio value=\\\"2\\\" selected=selectedValue}}Radio button 2{{/paper-radio}}\\n  {{#paper-radio value=\\\"3\\\" selected=selectedValue}}Radio button 3{{/paper-radio}}\\n</pre>\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/radio.js");
-
-;eval("define(\"dummy/templates/textfield\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;\n\n\n      data.buffer.push(\"<h3>Text fields</h3>\\n<ul class=\\\"paper-list-inline\\\">\\n  <li>\");\n      data.buffer.push(escapeExpression((helper = helpers[\'paper-text\'] || (depth0 && depth0[\'paper-text\']),options={hash:{\n        \'label\': (\"Name\"),\n        \'value\': (\"name\")\n      },hashTypes:{\'label\': \"STRING\",\'value\': \"ID\"},hashContexts:{\'label\': depth0,\'value\': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-text\", options))));\n      data.buffer.push(\"</li>\\n  <li>\");\n      data.buffer.push(escapeExpression((helper = helpers[\'paper-text\'] || (depth0 && depth0[\'paper-text\']),options={hash:{\n        \'label\': (\"E-mail\"),\n        \'type\': (\"email\"),\n        \'value\': (\"email\")\n      },hashTypes:{\'label\': \"STRING\",\'type\': \"STRING\",\'value\': \"ID\"},hashContexts:{\'label\': depth0,\'type\': depth0,\'value\': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-text\", options))));\n      data.buffer.push(\"</li>\\n  <li>\");\n      data.buffer.push(escapeExpression((helper = helpers[\'paper-text\'] || (depth0 && depth0[\'paper-text\']),options={hash:{\n        \'label\': (\"Password\"),\n        \'type\': (\"password\")\n      },hashTypes:{\'label\': \"STRING\",\'type\': \"STRING\"},hashContexts:{\'label\': depth0,\'type\': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-text\", options))));\n      data.buffer.push(\"</li>\\n  <li>\");\n      data.buffer.push(escapeExpression((helper = helpers[\'paper-text\'] || (depth0 && depth0[\'paper-text\']),options={hash:{\n        \'label\': (\"E-mail\"),\n        \'type\': (\"email\"),\n        \'disabled\': (true)\n      },hashTypes:{\'label\': \"STRING\",\'type\': \"STRING\",\'disabled\': \"BOOLEAN\"},hashContexts:{\'label\': depth0,\'type\': depth0,\'disabled\': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-text\", options))));\n      data.buffer.push(\"</li>\\n</ul>\\n<p>Name: \");\n      stack1 = helpers._triageMustache.call(depth0, \"name\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</p>\\n<p>Email: \");\n      stack1 = helpers._triageMustache.call(depth0, \"email\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"</p>\\n<h3>Template</h3>\\n<pre>\\n  {{paper-text label=\\\"Name\\\" value=name}}\\n  {{paper-text label=\\\"E-mail\\\" type=\\\"email\\\" value=email}}\\n  {{paper-text label=\\\"Password\\\" type=\\\"password\\\"}}\\n  {{paper-text label=\\\"E-mail\\\" type=\\\"email\\\" disabled=true}}\\n</pre>\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/textfield.js");
-
-;eval("define(\"dummy/templates/toggle\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      var buffer = \'\', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;\n\n    function program1(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\" \");\n      stack1 = helpers._triageMustache.call(depth0, \"booleanProp1\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\" \");\n      return buffer;\n      }\n\n    function program3(depth0,data) {\n      \n      var buffer = \'\', stack1;\n      data.buffer.push(\" \");\n      stack1 = helpers._triageMustache.call(depth0, \"booleanProp2\", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:[\"ID\"],data:data});\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\" \");\n      return buffer;\n      }\n\n    function program5(depth0,data) {\n      \n      \n      data.buffer.push(\" Disabled toggle \");\n      }\n\n    function program7(depth0,data) {\n      \n      \n      data.buffer.push(\" Noink toggle \");\n      }\n\n      data.buffer.push(\"<h3>Toggle</h3>\\n<p>\\n  \");\n      stack1 = (helper = helpers[\'paper-toggle\'] || (depth0 && depth0[\'paper-toggle\']),options={hash:{\n        \'value\': (\"booleanProp1\")\n      },hashTypes:{\'value\': \"ID\"},hashContexts:{\'value\': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-toggle\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-toggle\'] || (depth0 && depth0[\'paper-toggle\']),options={hash:{\n        \'value\': (\"booleanProp2\")\n      },hashTypes:{\'value\': \"ID\"},hashContexts:{\'value\': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-toggle\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-toggle\'] || (depth0 && depth0[\'paper-toggle\']),options={hash:{\n        \'disabled\': (true)\n      },hashTypes:{\'disabled\': \"BOOLEAN\"},hashContexts:{\'disabled\': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-toggle\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n  \");\n      stack1 = (helper = helpers[\'paper-toggle\'] || (depth0 && depth0[\'paper-toggle\']),options={hash:{\n        \'noink\': (true)\n      },hashTypes:{\'noink\': \"BOOLEAN\"},hashContexts:{\'noink\': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, \"paper-toggle\", options));\n      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }\n      data.buffer.push(\"\\n</p>\\n<h3>Template</h3>\\n<pre>\\n  {{#paper-toggle value=booleanProp1}} {{booleanProp1}} {{/paper-toggle}}\\n\\n  {{#paper-toggle value=booleanProp2}} {{booleanProp2}} {{/paper-toggle}}\\n\\n  {{#paper-toggle disabled=true}} Disabled toggle {{/paper-toggle}}\\n  \\n  {{#paper-toggle noink=true}} Noink toggle {{/paper-toggle}}\\n</pre>\\n\");\n      return buffer;\n      \n    });\n  });//# sourceURL=dummy/templates/toggle.js");
-
-;eval("define(\"dummy/templates/typography\", \n  [\"ember\",\"exports\"],\n  function(__dependency1__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    __exports__[\"default\"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {\n    this.compilerInfo = [4,\'>= 1.0.0\'];\n    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};\n      \n\n\n      data.buffer.push(\"<h3>HTML Elements</h3>\\n<hr/>\\n<h3>Headings</h3>\\n<div class=\\\"preview-block\\\">\\n  <h1>&lt;h1&gt;</h1>\\n  <h2>&lt;h2&gt;</h2>\\n  <h3>&lt;h3&gt;</h3>\\n  <h4>&lt;h4&gt;</h4>\\n  <h5>&lt;h5&gt;</h5>\\n  <h6>&lt;h6&gt;</h6>\\n</div>\\n\\n<h3>Formatting</h3>\\n<div class=\\\"preview-block\\\">\\n  <p><u>&lt;u&gt;Underlined&lt;u&gt;</u></p>\\n\\n  <p><b>&lt;b&gt;Bold&lt;b&gt;</b></p>\\n\\n  <p><strong>&lt;strong&gt;Strong&lt;strong&gt;</strong></p>\\n\\n  <p><i>&lt;italic&gt;Italic&lt;italic&gt;</i></p>\\n\\n  <p><em>&lt;em&gt;Em&lt;em&gt;</em></p>\\n\\n  <p><s>&lt;s&gt;Strikethrough&lt;s&gt;</s></p>\\n\\n  <p><small>&lt;small&gt;Small&lt;small&gt;</small></p>\\n\\n  <p><mark>&lt;mark&gt;Mark&lt;mark&gt;</mark></p>\\n</div>\\n\\n<h3>Subtitles</h3>\\n<div class=\\\"preview-block\\\">\\n  <h1>&lt;h1&gt; <small>Subtitle</small></h1>\\n  <h2>&lt;h2&gt; <small>Subtitle</small></h2>\\n  <h3>&lt;h3&gt; <small>Subtitle</small></h3>\\n  <h4>&lt;h4&gt; <small>Subtitle</small></h4>\\n  <h5>&lt;h5&gt; <small>Subtitle</small></h5>\\n  <h6>&lt;h6&gt; <small>Subtitle</small></h6>\\n</div>\\n\\n<h3>Description</h3>\\n<div class=\\\"preview-block\\\">\\n  <dl>\\n    <dt>Description lists</dt>\\n    <dd>A description list is perfect for defining terms.</dd>\\n    <dt>Euismod</dt>\\n    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\\n    <dd>Donec id elit non mi porta gravida at eget metus.</dd>\\n    <dt>Malesuada porta</dt>\\n    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\\n  </dl>\\n</div>\\n\\n<h3>Quotes</h3>\\n<div class=\\\"preview-block\\\">\\n  <blockquote>&lt;blockquote&gt;</blockquote>\\n</div>\\n\\n<h2>Addresses</h2>\\n\\n<address>\\n  <strong>Googleplex</strong><br>\\n  1600 Amphitheatre Pkwy<br>\\n  Mountain View, CA 94043<br>\\n  <abbr title=\\\"Phone\\\">P:</abbr> (650) 253-0000\\n</address>\\n\\n<h2>Code</h2>\\n\\n<h3>Multi-line code blocks</h3>\\n<p>\\nUse &lt;pre&gt; for multi-line code blocks.\\n<pre>\\n&lt;p&gt;This is the first line of code&lt;/p&gt;\\n&lt;p&gt;This is the second line of code&lt;/p&gt;\\n</pre>\\n</p>\\n\\n<h3>Inline code blocks</h3>\\n<p>Code blocks like <code>&lt;main&gt;</code> could be displayed inline.</p>\\n\\n<h2>Tables</h2>\\n\\n<h3>Basic table</h3>\\n\\n<table>\\n  <thead>\\n    <tr>\\n      <th>#</th>\\n      <th>First Name</th>\\n      <th>Last Name</th>\\n      <th>Username</th>\\n    </tr>\\n  </thead>\\n  <tbody>\\n    <tr>\\n      <td>1</td>\\n      <td>Larry</td>\\n      <td>Page</td>\\n      <td>+LarryPage</td>\\n    </tr>\\n    <tr>\\n      <td>2</td>\\n      <td>Sergey</td>\\n      <td>Brin</td>\\n      <td>+SergeyBrin</td>\\n    </tr>\\n    <tr>\\n      <td>3</td>\\n      <td>Eric</td>\\n      <td>Schmidt</td>\\n      <td>+EricSchmidt</td>\\n    </tr>\\n  </tbody>\\n</table>\");\n      \n    });\n  });//# sourceURL=dummy/templates/typography.js");
-
-;eval("define(\"dummy/tests/app.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - .\');\n    test(\'app.js should pass jshint\', function() { \n      ok(true, \'app.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/app.jshint.js");
-
-;eval("define(\"dummy/tests/controllers/checkbox.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - controllers\');\n    test(\'controllers/checkbox.js should pass jshint\', function() { \n      ok(true, \'controllers/checkbox.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/controllers/checkbox.jshint.js");
-
-;eval("define(\"dummy/tests/controllers/toggle.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - controllers\');\n    test(\'controllers/toggle.js should pass jshint\', function() { \n      ok(true, \'controllers/toggle.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/controllers/toggle.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/helpers/resolver.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/helpers\');\n    test(\'dummy/tests/helpers/resolver.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/helpers/resolver.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/helpers/resolver.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/helpers/start-app.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/helpers\');\n    test(\'dummy/tests/helpers/start-app.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/helpers/start-app.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/helpers/start-app.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/test-helper.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests\');\n    test(\'dummy/tests/test-helper.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/test-helper.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/test-helper.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/base-focusable-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/base-focusable-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/base-focusable-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/base-focusable-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-button-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-button-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-button-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-button-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-checkbox-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-checkbox-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-checkbox-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-checkbox-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-content-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-content-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-content-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-content-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-drawer-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-drawer-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-drawer-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-drawer-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-radio-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-radio-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-radio-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-radio-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-ripple-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-ripple-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-ripple-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-ripple-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-shadow-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-shadow-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-shadow-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-shadow-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-sidenav-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-sidenav-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-sidenav-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-sidenav-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-text-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-text-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-text-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-text-test.jshint.js");
-
-;eval("define(\"dummy/tests/dummy/tests/unit/components/paper-toggle-test.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - dummy/tests/unit/components\');\n    test(\'dummy/tests/unit/components/paper-toggle-test.js should pass jshint\', function() { \n      ok(true, \'dummy/tests/unit/components/paper-toggle-test.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/dummy/tests/unit/components/paper-toggle-test.jshint.js");
-
-;eval("define(\"dummy/tests/helpers/resolver\", \n  [\"ember/resolver\",\"dummy/config/environment\",\"exports\"],\n  function(__dependency1__, __dependency2__, __exports__) {\n    \"use strict\";\n    var Resolver = __dependency1__[\"default\"];\n    var config = __dependency2__[\"default\"];\n\n    var resolver = Resolver.create();\n\n    resolver.namespace = {\n      modulePrefix: config.modulePrefix,\n      podModulePrefix: config.podModulePrefix\n    };\n\n    __exports__[\"default\"] = resolver;\n  });//# sourceURL=dummy/tests/helpers/resolver.js");
-
-;eval("define(\"dummy/tests/helpers/start-app\", \n  [\"ember\",\"dummy/app\",\"dummy/router\",\"dummy/config/environment\",\"exports\"],\n  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {\n    \"use strict\";\n    var Ember = __dependency1__[\"default\"];\n    var Application = __dependency2__[\"default\"];\n    var Router = __dependency3__[\"default\"];\n    var config = __dependency4__[\"default\"];\n\n    __exports__[\"default\"] = function startApp(attrs) {\n      var App;\n\n      var attributes = Ember.merge({}, config.APP);\n      attributes = Ember.merge(attributes, attrs); // use defaults, but you can override;\n\n      Router.reopen({\n        location: \'none\'\n      });\n\n      Ember.run(function() {\n        App = Application.create(attributes);\n        App.setupForTesting();\n        App.injectTestHelpers();\n      });\n\n      App.reset(); // this shouldn\'t be needed, i want to be able to \"start an app at a specific URL\"\n\n      return App;\n    }\n  });//# sourceURL=dummy/tests/helpers/start-app.js");
-
-;eval("define(\"dummy/tests/router.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - .\');\n    test(\'router.js should pass jshint\', function() { \n      ok(true, \'router.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/router.jshint.js");
-
-;eval("define(\"dummy/tests/routes/application.jshint\", \n  [],\n  function() {\n    \"use strict\";\n    module(\'JSHint - routes\');\n    test(\'routes/application.js should pass jshint\', function() { \n      ok(true, \'routes/application.js should pass jshint.\'); \n    });\n  });//# sourceURL=dummy/tests/routes/application.jshint.js");
-
-;eval("define(\"dummy/tests/test-helper\", \n  [\"dummy/tests/helpers/resolver\",\"ember-qunit\"],\n  function(__dependency1__, __dependency2__) {\n    \"use strict\";\n    var resolver = __dependency1__[\"default\"];\n    var setResolver = __dependency2__.setResolver;\n\n    setResolver(resolver);\n\n    document.write(\'<div id=\"ember-testing-container\"><div id=\"ember-testing\"></div></div>\');\n\n    QUnit.config.urlConfig.push({ id: \'nocontainer\', label: \'Hide container\'});\n    var containerVisibility = QUnit.urlParams.nocontainer ? \'hidden\' : \'visible\';\n    document.getElementById(\'ember-testing-container\').style.visibility = containerVisibility;\n  });//# sourceURL=dummy/tests/test-helper.js");
-
-;eval("define(\"dummy/tests/unit/components/base-focusable-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'base-focusable\', \'BaseFocusableComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/base-focusable-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-button-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-button\', \'PaperButtonComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-button-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-checkbox-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-checkbox\', \'PaperCheckboxComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-checkbox-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-content-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-content\', \'PaperContentComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-content-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-drawer-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-drawer\', \'PaperDrawerComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-drawer-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-radio-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-radio\', \'PaperRadioComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-radio-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-ripple-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-ripple\', \'PaperRippleComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-ripple-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-shadow-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-shadow\', \'PaperShadowComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-shadow-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-sidenav-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-sidenav\', \'PaperSidenavComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-sidenav-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-text-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-text\', \'PaperTextComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-text-test.js");
-
-;eval("define(\"dummy/tests/unit/components/paper-toggle-test\", \n  [\"ember-qunit\"],\n  function(__dependency1__) {\n    \"use strict\";\n    var moduleForComponent = __dependency1__.moduleForComponent;\n    var test = __dependency1__.test;\n\n    moduleForComponent(\'paper-toggle\', \'PaperToggleComponent\', {\n      // specify the other units that are required for this test\n      // needs: [\'component:foo\', \'helper:bar\']\n    });\n\n    test(\'it renders\', function() {\n      expect(2);\n\n      // creates the component instance\n      var component = this.subject();\n      equal(component._state, \'preRender\');\n\n      // appends the component to the page\n      this.append();\n      equal(component._state, \'inDOM\');\n    });\n  });//# sourceURL=dummy/tests/unit/components/paper-toggle-test.js");
-
+});
+define('dummy/components/paper-toggle', ['exports', 'ember-paper/components/paper-toggle'], function (exports, PaperToggle) {
+
+	'use strict';
+
+	exports['default'] = PaperToggle['default'];
+
+});
+define('dummy/controllers/checkbox', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Controller.extend({
+    value1:true,
+    value2:false
+  });
+
+});
+define('dummy/controllers/lists', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Controller.extend({
+    listData: [{
+      face: '/tomster.png',
+      who: 'tomster',
+      what: 'a message for you',
+      notes: 'this is a message for you about ember'
+    },{
+      face: '/tomster.png',
+      who: 'tomster',
+      what: 'a message for you',
+      notes: 'this is a message for you about ember'
+    },{
+      face: '/tomster.png',
+      who: 'tomster',
+      what: 'a message for you',
+      notes: 'this is a message for you about ember'
+    },{
+      face: '/tomster.png',
+      who: 'tomster',
+      what: 'a message for you',
+      notes: 'this is a message for you about ember'
+    },{
+      face: '/tomster.png',
+      who: 'tomster',
+      what: 'a message for you',
+      notes: 'this is a message for you about ember'
+    }]
+  })
+
+});
+define('dummy/controllers/toggle', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Controller.extend({
+    booleanProp1:true,
+    booleanProp2:false
+  });
+
+});
+define('dummy/initializers/export-application-global', ['exports', 'ember', 'dummy/config/environment'], function (exports, Ember, config) {
+
+  'use strict';
+
+  exports.initialize = initialize;
+
+  function initialize(container, application) {
+    var classifiedName = Ember['default'].String.classify(config['default'].modulePrefix);
+
+    if (config['default'].exportApplicationGlobal) {
+      window[classifiedName] = application;
+    }
+  };
+
+  exports['default'] = {
+    name: 'export-application-global',
+
+    initialize: initialize
+  };
+
+});
+define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], function (exports, Ember, config) {
+
+  'use strict';
+
+  var Router = Ember['default'].Router.extend({
+    location: config['default'].locationType
+  });
+
+  Router.map(function() {
+    this.route('introduction');
+    this.route('button');
+    this.route('checkbox');
+    this.route('radio');
+    this.route('toggle');
+    this.route('typography');
+    this.route('lists');
+    this.route('navigation');
+    this.route('textfield');
+    //this.route('index',);
+  });
+
+  exports['default'] = Router;
+
+});
+define('dummy/routes/application', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Route.extend({
+    actions:{
+      raisedButton:function(){
+        alert('You pressed a raised button.');
+      },
+      flatButton:function(){
+        alert('You pressed a flat button.');
+      },
+      targetButton:function() {
+        alert('You pressed a target button. -from route');
+      }
+    }
+  });
+
+});
+define('dummy/templates/application', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n  ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-drawer']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-drawer']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-drawer']) { stack1 = blockHelperMissing.call(depth0, 'paper-drawer', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("sidenav-static-content")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(22, program22, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    }
+  function program2(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n    <h1 class=\"logo\"><img src=\"ember-logo.png\" height=\"30\"/>&nbsp;&nbsp;<strong>Paper</strong></h1>\n    ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-content']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n      <nav class=\"sidenav-nav\">\n        <ul>\n        <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "navigation", options) : helperMissing.call(depth0, "link-to", "navigation", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "typography", options) : helperMissing.call(depth0, "link-to", "typography", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "lists", options) : helperMissing.call(depth0, "link-to", "lists", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(12, program12, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "button", options) : helperMissing.call(depth0, "link-to", "button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toggle", options) : helperMissing.call(depth0, "link-to", "toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "textfield", options) : helperMissing.call(depth0, "link-to", "textfield", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n        </ul>\n      </nav>\n    ");
+    return buffer;
+    }
+  function program4(depth0,data) {
+    
+    
+    data.buffer.push("Introduction");
+    }
+
+  function program6(depth0,data) {
+    
+    
+    data.buffer.push("Navigation");
+    }
+
+  function program8(depth0,data) {
+    
+    
+    data.buffer.push("Typography");
+    }
+
+  function program10(depth0,data) {
+    
+    
+    data.buffer.push("Lists");
+    }
+
+  function program12(depth0,data) {
+    
+    
+    data.buffer.push("Button");
+    }
+
+  function program14(depth0,data) {
+    
+    
+    data.buffer.push("Checkbox");
+    }
+
+  function program16(depth0,data) {
+    
+    
+    data.buffer.push("Toggle");
+    }
+
+  function program18(depth0,data) {
+    
+    
+    data.buffer.push("Radio");
+    }
+
+  function program20(depth0,data) {
+    
+    
+    data.buffer.push("Text Field");
+    }
+
+  function program22(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-sidenav']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-sidenav']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-sidenav']) { stack1 = blockHelperMissing.call(depth0, 'paper-sidenav', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n<!-- Place this tag right after the last button or just before your close body tag. -->\n<script async defer id=\"github-bjs\" src=\"https://buttons.github.io/buttons.js\"></script>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    
+    data.buffer.push("Button with action");
+    }
+
+  function program3(depth0,data) {
+    
+    
+    data.buffer.push("Primary (noink)");
+    }
+
+  function program5(depth0,data) {
+    
+    
+    data.buffer.push("disabled");
+    }
+
+  function program7(depth0,data) {
+    
+    
+    data.buffer.push("warn");
+    }
+
+  function program9(depth0,data) {
+    
+    
+    data.buffer.push("Primary");
+    }
+
+  function program11(depth0,data) {
+    
+    
+    data.buffer.push("Button with target");
+    }
+
+  function program13(depth0,data) {
+    
+    
+    data.buffer.push("Button no bubble");
+    }
+
+    data.buffer.push("<h3>Buttons</h3>\n<p>\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'action': ("flatButton")
+    },hashTypes:{'action': "STRING"},hashContexts:{'action': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'noink': (true),
+      'classNames': ("md-primary")
+    },hashTypes:{'noink': "BOOLEAN",'classNames': "STRING"},hashContexts:{'noink': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'disabled': (true)
+    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'classNames': ("md-warn")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</p>\n<p>\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'action': ("raisedButton")
+    },hashTypes:{'raised': "BOOLEAN",'action': "STRING"},hashContexts:{'raised': depth0,'action': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'classNames': ("md-primary")
+    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING"},hashContexts:{'raised': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'disabled': (true)
+    },hashTypes:{'raised': "BOOLEAN",'disabled': "BOOLEAN"},hashContexts:{'raised': depth0,'disabled': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'classNames': ("md-warn")
+    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING"},hashContexts:{'raised': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</p>\n<p>\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'action': ("targetButton"),
+      'target': ("view")
+    },hashTypes:{'raised': "BOOLEAN",'action': "STRING",'target': "ID"},hashContexts:{'raised': depth0,'action': depth0,'target': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'classNames': ("md-primary"),
+      'action': ("targetButton"),
+      'target': ("view"),
+      'bubbles': (false)
+    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID",'bubbles': "BOOLEAN"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0,'bubbles': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</p>\n<h3>Template</h3>\n<pre>\n&lt;p&gt;\n  {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n  {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n  {{#paper-button disabled=true}}disabled{{/paper-button}}\n  {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n&lt;/p&gt;\n&lt;p&gt;\n  {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n&lt;/p&gt;\n&lt;p&gt;\n  {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n  {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n&lt;/p&gt;\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/checkbox', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("A checkbox: ");
+    stack1 = helpers._triageMustache.call(depth0, "value1", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    return buffer;
+    }
+
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("A checkbox: ");
+    stack1 = helpers['if'].call(depth0, "value2", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    return buffer;
+    }
+  function program4(depth0,data) {
+    
+    
+    data.buffer.push("yep");
+    }
+
+  function program6(depth0,data) {
+    
+    
+    data.buffer.push("nope");
+    }
+
+  function program8(depth0,data) {
+    
+    
+    data.buffer.push("Checkbox (disabled)");
+    }
+
+  function program10(depth0,data) {
+    
+    
+    data.buffer.push("Checkbox (disabled and checked)");
+    }
+
+  function program12(depth0,data) {
+    
+    
+    data.buffer.push("Checkbox (no ink)");
+    }
+
+    data.buffer.push("<h3>Checkboxes</h3>\n");
+    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
+      'checked': ("value1")
+    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
+      'checked': ("value2")
+    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
+      'disabled': (true)
+    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
+      'disabled': (true),
+      'checked': (true)
+    },hashTypes:{'disabled': "BOOLEAN",'checked': "BOOLEAN"},hashContexts:{'disabled': depth0,'checked': depth0},inverse:self.noop,fn:self.program(10, program10, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
+      'noink': (true)
+    },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(12, program12, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n<h3>Template</h3>\n<pre>\n  {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n  {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n  {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n  {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n  {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/base-focusable', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1;
+
+
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-button', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, escapeExpression=this.escapeExpression;
+
+
+    data.buffer.push("<span ");
+    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+      'type': ("type"),
+      'disabled': ("disabled")
+    },hashTypes:{'type': "ID",'disabled': "ID"},hashContexts:{'type': depth0,'disabled': depth0},contexts:[],types:[],data:data})));
+    data.buffer.push(">\n  ");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</span>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-checkbox', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, self=this;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  <div class=\"md-label\">\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n");
+    return buffer;
+    }
+
+    data.buffer.push("<div class=\"md-container\">\n  <div class=\"md-icon\"></div>\n</div>\n");
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-content', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1;
+
+
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-drawer', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1;
+
+
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-radio', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, self=this;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  <div class=\"md-label\">\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n");
+    return buffer;
+    }
+
+    data.buffer.push("<div class=\"md-container\">\n  <div class=\"md-off\"></div>\n  <div class=\"md-on\"></div>\n</div>\n");
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-sidenav', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, escapeExpression=this.escapeExpression;
+
+
+    data.buffer.push("<div class=\"icon ic-menu nav-button\" ");
+    data.buffer.push(escapeExpression(helpers.action.call(depth0, "toggleDrawer", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+    data.buffer.push("></div>\n");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n<div ");
+    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+      'class': (":animatable drawerOpen:visible :sidenav-modal-bg")
+    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},contexts:[],types:[],data:data})));
+    data.buffer.push(" ");
+    data.buffer.push(escapeExpression(helpers.action.call(depth0, "closeDrawer", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+    data.buffer.push("></div>");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-text', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
+
+
+    data.buffer.push("<label ");
+    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+      'for': ("inputElementId")
+    },hashTypes:{'for': "ID"},hashContexts:{'for': depth0},contexts:[],types:[],data:data})));
+    data.buffer.push(">");
+    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</label>\n");
+    data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+      'id': ("inputElementId"),
+      'type': ("type"),
+      'value': ("value"),
+      'focus-in': ("focusIn"),
+      'focus-out': ("focusOut"),
+      'disabled': ("disabled")
+    },hashTypes:{'id': "ID",'type': "ID",'value': "ID",'focus-in': "STRING",'focus-out': "STRING",'disabled': "ID"},hashContexts:{'id': depth0,'type': depth0,'value': depth0,'focus-in': depth0,'focus-out': depth0,'disabled': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/components/paper-toggle', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  ");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    }
+
+    data.buffer.push("<div class=\"md-switch-bar\"></div>\n");
+    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'classNames': ("md-switch-thumb"),
+      'checked': ("value"),
+      'disabled': ("disabled"),
+      'noink': ("noink")
+    },hashTypes:{'classNames': "STRING",'checked': "ID",'disabled': "ID",'noink': "ID"},hashContexts:{'classNames': depth0,'checked': depth0,'disabled': depth0,'noink': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/index', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    
+
+
+    data.buffer.push("<h3>Introduction <small>Welcome to Ember Paper.</small></h3>\n<p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon. This allows a much nicer \"plug and play\" experience, as you can see for yourself in the \"Installation\" section.</p>\n\n<h3>Installation</h3>\n<p>Install the ember-cli addon in your ember-cli project:</p>\n<div class=\"preview-block\">\n  <pre style=\"margin:0\">$ npm install --save-dev ember-paper</pre>\n  <pre style=\"margin:0\">$ ember g ember-paper</pre>\n</div>\n<p>All the components and styles are ready to use in your application templates.</p>\n<p>Navigate through the docs to understand how to use each component.</p>\n\n<h3>Contribution</h3>\n<p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. I've been porting <a href=\"https://github.com/angular/material\">Angular Material</a> to Ember. This seems to be the most useful resource at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n<p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n<p>\n<strong>Help us on Github!</strong>\n<!-- Place this tag where you want the button to render. -->\n</p>\n<p>\n<a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n</p>\n");
+    
+  });
+
+});
+define('dummy/templates/lists', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n    ");
+    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+  function program2(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n      ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n        ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-tile-left']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-tile-left']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-tile-left']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-left', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n        ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-tile-content']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-tile-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-tile-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n      ");
+    return buffer;
+    }
+  function program4(depth0,data) {
+    
+    var buffer = '';
+    data.buffer.push("\n          <img ");
+    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+      'src': ("face"),
+      'alt': ("who")
+    },hashTypes:{'src': "ID",'alt': "ID"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
+    data.buffer.push(" class=\"face\">\n        ");
+    return buffer;
+    }
+
+  function program6(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n          <h3>");
+    stack1 = helpers._triageMustache.call(depth0, "what", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</h3>\n          <h4>");
+    stack1 = helpers._triageMustache.call(depth0, "who", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</h4>\n          <p>\n            ");
+    stack1 = helpers._triageMustache.call(depth0, "notes", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n          </p>\n        ");
+    return buffer;
+    }
+
+    data.buffer.push("<h3>Lists</h3>\n<div class=\"preview-block list-demo\">\n\n\n  ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n</div>\n\n<h3>Template</h3>\n<pre>\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n    {{/each}}\n  {{/paper-list}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/navigation', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '';
+
+
+    data.buffer.push("<h3>Navigation</h3>\n<p>Try to resize this webpage.</p>\n<h3>Template</h3>\n<pre>\n  {{#paper-sidenav}}\n    {{#paper-drawer}}\n\n      &lt;h1 class=\"logo\"&gt;&lt;img src=\"ember-logo.png\" height=\"30\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;&lt;/h1&gt;\n      &lt;nav class=\"sidenav-nav\"&gt;\n        &lt;ul&gt;\n          &lt;li&gt;{{#link-to \"typography\"}}Typography{{/link-to}}&lt;/li&gt;\n          &lt;li&gt;{{#link-to \"lists\"}}Lists{{/link-to}}&lt;/li&gt;\n          &lt;li&gt;{{#link-to \"button\"}}Button{{/link-to}}&lt;/li&gt;\n          &lt;li&gt;{{#link-to \"checkbox\"}}Checkbox{{/link-to}}&lt;/li&gt;\n          &lt;li&gt;{{#link-to \"toggle\"}}Toggle{{/link-to}}&lt;/li&gt;\n          &lt;li&gt;{{#link-to \"radio\"}}Radio{{/link-to}}&lt;/li&gt;\n        &lt;/ul&gt;\n      &lt;/nav&gt;\n\n    {{/paper-drawer}}\n    {{#paper-content  classNames=\"sidenav-static-content\"}}\n\n      {{outlet}}\n\n    {{/paper-content}}\n  {{/paper-sidenav}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    
+    data.buffer.push("A radio button");
+    }
+
+  function program3(depth0,data) {
+    
+    
+    data.buffer.push("Toggable radio button");
+    }
+
+  function program5(depth0,data) {
+    
+    
+    data.buffer.push("Disabled radio button");
+    }
+
+  function program7(depth0,data) {
+    
+    
+    data.buffer.push("Radio button 1");
+    }
+
+  function program9(depth0,data) {
+    
+    
+    data.buffer.push("Radio button 2");
+    }
+
+  function program11(depth0,data) {
+    
+    
+    data.buffer.push("Radio button 3");
+    }
+
+    data.buffer.push("<h3>Radio Buttons</h3>\n<ul class=\"paper-list-inline\">\n  <li>");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-radio']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-radio']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-radio']) { stack1 = blockHelperMissing.call(depth0, 'paper-radio', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n  <li>");
+    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'toggle': (true)
+    },hashTypes:{'toggle': "BOOLEAN"},hashContexts:{'toggle': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n  <li>");
+    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'disabled': (true)
+    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n</ul>\n<h3>Radio Button Group</h3>\n<ul class=\"paper-list-inline\">\n  <li>");
+    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'value': ("1"),
+      'selected': ("selectedValue")
+    },hashTypes:{'value': "STRING",'selected': "ID"},hashContexts:{'value': depth0,'selected': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n  <li>");
+    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'value': ("2"),
+      'selected': ("selectedValue")
+    },hashTypes:{'value': "STRING",'selected': "ID"},hashContexts:{'value': depth0,'selected': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n  <li>");
+    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'value': ("3"),
+      'selected': ("selectedValue")
+    },hashTypes:{'value': "STRING",'selected': "ID"},hashContexts:{'value': depth0,'selected': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n</ul>\n<p>Selected value: ");
+    stack1 = helpers._triageMustache.call(depth0, "selectedValue", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</p>\n<h3>Template</h3>\n<pre>\n  {{#paper-radio}}A radio button{{/paper-radio}}\n  {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n  {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n  {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n  {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n  {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n</pre>");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/textfield', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+    data.buffer.push("<h3>Text fields</h3>\n<ul class=\"paper-list-inline\">\n  <li>");
+    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
+      'label': ("Name"),
+      'value': ("name")
+    },hashTypes:{'label': "STRING",'value': "ID"},hashContexts:{'label': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
+    data.buffer.push("</li>\n  <li>");
+    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
+      'label': ("E-mail"),
+      'type': ("email"),
+      'value': ("email")
+    },hashTypes:{'label': "STRING",'type': "STRING",'value': "ID"},hashContexts:{'label': depth0,'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
+    data.buffer.push("</li>\n  <li>");
+    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
+      'label': ("Password"),
+      'type': ("password")
+    },hashTypes:{'label': "STRING",'type': "STRING"},hashContexts:{'label': depth0,'type': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
+    data.buffer.push("</li>\n  <li>");
+    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
+      'label': ("E-mail"),
+      'type': ("email"),
+      'disabled': (true)
+    },hashTypes:{'label': "STRING",'type': "STRING",'disabled': "BOOLEAN"},hashContexts:{'label': depth0,'type': depth0,'disabled': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
+    data.buffer.push("</li>\n</ul>\n<p>Name: ");
+    stack1 = helpers._triageMustache.call(depth0, "name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</p>\n<p>Email: ");
+    stack1 = helpers._triageMustache.call(depth0, "email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</p>\n<h3>Template</h3>\n<pre>\n  {{paper-text label=\"Name\" value=name}}\n  {{paper-text label=\"E-mail\" type=\"email\" value=email}}\n  {{paper-text label=\"Password\" type=\"password\"}}\n  {{paper-text label=\"E-mail\" type=\"email\" disabled=true}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/toggle', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push(" ");
+    stack1 = helpers._triageMustache.call(depth0, "booleanProp1", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push(" ");
+    return buffer;
+    }
+
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push(" ");
+    stack1 = helpers._triageMustache.call(depth0, "booleanProp2", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push(" ");
+    return buffer;
+    }
+
+  function program5(depth0,data) {
+    
+    
+    data.buffer.push(" Disabled toggle ");
+    }
+
+  function program7(depth0,data) {
+    
+    
+    data.buffer.push(" Noink toggle ");
+    }
+
+    data.buffer.push("<h3>Toggle</h3>\n<p>\n  ");
+    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
+      'value': ("booleanProp1")
+    },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
+      'value': ("booleanProp2")
+    },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
+      'disabled': (true)
+    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
+      'noink': (true)
+    },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</p>\n<h3>Template</h3>\n<pre>\n  {{#paper-toggle value=booleanProp1}} {{booleanProp1}} {{/paper-toggle}}\n\n  {{#paper-toggle value=booleanProp2}} {{booleanProp2}} {{/paper-toggle}}\n\n  {{#paper-toggle disabled=true}} Disabled toggle {{/paper-toggle}}\n  \n  {{#paper-toggle noink=true}} Noink toggle {{/paper-toggle}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/typography', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    
+
+
+    data.buffer.push("<h3>HTML Elements</h3>\n<hr/>\n<h3>Headings</h3>\n<div class=\"preview-block\">\n  <h1>&lt;h1&gt;</h1>\n  <h2>&lt;h2&gt;</h2>\n  <h3>&lt;h3&gt;</h3>\n  <h4>&lt;h4&gt;</h4>\n  <h5>&lt;h5&gt;</h5>\n  <h6>&lt;h6&gt;</h6>\n</div>\n\n<h3>Formatting</h3>\n<div class=\"preview-block\">\n  <p><u>&lt;u&gt;Underlined&lt;u&gt;</u></p>\n\n  <p><b>&lt;b&gt;Bold&lt;b&gt;</b></p>\n\n  <p><strong>&lt;strong&gt;Strong&lt;strong&gt;</strong></p>\n\n  <p><i>&lt;italic&gt;Italic&lt;italic&gt;</i></p>\n\n  <p><em>&lt;em&gt;Em&lt;em&gt;</em></p>\n\n  <p><s>&lt;s&gt;Strikethrough&lt;s&gt;</s></p>\n\n  <p><small>&lt;small&gt;Small&lt;small&gt;</small></p>\n\n  <p><mark>&lt;mark&gt;Mark&lt;mark&gt;</mark></p>\n</div>\n\n<h3>Subtitles</h3>\n<div class=\"preview-block\">\n  <h1>&lt;h1&gt; <small>Subtitle</small></h1>\n  <h2>&lt;h2&gt; <small>Subtitle</small></h2>\n  <h3>&lt;h3&gt; <small>Subtitle</small></h3>\n  <h4>&lt;h4&gt; <small>Subtitle</small></h4>\n  <h5>&lt;h5&gt; <small>Subtitle</small></h5>\n  <h6>&lt;h6&gt; <small>Subtitle</small></h6>\n</div>\n\n<h3>Description</h3>\n<div class=\"preview-block\">\n  <dl>\n    <dt>Description lists</dt>\n    <dd>A description list is perfect for defining terms.</dd>\n    <dt>Euismod</dt>\n    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n    <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n    <dt>Malesuada porta</dt>\n    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n  </dl>\n</div>\n\n<h3>Quotes</h3>\n<div class=\"preview-block\">\n  <blockquote>&lt;blockquote&gt;</blockquote>\n</div>\n\n<h2>Addresses</h2>\n\n<address>\n  <strong>Googleplex</strong><br>\n  1600 Amphitheatre Pkwy<br>\n  Mountain View, CA 94043<br>\n  <abbr title=\"Phone\">P:</abbr> (650) 253-0000\n</address>\n\n<h2>Code</h2>\n\n<h3>Multi-line code blocks</h3>\n<p>\nUse &lt;pre&gt; for multi-line code blocks.\n<pre>\n&lt;p&gt;This is the first line of code&lt;/p&gt;\n&lt;p&gt;This is the second line of code&lt;/p&gt;\n</pre>\n</p>\n\n<h3>Inline code blocks</h3>\n<p>Code blocks like <code>&lt;main&gt;</code> could be displayed inline.</p>\n\n<h2>Tables</h2>\n\n<h3>Basic table</h3>\n\n<table>\n  <thead>\n    <tr>\n      <th>#</th>\n      <th>First Name</th>\n      <th>Last Name</th>\n      <th>Username</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1</td>\n      <td>Larry</td>\n      <td>Page</td>\n      <td>+LarryPage</td>\n    </tr>\n    <tr>\n      <td>2</td>\n      <td>Sergey</td>\n      <td>Brin</td>\n      <td>+SergeyBrin</td>\n    </tr>\n    <tr>\n      <td>3</td>\n      <td>Eric</td>\n      <td>Schmidt</td>\n      <td>+EricSchmidt</td>\n    </tr>\n  </tbody>\n</table>");
+    
+  });
+
+});
+define('dummy/tests/helpers/resolver', ['exports', 'ember/resolver', 'dummy/config/environment'], function (exports, Resolver, config) {
+
+  'use strict';
+
+  var resolver = Resolver['default'].create();
+
+  resolver.namespace = {
+    modulePrefix: config['default'].modulePrefix,
+    podModulePrefix: config['default'].podModulePrefix
+  };
+
+  exports['default'] = resolver;
+
+});
+define('dummy/tests/helpers/start-app', ['exports', 'ember', 'dummy/app', 'dummy/router', 'dummy/config/environment'], function (exports, Ember, Application, Router, config) {
+
+  'use strict';
+
+  function startApp(attrs) {
+    var App;
+
+    var attributes = Ember['default'].merge({}, config['default'].APP);
+    attributes = Ember['default'].merge(attributes, attrs); // use defaults, but you can override;
+
+    Router['default'].reopen({
+      location: 'none'
+    });
+
+    Ember['default'].run(function() {
+      App = Application['default'].create(attributes);
+      App.setupForTesting();
+      App.injectTestHelpers();
+    });
+
+    App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
+
+    return App;
+  }
+  exports['default'] = startApp;
+
+});
+define('dummy/tests/test-helper', ['dummy/tests/helpers/resolver', 'ember-qunit'], function (resolver, ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.setResolver(resolver['default']);
+
+  document.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>');
+
+  QUnit.config.urlConfig.push({ id: 'nocontainer', label: 'Hide container'});
+  var containerVisibility = QUnit.urlParams.nocontainer ? 'hidden' : 'visible';
+  document.getElementById('ember-testing-container').style.visibility = containerVisibility;
+
+});
+define('dummy/tests/unit/components/base-focusable-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('base-focusable', 'BaseFocusableComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-button-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-button', 'PaperButtonComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+
+
+  });
+
+});
+define('dummy/tests/unit/components/paper-checkbox-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-checkbox', 'PaperCheckboxComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-content-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-content', 'PaperContentComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-drawer-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-drawer', 'PaperDrawerComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-radio-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-radio', 'PaperRadioComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-ripple-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-ripple', 'PaperRippleComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-shadow-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-shadow', 'PaperShadowComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-sidenav-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-sidenav', 'PaperSidenavComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-text-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-text', 'PaperTextComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/tests/unit/components/paper-toggle-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent('paper-toggle', 'PaperToggleComponent', {
+    // specify the other units that are required for this test
+    // needs: ['component:foo', 'helper:bar']
+  });
+
+  ember_qunit.test('it renders', function() {
+    expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    equal(component._state, 'preRender');
+
+    // appends the component to the page
+    this.append();
+    equal(component._state, 'inDOM');
+  });
+
+});
+define('dummy/views/button', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].View.extend({
+    actions: {
+      targetButton: function() {
+        alert('You pressed a target button. -from view');
+      }
+    }
+  });
+
+});
 /* jshint ignore:start */
 
 define('dummy/config/environment', ['ember'], function(Ember) {
@@ -249,7 +1465,6 @@ catch(err) {
 
 /* jshint ignore:end */
 
-
 });
 
 if (runningTests) {
@@ -258,5 +1473,5 @@ if (runningTests) {
   require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true});
 }
 
-
 /* jshint ignore:end */
+//# sourceMappingURL=dummy.map

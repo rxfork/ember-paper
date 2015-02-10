@@ -43,6 +43,13 @@ define('dummy/components/paper-content', ['exports', 'ember-paper/components/pap
 	exports['default'] = PaperContent['default'];
 
 });
+define('dummy/components/paper-divider', ['exports', 'ember-paper/components/paper-divider'], function (exports, PaperDivider) {
+
+	'use strict';
+
+	exports['default'] = PaperDivider['default'];
+
+});
 define('dummy/components/paper-drawer', ['exports', 'ember-paper/components/paper-drawer'], function (exports, PaperDrawer) {
 
 	'use strict';
@@ -116,7 +123,7 @@ define('dummy/controllers/checkbox', ['exports', 'ember'], function (exports, Em
   });
 
 });
-define('dummy/controllers/lists', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
 
@@ -196,7 +203,8 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     this.route('radio');
     this.route('toggle');
     this.route('typography');
-    this.route('lists');
+    this.route('list');
+    this.route('divider');
     this.route('navigation');
     this.route('textfield');
     //this.route('index',);
@@ -224,6 +232,15 @@ define('dummy/routes/application', ['exports', 'ember'], function (exports, Embe
   });
 
 });
+define('dummy/routes/divider', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Route.extend({
+    controllerName: 'list'
+  });
+
+});
 define('dummy/templates/application', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
@@ -245,7 +262,7 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     data.buffer.push("\n  ");
     stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
       'classNames': ("sidenav-static-content")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(22, program22, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(24, program24, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;
@@ -275,22 +292,25 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "typography", options) : helperMissing.call(depth0, "link-to", "typography", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "lists", options) : helperMissing.call(depth0, "link-to", "lists", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "list", options) : helperMissing.call(depth0, "link-to", "list", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(12, program12, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "button", options) : helperMissing.call(depth0, "link-to", "button", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(12, program12, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "divider", options) : helperMissing.call(depth0, "link-to", "divider", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "button", options) : helperMissing.call(depth0, "link-to", "button", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toggle", options) : helperMissing.call(depth0, "link-to", "toggle", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toggle", options) : helperMissing.call(depth0, "link-to", "toggle", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "textfield", options) : helperMissing.call(depth0, "link-to", "textfield", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(22, program22, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "textfield", options) : helperMissing.call(depth0, "link-to", "textfield", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n        </ul>\n      </nav>\n    ");
     return buffer;
@@ -322,34 +342,40 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
   function program12(depth0,data) {
     
     
-    data.buffer.push("Button");
+    data.buffer.push("Dividers");
     }
 
   function program14(depth0,data) {
     
     
-    data.buffer.push("Checkbox");
+    data.buffer.push("Button");
     }
 
   function program16(depth0,data) {
     
     
-    data.buffer.push("Toggle");
+    data.buffer.push("Checkbox");
     }
 
   function program18(depth0,data) {
     
     
-    data.buffer.push("Radio");
+    data.buffer.push("Toggle");
     }
 
   function program20(depth0,data) {
     
     
-    data.buffer.push("Text Field");
+    data.buffer.push("Radio");
     }
 
   function program22(depth0,data) {
+    
+    
+    data.buffer.push("Text Field");
+    }
+
+  function program24(depth0,data) {
     
     var buffer = '', stack1;
     data.buffer.push("\n    ");
@@ -802,70 +828,70 @@ define('dummy/templates/components/paper-toggle', ['exports', 'ember'], function
   });
 
 });
-define('dummy/templates/index', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/templates/divider', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
 
   exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
   helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    
-
-
-    data.buffer.push("<h3>Introduction <small>Welcome to Ember Paper.</small></h3>\n<p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n<h3>Installation</h3>\n<p>Install the ember-cli addon in your ember-cli project:</p>\n<div class=\"preview-block\">\n  <pre style=\"margin:0\">$ npm install --save-dev ember-paper</pre>\n  <pre style=\"margin:0\">$ ember g ember-paper</pre>\n</div>\n<p>All the components and styles are ready to use in your application templates.</p>\n<p>Navigate through the docs to understand how to use each component.</p>\n\n<h3>Contribution</h3>\n<p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n<p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n<p>\n<strong>Help us on Github!</strong>\n<!-- Place this tag where you want the button to render. -->\n</p>\n<p>\n<a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n</p>\n");
-    
-  });
-
-});
-define('dummy/templates/lists', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
+    var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing, helperMissing=helpers.helperMissing;
 
   function program1(depth0,data) {
     
-    var buffer = '', stack1;
-    data.buffer.push("\n    ");
-    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    var buffer = '', stack1, helper, options;
     data.buffer.push("\n  ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
     return buffer;
     }
   function program2(depth0,data) {
     
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n      ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    var buffer = '', stack1;
     data.buffer.push("\n    ");
+    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
     return buffer;
     }
   function program3(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n        ");
+    data.buffer.push("\n      ");
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n      ");
+    stack1 = helpers._triageMustache.call(depth0, "paper-divider", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+  function program4(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n        ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
     if (helper = helpers['paper-tile-left']) { stack1 = helper.call(depth0, options); }
     else { helper = (depth0 && depth0['paper-tile-left']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-tile-left']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-left', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}); }
+    if (!helpers['paper-tile-left']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-left', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n\n        ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}
     if (helper = helpers['paper-tile-content']) { stack1 = helper.call(depth0, options); }
     else { helper = (depth0 && depth0['paper-tile-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-tile-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
+    if (!helpers['paper-tile-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}); }
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n      ");
     return buffer;
     }
-  function program4(depth0,data) {
+  function program5(depth0,data) {
     
     var buffer = '';
     data.buffer.push("\n          <img ");
@@ -877,7 +903,7 @@ define('dummy/templates/lists', ['exports', 'ember'], function (exports, Ember) 
     return buffer;
     }
 
-  function program6(depth0,data) {
+  function program7(depth0,data) {
     
     var buffer = '', stack1;
     data.buffer.push("\n          <h3>");
@@ -893,13 +919,169 @@ define('dummy/templates/lists', ['exports', 'ember'], function (exports, Ember) 
     return buffer;
     }
 
-    data.buffer.push("<h3>Lists</h3>\n<div class=\"preview-block list-demo\">\n\n\n  ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
+  function program9(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n  ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[],types:[],data:data}
     if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
     else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
+    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[],types:[],data:data}); }
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n</div>\n\n<h3>Template</h3>\n<pre>\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n    {{/each}}\n  {{/paper-list}}\n</pre>\n");
+    data.buffer.push("\n");
+    return buffer;
+    }
+  function program10(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n    ");
+    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(11, program11, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+  function program11(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n      ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n      ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-divider'] || (depth0 && depth0['paper-divider']),options={hash:{
+      'inset': (true)
+    },hashTypes:{'inset': "BOOLEAN"},hashContexts:{'inset': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-divider", options))));
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+
+    data.buffer.push("<h3>Dividers</h3>\n\n<h4>Full width dividers</h4>\n");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("md-whiteframe-z1 list-demo")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n<h4>Inset dividers</h4>\n");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("md-whiteframe-z1 list-demo")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n<h3>Template</h3>\n<pre>\n{{#paper-content classNames=\"md-whiteframe-z1\"}}\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n      {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n    {{/each}}\n  {{/paper-list}}\n{{/paper-content}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/index', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    
+
+
+    data.buffer.push("<h3>Introduction <small>Welcome to Ember Paper.</small></h3>\n<p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n<h3>Installation</h3>\n<p>Install the ember-cli addon in your ember-cli project:</p>\n<div class=\"preview-block\">\n  <pre style=\"margin:0\">$ npm install --save-dev ember-paper</pre>\n  <pre style=\"margin:0\">$ ember g ember-paper</pre>\n</div>\n<p>All the components and styles are ready to use in your application templates.</p>\n<p>Navigate through the docs to understand how to use each component.</p>\n\n<h3>Contribution</h3>\n<p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n<p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n<p>\n<strong>Help us on Github!</strong>\n<!-- Place this tag where you want the button to render. -->\n</p>\n<p>\n<a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n</p>\n");
+    
+  });
+
+});
+define('dummy/templates/list', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n  ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    }
+  function program2(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n    ");
+    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n      ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+  function program4(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n        ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-tile-left']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-tile-left']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-tile-left']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-left', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n        ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-tile-content']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-tile-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-tile-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n      ");
+    return buffer;
+    }
+  function program5(depth0,data) {
+    
+    var buffer = '';
+    data.buffer.push("\n          <img ");
+    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+      'src': ("face"),
+      'alt': ("who")
+    },hashTypes:{'src': "ID",'alt': "ID"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
+    data.buffer.push(" class=\"face\">\n        ");
+    return buffer;
+    }
+
+  function program7(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n          <h3>");
+    stack1 = helpers._triageMustache.call(depth0, "what", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</h3>\n          <h4>");
+    stack1 = helpers._triageMustache.call(depth0, "who", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</h4>\n          <p>\n            ");
+    stack1 = helpers._triageMustache.call(depth0, "notes", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n          </p>\n        ");
+    return buffer;
+    }
+
+    data.buffer.push("<h3>Lists</h3>\n<div class=\"list-demo\">\n\n");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("md-whiteframe-z1 list-demo")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</div>\n\n<h3>Template</h3>\n<pre>\n{{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n    {{/each}}\n  {{/paper-list}}\n{{/paper-content}}\n</pre>\n");
     return buffer;
     
   });

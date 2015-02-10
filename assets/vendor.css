@@ -1994,6 +1994,31 @@ md-item-content {
 .md-tile-right {
   padding-right: 0px; }
 
+md-divider {
+  display: block;
+  border-top: 1px solid;
+  margin: 0; }
+  md-divider[md-inset] {
+    margin-left: 80px; }
+
+md-divider.md-default-theme {
+  border-top-color: rgba(0, 0, 0, 0.12); }
+
+.md-whiteframe-z1 {
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26); }
+
+.md-whiteframe-z2 {
+  box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2); }
+
+.md-whiteframe-z3 {
+  box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.19); }
+
+.md-whiteframe-z4 {
+  box-shadow: 0px 16px 28px 0 rgba(0, 0, 0, 0.22); }
+
+.md-whiteframe-z5 {
+  box-shadow: 0px 27px 24px 0 rgba(0, 0, 0, 0.2); }
+
 /* SIDE NAV */
 .sidenav {
   display: block;

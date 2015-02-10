@@ -85,6 +85,13 @@ define('dummy/components/paper-sidenav', ['exports', 'ember-paper/components/pap
 	exports['default'] = PaperSidenav['default'];
 
 });
+define('dummy/components/paper-switch', ['exports', 'ember-paper/components/paper-switch'], function (exports, PaperSwitch) {
+
+	'use strict';
+
+	exports['default'] = PaperSwitch['default'];
+
+});
 define('dummy/components/paper-text', ['exports', 'ember-paper/components/paper-text'], function (exports, PaperText) {
 
 	'use strict';
@@ -104,13 +111,6 @@ define('dummy/components/paper-tile-left', ['exports', 'ember-paper/components/p
 	'use strict';
 
 	exports['default'] = PaperTileLeft['default'];
-
-});
-define('dummy/components/paper-toggle', ['exports', 'ember-paper/components/paper-toggle'], function (exports, PaperToggle) {
-
-	'use strict';
-
-	exports['default'] = PaperToggle['default'];
 
 });
 define('dummy/controllers/checkbox', ['exports', 'ember'], function (exports, Ember) {
@@ -157,7 +157,7 @@ define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember)
   })
 
 });
-define('dummy/controllers/toggle', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/controllers/switch', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
 
@@ -201,7 +201,7 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     this.route('button');
     this.route('checkbox');
     this.route('radio');
-    this.route('toggle');
+    this.route('switch');
     this.route('typography');
     this.route('list');
     this.route('divider');
@@ -304,7 +304,7 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toggle", options) : helperMissing.call(depth0, "link-to", "toggle", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "switch", options) : helperMissing.call(depth0, "link-to", "switch", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
     stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
@@ -336,13 +336,13 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
   function program10(depth0,data) {
     
     
-    data.buffer.push("Lists");
+    data.buffer.push("List");
     }
 
   function program12(depth0,data) {
     
     
-    data.buffer.push("Dividers");
+    data.buffer.push("Divider");
     }
 
   function program14(depth0,data) {
@@ -360,7 +360,7 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
   function program18(depth0,data) {
     
     
-    data.buffer.push("Toggle");
+    data.buffer.push("Switch");
     }
 
   function program20(depth0,data) {
@@ -763,6 +763,34 @@ define('dummy/templates/components/paper-sidenav', ['exports', 'ember'], functio
   });
 
 });
+define('dummy/templates/components/paper-switch', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, self=this;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  <div class=\"md-label\">\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n");
+    return buffer;
+    }
+
+    data.buffer.push("<div class=\"md-switch-bar\"></div>\n<div class=\"md-container\">\n  <div class=\"md-bar\"></div>\n  <div class=\"md-thumb-container\">\n    <div class=\"md-thumb\">\n    </div>\n  </div>\n</div>\n");
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
 define('dummy/templates/components/paper-text', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
@@ -789,39 +817,6 @@ define('dummy/templates/components/paper-text', ['exports', 'ember'], function (
       'focus-out': ("focusOut"),
       'disabled': ("disabled")
     },hashTypes:{'id': "ID",'type': "ID",'value': "ID",'focus-in': "STRING",'focus-out': "STRING",'disabled': "ID"},hashContexts:{'id': depth0,'type': depth0,'value': depth0,'focus-in': depth0,'focus-out': depth0,'disabled': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-toggle', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  ");
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    }
-
-    data.buffer.push("<div class=\"md-switch-bar\"></div>\n");
-    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'classNames': ("md-switch-thumb"),
-      'checked': ("value"),
-      'disabled': ("disabled"),
-      'noink': ("noink")
-    },hashTypes:{'classNames': "STRING",'checked': "ID",'disabled': "ID",'noink': "ID"},hashContexts:{'classNames': depth0,'checked': depth0,'disabled': depth0,'noink': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;
     
@@ -967,7 +962,7 @@ define('dummy/templates/divider', ['exports', 'ember'], function (exports, Ember
       'classNames': ("md-whiteframe-z1 list-demo")
     },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n<h3>Template</h3>\n<pre>\n{{#paper-content classNames=\"md-whiteframe-z1\"}}\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n      {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n    {{/each}}\n  {{/paper-list}}\n{{/paper-content}}\n</pre>\n");
+    data.buffer.push("\n\n<h3>Template</h3>\n<pre>\n{{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n      {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n    {{/each}}\n  {{/paper-list}}\n{{/paper-content}}\n</pre>\n");
     return buffer;
     
   });
@@ -1076,12 +1071,12 @@ define('dummy/templates/list', ['exports', 'ember'], function (exports, Ember) {
     return buffer;
     }
 
-    data.buffer.push("<h3>Lists</h3>\n<div class=\"list-demo\">\n\n");
+    data.buffer.push("<h3>Lists</h3>\n\n");
     stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
       'classNames': ("md-whiteframe-z1 list-demo")
     },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n</div>\n\n<h3>Template</h3>\n<pre>\n{{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n    {{/each}}\n  {{/paper-list}}\n{{/paper-content}}\n</pre>\n");
+    data.buffer.push("\n\n<h3>Template</h3>\n<pre>\n{{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n  {{#paper-list}}\n    {{#each listData}}\n      {{#paper-item}}\n        {{#paper-tile-left}}\n          &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n        {{/paper-tile-left}}\n\n        {{#paper-tile-content}}\n          &lt;h3&gt;{{what}}&lt;/h3&gt;\n          &lt;h4&gt;{{who}}&lt;/h4&gt;\n          &lt;p&gt;\n            {{notes}}\n          &lt;/p&gt;\n        {{/paper-tile-content}}\n      {{/paper-item}}\n    {{/each}}\n  {{/paper-list}}\n{{/paper-content}}\n</pre>\n");
     return buffer;
     
   });
@@ -1191,6 +1186,73 @@ define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) 
   });
 
 });
+define('dummy/templates/switch', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push(" ");
+    stack1 = helpers._triageMustache.call(depth0, "booleanProp1", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push(" ");
+    return buffer;
+    }
+
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push(" ");
+    stack1 = helpers._triageMustache.call(depth0, "booleanProp2", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push(" ");
+    return buffer;
+    }
+
+  function program5(depth0,data) {
+    
+    
+    data.buffer.push(" Disabled switch ");
+    }
+
+  function program7(depth0,data) {
+    
+    
+    data.buffer.push(" Noink switch ");
+    }
+
+    data.buffer.push("<h3>Switches</h3>\n<p>\n  ");
+    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
+      'checked': ("booleanProp1")
+    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
+      'checked': ("booleanProp2")
+    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
+      'disabled': (true)
+    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
+      'noink': (true)
+    },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n</p>\n<h3>Template</h3>\n<pre>\n  {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n  {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n  {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n  {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n</pre>\n");
+    return buffer;
+    
+  });
+
+});
 define('dummy/templates/textfield', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
@@ -1230,73 +1292,6 @@ define('dummy/templates/textfield', ['exports', 'ember'], function (exports, Emb
     stack1 = helpers._triageMustache.call(depth0, "email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</p>\n<h3>Template</h3>\n<pre>\n  {{paper-text label=\"Name\" value=name}}\n  {{paper-text label=\"E-mail\" type=\"email\" value=email}}\n  {{paper-text label=\"Password\" type=\"password\"}}\n  {{paper-text label=\"E-mail\" type=\"email\" disabled=true}}\n</pre>\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/toggle', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push(" ");
-    stack1 = helpers._triageMustache.call(depth0, "booleanProp1", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push(" ");
-    return buffer;
-    }
-
-  function program3(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push(" ");
-    stack1 = helpers._triageMustache.call(depth0, "booleanProp2", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push(" ");
-    return buffer;
-    }
-
-  function program5(depth0,data) {
-    
-    
-    data.buffer.push(" Disabled toggle ");
-    }
-
-  function program7(depth0,data) {
-    
-    
-    data.buffer.push(" Noink toggle ");
-    }
-
-    data.buffer.push("<h3>Toggle</h3>\n<p>\n  ");
-    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
-      'value': ("booleanProp1")
-    },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
-      'value': ("booleanProp2")
-    },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
-      'disabled': (true)
-    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-toggle'] || (depth0 && depth0['paper-toggle']),options={hash:{
-      'noink': (true)
-    },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n</p>\n<h3>Template</h3>\n<pre>\n  {{#paper-toggle value=booleanProp1}} {{booleanProp1}} {{/paper-toggle}}\n\n  {{#paper-toggle value=booleanProp2}} {{booleanProp2}} {{/paper-toggle}}\n\n  {{#paper-toggle disabled=true}} Disabled toggle {{/paper-toggle}}\n  \n  {{#paper-toggle noink=true}} Noink toggle {{/paper-toggle}}\n</pre>\n");
     return buffer;
     
   });

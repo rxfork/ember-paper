@@ -66309,6 +66309,27 @@ define('ember-paper/components/paper-sidenav', ['exports', 'ember'], function (e
   });
 
 });
+define('ember-paper/components/paper-switch', ['exports', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, BaseFocusable, RippleMixin) {
+
+  'use strict';
+
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
+    tagName:'md-switch',
+    classNames:['paper-switch','md-default-theme'],
+    classNameBindings:['checked:md-checked'],
+    toggle:true,
+
+    center: true,
+    rippleContainerSelector:'.md-thumb',
+
+    click:function(){
+      if(!this.get('disabled')){
+        this.toggleProperty('checked');
+      }
+    }
+  });
+
+});
 define('ember-paper/components/paper-text', ['exports', 'ember', 'ember-paper/components/base-focusable'], function (exports, Ember, BaseFocusable) {
 
   'use strict';
@@ -66348,23 +66369,6 @@ define('ember-paper/components/paper-tile-left', ['exports', 'ember'], function 
 
   exports['default'] = Ember['default'].Component.extend({
     classNames:['md-tile-left']
-  });
-
-});
-define('ember-paper/components/paper-toggle', ['exports', 'ember-paper/components/base-focusable'], function (exports, BaseFocusable) {
-
-  'use strict';
-
-  exports['default'] = BaseFocusable['default'].extend({
-    tagName:'md-switch',
-    classNames:['md-switch','md-default-theme'],
-    toggle:true,
-
-    click:function(){
-      if(!this.get('disabled')){
-        this.toggleProperty('value');
-      }
-    }
   });
 
 });

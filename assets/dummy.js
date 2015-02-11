@@ -444,6 +444,12 @@ define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember)
   function program13(depth0,data) {
     
     
+    data.buffer.push("Button with bubble");
+    }
+
+  function program15(depth0,data) {
+    
+    
     data.buffer.push("Button no bubble");
     }
 
@@ -504,11 +510,19 @@ define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember)
       'raised': (true),
       'classNames': ("md-primary"),
       'action': ("targetButton"),
+      'target': ("view")
+    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'classNames': ("md-primary"),
+      'action': ("targetButton"),
       'target': ("view"),
       'bubbles': (false)
-    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID",'bubbles': "BOOLEAN"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0,'bubbles': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
+    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID",'bubbles': "BOOLEAN"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0,'bubbles': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n</p>\n<h3>Template</h3>\n<pre>\n&lt;p&gt;\n  {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n  {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n  {{#paper-button disabled=true}}disabled{{/paper-button}}\n  {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n&lt;/p&gt;\n&lt;p&gt;\n  {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n&lt;/p&gt;\n&lt;p&gt;\n  {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n  {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n&lt;/p&gt;\n</pre>\n");
+    data.buffer.push("\n</p>\n<h3>Template</h3>\n<pre>\n&lt;p&gt;\n  {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n  {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n  {{#paper-button disabled=true}}disabled{{/paper-button}}\n  {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n&lt;/p&gt;\n&lt;p&gt;\n  {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n  {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n&lt;/p&gt;\n&lt;p&gt;\n  {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n  {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n&lt;/p&gt;\n</pre>\n");
     return buffer;
     
   });
@@ -978,7 +992,7 @@ define('dummy/templates/index', ['exports', 'ember'], function (exports, Ember) 
     
 
 
-    data.buffer.push("<h3>Introduction <small>Welcome to Ember Paper.</small></h3>\n<p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n<h3>Installation</h3>\n<p>Install the ember-cli addon in your ember-cli project:</p>\n<div class=\"preview-block\">\n  <pre style=\"margin:0\">$ npm install --save-dev ember-paper</pre>\n  <pre style=\"margin:0\">$ ember g ember-paper</pre>\n</div>\n<p>All the components and styles are ready to use in your application templates.</p>\n<p>Navigate through the docs to understand how to use each component.</p>\n\n<h3>Contribution</h3>\n<p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n<p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n<p>\n<strong>Help us on Github!</strong>\n<!-- Place this tag where you want the button to render. -->\n</p>\n<p>\n<a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n</p>\n");
+    data.buffer.push("<h3>Introduction <small>Welcome to Ember Paper.</small></h3>\n<p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n<h3>Installation</h3>\n<p>Install the ember-cli addon in your ember-cli project:</p>\n<div class=\"preview-block\">\n  <pre style=\"margin:0\">$ ember install:addon ember-paper</pre>\n</div>\n<p>All the components and styles are ready to use in your application templates.</p>\n<p>Navigate through the docs to understand how to use each component.</p>\n\n<h3>Contribution</h3>\n<p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n<p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n<p>\n<strong>Help us on Github!</strong>\n<!-- Place this tag where you want the button to render. -->\n</p>\n<p>\n<a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n</p>\n");
     
   });
 

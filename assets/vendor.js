@@ -66108,56 +66108,30 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
   });
 
 });
-define('ember-paper/components/paper-button', ['exports', 'ember', 'ember-paper/components/base-focusable', 'ember-paper/mixins/shadow-mixin', 'ember-paper/mixins/ripple-mixin'], function (exports, Ember, BaseFocusable, ShadowMixin, RippleMixin) {
+define('ember-paper/components/paper-button', ['exports', 'ember', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, Ember, BaseFocusable, RippleMixin) {
 
   'use strict';
 
-  exports['default'] = BaseFocusable['default'].extend(ShadowMixin['default'],RippleMixin['default'],{
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
     attributeBindings: ['target', 'action'],
-    tagName:'button',
-    classNames:['md-button','md-default-theme'],
+    tagName: 'button',
+    classNames: ['md-button','md-default-theme'],
+    classNameBindings: ['raised:md-raised'],
 
     /* RippleMixin overrides */
     center: false,
     dimBackground: true,
 
-    /* ShadowMixin properties */
-    z:1,
-
-    defaultZ:1,
-    activeZ:2,
-    disabledZ:0,
-
-    /*
-     * Function that handles button state changes.
-     * Changes z and sends action.
-     */
-    stateDidChange:Ember['default'].observer('active','focus','disabled','hover',function(){
-      var active = this.get('active'),
-        disabled = this.get('disabled'),
-        hover = this.get('hover'),
-        focus = this.get('focus');
-      if (active || focus || hover) {
-        this.set('z',this.get('activeZ'));
-      } else if (disabled) {
-        this.set('z',this.get('disabledZ'));
-      } else {
-        this.set('z',this.get('defaultZ'));
-      }
-    }),
-
-    click:function(){
+    click: function(){
       var target = this.get('target');
 
       if (target) {
         this.get('target').send(this.get('action'));
-
-        if (typeof this.get('bubbles') !== 'undefined' && !this.get('bubbles')) {
-          return;
-        }
+      } else {
+        this.sendAction();
       }
 
-      this.sendAction();
+      return typeof this.get('bubbles') == 'undefined' || this.get('bubbles') == true;
     }
   });
 

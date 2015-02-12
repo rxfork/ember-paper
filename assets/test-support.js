@@ -1,7 +1,5 @@
 /* jshint ignore:start */
 
-runningTests = true;
-
 /* jshint ignore:end */
 
 define("ember-qunit/isolated-container",
@@ -3271,4 +3269,12 @@ QUnit.notifications = function(options) {
     });
   }
 };
+
+/* jshint ignore:start */
+
+runningTests = true;
+
+
+
+/* jshint ignore:end */
 //# sourceMappingURL=test-support.map

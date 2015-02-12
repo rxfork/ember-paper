@@ -3,6 +3,8 @@
 window.EmberENV = {"FEATURES":{}};
 var runningTests = false;
 
+
+
 /* jshint ignore:end */
 
 ;var define, requireModule, require, requirejs;
@@ -66046,7 +66048,14 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
       };
     }
   });
-;define('ember-paper/components/base-focusable', ['exports', 'ember', 'ember-paper/mixins/events-mixin'], function (exports, Ember, EventsMixin) {
+;define("ember-paper", ["ember-paper/index","exports"], function(__index__, __exports__) {
+  "use strict";
+  Object.keys(__index__).forEach(function(key){
+    __exports__[key] = __index__[key];
+  });
+});
+
+define('ember-paper/components/base-focusable', ['exports', 'ember', 'ember-paper/mixins/events-mixin'], function (exports, Ember, EventsMixin) {
 
   'use strict';
 
@@ -66104,6 +66113,21 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
       if (!this.toggle) {
         this.set('active',false);
       }
+    }
+  });
+
+});
+define('ember-paper/components/paper-backdrop', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName: 'md-backdrop',
+    classNames:['paper-backdrop','md-opaque','md-default-theme'],
+
+    click: function(evt){
+      Ember['default'].$(evt.target).trigger('collapseSidenav');
+      return false;
     }
   });
 
@@ -66180,7 +66204,15 @@ define('ember-paper/components/paper-content', ['exports', 'ember'], function (e
 
   exports['default'] = Ember['default'].Component.extend({
     tagName:'md-content',
-    classNames:['md-content']
+    classNames:['md-content'],
+    attributeBindings:['flexAttr:flex','flex-layout:layout'],
+    /*
+     * Not binding boolean values in Ember 1.8.1?
+     * https://github.com/emberjs/ember.js/issues/9595
+     */
+    flexAttr:function(){
+      return this.get('flex') ? 'flex' : null;
+    }.property('flex')
   });
 
 });
@@ -66233,6 +66265,33 @@ define('ember-paper/components/paper-list', ['exports', 'ember'], function (expo
   });
 
 });
+define('ember-paper/components/paper-nav-container', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName: 'md-nav-container',
+    classNames:['paper-nav-container'],
+    classNameBindings: ['active:sidenav-expanded'],
+
+    active: false,
+
+    // Custom events
+
+    toggleSidenav: function(){
+      this.toggleProperty('active');
+    },
+
+    expandSidenav: function(){
+      this.set('active', true);
+    },
+
+    collapseSidenav: function(){
+      this.set('active', false);
+    }
+  });
+
+});
 define('ember-paper/components/paper-radio', ['exports', 'ember', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, Ember, BaseFocusable, RippleMixin) {
 
   'use strict';
@@ -66266,20 +66325,35 @@ define('ember-paper/components/paper-radio', ['exports', 'ember', 'ember-paper/c
   });
 
 });
+define('ember-paper/components/paper-sidenav-toggle', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName: 'md-sidenav-toggle',
+    classNames:['paper-sidenav-toggle'],
+    toggle:true,
+
+    click: function(evt){
+      var eventName;
+      if (this.get('toggle')) {
+        eventName = 'toggleSidenav';
+      } else {
+        eventName = 'expandSidenav';
+      }
+      Ember['default'].$(evt.target).trigger(eventName);
+      return false;
+    }
+  });
+
+});
 define('ember-paper/components/paper-sidenav', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
 
   exports['default'] = Ember['default'].Component.extend({
-    classNames:['paper-sidenav'],
-    actions:{
-      toggleDrawer:function(){
-        this.toggleProperty('drawerOpen');
-      },
-      closeDrawer:function(){
-        this.set('drawerOpen',false);
-      }
-    }
+    tagName: 'md-sidenav',
+    classNames:['paper-sidenav']
   });
 
 });
@@ -66343,6 +66417,16 @@ define('ember-paper/components/paper-tile-left', ['exports', 'ember'], function 
 
   exports['default'] = Ember['default'].Component.extend({
     classNames:['md-tile-left']
+  });
+
+});
+define('ember-paper/components/paper-toolbar', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend({
+    tagName:'md-toolbar',
+    classNames:['paper-toolbar','md-default-theme']
   });
 
 });
@@ -66676,10 +66760,9 @@ define('ember-paper/mixins/shadow-mixin', ['exports', 'ember'], function (export
   });
 
 });
-define("ember-paper", ["ember-paper/index","exports"], function(__index__, __exports__) {
-  "use strict";
-  Object.keys(__index__).forEach(function(key){
-    __exports__[key] = __index__[key];
-  });
-});
+;/* jshint ignore:start */
+
+
+
+/* jshint ignore:end */
 //# sourceMappingURL=vendor.map

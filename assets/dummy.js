@@ -1585,13 +1585,43 @@ define('dummy/templates/toolbar', ['exports', 'ember'], function (exports, Ember
   function program1(depth0,data) {
     
     
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    <span>Toolbar</span>\n  </h2>\n");
+    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    <span>Toolbars</span>\n  </h2>\n");
     }
 
   function program3(depth0,data) {
     
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n\n  ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n  <p>\"md-toolbar-tools\" is a class that centers your elements in the toolbar.</p>\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-toolbar}}\n      &lt;div class=\"md-toolbar-tools\"&gt;\n        {{#paper-button}}Example button{{/paper-button}}\n        {{#paper-button}}Example button{{/paper-button}}\n      &lt;/div&gt;\n    {{/paper-toolbar}}\n  </pre>\n\n");
+    return buffer;
+    }
+  function program4(depth0,data) {
     
-    data.buffer.push("\n  <h3>Stuff</h3>\n");
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n    <div class=\"md-toolbar-tools\">\n      ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-button']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-button']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-button']) { stack1 = blockHelperMissing.call(depth0, 'paper-button', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n      ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-button']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-button']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-button']) { stack1 = blockHelperMissing.call(depth0, 'paper-button', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    </div>\n  ");
+    return buffer;
+    }
+  function program5(depth0,data) {
+    
+    
+    data.buffer.push("Example button");
     }
 
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}

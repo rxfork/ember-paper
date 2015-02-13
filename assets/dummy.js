@@ -572,7 +572,12 @@ define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember)
       'bubbles': (false)
     },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID",'bubbles': "BOOLEAN"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0,'bubbles': depth0},inverse:self.noop,fn:self.program(19, program19, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n  &lt;p&gt;\n    {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n    {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n    {{#paper-button disabled=true}}disabled{{/paper-button}}\n    {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n  &lt;/p&gt;\n  </pre>\n");
+    data.buffer.push("\n  </p>\n  <p>\n    ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
+      'raised': (true),
+      'label': ("Blockless version")
+    },hashTypes:{'raised': "BOOLEAN",'label': "STRING"},hashContexts:{'raised': depth0,'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options))));
+    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n  &lt;p&gt;\n    {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n    {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n    {{#paper-button disabled=true}}disabled{{/paper-button}}\n    {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{paper-button raised=true label=\"Blockless version\"}}\n  &lt;/p&gt;\n  </pre>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -699,7 +704,11 @@ define('dummy/templates/checkbox', ['exports', 'ember'], function (exports, Embe
       'noink': (true)
     },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(16, program16, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n    {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n    {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n    {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n    {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n  </pre>\n");
+    data.buffer.push("\n\n  ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
+      'label': ("Blockless version")
+    },hashTypes:{'label': "STRING"},hashContexts:{'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options))));
+    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n    {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n    {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n    {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n    {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n\n    {{paper-checkbox label=\"Blockless version\"}}\n  </pre>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -790,8 +799,27 @@ define('dummy/templates/components/paper-button', ['exports', 'ember'], function
   exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
   helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, escapeExpression=this.escapeExpression;
+    var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
 
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
 
     data.buffer.push("<span ");
     data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -799,7 +827,7 @@ define('dummy/templates/components/paper-button', ['exports', 'ember'], function
       'disabled': ("disabled")
     },hashTypes:{'type': "ID",'disabled': "ID"},hashContexts:{'type': depth0,'disabled': depth0},contexts:[],types:[],data:data})));
     data.buffer.push(">\n  ");
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n</span>\n");
     return buffer;
@@ -826,8 +854,18 @@ define('dummy/templates/components/paper-checkbox', ['exports', 'ember'], functi
     return buffer;
     }
 
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  <div class=\"md-label\">\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n");
+    return buffer;
+    }
+
     data.buffer.push("<div class=\"md-container\">\n  <div class=\"md-icon\"></div>\n</div>\n");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;
@@ -885,8 +923,18 @@ define('dummy/templates/components/paper-radio', ['exports', 'ember'], function 
     return buffer;
     }
 
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  <div class=\"md-label\">\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n");
+    return buffer;
+    }
+
     data.buffer.push("<div class=\"md-container\">\n  <div class=\"md-off\"></div>\n  <div class=\"md-on\"></div>\n</div>\n");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;
@@ -913,8 +961,18 @@ define('dummy/templates/components/paper-switch', ['exports', 'ember'], function
     return buffer;
     }
 
+  function program3(depth0,data) {
+    
+    var buffer = '', stack1;
+    data.buffer.push("\n  <div class=\"md-label\">\n    ");
+    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n");
+    return buffer;
+    }
+
     data.buffer.push("<div class=\"md-switch-bar\"></div>\n<div class=\"md-container\">\n  <div class=\"md-bar\"></div>\n  <div class=\"md-thumb-container\">\n    <div class=\"md-thumb\">\n    </div>\n  </div>\n</div>\n");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;
@@ -1452,7 +1510,12 @@ define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) 
     data.buffer.push("</li>\n  </ul>\n  <p>Selected value: ");
     stack1 = helpers._triageMustache.call(depth0, "selectedValue", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-radio}}A radio button{{/paper-radio}}\n    {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n    {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n    {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n    {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n    {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n  </pre>\n");
+    data.buffer.push("</p>\n\n  <p>");
+    data.buffer.push(escapeExpression((helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
+      'toggle': (true),
+      'label': ("Blockless version")
+    },hashTypes:{'toggle': "BOOLEAN",'label': "STRING"},hashContexts:{'toggle': depth0,'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options))));
+    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-radio}}A radio button{{/paper-radio}}\n    {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n    {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n    {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n    {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n    {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n\n    {{paper-radio toggle=true label=\"Blockless version\"}}\n  </pre>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -1561,7 +1624,11 @@ define('dummy/templates/switch', ['exports', 'ember'], function (exports, Ember)
       'noink': (true)
     },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n    {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n    {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n    {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n  </pre>\n");
+    data.buffer.push("\n\n    ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
+      'label': ("Blockless version")
+    },hashTypes:{'label': "STRING"},hashContexts:{'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options))));
+    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n    {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n    {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n    {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n\n    {{paper-switch label=\"Blockless version\"}}\n  </pre>\n");
     return buffer;
     }
   function program5(depth0,data) {

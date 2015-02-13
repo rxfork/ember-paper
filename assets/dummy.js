@@ -701,7 +701,7 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     this.route('typography');
     this.route('list');
     this.route('divider');
-    this.route('navigation');
+    this.route('sidenav');
     this.route('textfield');
     this.route('toolbar');
     this.route('icons');
@@ -797,7 +797,7 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "navigation", options) : helperMissing.call(depth0, "link-to", "navigation", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "sidenav", options) : helperMissing.call(depth0, "link-to", "sidenav", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
     stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "typography", options) : helperMissing.call(depth0, "link-to", "typography", options));
@@ -841,7 +841,7 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
   function program8(depth0,data) {
     
     
-    data.buffer.push("Navigation");
+    data.buffer.push("Sidenav");
     }
 
   function program10(depth0,data) {
@@ -1910,60 +1910,6 @@ define('dummy/templates/list', ['exports', 'ember'], function (exports, Ember) {
   });
 
 });
-define('dummy/templates/navigation', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Navigation</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '';
-    data.buffer.push("\n  <p>Try to resize this webpage.</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-nav-container classNames=\"ember-app\"}}\n\n      {{#paper-sidenav classNames=\"md-sidenav-left md-whiteframe-z2\" flex-layout=\"column\"}}\n\n        {{#paper-toolbar}}\n          &lt;div class=\"md-toolbar-tools\"&gt;\n            &lt;div class=\"logo\"&gt;\n              &lt;img src=\"ember-logo-white.png\" height=\"30\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        {{/paper-toolbar}}\n\n        {{#paper-content}}\n          &lt;nav class=\"sidenav\"&gt;\n            &lt;ul&gt;\n              &lt;li&gt;{{#link-to \"index\"}}Introduction{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"navigation\"}}Navigation{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"typography\"}}Typography{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"list\"}}List{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"divider\"}}Divider{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"button\"}}Button{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"checkbox\"}}Checkbox{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"switch\"}}Switch{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"radio\"}}Radio{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"textfield\"}}Text Field{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"toolbar\"}}Toolbar{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"icons\"}}Icons{{/link-to}}&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/nav&gt;\n        {{/paper-content}}\n      {{/paper-sidenav}}\n\n      {{#paper-content flex-layout=\"column\" flex=true}}\n        {{outlet}}\n      {{/paper-content}}\n\n    {{/paper-nav-container}}\n  </pre>\n");
-    return buffer;
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
 define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
@@ -2077,6 +2023,60 @@ define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) 
     
     
     data.buffer.push("Radio button 3");
+    }
+
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("md-padding")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
+define('dummy/templates/sidenav', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
+    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
+      'class': ("menu-sidenav-toggle")
+    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    <span>Sidenav</span>\n  </h2>\n");
+    return buffer;
+    }
+  function program2(depth0,data) {
+    
+    var buffer = '', helper, options;
+    data.buffer.push("\n      ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
+      'icon': ("menu")
+    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+
+  function program4(depth0,data) {
+    
+    var buffer = '';
+    data.buffer.push("\n  <p>Try to resize this webpage.</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-nav-container classNames=\"ember-app\"}}\n\n      {{#paper-sidenav classNames=\"md-sidenav-left md-whiteframe-z2\" flex-layout=\"column\" flex=true}}\n\n        {{#paper-toolbar}}\n          &lt;div class=\"md-toolbar-tools\"&gt;\n            &lt;div class=\"logo\"&gt;\n              &lt;img src=\"ember-logo-white.png\" height=\"30\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        {{/paper-toolbar}}\n\n        {{#paper-content}}\n          &lt;nav class=\"sidenav\"&gt;\n            &lt;ul&gt;\n              &lt;li&gt;{{#link-to \"index\"}}Introduction{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"navigation\"}}Navigation{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"typography\"}}Typography{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"list\"}}List{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"divider\"}}Divider{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"button\"}}Button{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"checkbox\"}}Checkbox{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"switch\"}}Switch{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"radio\"}}Radio{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"textfield\"}}Text Field{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"toolbar\"}}Toolbar{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"icons\"}}Icons{{/link-to}}&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/nav&gt;\n        {{/paper-content}}\n      {{/paper-sidenav}}\n\n      {{#paper-content flex-layout=\"column\" flex=true}}\n        {{outlet}}\n      {{/paper-content}}\n\n    {{/paper-nav-container}}\n  </pre>\n");
+    return buffer;
     }
 
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}

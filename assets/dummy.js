@@ -724,6 +724,9 @@ define('dummy/routes/application', ['exports', 'ember'], function (exports, Embe
       },
       targetButton:function() {
         alert('You pressed a target button. -from route');
+      },
+      willTransition: function(transition) {
+        this.controller.set('drawerOpen',false);
       }
     }
   });
@@ -915,8 +918,9 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     }
 
     stack1 = (helper = helpers['paper-nav-container'] || (depth0 && depth0['paper-nav-container']),options={hash:{
+      'open': ("drawerOpen"),
       'classNames': ("ember-app")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-nav-container", options));
+    },hashTypes:{'open': "ID",'classNames': "STRING"},hashContexts:{'open': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-nav-container", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n\n<!-- Place this tag right after the last button or just before your close body tag. -->\n<script async defer id=\"github-bjs\" src=\"https://buttons.github.io/buttons.js\"></script>\n");
     return buffer;

@@ -66270,22 +66270,22 @@ define('ember-paper/components/paper-nav-container', ['exports', 'ember', 'ember
   exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName: 'md-nav-container',
     classNames:['paper-nav-container'],
-    classNameBindings: ['active:sidenav-expanded'],
+    classNameBindings: ['open:sidenav-expanded'],
 
-    active: false,
+    open: false,
 
     // Custom events
 
     toggleSidenav: function(){
-      this.toggleProperty('active');
+      this.toggleProperty('open');
     },
 
     expandSidenav: function(){
-      this.set('active', true);
+      this.set('open', true);
     },
 
     collapseSidenav: function(){
-      this.set('active', false);
+      this.set('open', false);
     }
   });
 

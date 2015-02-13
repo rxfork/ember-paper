@@ -753,13 +753,15 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     data.buffer.push("\n\n  ");
     stack1 = (helper = helpers['paper-sidenav'] || (depth0 && depth0['paper-sidenav']),options={hash:{
       'classNames': ("md-sidenav-left md-whiteframe-z2"),
-      'flex-layout': ("column")
-    },hashTypes:{'classNames': "STRING",'flex-layout': "STRING"},hashContexts:{'classNames': depth0,'flex-layout': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav", options));
+      'flex-layout': ("column"),
+      'flex': (true)
+    },hashTypes:{'classNames': "STRING",'flex-layout': "STRING",'flex': "BOOLEAN"},hashContexts:{'classNames': depth0,'flex-layout': depth0,'flex': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n\n  ");
     stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'flex-layout': ("column")
-    },hashTypes:{'flex-layout': "STRING"},hashContexts:{'flex-layout': depth0},inverse:self.noop,fn:self.program(30, program30, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+      'flex-layout': ("column"),
+      'flex': (true)
+    },hashTypes:{'flex-layout': "STRING",'flex': "BOOLEAN"},hashContexts:{'flex-layout': depth0,'flex': depth0},inverse:self.noop,fn:self.program(30, program30, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n\n");
     return buffer;

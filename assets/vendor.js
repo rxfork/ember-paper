@@ -66234,14 +66234,17 @@ define('ember-paper/components/paper-divider', ['exports', 'ember'], function (e
   });
 
 });
-define('ember-paper/components/paper-drawer', ['exports', 'ember'], function (exports, Ember) {
+define('ember-paper/components/paper-icon', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
 
   exports['default'] = Ember['default'].Component.extend({
-    classNames:['paper-drawer','sidenav', 'sidenav-static','animatable'],
-    classNameBindings:['open:visible'],
-    open:Ember['default'].computed.alias('parentView.drawerOpen')
+    tagName: 'md-icon',
+    classNames: ['paper-icon'],
+    classNameBindings: ['iconClass'],
+    iconClass: function(){
+      return 'ic-'+this.get('icon');
+    }.property('icon')
   });
 
 });

@@ -155,6 +155,449 @@ define('dummy/controllers/checkbox', ['exports', 'ember'], function (exports, Em
   });
 
 });
+define('dummy/controllers/icons', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Controller.extend({
+    icons:[
+      'access-alarms',
+      'access-time',
+      'accessibility',
+      'account-box',
+      'account-circle',
+      'adb',
+      'add',
+      'add-alarm',
+      'add-box',
+      'add-circle',
+      'add-circle-outline',
+      'airplane-mode-off',
+      'airplane-mode-on',
+      'android',
+      'apps',
+      'archive',
+      'arrow-back',
+      'arrow-drop-down',
+      'arrow-drop-down-circle',
+      'arrow-drop-up',
+      'arrow-forward',
+      'attachment',
+      'auto-fix',
+      'backspace',
+      'backup',
+      'beenhere',
+      'block',
+      'bluetooth',
+      'bluetooth-audio',
+      'bluetooth-connected',
+      'bluetooth-disabled',
+      'bluetooth-searching',
+      'bold',
+      'book',
+      'bookmark',
+      'bookmark-outline',
+      'brightness-auto',
+      'brightness-high',
+      'brightness-low',
+      'brightness-medium',
+      'bug-report',
+      'cake',
+      'call',
+      'call-end',
+      'call-made',
+      'call-merge',
+      'call-missed',
+      'call-received',
+      'call-split',
+      'camera',
+      'camera-alt',
+      'camera-roll',
+      'cancel',
+      'cast',
+      'cast-connected',
+      'chat',
+      'check',
+      'check-box',
+      'check-box-blank',
+      'check-box-outline',
+      'check-box-outline-blank',
+      'check-circle',
+      'check-circle-blank',
+      'check-circle-outline',
+      'check-circle-outline-blank',
+      'chevron-left',
+      'chevron-right',
+      'chromecast',
+      'circles',
+      'circles-add',
+      'circles-extended',
+      'clear',
+      'close',
+      'close-caption',
+      'cloud',
+      'cloud-circle',
+      'cloud-done',
+      'cloud-download',
+      'cloud-off',
+      'cloud-queue',
+      'cloud-upload',
+      'comment',
+      'communities',
+      'content-copy',
+      'content-cut',
+      'content-paste',
+      'create',
+      'credit-card',
+      'crop',
+      'crop-free',
+      'crop-landscape',
+      'crop-portrait',
+      'crop-square',
+      'data-usage',
+      'delete',
+      'developer-mode',
+      'dialpad',
+      'directions',
+      'directions-bike',
+      'directions-bus',
+      'directions-car',
+      'directions-subway',
+      'directions-train',
+      'directions-transit',
+      'directionswalk',
+      'disc-full',
+      'do-not-disturb',
+      'dock',
+      'domain',
+      'done',
+      'done-all',
+      'drafts',
+      'drive',
+      'drive-apk',
+      'drive-audio',
+      'drive-code',
+      'drive-document',
+      'drive-drawing',
+      'drive-eta',
+      'drive-file',
+      'drive-font',
+      'drive-form',
+      'drive-fusiontable',
+      'drive-image',
+      'drive-ms-excel',
+      'drive-ms-powerpoint',
+      'drive-ms-word',
+      'drive-pdf',
+      'drive-presentation',
+      'drive-script',
+      'drive-site',
+      'drive-spreadsheet',
+      'drive-video',
+      'drive-zip',
+      'earth',
+      'email',
+      'error',
+      'event',
+      'exit-to-app',
+      'expand-less',
+      'expand-more',
+      'explore',
+      'extension',
+      'fast-forward',
+      'fast-rewind',
+      'favorite',
+      'favorite-outline',
+      'file-download',
+      'file-upload',
+      'filter',
+      'flag',
+      'flash-auto',
+      'flash-off',
+      'flash-on',
+      'flights',
+      'flip-to-back',
+      'flip-to-front',
+      'folder',
+      'folder-mydrive',
+      'folder-shared',
+      'forum',
+      'forward',
+      'fullscreen',
+      'fullscreen-exit',
+      'gamepad',
+      'games',
+      'gesture',
+      'glass',
+      'gmail',
+      'google',
+      'google-plus',
+      'gps-fixed',
+      'gps-not-fixed',
+      'gps-off',
+      'group',
+      'group-add',
+      'hangout',
+      'hangout-video',
+      'hangout-video-off',
+      'headset',
+      'headset-mic',
+      'help',
+      'high-quality',
+      'history',
+      'home',
+      'hotel',
+      'https',
+      'image',
+      'import-export',
+      'inbox',
+      'info',
+      'info-outline',
+      'invert-colors',
+      'italics',
+      'keep',
+      'keyboard',
+      'keyboard-alt',
+      'keyboard-arrow-down',
+      'keyboard-arrow-left',
+      'keyboard-arrow-right',
+      'keyboard-arrow-up',
+      'keyboard-backspace',
+      'keyboard-capslock',
+      'keyboard-control',
+      'keyboard-hide',
+      'keyboard-return',
+      'keyboard-tab',
+      'keyboard-voice',
+      'label',
+      'label-outline',
+      'landscape',
+      'language',
+      'laptop',
+      'launch',
+      'link',
+      'list',
+      'live-help',
+      'location',
+      'location-city',
+      'location-disabled',
+      'location-searching',
+      'lock',
+      'lock-open',
+      'lock-outline',
+      'loop',
+      'mail',
+      'map',
+      'mark-unread',
+      'memory',
+      'menu',
+      'message',
+      'messenger',
+      'mic',
+      'none',
+      'off',
+      'mms',
+      'mood',
+      'more',
+      'more-horiz',
+      'more-vert',
+      'mouse',
+      'movie',
+      'nest-protect',
+      'nest-thermostat',
+      'network-cell',
+      'network-wifi',
+      'news',
+      'nfc',
+      'notifications',
+      'notifications-none',
+      'notifications-off',
+      'notifications-on',
+      'notifications-paused',
+      'pages',
+      'palette',
+      'panorama',
+      'party-mode',
+      'pause',
+      'pause-circle-fill',
+      'pause-circle-outline',
+      'people',
+      'person',
+      'person-add',
+      'person-location',
+      'person-outline',
+      'phone',
+      'phone2',
+      'phone-bluetooth-speaker',
+      'phone-forwarded',
+      'phone-in-talk',
+      'phone-locked',
+      'phone-missed',
+      'phone-paused',
+      'photo',
+      'photo-album',
+      'photo-library',
+      'place',
+      'play-arrow',
+      'play-circle-fill',
+      'play-circle-outline',
+      'play-download',
+      'play-install',
+      'plus-one',
+      'poll',
+      'polymer',
+      'portrait',
+      'post-blogger',
+      'post-facebook',
+      'post-gplus',
+      'post-instagram',
+      'post-linkedin',
+      'post-pinterest',
+      'post-tumblr',
+      'post-twitter',
+      'print',
+      'public',
+      'queue',
+      'radio-button-off',
+      'radio-button-on',
+      'receipt',
+      'refresh',
+      'reminder',
+      'remove',
+      'remove-circle',
+      'remove-circle-outline',
+      'replay',
+      'reply',
+      'reply-all',
+      'report',
+      'ring-volume',
+      'rotate-left',
+      'rotate-right',
+      'satellite',
+      'save',
+      'schedule',
+      'school',
+      'screen-lock-landscape',
+      'screen-lock-portrait',
+      'screen-lock-rotation',
+      'screen-rotation',
+      'sd-card',
+      'sd-storage',
+      'search',
+      'select-all',
+      'send',
+      'settings',
+      'settings-application',
+      'settings-bluetooth',
+      'settings-cell',
+      'settings-phone',
+      'settings-power',
+      'settings-voice',
+      'share',
+      'share-alt',
+      'shopping-basket',
+      'shopping-cart',
+      'shuffle',
+      'signal-cellular-1-bar',
+      'signal-cellular-2-bar',
+      'signal-cellular-3-bar',
+      'signal-cellular-4-bar',
+      'signal-wifi-1-bar',
+      'signal-wifi-2-bar',
+      'signal-wifi-3-bar',
+      'signal-wifi-4-bar',
+      'sim-card-alert',
+      'skip-next',
+      'skip-previous',
+      'slideshow',
+      'sms',
+      'sms-failed',
+      'sort',
+      'speaker',
+      'star',
+      'star-half',
+      'star-outline',
+      'star-rate',
+      'stop',
+      'storage',
+      'store',
+      'swap-driving-apps',
+      'swap-horiz',
+      'swap-vert',
+      'swap-vert-circle',
+      'switch-camera',
+      'switch-video',
+      'sync',
+      'sync-disabled',
+      'sync-green',
+      'sync-problem',
+      'sync-problem-red',
+      'system-update',
+      'tab',
+      'tab-unselected',
+      'tablet',
+      'tag-faces',
+      'tap-and-play',
+      'terrain',
+      'text-format',
+      'text-sms',
+      'theaters',
+      'thumbs-down',
+      'thumbs-up',
+      'time-to-leave',
+      'timelapse',
+      'timer',
+      'today',
+      'traffic',
+      'translate',
+      'tv',
+      'underline',
+      'undo',
+      'unfold-less',
+      'unfold-more',
+      'unknown-1',
+      'unknown-3',
+      'unknown-4',
+      'unknown-5',
+      'unknown-6',
+      'unknown-7',
+      'unkown-2',
+      'usb',
+      'vibration',
+      'video-youtube',
+      'videocam',
+      'videocam-off',
+      'view-array',
+      'view-column',
+      'view-headline',
+      'view-list',
+      'view-module',
+      'view-quilt',
+      'view-stream',
+      'visibility',
+      'visibility-off',
+      'voice',
+      'voicemail',
+      'volume-down',
+      'volume-mute',
+      'volume-off',
+      'volume-up',
+      'vpn',
+      'warning',
+      'watch',
+      'wb-auto',
+      'wb-cloudy',
+      'wb-incandescent',
+      'wb-irradescent',
+      'wb-sunny',
+      'web',
+      'whatshot',
+      'wifi-tethering',
+      'work'
+    ]
+  });
+
+});
 define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
@@ -1238,1740 +1681,24 @@ define('dummy/templates/icons', ['exports', 'ember'], function (exports, Ember) 
 
   function program4(depth0,data) {
     
-    var buffer = '', helper, options;
-    data.buffer.push("\n\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("access-alarms")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("access-time")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("accessibility")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("account-box")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("account-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("adb")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("add")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("add-alarm")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("add-box")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("add-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("add-circle-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("airplane-mode-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("airplane-mode-on")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("android")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("apps")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("archive")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("arrow-back")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("arrow-drop-down")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("arrow-drop-down-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("arrow-drop-up")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("arrow-forward")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("attachment")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("auto-fix")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("backspace")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("backup")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("beenhere")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("block")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bluetooth")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bluetooth-audio")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bluetooth-connected")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bluetooth-disabled")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bluetooth-searching")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bold")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("book")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bookmark")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bookmark-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("brightness-auto")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("brightness-high")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("brightness-low")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("brightness-medium")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("bug-report")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cake")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call-end")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call-made")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call-merge")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call-missed")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call-received")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("call-split")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("camera")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("camera-alt")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("camera-roll")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cancel")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cast")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cast-connected")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("chat")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-box")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-box-blank")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-box-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-box-outline-blank")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-circle-blank")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-circle-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("check-circle-outline-blank")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("chevron-left")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("chevron-right")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("chromecast")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("circles")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("circles-add")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("circles-extended")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("clear")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("close")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("close-caption")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud-done")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud-download")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud-queue")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("cloud-upload")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("comment")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("communities")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("content-copy")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("content-cut")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("content-paste")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("create")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("credit-card")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("crop")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("crop-free")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("crop-landscape")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("crop-portrait")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("crop-square")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("data-usage")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("delete")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("developer-mode")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("dialpad")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions-bike")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions-bus")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions-car")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions-subway")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions-train")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directions-transit")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("directionswalk")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("disc-full")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("do-not-disturb")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("dock")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("domain")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("done")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("done-all")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drafts")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-apk")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-audio")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-code")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-document")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-drawing")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-eta")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-file")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-font")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-form")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-fusiontable")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-image")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-ms-excel")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-ms-powerpoint")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-ms-word")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-pdf")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-presentation")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-script")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-site")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-spreadsheet")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-video")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("drive-zip")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("earth")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("email")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("error")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("event")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("exit-to-app")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("expand-less")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("expand-more")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("explore")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("extension")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("fast-forward")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("fast-rewind")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("favorite")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("favorite-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("file-download")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("file-upload")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("filter")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flag")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flash-auto")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flash-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flash-on")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flights")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flip-to-back")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("flip-to-front")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("folder")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("folder-mydrive")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("folder-shared")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("forum")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("forward")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("fullscreen")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("fullscreen-exit")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("gamepad")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("games")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("gesture")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("glass")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("gmail")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("google")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("google-plus")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("gps-fixed")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("gps-not-fixed")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("gps-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("group")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("group-add")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("hangout")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("hangout-video")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("hangout-video-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("headset")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("headset-mic")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("help")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("high-quality")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("history")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("home")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("hotel")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("https")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("image")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("import-export")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("inbox")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("info")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("info-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("invert-colors")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("italics")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keep")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-alt")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-arrow-down")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-arrow-left")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-arrow-right")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-arrow-up")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-backspace")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-capslock")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-control")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-hide")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-return")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-tab")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("keyboard-voice")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("label")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("label-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("landscape")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("language")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("laptop")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("launch")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("link")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("list")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("live-help")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("location")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("location-city")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("location-disabled")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("location-searching")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("lock")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("lock-open")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("lock-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("loop")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("mail")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("map")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("mark-unread")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("memory")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("message")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("messenger")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("mic")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("none")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("mms")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("mood")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("more")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("more-horiz")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("more-vert")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("mouse")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("movie")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("nest-protect")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("nest-thermostat")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("network-cell")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("network-wifi")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("news")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("nfc")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("notifications")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("notifications-none")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("notifications-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("notifications-on")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("notifications-paused")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("pages")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("palette")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("panorama")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("party-mode")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("pause")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("pause-circle-fill")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("pause-circle-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("people")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("person")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("person-add")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("person-location")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("person-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone2")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone-bluetooth-speaker")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone-forwarded")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone-in-talk")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone-locked")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone-missed")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("phone-paused")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("photo")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("photo-album")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("photo-library")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("place")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("play-arrow")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("play-circle-fill")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("play-circle-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("play-download")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("play-install")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("plus-one")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("poll")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("polymer")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("portrait")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-blogger")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-facebook")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-gplus")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-instagram")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-linkedin")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-pinterest")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-tumblr")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("post-twitter")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("print")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("public")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("queue")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("radio-button-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("radio-button-on")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("receipt")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("refresh")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("reminder")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("remove")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("remove-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("remove-circle-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("replay")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("reply")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("reply-all")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("report")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("ring-volume")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("rotate-left")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("rotate-right")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("satellite")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("save")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("schedule")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("school")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("screen-lock-landscape")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("screen-lock-portrait")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("screen-lock-rotation")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("screen-rotation")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sd-card")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sd-storage")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("search")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("select-all")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("send")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings-application")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings-bluetooth")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings-cell")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings-phone")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings-power")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("settings-voice")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("share")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("share-alt")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("shopping-basket")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("shopping-cart")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("shuffle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-cellular-1-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-cellular-2-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-cellular-3-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-cellular-4-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-wifi-1-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-wifi-2-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-wifi-3-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("signal-wifi-4-bar")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sim-card-alert")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("skip-next")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("skip-previous")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("slideshow")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sms")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sms-failed")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sort")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("speaker")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("star")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("star-half")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("star-outline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("star-rate")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("stop")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("storage")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("store")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("swap-driving-apps")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("swap-horiz")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("swap-vert")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("swap-vert-circle")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("switch-camera")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("switch-video")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sync")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sync-disabled")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sync-green")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sync-problem")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("sync-problem-red")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("system-update")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("tab")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("tab-unselected")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("tablet")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("tag-faces")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("tap-and-play")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("terrain")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("text-format")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("text-sms")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("theaters")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("thumbs-down")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("thumbs-up")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("time-to-leave")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("timelapse")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("timer")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("today")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("traffic")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("translate")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("tv")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("underline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("undo")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unfold-less")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unfold-more")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unknown-1")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unknown-3")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unknown-4")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unknown-5")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unknown-6")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unknown-7")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("unkown-2")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("usb")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("vibration")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("video-youtube")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("videocam")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("videocam-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-array")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-column")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-headline")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-list")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-module")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-quilt")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("view-stream")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("visibility")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("visibility-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("voice")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("voicemail")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("volume-down")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("volume-mute")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("volume-off")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("volume-up")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("vpn")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("warning")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("watch")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("wb-auto")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("wb-cloudy")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("wb-incandescent")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("wb-irradescent")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("wb-sunny")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("web")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("whatshot")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("wifi-tethering")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("work")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n\n");
+    var buffer = '', stack1;
+    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{paper-icon icon=\"check\"}}\n  </pre>\n\n  <div>\n    ");
+    stack1 = helpers.each.call(depth0, "icon", "in", "icons", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  </div>\n\n");
+    return buffer;
+    }
+  function program5(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n      <div class=\"icon-tile\">\n        ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
+      'icon': ("icon")
+    },hashTypes:{'icon': "ID"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
+    data.buffer.push("\n        <p>");
+    stack1 = helpers._triageMustache.call(depth0, "icon", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</p>\n      </div>\n    ");
     return buffer;
     }
 

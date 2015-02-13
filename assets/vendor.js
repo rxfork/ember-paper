@@ -66198,21 +66198,13 @@ define('ember-paper/components/paper-checkbox', ['exports', 'ember-paper/compone
   });
 
 });
-define('ember-paper/components/paper-content', ['exports', 'ember'], function (exports, Ember) {
+define('ember-paper/components/paper-content', ['exports', 'ember', 'ember-paper/mixins/flex-mixin'], function (exports, Ember, FlexMixin) {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Component.extend({
+  exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName:'md-content',
-    classNames:['md-content'],
-    attributeBindings:['flexAttr:flex','flex-layout:layout'],
-    /*
-     * Not binding boolean values in Ember 1.8.1?
-     * https://github.com/emberjs/ember.js/issues/9595
-     */
-    flexAttr:function(){
-      return this.get('flex') ? 'flex' : null;
-    }.property('flex')
+    classNames:['md-content']
   });
 
 });
@@ -66268,11 +66260,11 @@ define('ember-paper/components/paper-list', ['exports', 'ember'], function (expo
   });
 
 });
-define('ember-paper/components/paper-nav-container', ['exports', 'ember'], function (exports, Ember) {
+define('ember-paper/components/paper-nav-container', ['exports', 'ember', 'ember-paper/mixins/flex-mixin'], function (exports, Ember, FlexMixin) {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Component.extend({
+  exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName: 'md-nav-container',
     classNames:['paper-nav-container'],
     classNameBindings: ['active:sidenav-expanded'],
@@ -66350,11 +66342,11 @@ define('ember-paper/components/paper-sidenav-toggle', ['exports', 'ember'], func
   });
 
 });
-define('ember-paper/components/paper-sidenav', ['exports', 'ember'], function (exports, Ember) {
+define('ember-paper/components/paper-sidenav', ['exports', 'ember', 'ember-paper/mixins/flex-mixin'], function (exports, Ember, FlexMixin) {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Component.extend({
+  exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName: 'md-sidenav',
     classNames:['paper-sidenav']
   });
@@ -66459,6 +66451,22 @@ define('ember-paper/mixins/events-mixin', ['exports', 'ember'], function (export
     up: Ember['default'].K,
     down: Ember['default'].K,
     contextMenu: Ember['default'].K
+  });
+
+});
+define('ember-paper/mixins/flex-mixin', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Mixin.create({
+    attributeBindings:['flexAttr:flex','flex-layout:layout'],
+    /*
+     * Not binding boolean values in Ember 1.8.1?
+     * https://github.com/emberjs/ember.js/issues/9595
+     */
+    flexAttr:function(){
+      return this.get('flex') ? 'flex' : null;
+    }.property('flex')
   });
 
 });

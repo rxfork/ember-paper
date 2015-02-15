@@ -629,7 +629,7 @@ define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember)
       what: 'a message for you',
       notes: 'this is a message for you about ember'
     }]
-  })
+  });
 
 });
 define('dummy/controllers/switch', ['exports', 'ember'], function (exports, Ember) {
@@ -725,7 +725,7 @@ define('dummy/routes/application', ['exports', 'ember'], function (exports, Embe
       targetButton:function() {
         alert('You pressed a target button. -from route');
       },
-      willTransition: function(transition) {
+      willTransition: function() {
         this.controller.set('drawerOpen',false);
       }
     }
@@ -1355,7 +1355,7 @@ define('dummy/templates/components/paper-nav-container', ['exports', 'ember'], f
     stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
-    stack1 = helpers['if'].call(depth0, "active", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    stack1 = helpers['if'].call(depth0, "open", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;

@@ -4272,9 +4272,9 @@ md-icon {
   line-height: 24px; }
 
 md-sidenav {
-  width: 304px;
-  min-width: 304px;
-  max-width: 304px;
+  width: 254px;
+  min-width: 254px;
+  max-width: 254px;
   z-index: 60;
   background-color: white;
   overflow: auto;
@@ -4287,13 +4287,13 @@ md-sidenav {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2); }
   md-sidenav.md-sidenav-left {
-    left: -304px;
+    left: -254px;
     transition-property: left; }
     @media screen and (min-width: 850px) {
       md-sidenav.md-sidenav-left {
         left: 0; } }
   md-sidenav.md-sidenav-right {
-    right: -304px;
+    right: -254px;
     transition-property: right; }
     @media screen and (min-width: 850px) {
       md-sidenav.md-sidenav-right {

@@ -3598,8 +3598,34 @@ md-content {
     padding: 8px; }
 
 @media (min-width: 600px) {
-  .md-content.md-padding {
+  md-content.md-padding {
     padding: 16px; } }
+
+md-card {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 8px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26); }
+  md-card > img, md-card > :not(md-card-content) img {
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%; }
+  md-card md-card-content {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 16px; }
+
+md-card.md-default-theme {
+  border-radius: 2px; }
+  md-card.md-default-theme .md-card-image {
+    border-radius: 2px 2px 0 0; }
 
 /**
  * Position a FAB button.
@@ -4271,10 +4297,71 @@ md-icon {
   width: 24px;
   line-height: 24px; }
 
+.md-lg {
+  font-size: 1.5em;
+  line-height: .5em;
+  vertical-align: -35%; }
+
+.md-2x {
+  font-size: 2em; }
+
+.md-3x {
+  font-size: 3em; }
+
+.md-4x {
+  font-size: 4em; }
+
+.md-5x {
+  font-size: 5em; }
+
+.md-spin {
+  -webkit-animation: md-spin 1.5s infinite linear;
+  animation: md-spin 1.5s infinite linear; }
+
+.md-spin-reverse {
+  -webkit-animation: md-spin-reverse 1.5s infinite linear;
+  animation: md-spin-reverse 1.5s infinite linear; }
+
+@-webkit-keyframes md-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes md-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes md-spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg); } }
+
+@keyframes md-spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(-359deg);
+    transform: rotate(-359deg); } }
+
 md-sidenav {
-  width: 304px;
-  min-width: 304px;
-  max-width: 304px;
+  width: 254px;
+  min-width: 254px;
+  max-width: 254px;
   z-index: 60;
   background-color: white;
   overflow: auto;
@@ -4287,13 +4374,13 @@ md-sidenav {
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2); }
   md-sidenav.md-sidenav-left {
-    left: -304px;
+    left: -254px;
     transition-property: left; }
     @media screen and (min-width: 850px) {
       md-sidenav.md-sidenav-left {
         left: 0; } }
   md-sidenav.md-sidenav-right {
-    right: -304px;
+    right: -254px;
     transition-property: right; }
     @media screen and (min-width: 850px) {
       md-sidenav.md-sidenav-right {

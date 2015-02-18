@@ -66155,8 +66155,28 @@ define('ember-paper/components/paper-button', ['exports', 'ember', 'ember-paper/
         this.sendAction();
       }
 
-      return typeof this.get('bubbles') == 'undefined' || this.get('bubbles') == true;
+      return typeof this.get('bubbles') === 'undefined' || this.get('bubbles') === true;
     }
+  });
+
+});
+define('ember-paper/components/paper-card-content', ['exports', 'ember', 'ember-paper/mixins/flex-mixin'], function (exports, Ember, FlexMixin) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
+    tagName:'md-card-content',
+    classNames:['paper-card-content']
+  });
+
+});
+define('ember-paper/components/paper-card', ['exports', 'ember', 'ember-paper/mixins/flex-mixin'], function (exports, Ember, FlexMixin) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
+    tagName:'md-card',
+    classNames:['paper-card']
   });
 
 });
@@ -66204,7 +66224,7 @@ define('ember-paper/components/paper-content', ['exports', 'ember', 'ember-paper
 
   exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName:'md-content',
-    classNames:['md-content']
+    classNames:['paper-content']
   });
 
 });
@@ -66233,10 +66253,37 @@ define('ember-paper/components/paper-icon', ['exports', 'ember'], function (expo
   exports['default'] = Ember['default'].Component.extend({
     tagName: 'md-icon',
     classNames: ['paper-icon'],
-    classNameBindings: ['iconClass'],
+    classNameBindings: ['iconClass', 'sizeClass', 'spinClass'],
+
+    spin: false,
+    reverseSpin: false,
+
     iconClass: function(){
       return 'ic-'+this.get('icon');
-    }.property('icon')
+    }.property('icon'),
+
+    spinClass: function(){
+      if(this.get('spin')){
+        return ' md-spin';
+      } else if (this.get('reverseSpin')){
+        return ' md-spin-reverse';
+      }
+    }.property('spin','reverseSpin'),
+
+    sizeClass : function(){
+      switch(this.get('size')){
+        case 'lg':
+          return ' md-lg';
+        case 2:
+          return ' md-2x';
+        case 3:
+          return ' md-3x';
+        case 4:
+          return ' md-4x';
+        case 5:
+          return ' md-5x';
+      }
+    }.property('size')
   });
 
 });

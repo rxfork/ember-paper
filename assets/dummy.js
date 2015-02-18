@@ -40,6 +40,20 @@ define('dummy/components/paper-button', ['exports', 'ember-paper/components/pape
 	exports['default'] = PaperButton['default'];
 
 });
+define('dummy/components/paper-card-content', ['exports', 'ember-paper/components/paper-card-content'], function (exports, PaperCardContent) {
+
+	'use strict';
+
+	exports['default'] = PaperCardContent['default'];
+
+});
+define('dummy/components/paper-card', ['exports', 'ember-paper/components/paper-card'], function (exports, PaperCard) {
+
+	'use strict';
+
+	exports['default'] = PaperCard['default'];
+
+});
 define('dummy/components/paper-checkbox', ['exports', 'ember-paper/components/paper-checkbox'], function (exports, PaperCheckbox) {
 
 	'use strict';
@@ -629,7 +643,7 @@ define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember)
       what: 'a message for you',
       notes: 'this is a message for you about ember'
     }]
-  })
+  });
 
 });
 define('dummy/controllers/switch', ['exports', 'ember'], function (exports, Ember) {
@@ -695,6 +709,7 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
   Router.map(function() {
     this.route('introduction');
     this.route('button');
+    this.route('card');
     this.route('checkbox');
     this.route('radio');
     this.route('switch');
@@ -725,7 +740,7 @@ define('dummy/routes/application', ['exports', 'ember'], function (exports, Embe
       targetButton:function() {
         alert('You pressed a target button. -from route');
       },
-      willTransition: function(transition) {
+      willTransition: function() {
         this.controller.set('drawerOpen',false);
       }
     }
@@ -764,7 +779,7 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
       'flex-layout': ("column"),
       'flex': (true)
-    },hashTypes:{'flex-layout': "STRING",'flex': "BOOLEAN"},hashContexts:{'flex-layout': depth0,'flex': depth0},inverse:self.noop,fn:self.program(30, program30, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    },hashTypes:{'flex-layout': "STRING",'flex': "BOOLEAN"},hashContexts:{'flex-layout': depth0,'flex': depth0},inverse:self.noop,fn:self.program(32, program32, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n\n");
     return buffer;
@@ -812,25 +827,28 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
     stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "divider", options) : helperMissing.call(depth0, "link-to", "divider", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "button", options) : helperMissing.call(depth0, "link-to", "button", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "card", options) : helperMissing.call(depth0, "link-to", "card", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "button", options) : helperMissing.call(depth0, "link-to", "button", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "switch", options) : helperMissing.call(depth0, "link-to", "switch", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(22, program22, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(22, program22, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "switch", options) : helperMissing.call(depth0, "link-to", "switch", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(24, program24, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "textfield", options) : helperMissing.call(depth0, "link-to", "textfield", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(24, program24, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(26, program26, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toolbar", options) : helperMissing.call(depth0, "link-to", "toolbar", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(26, program26, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "textfield", options) : helperMissing.call(depth0, "link-to", "textfield", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(28, program28, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "icons", options) : helperMissing.call(depth0, "link-to", "icons", options));
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(28, program28, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toolbar", options) : helperMissing.call(depth0, "link-to", "toolbar", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("</li>\n          <li>");
+    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(30, program30, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "icons", options) : helperMissing.call(depth0, "link-to", "icons", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("</li>\n        </ul>\n      </nav>\n    ");
     return buffer;
@@ -868,46 +886,52 @@ define('dummy/templates/application', ['exports', 'ember'], function (exports, E
   function program16(depth0,data) {
     
     
-    data.buffer.push("Button");
+    data.buffer.push("Card");
     }
 
   function program18(depth0,data) {
     
     
-    data.buffer.push("Checkbox");
+    data.buffer.push("Button");
     }
 
   function program20(depth0,data) {
     
     
-    data.buffer.push("Switch");
+    data.buffer.push("Checkbox");
     }
 
   function program22(depth0,data) {
     
     
-    data.buffer.push("Radio");
+    data.buffer.push("Switch");
     }
 
   function program24(depth0,data) {
     
     
-    data.buffer.push("Text Field");
+    data.buffer.push("Radio");
     }
 
   function program26(depth0,data) {
     
     
-    data.buffer.push("Toolbar");
+    data.buffer.push("Text Field");
     }
 
   function program28(depth0,data) {
     
     
-    data.buffer.push("Icons");
+    data.buffer.push("Toolbar");
     }
 
   function program30(depth0,data) {
+    
+    
+    data.buffer.push("Icons");
+    }
+
+  function program32(depth0,data) {
     
     var buffer = '', stack1;
     data.buffer.push("\n    ");
@@ -962,7 +986,7 @@ define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember)
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <p>\n    ");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <p>\n    ");
     stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
       'action': ("flatButton")
     },hashTypes:{'action': "STRING"},hashContexts:{'action': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
@@ -1036,7 +1060,7 @@ define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember)
       'raised': (true),
       'label': ("Blockless version")
     },hashTypes:{'raised': "BOOLEAN",'label': "STRING"},hashContexts:{'raised': depth0,'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options))));
-    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n  &lt;p&gt;\n    {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n    {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n    {{#paper-button disabled=true}}disabled{{/paper-button}}\n    {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{paper-button raised=true label=\"Blockless version\"}}\n  &lt;/p&gt;\n  </pre>\n");
+    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n  &lt;p&gt;\n    {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n    {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n    {{#paper-button disabled=true}}disabled{{/paper-button}}\n    {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{paper-button raised=true label=\"Blockless version\"}}\n  &lt;/p&gt;\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -1103,6 +1127,106 @@ define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember)
   });
 
 });
+define('dummy/templates/card', ['exports', 'ember'], function (exports, Ember) {
+
+  'use strict';
+
+  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
+    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
+
+  function program1(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
+    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
+      'class': ("menu-sidenav-toggle")
+    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    <span>Card</span>\n  </h2>\n");
+    return buffer;
+    }
+  function program2(depth0,data) {
+    
+    var buffer = '', helper, options;
+    data.buffer.push("\n      ");
+    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
+      'icon': ("menu")
+    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+
+  function program4(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n<div class=\"doc-content\">\n  ");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("md-whiteframe-z1 list-demo")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-card}}\n    &lt;img src=\"https://material.angularjs.org/img/washedout.png\" alt=\"Washed Out\"&gt;\n    {{#paper-card-content}}\n      &lt;h2&gt;Paracosm&lt;/h2&gt;\n      &lt;p&gt;\n        The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n        two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n      &lt;/p&gt;\n    {{/paper-card-content}}\n  {{/paper-card}}\n  </pre>\n</div>\n");
+    return buffer;
+    }
+  function program5(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n    ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-card']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-card']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-card']) { stack1 = blockHelperMissing.call(depth0, 'paper-card', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-card']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-card']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-card']) { stack1 = blockHelperMissing.call(depth0, 'paper-card', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-card']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-card']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-card']) { stack1 = blockHelperMissing.call(depth0, 'paper-card', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n  ");
+    return buffer;
+    }
+  function program6(depth0,data) {
+    
+    var buffer = '', stack1, helper, options;
+    data.buffer.push("\n      <img src=\"https://material.angularjs.org/img/washedout.png\" alt=\"Washed Out\">\n      ");
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-card-content']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-card-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-card-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-card-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n    ");
+    return buffer;
+    }
+  function program7(depth0,data) {
+    
+    
+    data.buffer.push("\n        <h2>Paracosm</h2>\n        <p>\n          The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n        </p>\n      ");
+    }
+
+    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
+    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
+    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
+    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n\n");
+    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
+      'classNames': ("md-padding")
+    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
+    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+    data.buffer.push("\n");
+    return buffer;
+    
+  });
+
+});
 define('dummy/templates/checkbox', ['exports', 'ember'], function (exports, Ember) {
 
   'use strict';
@@ -1137,7 +1261,7 @@ define('dummy/templates/checkbox', ['exports', 'ember'], function (exports, Embe
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  ");
+    data.buffer.push("\n<div class=\"doc-content\">\n  ");
     stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
       'checked': ("value1")
     },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
@@ -1167,7 +1291,7 @@ define('dummy/templates/checkbox', ['exports', 'ember'], function (exports, Embe
     data.buffer.push(escapeExpression((helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
       'label': ("Blockless version")
     },hashTypes:{'label': "STRING"},hashContexts:{'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options))));
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n    {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n    {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n    {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n    {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n\n    {{paper-checkbox label=\"Blockless version\"}}\n  </pre>\n");
+    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n    {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n    {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n    {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n    {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n\n    {{paper-checkbox label=\"Blockless version\"}}\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -1355,7 +1479,7 @@ define('dummy/templates/components/paper-nav-container', ['exports', 'ember'], f
     stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
-    stack1 = helpers['if'].call(depth0, "active", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+    stack1 = helpers['if'].call(depth0, "open", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n");
     return buffer;
@@ -1488,7 +1612,7 @@ define('dummy/templates/divider', ['exports', 'ember'], function (exports, Ember
       'class': ("menu-sidenav-toggle")
     },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Dividers</span>\n  </h2>\n");
+    data.buffer.push("\n    <span>Divider</span>\n  </h2>\n");
     return buffer;
     }
   function program2(depth0,data) {
@@ -1505,7 +1629,7 @@ define('dummy/templates/divider', ['exports', 'ember'], function (exports, Ember
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n\n  <h4>Full width dividers</h4>\n  ");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <h4>Full width dividers</h4>\n  ");
     stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
       'classNames': ("md-whiteframe-z1 list-demo")
     },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
@@ -1515,7 +1639,7 @@ define('dummy/templates/divider', ['exports', 'ember'], function (exports, Ember
       'classNames': ("md-whiteframe-z1 list-demo")
     },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            &lt;h3&gt;{{what}}&lt;/h3&gt;\n            &lt;h4&gt;{{who}}&lt;/h4&gt;\n            &lt;p&gt;\n              {{notes}}\n            &lt;/p&gt;\n          {{/paper-tile-content}}\n        {{/paper-item}}\n        {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  </pre>\n\n");
+    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            &lt;h3&gt;{{what}}&lt;/h3&gt;\n            &lt;h4&gt;{{who}}&lt;/h4&gt;\n            &lt;p&gt;\n              {{notes}}\n            &lt;/p&gt;\n          {{/paper-tile-content}}\n        {{/paper-item}}\n        {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -1688,7 +1812,7 @@ define('dummy/templates/icons', ['exports', 'ember'], function (exports, Ember) 
   function program4(depth0,data) {
     
     var buffer = '', stack1;
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{paper-icon icon=\"check\"}}\n  </pre>\n\n  <div>\n    ");
+    data.buffer.push("\n\n  <h3>Template</h3>\n  <h4>Basic Icons</h4>\n  <pre>\n    {{paper-icon icon=\"check\"}}\n  </pre>\n  <h4>Larger Icons</h4>\n    <pre>\n      {{paper-icon icon=\"check\" size=\"lg\"}}\n      {{paper-icon icon=\"check\" size=2}}\n      {{paper-icon icon=\"check\" size=3}}\n      {{paper-icon icon=\"check\" size=4}}\n      {{paper-icon icon=\"check\" size=5}}\n    </pre>\n  <h4>Spinners</h4>\n    <pre>\n      {{paper-icon icon=\"rotate-right\" spin=true}}\n      {{paper-icon icon=\"rotate-left\" reverseSpin=true}}\n    </pre>\n  <div>\n    ");
     stack1 = helpers.each.call(depth0, "icon", "in", "icons", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
     data.buffer.push("\n  </div>\n\n");
@@ -1758,7 +1882,7 @@ define('dummy/templates/index', ['exports', 'ember'], function (exports, Ember) 
   function program4(depth0,data) {
     
     
-    data.buffer.push("\n  <h3>Welcome to Ember Paper.</h3>\n  <p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n  <h3>Installation</h3>\n  <p>Install the ember-cli addon in your ember-cli project:</p>\n  <div class=\"preview-block\">\n    <pre style=\"margin:0\">$ ember install:addon ember-paper</pre>\n  </div>\n  <p>All the components and styles are ready to use in your application templates.</p>\n  <p>Navigate through the docs to understand how to use each component.</p>\n\n  <h3>Contribution</h3>\n  <p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n  <p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n  <p>\n  <strong>Help us on Github!</strong>\n  <!-- Place this tag where you want the button to render. -->\n  </p>\n  <p>\n  <a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n  </p>\n");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <h3>Welcome to Ember Paper.</h3>\n  <p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n  <h3>Installation</h3>\n  <p>Install the ember-cli addon in your ember-cli project:</p>\n  <div class=\"preview-block\">\n    <pre style=\"margin:0\">$ ember install:addon ember-paper</pre>\n  </div>\n  <p>All the components and styles are ready to use in your application templates.</p>\n  <p>Navigate through the docs to understand how to use each component.</p>\n\n  <h3>Contribution</h3>\n  <p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n  <p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n  <p>\n  <strong>Help us on Github!</strong>\n  <!-- Place this tag where you want the button to render. -->\n  </p>\n  <p>\n  <a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n  </p>\n</div>\n");
     }
 
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
@@ -1811,12 +1935,12 @@ define('dummy/templates/list', ['exports', 'ember'], function (exports, Ember) {
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n\n  ");
+    data.buffer.push("\n<div class=\"doc-content\">\n  ");
     stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
       'classNames': ("md-whiteframe-z1 list-demo")
     },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            &lt;h3&gt;{{what}}&lt;/h3&gt;\n            &lt;h4&gt;{{who}}&lt;/h4&gt;\n            &lt;p&gt;\n              {{notes}}\n            &lt;/p&gt;\n          {{/paper-tile-content}}\n        {{/paper-item}}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  </pre>\n");
+    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            &lt;h3&gt;{{what}}&lt;/h3&gt;\n            &lt;h4&gt;{{who}}&lt;/h4&gt;\n            &lt;p&gt;\n              {{notes}}\n            &lt;/p&gt;\n          {{/paper-tile-content}}\n        {{/paper-item}}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -1948,7 +2072,7 @@ define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) 
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <ul class=\"paper-list-inline\">\n    <li>");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <ul class=\"paper-list-inline\">\n    <li>");
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
     if (helper = helpers['paper-radio']) { stack1 = helper.call(depth0, options); }
     else { helper = (depth0 && depth0['paper-radio']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
@@ -1990,7 +2114,7 @@ define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) 
       'toggle': (true),
       'label': ("Blockless version")
     },hashTypes:{'toggle': "BOOLEAN",'label': "STRING"},hashContexts:{'toggle': depth0,'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options))));
-    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-radio}}A radio button{{/paper-radio}}\n    {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n    {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n    {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n    {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n    {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n\n    {{paper-radio toggle=true label=\"Blockless version\"}}\n  </pre>\n");
+    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-radio}}A radio button{{/paper-radio}}\n    {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n    {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n    {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n    {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n    {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n\n    {{paper-radio toggle=true label=\"Blockless version\"}}\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -2079,7 +2203,7 @@ define('dummy/templates/sidenav', ['exports', 'ember'], function (exports, Ember
   function program4(depth0,data) {
     
     var buffer = '';
-    data.buffer.push("\n  <p>Try to resize this webpage.</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-nav-container classNames=\"ember-app\"}}\n\n      {{#paper-sidenav classNames=\"md-sidenav-left md-whiteframe-z2\" flex-layout=\"column\" flex=true}}\n\n        {{#paper-toolbar}}\n          &lt;div class=\"md-toolbar-tools\"&gt;\n            &lt;div class=\"logo\"&gt;\n              &lt;img src=\"ember-logo-white.png\" height=\"30\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        {{/paper-toolbar}}\n\n        {{#paper-content}}\n          &lt;nav class=\"sidenav\"&gt;\n            &lt;ul&gt;\n              &lt;li&gt;{{#link-to \"index\"}}Introduction{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"navigation\"}}Navigation{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"typography\"}}Typography{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"list\"}}List{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"divider\"}}Divider{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"button\"}}Button{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"checkbox\"}}Checkbox{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"switch\"}}Switch{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"radio\"}}Radio{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"textfield\"}}Text Field{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"toolbar\"}}Toolbar{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"icons\"}}Icons{{/link-to}}&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/nav&gt;\n        {{/paper-content}}\n      {{/paper-sidenav}}\n\n      {{#paper-content flex-layout=\"column\" flex=true}}\n        {{outlet}}\n      {{/paper-content}}\n\n    {{/paper-nav-container}}\n  </pre>\n");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <p>Try to resize this webpage.</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-nav-container classNames=\"ember-app\"}}\n\n      {{#paper-sidenav classNames=\"md-sidenav-left md-whiteframe-z2\" flex-layout=\"column\" flex=true}}\n\n        {{#paper-toolbar}}\n          &lt;div class=\"md-toolbar-tools\"&gt;\n            &lt;div class=\"logo\"&gt;\n              &lt;img src=\"ember-logo-white.png\" height=\"30\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        {{/paper-toolbar}}\n\n        {{#paper-content}}\n          &lt;nav class=\"sidenav\"&gt;\n            &lt;ul&gt;\n              &lt;li&gt;{{#link-to \"index\"}}Introduction{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"navigation\"}}Navigation{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"typography\"}}Typography{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"list\"}}List{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"divider\"}}Divider{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"button\"}}Button{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"checkbox\"}}Checkbox{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"switch\"}}Switch{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"radio\"}}Radio{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"textfield\"}}Text Field{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"toolbar\"}}Toolbar{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"icons\"}}Icons{{/link-to}}&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/nav&gt;\n        {{/paper-content}}\n      {{/paper-sidenav}}\n\n      {{#paper-content flex-layout=\"column\" flex=true}}\n        {{outlet}}\n      {{/paper-content}}\n\n    {{/paper-nav-container}}\n  </pre>\n</div>\n");
     return buffer;
     }
 
@@ -2133,7 +2257,7 @@ define('dummy/templates/switch', ['exports', 'ember'], function (exports, Ember)
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <p>\n    ");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <p>\n    ");
     stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
       'checked': ("booleanProp1")
     },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
@@ -2157,7 +2281,7 @@ define('dummy/templates/switch', ['exports', 'ember'], function (exports, Ember)
     data.buffer.push(escapeExpression((helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
       'label': ("Blockless version")
     },hashTypes:{'label': "STRING"},hashContexts:{'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options))));
-    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n    {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n    {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n    {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n\n    {{paper-switch label=\"Blockless version\"}}\n  </pre>\n");
+    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n    {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n    {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n    {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n\n    {{paper-switch label=\"Blockless version\"}}\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -2242,7 +2366,7 @@ define('dummy/templates/textfield', ['exports', 'ember'], function (exports, Emb
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <ul class=\"paper-list-inline\">\n    <li>");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <ul class=\"paper-list-inline\">\n    <li>");
     data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
       'label': ("Name"),
       'value': ("name")
@@ -2270,7 +2394,7 @@ define('dummy/templates/textfield', ['exports', 'ember'], function (exports, Emb
     data.buffer.push("</p>\n  <p>Email: ");
     stack1 = helpers._triageMustache.call(depth0, "email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{paper-text label=\"Name\" value=name}}\n    {{paper-text label=\"E-mail\" type=\"email\" value=email}}\n    {{paper-text label=\"Password\" type=\"password\"}}\n    {{paper-text label=\"E-mail\" type=\"email\" disabled=true}}\n  </pre>\n");
+    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{paper-text label=\"Name\" value=name}}\n    {{paper-text label=\"E-mail\" type=\"email\" value=email}}\n    {{paper-text label=\"Password\" type=\"password\"}}\n    {{paper-text label=\"E-mail\" type=\"email\" disabled=true}}\n  </pre>\n</div>\n");
     return buffer;
     }
 
@@ -2324,13 +2448,13 @@ define('dummy/templates/toolbar', ['exports', 'ember'], function (exports, Ember
   function program4(depth0,data) {
     
     var buffer = '', stack1, helper, options;
-    data.buffer.push("\n\n  ");
+    data.buffer.push("\n<div class=\"doc-content\">\n  ");
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
     if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
     else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
     if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
     if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <p>\"md-toolbar-tools\" is a class that centers your elements in the toolbar.</p>\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-toolbar}}\n      &lt;div class=\"md-toolbar-tools\"&gt;\n        {{#paper-button}}Example button{{/paper-button}}\n        {{#paper-button}}Example button{{/paper-button}}\n      &lt;/div&gt;\n    {{/paper-toolbar}}\n  </pre>\n\n");
+    data.buffer.push("\n\n  <p>\"md-toolbar-tools\" is a class that centers your elements in the toolbar.</p>\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-toolbar}}\n      &lt;div class=\"md-toolbar-tools\"&gt;\n        {{#paper-button}}Example button{{/paper-button}}\n        {{#paper-button}}Example button{{/paper-button}}\n      &lt;/div&gt;\n    {{/paper-toolbar}}\n  </pre>\n</div>\n");
     return buffer;
     }
   function program5(depth0,data) {
@@ -2407,7 +2531,7 @@ define('dummy/templates/typography', ['exports', 'ember'], function (exports, Em
   function program4(depth0,data) {
     
     
-    data.buffer.push("\n  <h3>Headings</h3>\n  <div class=\"preview-block\">\n    <h1>&lt;h1&gt;</h1>\n    <h2>&lt;h2&gt;</h2>\n    <h3>&lt;h3&gt;</h3>\n    <h4>&lt;h4&gt;</h4>\n    <h5>&lt;h5&gt;</h5>\n    <h6>&lt;h6&gt;</h6>\n  </div>\n\n  <h3>Formatting</h3>\n  <div class=\"preview-block\">\n    <p><u>&lt;u&gt;Underlined&lt;u&gt;</u></p>\n\n    <p><b>&lt;b&gt;Bold&lt;b&gt;</b></p>\n\n    <p><strong>&lt;strong&gt;Strong&lt;strong&gt;</strong></p>\n\n    <p><i>&lt;italic&gt;Italic&lt;italic&gt;</i></p>\n\n    <p><em>&lt;em&gt;Em&lt;em&gt;</em></p>\n\n    <p><s>&lt;s&gt;Strikethrough&lt;s&gt;</s></p>\n\n    <p><small>&lt;small&gt;Small&lt;small&gt;</small></p>\n\n    <p><mark>&lt;mark&gt;Mark&lt;mark&gt;</mark></p>\n  </div>\n\n  <h3>Subtitles</h3>\n  <div class=\"preview-block\">\n    <h1>&lt;h1&gt; <small>Subtitle</small></h1>\n    <h2>&lt;h2&gt; <small>Subtitle</small></h2>\n    <h3>&lt;h3&gt; <small>Subtitle</small></h3>\n    <h4>&lt;h4&gt; <small>Subtitle</small></h4>\n    <h5>&lt;h5&gt; <small>Subtitle</small></h5>\n    <h6>&lt;h6&gt; <small>Subtitle</small></h6>\n  </div>\n\n  <h3>Description</h3>\n  <div class=\"preview-block\">\n    <dl>\n      <dt>Description lists</dt>\n      <dd>A description list is perfect for defining terms.</dd>\n      <dt>Euismod</dt>\n      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n      <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n      <dt>Malesuada porta</dt>\n      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n    </dl>\n  </div>\n\n  <h3>Quotes</h3>\n  <div class=\"preview-block\">\n    <blockquote>&lt;blockquote&gt;</blockquote>\n  </div>\n\n  <h2>Addresses</h2>\n\n  <address>\n    <strong>Googleplex</strong><br>\n    1600 Amphitheatre Pkwy<br>\n    Mountain View, CA 94043<br>\n    <abbr title=\"Phone\">P:</abbr> (650) 253-0000\n  </address>\n\n  <h2>Code</h2>\n\n  <h3>Multi-line code blocks</h3>\n  <p>\n  Use &lt;pre&gt; for multi-line code blocks.\n  <pre>\n  &lt;p&gt;This is the first line of code&lt;/p&gt;\n  &lt;p&gt;This is the second line of code&lt;/p&gt;\n  </pre>\n  </p>\n\n  <h3>Inline code blocks</h3>\n  <p>Code blocks like <code>&lt;main&gt;</code> could be displayed inline.</p>\n\n  <h2>Tables</h2>\n\n  <h3>Basic table</h3>\n\n  <table>\n    <thead>\n      <tr>\n        <th>#</th>\n        <th>First Name</th>\n        <th>Last Name</th>\n        <th>Username</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>1</td>\n        <td>Larry</td>\n        <td>Page</td>\n        <td>+LarryPage</td>\n      </tr>\n      <tr>\n        <td>2</td>\n        <td>Sergey</td>\n        <td>Brin</td>\n        <td>+SergeyBrin</td>\n      </tr>\n      <tr>\n        <td>3</td>\n        <td>Eric</td>\n        <td>Schmidt</td>\n        <td>+EricSchmidt</td>\n      </tr>\n    </tbody>\n  </table>\n");
+    data.buffer.push("\n<div class=\"doc-content\">\n  <h3>Headings</h3>\n  <div class=\"preview-block\">\n    <h1>&lt;h1&gt;</h1>\n    <h2>&lt;h2&gt;</h2>\n    <h3>&lt;h3&gt;</h3>\n    <h4>&lt;h4&gt;</h4>\n    <h5>&lt;h5&gt;</h5>\n    <h6>&lt;h6&gt;</h6>\n  </div>\n\n  <h3>Formatting</h3>\n  <div class=\"preview-block\">\n    <p><u>&lt;u&gt;Underlined&lt;u&gt;</u></p>\n\n    <p><b>&lt;b&gt;Bold&lt;b&gt;</b></p>\n\n    <p><strong>&lt;strong&gt;Strong&lt;strong&gt;</strong></p>\n\n    <p><i>&lt;italic&gt;Italic&lt;italic&gt;</i></p>\n\n    <p><em>&lt;em&gt;Em&lt;em&gt;</em></p>\n\n    <p><s>&lt;s&gt;Strikethrough&lt;s&gt;</s></p>\n\n    <p><small>&lt;small&gt;Small&lt;small&gt;</small></p>\n\n    <p><mark>&lt;mark&gt;Mark&lt;mark&gt;</mark></p>\n  </div>\n\n  <h3>Subtitles</h3>\n  <div class=\"preview-block\">\n    <h1>&lt;h1&gt; <small>Subtitle</small></h1>\n    <h2>&lt;h2&gt; <small>Subtitle</small></h2>\n    <h3>&lt;h3&gt; <small>Subtitle</small></h3>\n    <h4>&lt;h4&gt; <small>Subtitle</small></h4>\n    <h5>&lt;h5&gt; <small>Subtitle</small></h5>\n    <h6>&lt;h6&gt; <small>Subtitle</small></h6>\n  </div>\n\n  <h3>Description</h3>\n  <div class=\"preview-block\">\n    <dl>\n      <dt>Description lists</dt>\n      <dd>A description list is perfect for defining terms.</dd>\n      <dt>Euismod</dt>\n      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n      <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n      <dt>Malesuada porta</dt>\n      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n    </dl>\n  </div>\n\n  <h3>Quotes</h3>\n  <div class=\"preview-block\">\n    <blockquote>&lt;blockquote&gt;</blockquote>\n  </div>\n\n  <h2>Addresses</h2>\n\n  <address>\n    <strong>Googleplex</strong><br>\n    1600 Amphitheatre Pkwy<br>\n    Mountain View, CA 94043<br>\n    <abbr title=\"Phone\">P:</abbr> (650) 253-0000\n  </address>\n\n  <h2>Code</h2>\n\n  <h3>Multi-line code blocks</h3>\n  <p>\n  Use &lt;pre&gt; for multi-line code blocks.\n  <pre>\n  &lt;p&gt;This is the first line of code&lt;/p&gt;\n  &lt;p&gt;This is the second line of code&lt;/p&gt;\n  </pre>\n  </p>\n\n  <h3>Inline code blocks</h3>\n  <p>Code blocks like <code>&lt;main&gt;</code> could be displayed inline.</p>\n\n  <h2>Tables</h2>\n\n  <h3>Basic table</h3>\n\n  <table>\n    <thead>\n      <tr>\n        <th>#</th>\n        <th>First Name</th>\n        <th>Last Name</th>\n        <th>Username</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>1</td>\n        <td>Larry</td>\n        <td>Page</td>\n        <td>+LarryPage</td>\n      </tr>\n      <tr>\n        <td>2</td>\n        <td>Sergey</td>\n        <td>Brin</td>\n        <td>+SergeyBrin</td>\n      </tr>\n      <tr>\n        <td>3</td>\n        <td>Eric</td>\n        <td>Schmidt</td>\n        <td>+EricSchmidt</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n");
     }
 
     options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}

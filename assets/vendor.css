@@ -4371,8 +4371,8 @@ md-sidenav {
   position: fixed;
   top: 0;
   bottom: 0;
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2); }
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); }
   md-sidenav.md-sidenav-left {
     left: -254px;
     transition-property: left; }
@@ -4414,6 +4414,15 @@ md-nav-container {
 @media screen and (min-width: 850px) {
   md-nav-container > md-backdrop {
     display: none; } }
+
+md-nav-container.sidenav-expanded md-backdrop {
+  -webkit-animation: cubic-bezier(0.25, 0.8, 0.25, 1) mdBackdropFadeIn 0.5s both;
+          animation: cubic-bezier(0.25, 0.8, 0.25, 1) mdBackdropFadeIn 0.5s both; }
+md-nav-container:not(.sidenav-expanded) md-backdrop {
+  -webkit-animation: cubic-bezier(0.55, 0, 0.55, 0.2) mdBackdropFadeOut 0.2s both;
+          animation: cubic-bezier(0.55, 0, 0.55, 0.2) mdBackdropFadeOut 0.2s both;
+  opacity: 0;
+  pointer-events: none; }
 
 md-backdrop {
   z-index: 50;

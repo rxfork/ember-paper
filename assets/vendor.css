@@ -4374,17 +4374,19 @@ md-sidenav {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); }
   md-sidenav.md-sidenav-left {
-    left: -254px;
-    transition-property: left; }
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
     @media screen and (min-width: 850px) {
       md-sidenav.md-sidenav-left {
-        left: 0; } }
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); } }
   md-sidenav.md-sidenav-right {
-    right: -254px;
-    transition-property: right; }
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
     @media screen and (min-width: 850px) {
       md-sidenav.md-sidenav-right {
-        right: 0; } }
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); } }
   @media screen and (min-width: 850px) {
     md-sidenav {
       display: -webkit-flex;
@@ -4407,9 +4409,11 @@ md-nav-container {
       -ms-flex-direction: row;
           flex-direction: row; }
   md-nav-container.sidenav-expanded md-sidenav.md-sidenav-left {
-    left: 0; }
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
   md-nav-container.sidenav-expanded md-sidenav.md-sidenav-right {
-    right: 0; }
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
 
 @media screen and (min-width: 850px) {
   md-nav-container > md-backdrop {
@@ -4418,11 +4422,6 @@ md-nav-container {
 md-nav-container.sidenav-expanded md-backdrop {
   -webkit-animation: cubic-bezier(0.25, 0.8, 0.25, 1) mdBackdropFadeIn 0.5s both;
           animation: cubic-bezier(0.25, 0.8, 0.25, 1) mdBackdropFadeIn 0.5s both; }
-md-nav-container:not(.sidenav-expanded) md-backdrop {
-  -webkit-animation: cubic-bezier(0.55, 0, 0.55, 0.2) mdBackdropFadeOut 0.2s both;
-          animation: cubic-bezier(0.55, 0, 0.55, 0.2) mdBackdropFadeOut 0.2s both;
-  opacity: 0;
-  pointer-events: none; }
 
 md-backdrop {
   z-index: 50;

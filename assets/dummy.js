@@ -164,8 +164,8 @@ define('dummy/controllers/checkbox', ['exports', 'ember'], function (exports, Em
   'use strict';
 
   exports['default'] = Ember['default'].Controller.extend({
-    value1:true,
-    value2:false
+    value1: true,
+    value2: false
   });
 
 });
@@ -174,441 +174,7 @@ define('dummy/controllers/icons', ['exports', 'ember'], function (exports, Ember
   'use strict';
 
   exports['default'] = Ember['default'].Controller.extend({
-    icons:[
-      'access-alarms',
-      'access-time',
-      'accessibility',
-      'account-box',
-      'account-circle',
-      'adb',
-      'add',
-      'add-alarm',
-      'add-box',
-      'add-circle',
-      'add-circle-outline',
-      'airplane-mode-off',
-      'airplane-mode-on',
-      'android',
-      'apps',
-      'archive',
-      'arrow-back',
-      'arrow-drop-down',
-      'arrow-drop-down-circle',
-      'arrow-drop-up',
-      'arrow-forward',
-      'attachment',
-      'auto-fix',
-      'backspace',
-      'backup',
-      'beenhere',
-      'block',
-      'bluetooth',
-      'bluetooth-audio',
-      'bluetooth-connected',
-      'bluetooth-disabled',
-      'bluetooth-searching',
-      'bold',
-      'book',
-      'bookmark',
-      'bookmark-outline',
-      'brightness-auto',
-      'brightness-high',
-      'brightness-low',
-      'brightness-medium',
-      'bug-report',
-      'cake',
-      'call',
-      'call-end',
-      'call-made',
-      'call-merge',
-      'call-missed',
-      'call-received',
-      'call-split',
-      'camera',
-      'camera-alt',
-      'camera-roll',
-      'cancel',
-      'cast',
-      'cast-connected',
-      'chat',
-      'check',
-      'check-box',
-      'check-box-blank',
-      'check-box-outline',
-      'check-box-outline-blank',
-      'check-circle',
-      'check-circle-blank',
-      'check-circle-outline',
-      'check-circle-outline-blank',
-      'chevron-left',
-      'chevron-right',
-      'chromecast',
-      'circles',
-      'circles-add',
-      'circles-extended',
-      'clear',
-      'close',
-      'close-caption',
-      'cloud',
-      'cloud-circle',
-      'cloud-done',
-      'cloud-download',
-      'cloud-off',
-      'cloud-queue',
-      'cloud-upload',
-      'comment',
-      'communities',
-      'content-copy',
-      'content-cut',
-      'content-paste',
-      'create',
-      'credit-card',
-      'crop',
-      'crop-free',
-      'crop-landscape',
-      'crop-portrait',
-      'crop-square',
-      'data-usage',
-      'delete',
-      'developer-mode',
-      'dialpad',
-      'directions',
-      'directions-bike',
-      'directions-bus',
-      'directions-car',
-      'directions-subway',
-      'directions-train',
-      'directions-transit',
-      'directionswalk',
-      'disc-full',
-      'do-not-disturb',
-      'dock',
-      'domain',
-      'done',
-      'done-all',
-      'drafts',
-      'drive',
-      'drive-apk',
-      'drive-audio',
-      'drive-code',
-      'drive-document',
-      'drive-drawing',
-      'drive-eta',
-      'drive-file',
-      'drive-font',
-      'drive-form',
-      'drive-fusiontable',
-      'drive-image',
-      'drive-ms-excel',
-      'drive-ms-powerpoint',
-      'drive-ms-word',
-      'drive-pdf',
-      'drive-presentation',
-      'drive-script',
-      'drive-site',
-      'drive-spreadsheet',
-      'drive-video',
-      'drive-zip',
-      'earth',
-      'email',
-      'error',
-      'event',
-      'exit-to-app',
-      'expand-less',
-      'expand-more',
-      'explore',
-      'extension',
-      'fast-forward',
-      'fast-rewind',
-      'favorite',
-      'favorite-outline',
-      'file-download',
-      'file-upload',
-      'filter',
-      'flag',
-      'flash-auto',
-      'flash-off',
-      'flash-on',
-      'flights',
-      'flip-to-back',
-      'flip-to-front',
-      'folder',
-      'folder-mydrive',
-      'folder-shared',
-      'forum',
-      'forward',
-      'fullscreen',
-      'fullscreen-exit',
-      'gamepad',
-      'games',
-      'gesture',
-      'glass',
-      'gmail',
-      'google',
-      'google-plus',
-      'gps-fixed',
-      'gps-not-fixed',
-      'gps-off',
-      'group',
-      'group-add',
-      'hangout',
-      'hangout-video',
-      'hangout-video-off',
-      'headset',
-      'headset-mic',
-      'help',
-      'high-quality',
-      'history',
-      'home',
-      'hotel',
-      'https',
-      'image',
-      'import-export',
-      'inbox',
-      'info',
-      'info-outline',
-      'invert-colors',
-      'italics',
-      'keep',
-      'keyboard',
-      'keyboard-alt',
-      'keyboard-arrow-down',
-      'keyboard-arrow-left',
-      'keyboard-arrow-right',
-      'keyboard-arrow-up',
-      'keyboard-backspace',
-      'keyboard-capslock',
-      'keyboard-control',
-      'keyboard-hide',
-      'keyboard-return',
-      'keyboard-tab',
-      'keyboard-voice',
-      'label',
-      'label-outline',
-      'landscape',
-      'language',
-      'laptop',
-      'launch',
-      'link',
-      'list',
-      'live-help',
-      'location',
-      'location-city',
-      'location-disabled',
-      'location-searching',
-      'lock',
-      'lock-open',
-      'lock-outline',
-      'loop',
-      'mail',
-      'map',
-      'mark-unread',
-      'memory',
-      'menu',
-      'message',
-      'messenger',
-      'mic',
-      'none',
-      'off',
-      'mms',
-      'mood',
-      'more',
-      'more-horiz',
-      'more-vert',
-      'mouse',
-      'movie',
-      'nest-protect',
-      'nest-thermostat',
-      'network-cell',
-      'network-wifi',
-      'news',
-      'nfc',
-      'notifications',
-      'notifications-none',
-      'notifications-off',
-      'notifications-on',
-      'notifications-paused',
-      'pages',
-      'palette',
-      'panorama',
-      'party-mode',
-      'pause',
-      'pause-circle-fill',
-      'pause-circle-outline',
-      'people',
-      'person',
-      'person-add',
-      'person-location',
-      'person-outline',
-      'phone',
-      'phone2',
-      'phone-bluetooth-speaker',
-      'phone-forwarded',
-      'phone-in-talk',
-      'phone-locked',
-      'phone-missed',
-      'phone-paused',
-      'photo',
-      'photo-album',
-      'photo-library',
-      'place',
-      'play-arrow',
-      'play-circle-fill',
-      'play-circle-outline',
-      'play-download',
-      'play-install',
-      'plus-one',
-      'poll',
-      'polymer',
-      'portrait',
-      'post-blogger',
-      'post-facebook',
-      'post-gplus',
-      'post-instagram',
-      'post-linkedin',
-      'post-pinterest',
-      'post-tumblr',
-      'post-twitter',
-      'print',
-      'public',
-      'queue',
-      'radio-button-off',
-      'radio-button-on',
-      'receipt',
-      'refresh',
-      'reminder',
-      'remove',
-      'remove-circle',
-      'remove-circle-outline',
-      'replay',
-      'reply',
-      'reply-all',
-      'report',
-      'ring-volume',
-      'rotate-left',
-      'rotate-right',
-      'satellite',
-      'save',
-      'schedule',
-      'school',
-      'screen-lock-landscape',
-      'screen-lock-portrait',
-      'screen-lock-rotation',
-      'screen-rotation',
-      'sd-card',
-      'sd-storage',
-      'search',
-      'select-all',
-      'send',
-      'settings',
-      'settings-application',
-      'settings-bluetooth',
-      'settings-cell',
-      'settings-phone',
-      'settings-power',
-      'settings-voice',
-      'share',
-      'share-alt',
-      'shopping-basket',
-      'shopping-cart',
-      'shuffle',
-      'signal-cellular-1-bar',
-      'signal-cellular-2-bar',
-      'signal-cellular-3-bar',
-      'signal-cellular-4-bar',
-      'signal-wifi-1-bar',
-      'signal-wifi-2-bar',
-      'signal-wifi-3-bar',
-      'signal-wifi-4-bar',
-      'sim-card-alert',
-      'skip-next',
-      'skip-previous',
-      'slideshow',
-      'sms',
-      'sms-failed',
-      'sort',
-      'speaker',
-      'star',
-      'star-half',
-      'star-outline',
-      'star-rate',
-      'stop',
-      'storage',
-      'store',
-      'swap-driving-apps',
-      'swap-horiz',
-      'swap-vert',
-      'swap-vert-circle',
-      'switch-camera',
-      'switch-video',
-      'sync',
-      'sync-disabled',
-      'sync-green',
-      'sync-problem',
-      'sync-problem-red',
-      'system-update',
-      'tab',
-      'tab-unselected',
-      'tablet',
-      'tag-faces',
-      'tap-and-play',
-      'terrain',
-      'text-format',
-      'text-sms',
-      'theaters',
-      'thumbs-down',
-      'thumbs-up',
-      'time-to-leave',
-      'timelapse',
-      'timer',
-      'today',
-      'traffic',
-      'translate',
-      'tv',
-      'underline',
-      'undo',
-      'unfold-less',
-      'unfold-more',
-      'unknown-1',
-      'unknown-3',
-      'unknown-4',
-      'unknown-5',
-      'unknown-6',
-      'unknown-7',
-      'unkown-2',
-      'usb',
-      'vibration',
-      'video-youtube',
-      'videocam',
-      'videocam-off',
-      'view-array',
-      'view-column',
-      'view-headline',
-      'view-list',
-      'view-module',
-      'view-quilt',
-      'view-stream',
-      'visibility',
-      'visibility-off',
-      'voice',
-      'voicemail',
-      'volume-down',
-      'volume-mute',
-      'volume-off',
-      'volume-up',
-      'vpn',
-      'warning',
-      'watch',
-      'wb-auto',
-      'wb-cloudy',
-      'wb-incandescent',
-      'wb-irradescent',
-      'wb-sunny',
-      'web',
-      'whatshot',
-      'wifi-tethering',
-      'work'
-    ]
+    icons: ["access-alarms", "access-time", "accessibility", "account-box", "account-circle", "adb", "add", "add-alarm", "add-box", "add-circle", "add-circle-outline", "airplane-mode-off", "airplane-mode-on", "android", "apps", "archive", "arrow-back", "arrow-drop-down", "arrow-drop-down-circle", "arrow-drop-up", "arrow-forward", "attachment", "auto-fix", "backspace", "backup", "beenhere", "block", "bluetooth", "bluetooth-audio", "bluetooth-connected", "bluetooth-disabled", "bluetooth-searching", "bold", "book", "bookmark", "bookmark-outline", "brightness-auto", "brightness-high", "brightness-low", "brightness-medium", "bug-report", "cake", "call", "call-end", "call-made", "call-merge", "call-missed", "call-received", "call-split", "camera", "camera-alt", "camera-roll", "cancel", "cast", "cast-connected", "chat", "check", "check-box", "check-box-blank", "check-box-outline", "check-box-outline-blank", "check-circle", "check-circle-blank", "check-circle-outline", "check-circle-outline-blank", "chevron-left", "chevron-right", "chromecast", "circles", "circles-add", "circles-extended", "clear", "close", "close-caption", "cloud", "cloud-circle", "cloud-done", "cloud-download", "cloud-off", "cloud-queue", "cloud-upload", "comment", "communities", "content-copy", "content-cut", "content-paste", "create", "credit-card", "crop", "crop-free", "crop-landscape", "crop-portrait", "crop-square", "data-usage", "delete", "developer-mode", "dialpad", "directions", "directions-bike", "directions-bus", "directions-car", "directions-subway", "directions-train", "directions-transit", "directionswalk", "disc-full", "do-not-disturb", "dock", "domain", "done", "done-all", "drafts", "drive", "drive-apk", "drive-audio", "drive-code", "drive-document", "drive-drawing", "drive-eta", "drive-file", "drive-font", "drive-form", "drive-fusiontable", "drive-image", "drive-ms-excel", "drive-ms-powerpoint", "drive-ms-word", "drive-pdf", "drive-presentation", "drive-script", "drive-site", "drive-spreadsheet", "drive-video", "drive-zip", "earth", "email", "error", "event", "exit-to-app", "expand-less", "expand-more", "explore", "extension", "fast-forward", "fast-rewind", "favorite", "favorite-outline", "file-download", "file-upload", "filter", "flag", "flash-auto", "flash-off", "flash-on", "flights", "flip-to-back", "flip-to-front", "folder", "folder-mydrive", "folder-shared", "forum", "forward", "fullscreen", "fullscreen-exit", "gamepad", "games", "gesture", "glass", "gmail", "google", "google-plus", "gps-fixed", "gps-not-fixed", "gps-off", "group", "group-add", "hangout", "hangout-video", "hangout-video-off", "headset", "headset-mic", "help", "high-quality", "history", "home", "hotel", "https", "image", "import-export", "inbox", "info", "info-outline", "invert-colors", "italics", "keep", "keyboard", "keyboard-alt", "keyboard-arrow-down", "keyboard-arrow-left", "keyboard-arrow-right", "keyboard-arrow-up", "keyboard-backspace", "keyboard-capslock", "keyboard-control", "keyboard-hide", "keyboard-return", "keyboard-tab", "keyboard-voice", "label", "label-outline", "landscape", "language", "laptop", "launch", "link", "list", "live-help", "location", "location-city", "location-disabled", "location-searching", "lock", "lock-open", "lock-outline", "loop", "mail", "map", "mark-unread", "memory", "menu", "message", "messenger", "mic", "none", "off", "mms", "mood", "more", "more-horiz", "more-vert", "mouse", "movie", "nest-protect", "nest-thermostat", "network-cell", "network-wifi", "news", "nfc", "notifications", "notifications-none", "notifications-off", "notifications-on", "notifications-paused", "pages", "palette", "panorama", "party-mode", "pause", "pause-circle-fill", "pause-circle-outline", "people", "person", "person-add", "person-location", "person-outline", "phone", "phone2", "phone-bluetooth-speaker", "phone-forwarded", "phone-in-talk", "phone-locked", "phone-missed", "phone-paused", "photo", "photo-album", "photo-library", "place", "play-arrow", "play-circle-fill", "play-circle-outline", "play-download", "play-install", "plus-one", "poll", "polymer", "portrait", "post-blogger", "post-facebook", "post-gplus", "post-instagram", "post-linkedin", "post-pinterest", "post-tumblr", "post-twitter", "print", "public", "queue", "radio-button-off", "radio-button-on", "receipt", "refresh", "reminder", "remove", "remove-circle", "remove-circle-outline", "replay", "reply", "reply-all", "report", "ring-volume", "rotate-left", "rotate-right", "satellite", "save", "schedule", "school", "screen-lock-landscape", "screen-lock-portrait", "screen-lock-rotation", "screen-rotation", "sd-card", "sd-storage", "search", "select-all", "send", "settings", "settings-application", "settings-bluetooth", "settings-cell", "settings-phone", "settings-power", "settings-voice", "share", "share-alt", "shopping-basket", "shopping-cart", "shuffle", "signal-cellular-1-bar", "signal-cellular-2-bar", "signal-cellular-3-bar", "signal-cellular-4-bar", "signal-wifi-1-bar", "signal-wifi-2-bar", "signal-wifi-3-bar", "signal-wifi-4-bar", "sim-card-alert", "skip-next", "skip-previous", "slideshow", "sms", "sms-failed", "sort", "speaker", "star", "star-half", "star-outline", "star-rate", "stop", "storage", "store", "swap-driving-apps", "swap-horiz", "swap-vert", "swap-vert-circle", "switch-camera", "switch-video", "sync", "sync-disabled", "sync-green", "sync-problem", "sync-problem-red", "system-update", "tab", "tab-unselected", "tablet", "tag-faces", "tap-and-play", "terrain", "text-format", "text-sms", "theaters", "thumbs-down", "thumbs-up", "time-to-leave", "timelapse", "timer", "today", "traffic", "translate", "tv", "underline", "undo", "unfold-less", "unfold-more", "unknown-1", "unknown-3", "unknown-4", "unknown-5", "unknown-6", "unknown-7", "unkown-2", "usb", "vibration", "video-youtube", "videocam", "videocam-off", "view-array", "view-column", "view-headline", "view-list", "view-module", "view-quilt", "view-stream", "visibility", "visibility-off", "voice", "voicemail", "volume-down", "volume-mute", "volume-off", "volume-up", "vpn", "warning", "watch", "wb-auto", "wb-cloudy", "wb-incandescent", "wb-irradescent", "wb-sunny", "web", "whatshot", "wifi-tethering", "work"]
   });
 
 });
@@ -618,30 +184,30 @@ define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember)
 
   exports['default'] = Ember['default'].Controller.extend({
     listData: [{
-      face: 'tomster.png',
-      who: 'tomster',
-      what: 'a message for you',
-      notes: 'this is a message for you about ember'
-    },{
-      face: 'tomster.png',
-      who: 'tomster',
-      what: 'a message for you',
-      notes: 'this is a message for you about ember'
-    },{
-      face: 'tomster.png',
-      who: 'tomster',
-      what: 'a message for you',
-      notes: 'this is a message for you about ember'
-    },{
-      face: 'tomster.png',
-      who: 'tomster',
-      what: 'a message for you',
-      notes: 'this is a message for you about ember'
-    },{
-      face: 'tomster.png',
-      who: 'tomster',
-      what: 'a message for you',
-      notes: 'this is a message for you about ember'
+      face: "tomster.png",
+      who: "tomster",
+      what: "a message for you",
+      notes: "this is a message for you about ember"
+    }, {
+      face: "tomster.png",
+      who: "tomster",
+      what: "a message for you",
+      notes: "this is a message for you about ember"
+    }, {
+      face: "tomster.png",
+      who: "tomster",
+      what: "a message for you",
+      notes: "this is a message for you about ember"
+    }, {
+      face: "tomster.png",
+      who: "tomster",
+      what: "a message for you",
+      notes: "this is a message for you about ember"
+    }, {
+      face: "tomster.png",
+      who: "tomster",
+      what: "a message for you",
+      notes: "this is a message for you about ember"
     }]
   });
 
@@ -651,9 +217,264 @@ define('dummy/controllers/switch', ['exports', 'ember'], function (exports, Embe
   'use strict';
 
   exports['default'] = Ember['default'].Controller.extend({
-    booleanProp1:true,
-    booleanProp2:false
+    booleanProp1: true,
+    booleanProp2: false
   });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/base-focusable.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/base-focusable.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/base-focusable.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-backdrop.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-backdrop.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-backdrop.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-button.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-button.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-button.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-card-content.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-card-content.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-card-content.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-card.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-card.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-card.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-checkbox.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-checkbox.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-checkbox.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-content.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-content.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-content.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-divider.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-divider.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-divider.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-icon.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-icon.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-icon.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-item.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-item.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-item.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-list.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-list.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-list.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-nav-container.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-nav-container.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-nav-container.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-radio.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-radio.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-radio.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-sidenav-toggle.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-sidenav-toggle.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-sidenav-toggle.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-sidenav.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-sidenav.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-sidenav.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-switch.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-switch.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-switch.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-text.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-text.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-text.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-tile-content.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-tile-content.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-tile-content.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-tile-left.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-tile-left.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-tile-left.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/components/paper-toolbar.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/components");
+  test("modules/ember-paper/components/paper-toolbar.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/components/paper-toolbar.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/mixins/events-mixin.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/mixins");
+  test("modules/ember-paper/mixins/events-mixin.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/mixins/events-mixin.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/mixins/flex-mixin.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/mixins");
+  test("modules/ember-paper/mixins/flex-mixin.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/mixins/flex-mixin.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/mixins/ripple-mixin.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/mixins");
+  test("modules/ember-paper/mixins/ripple-mixin.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/mixins/ripple-mixin.js should pass jshint.");
+  });
+
+});
+define('dummy/ember-paper/tests/modules/ember-paper/mixins/shadow-mixin.jshint', function () {
+
+  'use strict';
+
+  module("JSHint - modules/ember-paper/mixins");
+  test("modules/ember-paper/mixins/shadow-mixin.js should pass jshint", function () {
+    ok(true, "modules/ember-paper/mixins/shadow-mixin.js should pass jshint.");
+  });
+
+});
+define('dummy/initializers/app-version', ['exports', 'dummy/config/environment', 'ember'], function (exports, config, Ember) {
+
+  'use strict';
+
+  var classify = Ember['default'].String.classify;
+
+  exports['default'] = {
+    name: "App Version",
+    initialize: function initialize(container, application) {
+      var appName = classify(application.toString());
+      Ember['default'].libraries.register(appName, config['default'].APP.version);
+    }
+  };
 
 });
 define('dummy/initializers/events', ['exports'], function (exports) {
@@ -663,16 +484,16 @@ define('dummy/initializers/events', ['exports'], function (exports) {
   exports.initialize = initialize;
 
   function initialize(container, application) {
-    var customEvents = application.get('customEvents') || {};
-    Ember.String.w('toggle expand collapse').forEach(function (prefix) {
+    var customEvents = application.get("customEvents") || {};
+    Ember.String.w("toggle expand collapse").forEach(function (prefix) {
       var name = Ember.String.fmt("%@Sidenav", prefix);
       customEvents[name] = name;
     });
-    application.set('customEvents', customEvents);
+    application.set("customEvents", customEvents);
   }
 
   exports['default'] = {
-    name: 'events',
+    name: "events",
     initialize: initialize
   };
 
@@ -689,10 +510,12 @@ define('dummy/initializers/export-application-global', ['exports', 'ember', 'dum
     if (config['default'].exportApplicationGlobal && !window[classifiedName]) {
       window[classifiedName] = application;
     }
-  };
+  }
+
+  ;
 
   exports['default'] = {
-    name: 'export-application-global',
+    name: "export-application-global",
 
     initialize: initialize
   };
@@ -706,20 +529,20 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     location: config['default'].locationType
   });
 
-  Router.map(function() {
-    this.route('introduction');
-    this.route('button');
-    this.route('card');
-    this.route('checkbox');
-    this.route('radio');
-    this.route('switch');
-    this.route('typography');
-    this.route('list');
-    this.route('divider');
-    this.route('sidenav');
-    this.route('textfield');
-    this.route('toolbar');
-    this.route('icons');
+  Router.map(function () {
+    this.route("introduction");
+    this.route("button");
+    this.route("card");
+    this.route("checkbox");
+    this.route("radio");
+    this.route("switch");
+    this.route("typography");
+    this.route("list");
+    this.route("divider");
+    this.route("sidenav");
+    this.route("textfield");
+    this.route("toolbar");
+    this.route("icons");
   });
 
   exports['default'] = Router;
@@ -730,18 +553,18 @@ define('dummy/routes/application', ['exports', 'ember'], function (exports, Embe
   'use strict';
 
   exports['default'] = Ember['default'].Route.extend({
-    actions:{
-      raisedButton:function(){
-        alert('You pressed a raised button.');
+    actions: {
+      raisedButton: function raisedButton() {
+        alert("You pressed a raised button.");
       },
-      flatButton:function(){
-        alert('You pressed a flat button.');
+      flatButton: function flatButton() {
+        alert("You pressed a flat button.");
       },
-      targetButton:function() {
-        alert('You pressed a target button. -from route');
+      targetButton: function targetButton() {
+        alert("You pressed a target button. -from route");
       },
-      willTransition: function() {
-        this.controller.set('drawerOpen',false);
+      willTransition: function willTransition() {
+        this.controller.set("drawerOpen", false);
       }
     }
   });
@@ -752,1801 +575,7439 @@ define('dummy/routes/divider', ['exports', 'ember'], function (exports, Ember) {
   'use strict';
 
   exports['default'] = Ember['default'].Route.extend({
-    controllerName: 'list'
+    controllerName: "list"
   });
 
 });
-define('dummy/templates/application', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/templates/application', ['exports'], function (exports) {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        var child0 = (function() {
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("      ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("div");
+              dom.setAttribute(el1,"class","md-toolbar-tools");
+              var el2 = dom.createTextNode("\n        ");
+              dom.appendChild(el1, el2);
+              var el2 = dom.createElement("div");
+              dom.setAttribute(el2,"class","logo");
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("img");
+              dom.setAttribute(el3,"src","ember-logo-white.png");
+              dom.setAttribute(el3,"height","30");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("  ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("strong");
+              var el4 = dom.createTextNode("Paper");
+              dom.appendChild(el3, el4);
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n        ");
+              dom.appendChild(el2, el3);
+              dom.appendChild(el1, el2);
+              var el2 = dom.createTextNode("\n      ");
+              dom.appendChild(el1, el2);
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              return fragment;
+            }
+          };
+        }());
+        var child1 = (function() {
+          var child0 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Introduction");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child1 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Sidenav");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child2 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Typography");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child3 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("List");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child4 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Divider");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child5 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Card");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child6 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Button");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child7 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Checkbox");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child8 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Switch");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child9 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Radio");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child10 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Text Field");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child11 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Toolbar");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          var child12 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createTextNode("Icons");
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("      ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("nav");
+              dom.setAttribute(el1,"class","sidenav");
+              var el2 = dom.createTextNode("\n        ");
+              dom.appendChild(el1, el2);
+              var el2 = dom.createElement("ul");
+              var el3 = dom.createTextNode("\n        ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n          ");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createElement("li");
+              dom.appendChild(el2, el3);
+              var el3 = dom.createTextNode("\n        ");
+              dom.appendChild(el2, el3);
+              dom.appendChild(el1, el2);
+              var el2 = dom.createTextNode("\n      ");
+              dom.appendChild(el1, el2);
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              var element0 = dom.childAt(fragment, [1, 1]);
+              var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),-1,-1);
+              var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),-1,-1);
+              var morph2 = dom.createMorphAt(dom.childAt(element0, [5]),-1,-1);
+              var morph3 = dom.createMorphAt(dom.childAt(element0, [7]),-1,-1);
+              var morph4 = dom.createMorphAt(dom.childAt(element0, [9]),-1,-1);
+              var morph5 = dom.createMorphAt(dom.childAt(element0, [11]),-1,-1);
+              var morph6 = dom.createMorphAt(dom.childAt(element0, [13]),-1,-1);
+              var morph7 = dom.createMorphAt(dom.childAt(element0, [15]),-1,-1);
+              var morph8 = dom.createMorphAt(dom.childAt(element0, [17]),-1,-1);
+              var morph9 = dom.createMorphAt(dom.childAt(element0, [19]),-1,-1);
+              var morph10 = dom.createMorphAt(dom.childAt(element0, [21]),-1,-1);
+              var morph11 = dom.createMorphAt(dom.childAt(element0, [23]),-1,-1);
+              var morph12 = dom.createMorphAt(dom.childAt(element0, [25]),-1,-1);
+              block(env, morph0, context, "link-to", ["index"], {}, child0, null);
+              block(env, morph1, context, "link-to", ["sidenav"], {}, child1, null);
+              block(env, morph2, context, "link-to", ["typography"], {}, child2, null);
+              block(env, morph3, context, "link-to", ["list"], {}, child3, null);
+              block(env, morph4, context, "link-to", ["divider"], {}, child4, null);
+              block(env, morph5, context, "link-to", ["card"], {}, child5, null);
+              block(env, morph6, context, "link-to", ["button"], {}, child6, null);
+              block(env, morph7, context, "link-to", ["checkbox"], {}, child7, null);
+              block(env, morph8, context, "link-to", ["switch"], {}, child8, null);
+              block(env, morph9, context, "link-to", ["radio"], {}, child9, null);
+              block(env, morph10, context, "link-to", ["textfield"], {}, child10, null);
+              block(env, morph11, context, "link-to", ["toolbar"], {}, child11, null);
+              block(env, morph12, context, "link-to", ["icons"], {}, child12, null);
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[2]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+            block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+            block(env, morph1, context, "paper-content", [], {}, child1, null);
+            return fragment;
+          }
+        };
+      }());
+      var child1 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("    ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, content = hooks.content;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            content(env, morph0, context, "outlet");
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+          block(env, morph0, context, "paper-sidenav", [], {"classNames": "md-sidenav-left md-whiteframe-z2", "flex-layout": "column", "flex": true}, child0, null);
+          block(env, morph1, context, "paper-content", [], {"flex-layout": "column", "flex": true}, child1, null);
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment(" Place this tag right after the last button or just before your close body tag. ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("script");
+        dom.setAttribute(el1,"async","");
+        dom.setAttribute(el1,"defer","");
+        dom.setAttribute(el1,"id","github-bjs");
+        dom.setAttribute(el1,"src","https://buttons.github.io/buttons.js");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        block(env, morph0, context, "paper-nav-container", [], {"open": get(env, context, "drawerOpen"), "classNames": "ember-app"}, child0, null);
+        return fragment;
+      }
+    };
+  }()));
 
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n\n  ");
-    stack1 = (helper = helpers['paper-sidenav'] || (depth0 && depth0['paper-sidenav']),options={hash:{
-      'classNames': ("md-sidenav-left md-whiteframe-z2"),
-      'flex-layout': ("column"),
-      'flex': (true)
-    },hashTypes:{'classNames': "STRING",'flex-layout': "STRING",'flex': "BOOLEAN"},hashContexts:{'classNames': depth0,'flex-layout': depth0,'flex': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  ");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'flex-layout': ("column"),
-      'flex': (true)
-    },hashTypes:{'flex-layout': "STRING",'flex': "BOOLEAN"},hashContexts:{'flex-layout': depth0,'flex': depth0},inverse:self.noop,fn:self.program(32, program32, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-content']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-  function program3(depth0,data) {
-    
-    
-    data.buffer.push("\n      <div class=\"md-toolbar-tools\">\n        <div class=\"logo\">\n          <img src=\"ember-logo-white.png\" height=\"30\"/>&nbsp;&nbsp;<strong>Paper</strong>\n        </div>\n      </div>\n    ");
-    }
+});
+define('dummy/templates/button', ['exports'], function (exports) {
 
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n      <nav class=\"sidenav\">\n        <ul>\n        <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "sidenav", options) : helperMissing.call(depth0, "link-to", "sidenav", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "typography", options) : helperMissing.call(depth0, "link-to", "typography", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(12, program12, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "list", options) : helperMissing.call(depth0, "link-to", "list", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "divider", options) : helperMissing.call(depth0, "link-to", "divider", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(16, program16, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "card", options) : helperMissing.call(depth0, "link-to", "card", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(18, program18, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "button", options) : helperMissing.call(depth0, "link-to", "button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(20, program20, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkbox", options) : helperMissing.call(depth0, "link-to", "checkbox", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(22, program22, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "switch", options) : helperMissing.call(depth0, "link-to", "switch", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(24, program24, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "radio", options) : helperMissing.call(depth0, "link-to", "radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(26, program26, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "textfield", options) : helperMissing.call(depth0, "link-to", "textfield", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(28, program28, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "toolbar", options) : helperMissing.call(depth0, "link-to", "toolbar", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n          <li>");
-    stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(30, program30, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "icons", options) : helperMissing.call(depth0, "link-to", "icons", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n        </ul>\n      </nav>\n    ");
-    return buffer;
-    }
-  function program6(depth0,data) {
-    
-    
-    data.buffer.push("Introduction");
-    }
+  'use strict';
 
-  function program8(depth0,data) {
-    
-    
-    data.buffer.push("Sidenav");
-    }
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Buttons");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Button with action");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child1 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Primary (noink)");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child2 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("disabled");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child3 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("warn");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child4 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Button with action");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child5 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Primary");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child6 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("disabled");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child7 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("warn");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child8 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Button with target");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child9 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Button with bubble");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child10 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Button no bubble");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n  <p>\n    {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n    {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n    {{#paper-button disabled=true}}disabled{{/paper-button}}\n    {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n  </p>\n  <p>\n    {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n  </p>\n  <p>\n    {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n  </p>\n  <p>\n    {{paper-button raised=true label=\"Blockless version\"}}\n  </p>\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block, get = hooks.get, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var element0 = dom.childAt(fragment, [0]);
+          var element1 = dom.childAt(element0, [1]);
+          var element2 = dom.childAt(element0, [3]);
+          var element3 = dom.childAt(element0, [5]);
+          var morph0 = dom.createMorphAt(element1,0,1);
+          var morph1 = dom.createMorphAt(element1,1,2);
+          var morph2 = dom.createMorphAt(element1,2,3);
+          var morph3 = dom.createMorphAt(element1,3,4);
+          var morph4 = dom.createMorphAt(element2,0,1);
+          var morph5 = dom.createMorphAt(element2,1,2);
+          var morph6 = dom.createMorphAt(element2,2,3);
+          var morph7 = dom.createMorphAt(element2,3,4);
+          var morph8 = dom.createMorphAt(element3,0,1);
+          var morph9 = dom.createMorphAt(element3,1,2);
+          var morph10 = dom.createMorphAt(element3,2,3);
+          var morph11 = dom.createMorphAt(dom.childAt(element0, [7]),0,1);
+          block(env, morph0, context, "paper-button", [], {"action": "flatButton"}, child0, null);
+          block(env, morph1, context, "paper-button", [], {"noink": true, "classNames": "md-primary"}, child1, null);
+          block(env, morph2, context, "paper-button", [], {"disabled": true}, child2, null);
+          block(env, morph3, context, "paper-button", [], {"classNames": "md-warn"}, child3, null);
+          block(env, morph4, context, "paper-button", [], {"raised": true, "action": "raisedButton"}, child4, null);
+          block(env, morph5, context, "paper-button", [], {"raised": true, "classNames": "md-primary"}, child5, null);
+          block(env, morph6, context, "paper-button", [], {"raised": true, "disabled": true}, child6, null);
+          block(env, morph7, context, "paper-button", [], {"raised": true, "classNames": "md-warn"}, child7, null);
+          block(env, morph8, context, "paper-button", [], {"raised": true, "action": "targetButton", "target": get(env, context, "view")}, child8, null);
+          block(env, morph9, context, "paper-button", [], {"raised": true, "classNames": "md-primary", "action": "targetButton", "target": get(env, context, "view")}, child9, null);
+          block(env, morph10, context, "paper-button", [], {"raised": true, "classNames": "md-primary", "action": "targetButton", "target": get(env, context, "view"), "bubbles": false}, child10, null);
+          inline(env, morph11, context, "paper-button", [], {"raised": true, "label": "Blockless version"});
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding demo-buttons"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
 
-  function program10(depth0,data) {
-    
-    
-    data.buffer.push("Typography");
-    }
+});
+define('dummy/templates/card', ['exports'], function (exports) {
 
-  function program12(depth0,data) {
-    
-    
-    data.buffer.push("List");
-    }
+  'use strict';
 
-  function program14(depth0,data) {
-    
-    
-    data.buffer.push("Divider");
-    }
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Card");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        var child0 = (function() {
+          var child0 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("h2");
+                var el2 = dom.createTextNode("Paracosm");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("p");
+                var el2 = dom.createTextNode("\n          The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n        ");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("      ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("img");
+              dom.setAttribute(el1,"src","https://material.angularjs.org/img/washedout.png");
+              dom.setAttribute(el1,"alt","Washed Out");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
+              var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+              block(env, morph0, context, "paper-card-content", [], {}, child0, null);
+              return fragment;
+            }
+          };
+        }());
+        var child1 = (function() {
+          var child0 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("h2");
+                var el2 = dom.createTextNode("Paracosm");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("p");
+                var el2 = dom.createTextNode("\n          The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n        ");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("      ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("img");
+              dom.setAttribute(el1,"src","https://material.angularjs.org/img/washedout.png");
+              dom.setAttribute(el1,"alt","Washed Out");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
+              var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+              block(env, morph0, context, "paper-card-content", [], {}, child0, null);
+              return fragment;
+            }
+          };
+        }());
+        var child2 = (function() {
+          var child0 = (function() {
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("h2");
+                var el2 = dom.createTextNode("Paracosm");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("p");
+                var el2 = dom.createTextNode("\n          The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n        ");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("      ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createElement("img");
+              dom.setAttribute(el1,"src","https://material.angularjs.org/img/washedout.png");
+              dom.setAttribute(el1,"alt","Washed Out");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("\n");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
+              var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+              block(env, morph0, context, "paper-card-content", [], {}, child0, null);
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2,3]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+            var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+            block(env, morph0, context, "paper-card", [], {}, child0, null);
+            block(env, morph1, context, "paper-card", [], {}, child1, null);
+            block(env, morph2, context, "paper-card", [], {}, child2, null);
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n  {{#paper-card}}\n    <img src=\"https://material.angularjs.org/img/washedout.png\" alt=\"Washed Out\">\n    {{#paper-card-content}}\n      <h2>Paracosm</h2>\n      <p>\n        The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n        two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n      </p>\n    {{/paper-card-content}}\n  {{/paper-card}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+          block(env, morph0, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
 
-  function program16(depth0,data) {
-    
-    
-    data.buffer.push("Card");
-    }
+});
+define('dummy/templates/checkbox', ['exports'], function (exports) {
 
-  function program18(depth0,data) {
-    
-    
-    data.buffer.push("Button");
-    }
+  'use strict';
 
-  function program20(depth0,data) {
-    
-    
-    data.buffer.push("Checkbox");
-    }
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Checkboxes");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("A checkbox: ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, content = hooks.content;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[1]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            content(env, morph0, context, "value1");
+            return fragment;
+          }
+        };
+      }());
+      var child1 = (function() {
+        var child0 = (function() {
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createTextNode("yep");
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              return fragment;
+            }
+          };
+        }());
+        var child1 = (function() {
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createTextNode("nope");
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("A checkbox: ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, get = hooks.get, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[1]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            block(env, morph0, context, "if", [get(env, context, "value2")], {}, child0, child1);
+            return fragment;
+          }
+        };
+      }());
+      var child2 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Checkbox (disabled)");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child3 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Checkbox (disabled and checked)");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child4 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Checkbox (no ink)");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n    {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n    {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n    {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n    {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n    {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n\n    {{paper-checkbox label=\"Blockless version\"}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, block = hooks.block, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var element0 = dom.childAt(fragment, [0]);
+          var morph0 = dom.createMorphAt(element0,0,1);
+          var morph1 = dom.createMorphAt(element0,1,2);
+          var morph2 = dom.createMorphAt(element0,2,3);
+          var morph3 = dom.createMorphAt(element0,3,4);
+          var morph4 = dom.createMorphAt(element0,4,5);
+          var morph5 = dom.createMorphAt(element0,5,6);
+          block(env, morph0, context, "paper-checkbox", [], {"checked": get(env, context, "value1")}, child0, null);
+          block(env, morph1, context, "paper-checkbox", [], {"checked": get(env, context, "value2")}, child1, null);
+          block(env, morph2, context, "paper-checkbox", [], {"disabled": true}, child2, null);
+          block(env, morph3, context, "paper-checkbox", [], {"disabled": true, "checked": true}, child3, null);
+          block(env, morph4, context, "paper-checkbox", [], {"noink": true}, child4, null);
+          inline(env, morph5, context, "paper-checkbox", [], {"label": "Blockless version"});
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
 
-  function program22(depth0,data) {
-    
-    
-    data.buffer.push("Switch");
-    }
+});
+define('dummy/templates/components/base-focusable', ['exports'], function (exports) {
 
-  function program24(depth0,data) {
-    
-    
-    data.buffer.push("Radio");
-    }
+  'use strict';
 
-  function program26(depth0,data) {
-    
-    
-    data.buffer.push("Text Field");
-    }
+  exports['default'] = Ember.HTMLBars.template((function() {
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, content = hooks.content;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        content(env, morph0, context, "yield");
+        return fragment;
+      }
+    };
+  }()));
 
-  function program28(depth0,data) {
-    
-    
-    data.buffer.push("Toolbar");
-    }
+});
+define('dummy/templates/components/paper-button', ['exports'], function (exports) {
 
-  function program30(depth0,data) {
-    
-    
-    data.buffer.push("Icons");
-    }
+  'use strict';
 
-  function program32(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          content(env, morph0, context, "yield");
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          content(env, morph0, context, "label");
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("span");
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, element = hooks.element, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var element0 = dom.childAt(fragment, [0]);
+        var morph0 = dom.createMorphAt(element0,0,-1);
+        element(env, element0, context, "bind-attr", [], {"type": get(env, context, "type"), "disabled": get(env, context, "disabled")});
+        block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }()));
 
-    stack1 = (helper = helpers['paper-nav-container'] || (depth0 && depth0['paper-nav-container']),options={hash:{
-      'open': ("drawerOpen"),
-      'classNames': ("ember-app")
-    },hashTypes:{'open': "ID",'classNames': "STRING"},hashContexts:{'open': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-nav-container", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n<!-- Place this tag right after the last button or just before your close body tag. -->\n<script async defer id=\"github-bjs\" src=\"https://buttons.github.io/buttons.js\"></script>\n");
-    return buffer;
-    
+});
+define('dummy/templates/components/paper-checkbox', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","md-label");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          content(env, morph0, context, "yield");
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","md-label");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          content(env, morph0, context, "label");
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","md-container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","md-icon");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[2]); }
+        var morph0 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/components/paper-nav-container', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          inline(env, morph0, context, "paper-backdrop", [], {"classNames": "md-sidenav-backdrop"});
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, content = hooks.content, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        content(env, morph0, context, "yield");
+        block(env, morph1, context, "if", [get(env, context, "open")], {}, child0, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/components/paper-radio', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","md-label");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          content(env, morph0, context, "yield");
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","md-label");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          content(env, morph0, context, "label");
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","md-container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","md-off");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","md-on");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[2]); }
+        var morph0 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/components/paper-switch', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","md-label");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          content(env, morph0, context, "yield");
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","md-label");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          content(env, morph0, context, "label");
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","md-switch-bar");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","md-container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","md-bar");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","md-thumb-container");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","md-thumb");
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[4]); }
+        var morph0 = dom.createMorphAt(fragment,3,4,contextualElement);
+        block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/components/paper-text', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("label");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, element = hooks.element, content = hooks.content, inline = hooks.inline;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var element0 = dom.childAt(fragment, [0]);
+        var morph0 = dom.createMorphAt(element0,-1,-1);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        element(env, element0, context, "bind-attr", [], {"for": get(env, context, "inputElementId")});
+        content(env, morph0, context, "label");
+        inline(env, morph1, context, "input", [], {"id": get(env, context, "inputElementId"), "type": get(env, context, "type"), "value": get(env, context, "value"), "focus-in": "focusIn", "focus-out": "focusOut", "disabled": get(env, context, "disabled")});
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/divider', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Divider");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        var child0 = (function() {
+          var child0 = (function() {
+            var child0 = (function() {
+              var child0 = (function() {
+                return {
+                  isHTMLBars: true,
+                  blockParams: 0,
+                  cachedFragment: null,
+                  hasRendered: false,
+                  build: function build(dom) {
+                    var el0 = dom.createDocumentFragment();
+                    var el1 = dom.createTextNode("            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("img");
+                    dom.setAttribute(el1,"class","face");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n");
+                    dom.appendChild(el0, el1);
+                    return el0;
+                  },
+                  render: function render(context, env, contextualElement) {
+                    var dom = env.dom;
+                    var hooks = env.hooks, get = hooks.get, element = hooks.element;
+                    dom.detectNamespace(contextualElement);
+                    var fragment;
+                    if (env.useFragmentCache && dom.canClone) {
+                      if (this.cachedFragment === null) {
+                        fragment = this.build(dom);
+                        if (this.hasRendered) {
+                          this.cachedFragment = fragment;
+                        } else {
+                          this.hasRendered = true;
+                        }
+                      }
+                      if (this.cachedFragment) {
+                        fragment = dom.cloneNode(this.cachedFragment, true);
+                      }
+                    } else {
+                      fragment = this.build(dom);
+                    }
+                    var element1 = dom.childAt(fragment, [1]);
+                    element(env, element1, context, "bind-attr", [], {"src": get(env, context, "item.face"), "alt": get(env, context, "item.who")});
+                    return fragment;
+                  }
+                };
+              }());
+              var child1 = (function() {
+                return {
+                  isHTMLBars: true,
+                  blockParams: 0,
+                  cachedFragment: null,
+                  hasRendered: false,
+                  build: function build(dom) {
+                    var el0 = dom.createDocumentFragment();
+                    var el1 = dom.createTextNode("            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("h3");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("h4");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("p");
+                    var el2 = dom.createTextNode("\n              ");
+                    dom.appendChild(el1, el2);
+                    var el2 = dom.createTextNode("\n            ");
+                    dom.appendChild(el1, el2);
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n");
+                    dom.appendChild(el0, el1);
+                    return el0;
+                  },
+                  render: function render(context, env, contextualElement) {
+                    var dom = env.dom;
+                    var hooks = env.hooks, content = hooks.content;
+                    dom.detectNamespace(contextualElement);
+                    var fragment;
+                    if (env.useFragmentCache && dom.canClone) {
+                      if (this.cachedFragment === null) {
+                        fragment = this.build(dom);
+                        if (this.hasRendered) {
+                          this.cachedFragment = fragment;
+                        } else {
+                          this.hasRendered = true;
+                        }
+                      }
+                      if (this.cachedFragment) {
+                        fragment = dom.cloneNode(this.cachedFragment, true);
+                      }
+                    } else {
+                      fragment = this.build(dom);
+                    }
+                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),-1,-1);
+                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),-1,-1);
+                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),0,1);
+                    content(env, morph0, context, "item.what");
+                    content(env, morph1, context, "item.who");
+                    content(env, morph2, context, "item.notes");
+                    return fragment;
+                  }
+                };
+              }());
+              return {
+                isHTMLBars: true,
+                blockParams: 0,
+                cachedFragment: null,
+                hasRendered: false,
+                build: function build(dom) {
+                  var el0 = dom.createDocumentFragment();
+                  var el1 = dom.createTextNode("");
+                  dom.appendChild(el0, el1);
+                  var el1 = dom.createTextNode("\n");
+                  dom.appendChild(el0, el1);
+                  var el1 = dom.createTextNode("");
+                  dom.appendChild(el0, el1);
+                  return el0;
+                },
+                render: function render(context, env, contextualElement) {
+                  var dom = env.dom;
+                  var hooks = env.hooks, block = hooks.block;
+                  dom.detectNamespace(contextualElement);
+                  var fragment;
+                  if (env.useFragmentCache && dom.canClone) {
+                    if (this.cachedFragment === null) {
+                      fragment = this.build(dom);
+                      if (this.hasRendered) {
+                        this.cachedFragment = fragment;
+                      } else {
+                        this.hasRendered = true;
+                      }
+                    }
+                    if (this.cachedFragment) {
+                      fragment = dom.cloneNode(this.cachedFragment, true);
+                    }
+                  } else {
+                    fragment = this.build(dom);
+                  }
+                  if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+                  var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                  var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                  block(env, morph0, context, "paper-tile-left", [], {}, child0, null);
+                  block(env, morph1, context, "paper-tile-content", [], {}, child1, null);
+                  return fragment;
+                }
+              };
+            }());
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                var hooks = env.hooks, block = hooks.block, content = hooks.content;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
+                var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                block(env, morph0, context, "paper-item", [], {}, child0, null);
+                content(env, morph1, context, "paper-divider");
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, get = hooks.get, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              block(env, morph0, context, "each", [get(env, context, "listData")], {"keyword": "item"}, child0, null);
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            block(env, morph0, context, "paper-list", [], {}, child0, null);
+            return fragment;
+          }
+        };
+      }());
+      var child1 = (function() {
+        var child0 = (function() {
+          var child0 = (function() {
+            var child0 = (function() {
+              var child0 = (function() {
+                return {
+                  isHTMLBars: true,
+                  blockParams: 0,
+                  cachedFragment: null,
+                  hasRendered: false,
+                  build: function build(dom) {
+                    var el0 = dom.createDocumentFragment();
+                    var el1 = dom.createTextNode("            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("img");
+                    dom.setAttribute(el1,"class","face");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n");
+                    dom.appendChild(el0, el1);
+                    return el0;
+                  },
+                  render: function render(context, env, contextualElement) {
+                    var dom = env.dom;
+                    var hooks = env.hooks, get = hooks.get, element = hooks.element;
+                    dom.detectNamespace(contextualElement);
+                    var fragment;
+                    if (env.useFragmentCache && dom.canClone) {
+                      if (this.cachedFragment === null) {
+                        fragment = this.build(dom);
+                        if (this.hasRendered) {
+                          this.cachedFragment = fragment;
+                        } else {
+                          this.hasRendered = true;
+                        }
+                      }
+                      if (this.cachedFragment) {
+                        fragment = dom.cloneNode(this.cachedFragment, true);
+                      }
+                    } else {
+                      fragment = this.build(dom);
+                    }
+                    var element0 = dom.childAt(fragment, [1]);
+                    element(env, element0, context, "bind-attr", [], {"src": get(env, context, "item.face"), "alt": get(env, context, "item.who")});
+                    return fragment;
+                  }
+                };
+              }());
+              var child1 = (function() {
+                return {
+                  isHTMLBars: true,
+                  blockParams: 0,
+                  cachedFragment: null,
+                  hasRendered: false,
+                  build: function build(dom) {
+                    var el0 = dom.createDocumentFragment();
+                    var el1 = dom.createTextNode("            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("h3");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("h4");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("p");
+                    var el2 = dom.createTextNode("\n              ");
+                    dom.appendChild(el1, el2);
+                    var el2 = dom.createTextNode("\n            ");
+                    dom.appendChild(el1, el2);
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n");
+                    dom.appendChild(el0, el1);
+                    return el0;
+                  },
+                  render: function render(context, env, contextualElement) {
+                    var dom = env.dom;
+                    var hooks = env.hooks, content = hooks.content;
+                    dom.detectNamespace(contextualElement);
+                    var fragment;
+                    if (env.useFragmentCache && dom.canClone) {
+                      if (this.cachedFragment === null) {
+                        fragment = this.build(dom);
+                        if (this.hasRendered) {
+                          this.cachedFragment = fragment;
+                        } else {
+                          this.hasRendered = true;
+                        }
+                      }
+                      if (this.cachedFragment) {
+                        fragment = dom.cloneNode(this.cachedFragment, true);
+                      }
+                    } else {
+                      fragment = this.build(dom);
+                    }
+                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),-1,-1);
+                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),-1,-1);
+                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),0,1);
+                    content(env, morph0, context, "item.what");
+                    content(env, morph1, context, "item.who");
+                    content(env, morph2, context, "item.notes");
+                    return fragment;
+                  }
+                };
+              }());
+              return {
+                isHTMLBars: true,
+                blockParams: 0,
+                cachedFragment: null,
+                hasRendered: false,
+                build: function build(dom) {
+                  var el0 = dom.createDocumentFragment();
+                  var el1 = dom.createTextNode("");
+                  dom.appendChild(el0, el1);
+                  var el1 = dom.createTextNode("\n");
+                  dom.appendChild(el0, el1);
+                  var el1 = dom.createTextNode("");
+                  dom.appendChild(el0, el1);
+                  return el0;
+                },
+                render: function render(context, env, contextualElement) {
+                  var dom = env.dom;
+                  var hooks = env.hooks, block = hooks.block;
+                  dom.detectNamespace(contextualElement);
+                  var fragment;
+                  if (env.useFragmentCache && dom.canClone) {
+                    if (this.cachedFragment === null) {
+                      fragment = this.build(dom);
+                      if (this.hasRendered) {
+                        this.cachedFragment = fragment;
+                      } else {
+                        this.hasRendered = true;
+                      }
+                    }
+                    if (this.cachedFragment) {
+                      fragment = dom.cloneNode(this.cachedFragment, true);
+                    }
+                  } else {
+                    fragment = this.build(dom);
+                  }
+                  if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+                  var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                  var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                  block(env, morph0, context, "paper-tile-left", [], {}, child0, null);
+                  block(env, morph1, context, "paper-tile-content", [], {}, child1, null);
+                  return fragment;
+                }
+              };
+            }());
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                var hooks = env.hooks, block = hooks.block, inline = hooks.inline;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
+                var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                block(env, morph0, context, "paper-item", [], {}, child0, null);
+                inline(env, morph1, context, "paper-divider", [], {"inset": true});
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, get = hooks.get, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              block(env, morph0, context, "each", [get(env, context, "listData")], {"keyword": "item"}, child0, null);
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            block(env, morph0, context, "paper-list", [], {}, child0, null);
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h4");
+          var el3 = dom.createTextNode("Full width dividers");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h4");
+          var el3 = dom.createTextNode("Inset dividers");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each item in listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            <img {{bind-attr src=item.face alt=item.who}} class=\"face\">\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            <h3>{{item.what}}</h3>\n            <h4>{{item.who}}</h4>\n            <p>\n              {{item.notes}}\n            </p>\n          {{/paper-tile-content}}\n        {{/paper-item}}\n        {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var element2 = dom.childAt(fragment, [0]);
+          var morph0 = dom.createMorphAt(element2,2,3);
+          var morph1 = dom.createMorphAt(element2,5,6);
+          block(env, morph0, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child0, null);
+          block(env, morph1, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child1, null);
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/icons', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Material icons");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("div");
+            dom.setAttribute(el1,"class","icon-tile");
+            var el2 = dom.createTextNode("\n        ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n        ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createElement("p");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n      ");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, get = hooks.get, inline = hooks.inline, content = hooks.content;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var element0 = dom.childAt(fragment, [1]);
+            var morph0 = dom.createMorphAt(element0,0,1);
+            var morph1 = dom.createMorphAt(dom.childAt(element0, [2]),-1,-1);
+            inline(env, morph0, context, "paper-icon", [], {"icon": get(env, context, "icon")});
+            content(env, morph1, context, "icon");
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h3");
+          var el2 = dom.createTextNode("Template");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h4");
+          var el2 = dom.createTextNode("Basic Icons");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("pre");
+          var el2 = dom.createTextNode("\n    {{paper-icon icon=\"check\"}}\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h4");
+          var el2 = dom.createTextNode("Larger Icons");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("pre");
+          var el2 = dom.createTextNode("\n      {{paper-icon icon=\"check\" size=\"lg\"}}\n      {{paper-icon icon=\"check\" size=2}}\n      {{paper-icon icon=\"check\" size=3}}\n      {{paper-icon icon=\"check\" size=4}}\n      {{paper-icon icon=\"check\" size=5}}\n    ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h4");
+          var el2 = dom.createTextNode("Spinners");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("pre");
+          var el2 = dom.createTextNode("\n      {{paper-icon icon=\"rotate-right\" spin=true}}\n      {{paper-icon icon=\"rotate-left\" reverseSpin=true}}\n    ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [15]),0,1);
+          block(env, morph0, context, "each", [get(env, context, "icons")], {"keyword": "icon"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding icon-demo"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/index', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Introduction");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Welcome to Ember Paper.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createElement("br");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("This project aims to bring Google's new ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("a");
+          dom.setAttribute(el3,"href","https://www.google.com/design/spec/material-design/introduction.html");
+          var el4 = dom.createTextNode("Material Design");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("a");
+          dom.setAttribute(el3,"href","http://www.ember-cli.com/");
+          var el4 = dom.createTextNode("Ember-cli");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" addon.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Installation");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Install the ember-cli addon in your ember-cli project:");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","preview-block");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("pre");
+          dom.setAttribute(el3,"style","margin:0");
+          var el4 = dom.createTextNode("$ ember install:addon ember-paper");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("All the components and styles are ready to use in your application templates.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Navigate through the docs to understand how to use each component.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Contribution");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("strong");
+          var el4 = dom.createTextNode("ember-paper");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" is heavily based on ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("a");
+          dom.setAttribute(el3,"href","https://github.com/angular/material");
+          var el4 = dom.createTextNode("Angular Material");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" and ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("a");
+          dom.setAttribute(el3,"href","https://github.com/google/web-starter-kit/tree/material-sprint");
+          var el4 = dom.createTextNode("Web Starter Kit (material-sprint branch)");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(". These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("strong");
+          var el4 = dom.createTextNode("Help us on Github!");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment(" Place this tag where you want the button to render. ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("a");
+          dom.setAttribute(el3,"class","github-button");
+          dom.setAttribute(el3,"href","https://github.com/miguelcobain/ember-paper");
+          dom.setAttribute(el3,"data-style","mega");
+          dom.setAttribute(el3,"data-count-href","/miguelcobain/ember-paper/network");
+          dom.setAttribute(el3,"data-count-api","/repos/miguelcobain/ember-paper#forks_count");
+          var el4 = dom.createTextNode("Fork");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/list', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Lists");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        var child0 = (function() {
+          var child0 = (function() {
+            var child0 = (function() {
+              var child0 = (function() {
+                return {
+                  isHTMLBars: true,
+                  blockParams: 0,
+                  cachedFragment: null,
+                  hasRendered: false,
+                  build: function build(dom) {
+                    var el0 = dom.createDocumentFragment();
+                    var el1 = dom.createTextNode("            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("img");
+                    dom.setAttribute(el1,"class","face");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n");
+                    dom.appendChild(el0, el1);
+                    return el0;
+                  },
+                  render: function render(context, env, contextualElement) {
+                    var dom = env.dom;
+                    var hooks = env.hooks, get = hooks.get, element = hooks.element;
+                    dom.detectNamespace(contextualElement);
+                    var fragment;
+                    if (env.useFragmentCache && dom.canClone) {
+                      if (this.cachedFragment === null) {
+                        fragment = this.build(dom);
+                        if (this.hasRendered) {
+                          this.cachedFragment = fragment;
+                        } else {
+                          this.hasRendered = true;
+                        }
+                      }
+                      if (this.cachedFragment) {
+                        fragment = dom.cloneNode(this.cachedFragment, true);
+                      }
+                    } else {
+                      fragment = this.build(dom);
+                    }
+                    var element0 = dom.childAt(fragment, [1]);
+                    element(env, element0, context, "bind-attr", [], {"src": get(env, context, "item.face"), "alt": get(env, context, "item.who")});
+                    return fragment;
+                  }
+                };
+              }());
+              var child1 = (function() {
+                return {
+                  isHTMLBars: true,
+                  blockParams: 0,
+                  cachedFragment: null,
+                  hasRendered: false,
+                  build: function build(dom) {
+                    var el0 = dom.createDocumentFragment();
+                    var el1 = dom.createTextNode("            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("h3");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("h4");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n            ");
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createElement("p");
+                    var el2 = dom.createTextNode("\n              ");
+                    dom.appendChild(el1, el2);
+                    var el2 = dom.createTextNode("\n            ");
+                    dom.appendChild(el1, el2);
+                    dom.appendChild(el0, el1);
+                    var el1 = dom.createTextNode("\n");
+                    dom.appendChild(el0, el1);
+                    return el0;
+                  },
+                  render: function render(context, env, contextualElement) {
+                    var dom = env.dom;
+                    var hooks = env.hooks, content = hooks.content;
+                    dom.detectNamespace(contextualElement);
+                    var fragment;
+                    if (env.useFragmentCache && dom.canClone) {
+                      if (this.cachedFragment === null) {
+                        fragment = this.build(dom);
+                        if (this.hasRendered) {
+                          this.cachedFragment = fragment;
+                        } else {
+                          this.hasRendered = true;
+                        }
+                      }
+                      if (this.cachedFragment) {
+                        fragment = dom.cloneNode(this.cachedFragment, true);
+                      }
+                    } else {
+                      fragment = this.build(dom);
+                    }
+                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),-1,-1);
+                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),-1,-1);
+                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),0,1);
+                    content(env, morph0, context, "item.what");
+                    content(env, morph1, context, "item.who");
+                    content(env, morph2, context, "item.notes");
+                    return fragment;
+                  }
+                };
+              }());
+              return {
+                isHTMLBars: true,
+                blockParams: 0,
+                cachedFragment: null,
+                hasRendered: false,
+                build: function build(dom) {
+                  var el0 = dom.createDocumentFragment();
+                  var el1 = dom.createTextNode("");
+                  dom.appendChild(el0, el1);
+                  var el1 = dom.createTextNode("\n");
+                  dom.appendChild(el0, el1);
+                  var el1 = dom.createTextNode("");
+                  dom.appendChild(el0, el1);
+                  return el0;
+                },
+                render: function render(context, env, contextualElement) {
+                  var dom = env.dom;
+                  var hooks = env.hooks, block = hooks.block;
+                  dom.detectNamespace(contextualElement);
+                  var fragment;
+                  if (env.useFragmentCache && dom.canClone) {
+                    if (this.cachedFragment === null) {
+                      fragment = this.build(dom);
+                      if (this.hasRendered) {
+                        this.cachedFragment = fragment;
+                      } else {
+                        this.hasRendered = true;
+                      }
+                    }
+                    if (this.cachedFragment) {
+                      fragment = dom.cloneNode(this.cachedFragment, true);
+                    }
+                  } else {
+                    fragment = this.build(dom);
+                  }
+                  if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+                  var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                  var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                  block(env, morph0, context, "paper-tile-left", [], {}, child0, null);
+                  block(env, morph1, context, "paper-tile-content", [], {}, child1, null);
+                  return fragment;
+                }
+              };
+            }());
+            return {
+              isHTMLBars: true,
+              blockParams: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              build: function build(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              render: function render(context, env, contextualElement) {
+                var dom = env.dom;
+                var hooks = env.hooks, block = hooks.block;
+                dom.detectNamespace(contextualElement);
+                var fragment;
+                if (env.useFragmentCache && dom.canClone) {
+                  if (this.cachedFragment === null) {
+                    fragment = this.build(dom);
+                    if (this.hasRendered) {
+                      this.cachedFragment = fragment;
+                    } else {
+                      this.hasRendered = true;
+                    }
+                  }
+                  if (this.cachedFragment) {
+                    fragment = dom.cloneNode(this.cachedFragment, true);
+                  }
+                } else {
+                  fragment = this.build(dom);
+                }
+                if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+                var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                block(env, morph0, context, "paper-item", [], {}, child0, null);
+                return fragment;
+              }
+            };
+          }());
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode("");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, get = hooks.get, block = hooks.block;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              block(env, morph0, context, "each", [get(env, context, "listData")], {"keyword": "item"}, child0, null);
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            block(env, morph0, context, "paper-list", [], {}, child0, null);
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each item in listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            <img {{bind-attr src=item.face alt=item.who}} class=\"face\">\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            <h3>{{item.what}}</h3>\n            <h4>{{item.who}}</h4>\n            <p>\n              {{item.notes}}\n            </p>\n          {{/paper-tile-content}}\n        {{/paper-item}}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+          block(env, morph0, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/radio', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Radio buttons");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("A radio button");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child1 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Toggable radio button");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child2 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Disabled radio button");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child3 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Radio button 1");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child4 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Radio button 2");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child5 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode("Radio button 3");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("ul");
+          dom.setAttribute(el2,"class","paper-list-inline");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Radio Button Group");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("ul");
+          dom.setAttribute(el2,"class","paper-list-inline");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Selected value: ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n    {{#paper-radio}}A radio button{{/paper-radio}}\n    {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n    {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n    {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n    {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n    {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n\n    {{paper-radio toggle=true label=\"Blockless version\"}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block, get = hooks.get, content = hooks.content, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var element0 = dom.childAt(fragment, [0]);
+          var element1 = dom.childAt(element0, [1]);
+          var element2 = dom.childAt(element0, [5]);
+          var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),-1,-1);
+          var morph1 = dom.createMorphAt(dom.childAt(element1, [3]),-1,-1);
+          var morph2 = dom.createMorphAt(dom.childAt(element1, [5]),-1,-1);
+          var morph3 = dom.createMorphAt(dom.childAt(element2, [1]),-1,-1);
+          var morph4 = dom.createMorphAt(dom.childAt(element2, [3]),-1,-1);
+          var morph5 = dom.createMorphAt(dom.childAt(element2, [5]),-1,-1);
+          var morph6 = dom.createMorphAt(dom.childAt(element0, [7]),0,-1);
+          var morph7 = dom.createMorphAt(dom.childAt(element0, [9]),-1,-1);
+          block(env, morph0, context, "paper-radio", [], {}, child0, null);
+          block(env, morph1, context, "paper-radio", [], {"toggle": true}, child1, null);
+          block(env, morph2, context, "paper-radio", [], {"disabled": true}, child2, null);
+          block(env, morph3, context, "paper-radio", [], {"value": "1", "selected": get(env, context, "selectedValue")}, child3, null);
+          block(env, morph4, context, "paper-radio", [], {"value": "2", "selected": get(env, context, "selectedValue")}, child4, null);
+          block(env, morph5, context, "paper-radio", [], {"value": "3", "selected": get(env, context, "selectedValue")}, child5, null);
+          content(env, morph6, context, "selectedValue");
+          inline(env, morph7, context, "paper-radio", [], {"toggle": true, "label": "Blockless version"});
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/sidenav', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Sidenav");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Try to resize this webpage.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n    {{#paper-nav-container classNames=\"ember-app\"}}\n\n      {{#paper-sidenav classNames=\"md-sidenav-left md-whiteframe-z2\" flex-layout=\"column\" flex=true}}\n\n        {{#paper-toolbar}}\n          <div class=\"md-toolbar-tools\">\n            <div class=\"logo\">\n              <img src=\"ember-logo-white.png\" height=\"30\"/>  <strong>Paper</strong>\n            </div>\n          </div>\n        {{/paper-toolbar}}\n\n        {{#paper-content}}\n          <nav class=\"sidenav\">\n            <ul>\n              <li>{{#link-to \"index\"}}Introduction{{/link-to}}</li>\n              <li>{{#link-to \"navigation\"}}Navigation{{/link-to}}</li>\n              <li>{{#link-to \"typography\"}}Typography{{/link-to}}</li>\n              <li>{{#link-to \"list\"}}List{{/link-to}}</li>\n              <li>{{#link-to \"divider\"}}Divider{{/link-to}}</li>\n              <li>{{#link-to \"button\"}}Button{{/link-to}}</li>\n              <li>{{#link-to \"checkbox\"}}Checkbox{{/link-to}}</li>\n              <li>{{#link-to \"switch\"}}Switch{{/link-to}}</li>\n              <li>{{#link-to \"radio\"}}Radio{{/link-to}}</li>\n              <li>{{#link-to \"textfield\"}}Text Field{{/link-to}}</li>\n              <li>{{#link-to \"toolbar\"}}Toolbar{{/link-to}}</li>\n              <li>{{#link-to \"icons\"}}Icons{{/link-to}}</li>\n            </ul>\n          </nav>\n        {{/paper-content}}\n      {{/paper-sidenav}}\n\n      {{#paper-content flex-layout=\"column\" flex=true}}\n        {{outlet}}\n      {{/paper-content}}\n\n    {{/paper-nav-container}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/switch', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Switches");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, content = hooks.content;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            content(env, morph0, context, "booleanProp1");
+            return fragment;
+          }
+        };
+      }());
+      var child1 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, content = hooks.content;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            content(env, morph0, context, "booleanProp2");
+            return fragment;
+          }
+        };
+      }());
+      var child2 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode(" Disabled switch ");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      var child3 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createTextNode(" Noink switch ");
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n    {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n    {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n    {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n    {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n\n    {{paper-switch label=\"Blockless version\"}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, block = hooks.block, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var element0 = dom.childAt(fragment, [0, 1]);
+          var morph0 = dom.createMorphAt(element0,0,1);
+          var morph1 = dom.createMorphAt(element0,1,2);
+          var morph2 = dom.createMorphAt(element0,2,3);
+          var morph3 = dom.createMorphAt(element0,3,4);
+          var morph4 = dom.createMorphAt(element0,4,5);
+          block(env, morph0, context, "paper-switch", [], {"checked": get(env, context, "booleanProp1")}, child0, null);
+          block(env, morph1, context, "paper-switch", [], {"checked": get(env, context, "booleanProp2")}, child1, null);
+          block(env, morph2, context, "paper-switch", [], {"disabled": true}, child2, null);
+          block(env, morph3, context, "paper-switch", [], {"noink": true}, child3, null);
+          inline(env, morph4, context, "paper-switch", [], {"label": "Blockless version"});
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/textfield', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Text fields");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("ul");
+          dom.setAttribute(el2,"class","paper-list-inline");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("li");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Name: ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Email: ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n    {{paper-text label=\"Name\" value=name}}\n    {{paper-text label=\"E-mail\" type=\"email\" value=email}}\n    {{paper-text label=\"Password\" type=\"password\"}}\n    {{paper-text label=\"E-mail\" type=\"email\" disabled=true}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, inline = hooks.inline, content = hooks.content;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var element0 = dom.childAt(fragment, [0]);
+          var element1 = dom.childAt(element0, [1]);
+          var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),-1,-1);
+          var morph1 = dom.createMorphAt(dom.childAt(element1, [3]),-1,-1);
+          var morph2 = dom.createMorphAt(dom.childAt(element1, [5]),-1,-1);
+          var morph3 = dom.createMorphAt(dom.childAt(element1, [7]),-1,-1);
+          var morph4 = dom.createMorphAt(dom.childAt(element0, [3]),0,-1);
+          var morph5 = dom.createMorphAt(dom.childAt(element0, [5]),0,-1);
+          inline(env, morph0, context, "paper-text", [], {"label": "Name", "value": get(env, context, "name")});
+          inline(env, morph1, context, "paper-text", [], {"label": "E-mail", "type": "email", "value": get(env, context, "email")});
+          inline(env, morph2, context, "paper-text", [], {"label": "Password", "type": "password"});
+          inline(env, morph3, context, "paper-text", [], {"label": "E-mail", "type": "email", "disabled": true});
+          content(env, morph4, context, "name");
+          content(env, morph5, context, "email");
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/toolbar', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("Toolbars");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      var child0 = (function() {
+        var child0 = (function() {
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createTextNode("Example button");
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              return fragment;
+            }
+          };
+        }());
+        var child1 = (function() {
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createTextNode("Example button");
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("    ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("div");
+            dom.setAttribute(el1,"class","md-toolbar-tools");
+            var el2 = dom.createTextNode("\n      ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n      ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n    ");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var element0 = dom.childAt(fragment, [1]);
+            var morph0 = dom.createMorphAt(element0,0,1);
+            var morph1 = dom.createMorphAt(element0,1,2);
+            block(env, morph0, context, "paper-button", [], {}, child0, null);
+            block(env, morph1, context, "paper-button", [], {}, child1, null);
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\"md-toolbar-tools\" is a class that centers your elements in the toolbar.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Template");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("pre");
+          var el3 = dom.createTextNode("\n    {{#paper-toolbar}}\n      <div class=\"md-toolbar-tools\">\n        {{#paper-button}}Example button{{/paper-button}}\n        {{#paper-button}}Example button{{/paper-button}}\n      </div>\n    {{/paper-toolbar}}\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+          block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/templates/typography', ['exports'], function (exports) {
+
+  'use strict';
+
+  exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      var child0 = (function() {
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, inline = hooks.inline;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h2");
+          dom.setAttribute(el1,"class","md-toolbar-tools");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("span");
+          var el3 = dom.createTextNode("HTML Elements");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","doc-content");
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Headings");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","preview-block");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h1");
+          var el4 = dom.createTextNode("<h1>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h2");
+          var el4 = dom.createTextNode("<h2>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h3");
+          var el4 = dom.createTextNode("<h3>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h4");
+          var el4 = dom.createTextNode("<h4>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h5");
+          var el4 = dom.createTextNode("<h5>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h6");
+          var el4 = dom.createTextNode("<h6>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Formatting");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","preview-block");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("u");
+          var el5 = dom.createTextNode("<u>Underlined<u>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("b");
+          var el5 = dom.createTextNode("<b>Bold<b>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("strong");
+          var el5 = dom.createTextNode("<strong>Strong<strong>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("i");
+          var el5 = dom.createTextNode("<italic>Italic<italic>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("em");
+          var el5 = dom.createTextNode("<em>Em<em>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("s");
+          var el5 = dom.createTextNode("<s>Strikethrough<s>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("<small>Small<small>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createElement("mark");
+          var el5 = dom.createTextNode("<mark>Mark<mark>");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Subtitles");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","preview-block");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h1");
+          var el4 = dom.createTextNode("<h1> ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("Subtitle");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h2");
+          var el4 = dom.createTextNode("<h2> ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("Subtitle");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h3");
+          var el4 = dom.createTextNode("<h3> ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("Subtitle");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h4");
+          var el4 = dom.createTextNode("<h4> ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("Subtitle");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h5");
+          var el4 = dom.createTextNode("<h5> ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("Subtitle");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h6");
+          var el4 = dom.createTextNode("<h6> ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("small");
+          var el5 = dom.createTextNode("Subtitle");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Description");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","preview-block");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("dl");
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dt");
+          var el5 = dom.createTextNode("Description lists");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dd");
+          var el5 = dom.createTextNode("A description list is perfect for defining terms.");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dt");
+          var el5 = dom.createTextNode("Euismod");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dd");
+          var el5 = dom.createTextNode("Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dd");
+          var el5 = dom.createTextNode("Donec id elit non mi porta gravida at eget metus.");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dt");
+          var el5 = dom.createTextNode("Malesuada porta");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("dd");
+          var el5 = dom.createTextNode("Etiam porta sem malesuada magna mollis euismod.");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n    ");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Quotes");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","preview-block");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("blockquote");
+          var el4 = dom.createTextNode("<blockquote>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h2");
+          var el3 = dom.createTextNode("Addresses");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("address");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("strong");
+          var el4 = dom.createTextNode("Googleplex");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("br");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    1600 Amphitheatre Pkwy");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("br");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    Mountain View, CA 94043");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("br");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("abbr");
+          dom.setAttribute(el3,"title","Phone");
+          var el4 = dom.createTextNode("P:");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" (650) 253-0000\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h2");
+          var el3 = dom.createTextNode("Code");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Multi-line code blocks");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("\n  Use <pre> for multi-line code blocks.\n  ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("pre");
+          var el4 = dom.createTextNode("\n  <p>This is the first line of code</p>\n  <p>This is the second line of code</p>\n  ");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Inline code blocks");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Code blocks like ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("code");
+          var el4 = dom.createTextNode("<main>");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" could be displayed inline.");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h2");
+          var el3 = dom.createTextNode("Tables");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h3");
+          var el3 = dom.createTextNode("Basic table");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("table");
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("thead");
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("tr");
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("th");
+          var el6 = dom.createTextNode("#");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("th");
+          var el6 = dom.createTextNode("First Name");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("th");
+          var el6 = dom.createTextNode("Last Name");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("th");
+          var el6 = dom.createTextNode("Username");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n      ");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n    ");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("tbody");
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("tr");
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("1");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("Larry");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("Page");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("+LarryPage");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n      ");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("tr");
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("2");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("Sergey");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("Brin");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("+SergeyBrin");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n      ");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n      ");
+          dom.appendChild(el3, el4);
+          var el4 = dom.createElement("tr");
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("3");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("Eric");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("Schmidt");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n        ");
+          dom.appendChild(el4, el5);
+          var el5 = dom.createElement("td");
+          var el6 = dom.createTextNode("+EricSchmidt");
+          dom.appendChild(el5, el6);
+          dom.appendChild(el4, el5);
+          var el5 = dom.createTextNode("\n      ");
+          dom.appendChild(el4, el5);
+          dom.appendChild(el3, el4);
+          var el4 = dom.createTextNode("\n    ");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
+        block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
+        return fragment;
+      }
+    };
+  }()));
+
+});
+define('dummy/tests/app.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - .');
+  test('app.js should pass jshint', function() { 
+    ok(true, 'app.js should pass jshint.'); 
   });
 
 });
-define('dummy/templates/button', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/tests/controllers/checkbox.jshint', function () {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Buttons</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  <p>\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'action': ("flatButton")
-    },hashTypes:{'action': "STRING"},hashContexts:{'action': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'noink': (true),
-      'classNames': ("md-primary")
-    },hashTypes:{'noink': "BOOLEAN",'classNames': "STRING"},hashContexts:{'noink': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'disabled': (true)
-    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'classNames': ("md-warn")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </p>\n  <p>\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'action': ("raisedButton")
-    },hashTypes:{'raised': "BOOLEAN",'action': "STRING"},hashContexts:{'raised': depth0,'action': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'classNames': ("md-primary")
-    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING"},hashContexts:{'raised': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'disabled': (true)
-    },hashTypes:{'raised': "BOOLEAN",'disabled': "BOOLEAN"},hashContexts:{'raised': depth0,'disabled': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'classNames': ("md-warn")
-    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING"},hashContexts:{'raised': depth0,'classNames': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </p>\n  <p>\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'action': ("targetButton"),
-      'target': ("view")
-    },hashTypes:{'raised': "BOOLEAN",'action': "STRING",'target': "ID"},hashContexts:{'raised': depth0,'action': depth0,'target': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'classNames': ("md-primary"),
-      'action': ("targetButton"),
-      'target': ("view")
-    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'classNames': ("md-primary"),
-      'action': ("targetButton"),
-      'target': ("view"),
-      'bubbles': (false)
-    },hashTypes:{'raised': "BOOLEAN",'classNames': "STRING",'action': "STRING",'target': "ID",'bubbles': "BOOLEAN"},hashContexts:{'raised': depth0,'classNames': depth0,'action': depth0,'target': depth0,'bubbles': depth0},inverse:self.noop,fn:self.program(19, program19, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </p>\n  <p>\n    ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-button'] || (depth0 && depth0['paper-button']),options={hash:{
-      'raised': (true),
-      'label': ("Blockless version")
-    },hashTypes:{'raised': "BOOLEAN",'label': "STRING"},hashContexts:{'raised': depth0,'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-button", options))));
-    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n  &lt;p&gt;\n    {{#paper-button action=\"flatButton\"}}Button with action{{/paper-button}}\n    {{#paper-button noink=true classNames=\"md-primary\"}}Primary (noink){{/paper-button}}\n    {{#paper-button disabled=true}}disabled{{/paper-button}}\n    {{#paper-button classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"raisedButton\"}}Button with action{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\"}}Primary{{/paper-button}}\n    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-warn\"}}warn{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{#paper-button raised=true action=\"targetButton\" target=view}}Button with target{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view}}Button with bubble{{/paper-button}}\n    {{#paper-button raised=true classNames=\"md-primary\" action=\"targetButton\" target=view bubbles=false}}Button no bubble{{/paper-button}}\n  &lt;/p&gt;\n  &lt;p&gt;\n    {{paper-button raised=true label=\"Blockless version\"}}\n  &lt;/p&gt;\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    
-    data.buffer.push("Button with action");
-    }
-
-  function program7(depth0,data) {
-    
-    
-    data.buffer.push("Primary (noink)");
-    }
-
-  function program9(depth0,data) {
-    
-    
-    data.buffer.push("disabled");
-    }
-
-  function program11(depth0,data) {
-    
-    
-    data.buffer.push("warn");
-    }
-
-  function program13(depth0,data) {
-    
-    
-    data.buffer.push("Primary");
-    }
-
-  function program15(depth0,data) {
-    
-    
-    data.buffer.push("Button with target");
-    }
-
-  function program17(depth0,data) {
-    
-    
-    data.buffer.push("Button with bubble");
-    }
-
-  function program19(depth0,data) {
-    
-    
-    data.buffer.push("Button no bubble");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding demo-buttons")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
+  module('JSHint - controllers');
+  test('controllers/checkbox.js should pass jshint', function() { 
+    ok(true, 'controllers/checkbox.js should pass jshint.'); 
   });
 
 });
-define('dummy/templates/card', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/tests/controllers/icons.jshint', function () {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Card</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  ");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-whiteframe-z1 list-demo")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-card}}\n    &lt;img src=\"https://material.angularjs.org/img/washedout.png\" alt=\"Washed Out\"&gt;\n    {{#paper-card-content}}\n      &lt;h2&gt;Paracosm&lt;/h2&gt;\n      &lt;p&gt;\n        The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n        two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n      &lt;/p&gt;\n    {{/paper-card-content}}\n  {{/paper-card}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-card']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-card']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-card']) { stack1 = blockHelperMissing.call(depth0, 'paper-card', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-card']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-card']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-card']) { stack1 = blockHelperMissing.call(depth0, 'paper-card', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-card']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-card']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-card']) { stack1 = blockHelperMissing.call(depth0, 'paper-card', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-  function program6(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n      <img src=\"https://material.angularjs.org/img/washedout.png\" alt=\"Washed Out\">\n      ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-card-content']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-card-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-card-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-card-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-  function program7(depth0,data) {
-    
-    
-    data.buffer.push("\n        <h2>Paracosm</h2>\n        <p>\n          The titles of Washed Out's breakthrough song and the first single from Paracosm share the\n          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...\n        </p>\n      ");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
+  module('JSHint - controllers');
+  test('controllers/icons.js should pass jshint', function() { 
+    ok(true, 'controllers/icons.js should pass jshint.'); 
   });
 
 });
-define('dummy/templates/checkbox', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/tests/controllers/list.jshint', function () {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Checkboxes</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  ");
-    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
-      'checked': ("value1")
-    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
-      'checked': ("value2")
-    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
-      'disabled': (true)
-    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(12, program12, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
-      'disabled': (true),
-      'checked': (true)
-    },hashTypes:{'disabled': "BOOLEAN",'checked': "BOOLEAN"},hashContexts:{'disabled': depth0,'checked': depth0},inverse:self.noop,fn:self.program(14, program14, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    stack1 = (helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
-      'noink': (true)
-    },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(16, program16, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-checkbox'] || (depth0 && depth0['paper-checkbox']),options={hash:{
-      'label': ("Blockless version")
-    },hashTypes:{'label': "STRING"},hashContexts:{'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-checkbox", options))));
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-checkbox checked=value1}}A checkbox: {{value1}}{{/paper-checkbox}}\n    {{#paper-checkbox checked=value2}}A checkbox: {{#if value2}}yep{{else}}nope{{/if}}{{/paper-checkbox}}\n    {{#paper-checkbox disabled=true}}Checkbox (disabled){{/paper-checkbox}}\n    {{#paper-checkbox disabled=true checked=true}}Checkbox (disabled and checked){{/paper-checkbox}}\n    {{#paper-checkbox noink=true}}Checkbox (no ink){{/paper-checkbox}}\n\n    {{paper-checkbox label=\"Blockless version\"}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("A checkbox: ");
-    stack1 = helpers._triageMustache.call(depth0, "value1", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    return buffer;
-    }
-
-  function program7(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("A checkbox: ");
-    stack1 = helpers['if'].call(depth0, "value2", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(10, program10, data),fn:self.program(8, program8, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    return buffer;
-    }
-  function program8(depth0,data) {
-    
-    
-    data.buffer.push("yep");
-    }
-
-  function program10(depth0,data) {
-    
-    
-    data.buffer.push("nope");
-    }
-
-  function program12(depth0,data) {
-    
-    
-    data.buffer.push("Checkbox (disabled)");
-    }
-
-  function program14(depth0,data) {
-    
-    
-    data.buffer.push("Checkbox (disabled and checked)");
-    }
-
-  function program16(depth0,data) {
-    
-    
-    data.buffer.push("Checkbox (no ink)");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
+  module('JSHint - controllers');
+  test('controllers/list.js should pass jshint', function() { 
+    ok(true, 'controllers/list.js should pass jshint.'); 
   });
 
 });
-define('dummy/templates/components/base-focusable', ['exports', 'ember'], function (exports, Ember) {
+define('dummy/tests/controllers/switch.jshint', function () {
 
   'use strict';
 
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1;
-
-
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-button', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-
-  function program3(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-
-    data.buffer.push("<span ");
-    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-      'type': ("type"),
-      'disabled': ("disabled")
-    },hashTypes:{'type': "ID",'disabled': "ID"},hashContexts:{'type': depth0,'disabled': depth0},contexts:[],types:[],data:data})));
-    data.buffer.push(">\n  ");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n</span>\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-checkbox', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, self=this;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  <div class=\"md-label\">\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n");
-    return buffer;
-    }
-
-  function program3(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  <div class=\"md-label\">\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n");
-    return buffer;
-    }
-
-    data.buffer.push("<div class=\"md-container\">\n  <div class=\"md-icon\"></div>\n</div>\n");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-nav-container', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n  ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-backdrop'] || (depth0 && depth0['paper-backdrop']),options={hash:{
-      'classNames': ("md-sidenav-backdrop")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-backdrop", options))));
-    data.buffer.push("\n");
-    return buffer;
-    }
-
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    stack1 = helpers['if'].call(depth0, "open", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-radio', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, self=this;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  <div class=\"md-label\">\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n");
-    return buffer;
-    }
-
-  function program3(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  <div class=\"md-label\">\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n");
-    return buffer;
-    }
-
-    data.buffer.push("<div class=\"md-container\">\n  <div class=\"md-off\"></div>\n  <div class=\"md-on\"></div>\n</div>\n");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-switch', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, self=this;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  <div class=\"md-label\">\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "yield", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n");
-    return buffer;
-    }
-
-  function program3(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n  <div class=\"md-label\">\n    ");
-    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n");
-    return buffer;
-    }
-
-    data.buffer.push("<div class=\"md-switch-bar\"></div>\n<div class=\"md-container\">\n  <div class=\"md-bar\"></div>\n  <div class=\"md-thumb-container\">\n    <div class=\"md-thumb\">\n    </div>\n  </div>\n</div>\n");
-    stack1 = helpers['if'].call(depth0, "template", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/components/paper-text', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
-
-
-    data.buffer.push("<label ");
-    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-      'for': ("inputElementId")
-    },hashTypes:{'for': "ID"},hashContexts:{'for': depth0},contexts:[],types:[],data:data})));
-    data.buffer.push(">");
-    stack1 = helpers._triageMustache.call(depth0, "label", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</label>\n");
-    data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-      'id': ("inputElementId"),
-      'type': ("type"),
-      'value': ("value"),
-      'focus-in': ("focusIn"),
-      'focus-out': ("focusOut"),
-      'disabled': ("disabled")
-    },hashTypes:{'id': "ID",'type': "ID",'value': "ID",'focus-in': "STRING",'focus-out': "STRING",'disabled': "ID"},hashContexts:{'id': depth0,'type': depth0,'value': depth0,'focus-in': depth0,'focus-out': depth0,'disabled': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/divider', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Divider</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  <h4>Full width dividers</h4>\n  ");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-whiteframe-z1 list-demo")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <h4>Inset dividers</h4>\n  ");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-whiteframe-z1 list-demo")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            &lt;h3&gt;{{what}}&lt;/h3&gt;\n            &lt;h4&gt;{{who}}&lt;/h4&gt;\n            &lt;p&gt;\n              {{notes}}\n            &lt;/p&gt;\n          {{/paper-tile-content}}\n        {{/paper-item}}\n        {{paper-divider}} {{! OR {{paper-divider inset=true}} }}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-  function program6(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n      ");
-    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-  function program7(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n        ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n        ");
-    stack1 = helpers._triageMustache.call(depth0, "paper-divider", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n      ");
-    return buffer;
-    }
-  function program8(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n          ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-tile-left']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-tile-left']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-tile-left']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-left', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n          ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-tile-content']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-tile-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-tile-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n        ");
-    return buffer;
-    }
-  function program9(depth0,data) {
-    
-    var buffer = '';
-    data.buffer.push("\n            <img ");
-    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-      'src': ("face"),
-      'alt': ("who")
-    },hashTypes:{'src': "ID",'alt': "ID"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
-    data.buffer.push(" class=\"face\">\n          ");
-    return buffer;
-    }
-
-  function program11(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n            <h3>");
-    stack1 = helpers._triageMustache.call(depth0, "what", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</h3>\n            <h4>");
-    stack1 = helpers._triageMustache.call(depth0, "who", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</h4>\n            <p>\n              ");
-    stack1 = helpers._triageMustache.call(depth0, "notes", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n            </p>\n          ");
-    return buffer;
-    }
-
-  function program13(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-  function program14(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n      ");
-    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-  function program15(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n        ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n        ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-divider'] || (depth0 && depth0['paper-divider']),options={hash:{
-      'inset': (true)
-    },hashTypes:{'inset': "BOOLEAN"},hashContexts:{'inset': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-divider", options))));
-    data.buffer.push("\n      ");
-    return buffer;
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/icons', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Material icons</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <h4>Basic Icons</h4>\n  <pre>\n    {{paper-icon icon=\"check\"}}\n  </pre>\n  <h4>Larger Icons</h4>\n    <pre>\n      {{paper-icon icon=\"check\" size=\"lg\"}}\n      {{paper-icon icon=\"check\" size=2}}\n      {{paper-icon icon=\"check\" size=3}}\n      {{paper-icon icon=\"check\" size=4}}\n      {{paper-icon icon=\"check\" size=5}}\n    </pre>\n  <h4>Spinners</h4>\n    <pre>\n      {{paper-icon icon=\"rotate-right\" spin=true}}\n      {{paper-icon icon=\"rotate-left\" reverseSpin=true}}\n    </pre>\n  <div>\n    ");
-    stack1 = helpers.each.call(depth0, "icon", "in", "icons", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  </div>\n\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n      <div class=\"icon-tile\">\n        ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("icon")
-    },hashTypes:{'icon': "ID"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n        <p>");
-    stack1 = helpers._triageMustache.call(depth0, "icon", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</p>\n      </div>\n    ");
-    return buffer;
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding icon-demo")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/index', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Introduction</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    
-    data.buffer.push("\n<div class=\"doc-content\">\n  <h3>Welcome to Ember Paper.</h3>\n  <p><br>This project aims to bring Google's new <a href=\"https://www.google.com/design/spec/material-design/introduction.html\">Material Design</a> to Ember. The goal is to encapsulate everything possible in Ember components. This project is packaged as an <a href=\"http://www.ember-cli.com/\">Ember-cli</a> addon.</p>\n\n  <h3>Installation</h3>\n  <p>Install the ember-cli addon in your ember-cli project:</p>\n  <div class=\"preview-block\">\n    <pre style=\"margin:0\">$ ember install:addon ember-paper</pre>\n  </div>\n  <p>All the components and styles are ready to use in your application templates.</p>\n  <p>Navigate through the docs to understand how to use each component.</p>\n\n  <h3>Contribution</h3>\n  <p><p>This is a very ambitious project. Google's design specs are extensive, and not trivial to implement. <strong>ember-paper</strong> is heavily based on <a href=\"https://github.com/angular/material\">Angular Material</a> and <a href=\"https://github.com/google/web-starter-kit/tree/material-sprint\">Web Starter Kit (material-sprint branch)</a>. These seem to be the most useful resources at the moment. If you feel like porting or fixing an element or two, please drop a pull request or issue at GitHub!</p>\n  <p>I believe that with the help of everyone we can bring these amazing design spec to Ember in a modular and robust way. The Ember way. </p>\n  <p>\n  <strong>Help us on Github!</strong>\n  <!-- Place this tag where you want the button to render. -->\n  </p>\n  <p>\n  <a class=\"github-button\" href=\"https://github.com/miguelcobain/ember-paper\" data-style=\"mega\" data-count-href=\"/miguelcobain/ember-paper/network\" data-count-api=\"/repos/miguelcobain/ember-paper#forks_count\">Fork</a>\n  </p>\n</div>\n");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/list', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Lists</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  ");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-whiteframe-z1 list-demo")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <h3>Template</h3>\n  <pre>\n  {{#paper-content classNames=\"md-whiteframe-z1 list-demo\"}}\n    {{#paper-list}}\n      {{#each listData}}\n        {{#paper-item}}\n          {{#paper-tile-left}}\n            &lt;img {{bind-attr src=face alt=who}} class=&quot;face&quot;&gt;\n          {{/paper-tile-left}}\n\n          {{#paper-tile-content}}\n            &lt;h3&gt;{{what}}&lt;/h3&gt;\n            &lt;h4&gt;{{who}}&lt;/h4&gt;\n            &lt;p&gt;\n              {{notes}}\n            &lt;/p&gt;\n          {{/paper-tile-content}}\n        {{/paper-item}}\n      {{/each}}\n    {{/paper-list}}\n  {{/paper-content}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n    ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-list']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-list']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-list']) { stack1 = blockHelperMissing.call(depth0, 'paper-list', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n  ");
-    return buffer;
-    }
-  function program6(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n      ");
-    stack1 = helpers.each.call(depth0, "listData", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-  function program7(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n        ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-item']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-item']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-item']) { stack1 = blockHelperMissing.call(depth0, 'paper-item', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n      ");
-    return buffer;
-    }
-  function program8(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n          ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-tile-left']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-tile-left']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-tile-left']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-left', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n          ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-tile-content']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-tile-content']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-tile-content']) { stack1 = blockHelperMissing.call(depth0, 'paper-tile-content', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n        ");
-    return buffer;
-    }
-  function program9(depth0,data) {
-    
-    var buffer = '';
-    data.buffer.push("\n            <img ");
-    data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-      'src': ("face"),
-      'alt': ("who")
-    },hashTypes:{'src': "ID",'alt': "ID"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
-    data.buffer.push(" class=\"face\">\n          ");
-    return buffer;
-    }
-
-  function program11(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push("\n            <h3>");
-    stack1 = helpers._triageMustache.call(depth0, "what", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</h3>\n            <h4>");
-    stack1 = helpers._triageMustache.call(depth0, "who", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</h4>\n            <p>\n              ");
-    stack1 = helpers._triageMustache.call(depth0, "notes", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n            </p>\n          ");
-    return buffer;
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/radio', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Radio buttons</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  <ul class=\"paper-list-inline\">\n    <li>");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-radio']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-radio']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-radio']) { stack1 = blockHelperMissing.call(depth0, 'paper-radio', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n    <li>");
-    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'toggle': (true)
-    },hashTypes:{'toggle': "BOOLEAN"},hashContexts:{'toggle': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n    <li>");
-    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'disabled': (true)
-    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n  </ul>\n  <h3>Radio Button Group</h3>\n  <ul class=\"paper-list-inline\">\n    <li>");
-    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'value': ("1"),
-      'selected': ("selectedValue")
-    },hashTypes:{'value': "STRING",'selected': "ID"},hashContexts:{'value': depth0,'selected': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n    <li>");
-    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'value': ("2"),
-      'selected': ("selectedValue")
-    },hashTypes:{'value': "STRING",'selected': "ID"},hashContexts:{'value': depth0,'selected': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n    <li>");
-    stack1 = (helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'value': ("3"),
-      'selected': ("selectedValue")
-    },hashTypes:{'value': "STRING",'selected': "ID"},hashContexts:{'value': depth0,'selected': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</li>\n  </ul>\n  <p>Selected value: ");
-    stack1 = helpers._triageMustache.call(depth0, "selectedValue", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</p>\n\n  <p>");
-    data.buffer.push(escapeExpression((helper = helpers['paper-radio'] || (depth0 && depth0['paper-radio']),options={hash:{
-      'toggle': (true),
-      'label': ("Blockless version")
-    },hashTypes:{'toggle': "BOOLEAN",'label': "STRING"},hashContexts:{'toggle': depth0,'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-radio", options))));
-    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-radio}}A radio button{{/paper-radio}}\n    {{#paper-radio toggle=true}}Toggable radio button{{/paper-radio}}\n    {{#paper-radio disabled=true}}Disabled radio button{{/paper-radio}}\n\n    {{#paper-radio value=\"1\" selected=selectedValue}}Radio button 1{{/paper-radio}}\n    {{#paper-radio value=\"2\" selected=selectedValue}}Radio button 2{{/paper-radio}}\n    {{#paper-radio value=\"3\" selected=selectedValue}}Radio button 3{{/paper-radio}}\n\n    {{paper-radio toggle=true label=\"Blockless version\"}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    
-    data.buffer.push("A radio button");
-    }
-
-  function program7(depth0,data) {
-    
-    
-    data.buffer.push("Toggable radio button");
-    }
-
-  function program9(depth0,data) {
-    
-    
-    data.buffer.push("Disabled radio button");
-    }
-
-  function program11(depth0,data) {
-    
-    
-    data.buffer.push("Radio button 1");
-    }
-
-  function program13(depth0,data) {
-    
-    
-    data.buffer.push("Radio button 2");
-    }
-
-  function program15(depth0,data) {
-    
-    
-    data.buffer.push("Radio button 3");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/sidenav', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Sidenav</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '';
-    data.buffer.push("\n<div class=\"doc-content\">\n  <p>Try to resize this webpage.</p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-nav-container classNames=\"ember-app\"}}\n\n      {{#paper-sidenav classNames=\"md-sidenav-left md-whiteframe-z2\" flex-layout=\"column\" flex=true}}\n\n        {{#paper-toolbar}}\n          &lt;div class=\"md-toolbar-tools\"&gt;\n            &lt;div class=\"logo\"&gt;\n              &lt;img src=\"ember-logo-white.png\" height=\"30\"/&gt;&nbsp;&nbsp;&lt;strong&gt;Paper&lt;/strong&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        {{/paper-toolbar}}\n\n        {{#paper-content}}\n          &lt;nav class=\"sidenav\"&gt;\n            &lt;ul&gt;\n              &lt;li&gt;{{#link-to \"index\"}}Introduction{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"navigation\"}}Navigation{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"typography\"}}Typography{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"list\"}}List{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"divider\"}}Divider{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"button\"}}Button{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"checkbox\"}}Checkbox{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"switch\"}}Switch{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"radio\"}}Radio{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"textfield\"}}Text Field{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"toolbar\"}}Toolbar{{/link-to}}&lt;/li&gt;\n              &lt;li&gt;{{#link-to \"icons\"}}Icons{{/link-to}}&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/nav&gt;\n        {{/paper-content}}\n      {{/paper-sidenav}}\n\n      {{#paper-content flex-layout=\"column\" flex=true}}\n        {{outlet}}\n      {{/paper-content}}\n\n    {{/paper-nav-container}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/switch', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Switches</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  <p>\n    ");
-    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
-      'checked': ("booleanProp1")
-    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
-      'checked': ("booleanProp2")
-    },hashTypes:{'checked': "ID"},hashContexts:{'checked': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
-      'disabled': (true)
-    },hashTypes:{'disabled': "BOOLEAN"},hashContexts:{'disabled': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    ");
-    stack1 = (helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
-      'noink': (true)
-    },hashTypes:{'noink': "BOOLEAN"},hashContexts:{'noink': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n    ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-switch'] || (depth0 && depth0['paper-switch']),options={hash:{
-      'label': ("Blockless version")
-    },hashTypes:{'label': "STRING"},hashContexts:{'label': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-switch", options))));
-    data.buffer.push("\n  </p>\n  <h3>Template</h3>\n  <pre>\n    {{#paper-switch checked=booleanProp1}} {{booleanProp1}} {{/paper-switch}}\n\n    {{#paper-switch checked=booleanProp2}} {{booleanProp2}} {{/paper-switch}}\n\n    {{#paper-switch disabled=true}} Disabled switch {{/paper-switch}}\n\n    {{#paper-switch noink=true}} Noink switch {{/paper-switch}}\n\n    {{paper-switch label=\"Blockless version\"}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push(" ");
-    stack1 = helpers._triageMustache.call(depth0, "booleanProp1", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push(" ");
-    return buffer;
-    }
-
-  function program7(depth0,data) {
-    
-    var buffer = '', stack1;
-    data.buffer.push(" ");
-    stack1 = helpers._triageMustache.call(depth0, "booleanProp2", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push(" ");
-    return buffer;
-    }
-
-  function program9(depth0,data) {
-    
-    
-    data.buffer.push(" Disabled switch ");
-    }
-
-  function program11(depth0,data) {
-    
-    
-    data.buffer.push(" Noink switch ");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/textfield', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Text fields</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  <ul class=\"paper-list-inline\">\n    <li>");
-    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
-      'label': ("Name"),
-      'value': ("name")
-    },hashTypes:{'label': "STRING",'value': "ID"},hashContexts:{'label': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
-    data.buffer.push("</li>\n    <li>");
-    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
-      'label': ("E-mail"),
-      'type': ("email"),
-      'value': ("email")
-    },hashTypes:{'label': "STRING",'type': "STRING",'value': "ID"},hashContexts:{'label': depth0,'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
-    data.buffer.push("</li>\n    <li>");
-    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
-      'label': ("Password"),
-      'type': ("password")
-    },hashTypes:{'label': "STRING",'type': "STRING"},hashContexts:{'label': depth0,'type': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
-    data.buffer.push("</li>\n    <li>");
-    data.buffer.push(escapeExpression((helper = helpers['paper-text'] || (depth0 && depth0['paper-text']),options={hash:{
-      'label': ("E-mail"),
-      'type': ("email"),
-      'disabled': (true)
-    },hashTypes:{'label': "STRING",'type': "STRING",'disabled': "BOOLEAN"},hashContexts:{'label': depth0,'type': depth0,'disabled': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-text", options))));
-    data.buffer.push("</li>\n  </ul>\n  <p>Name: ");
-    stack1 = helpers._triageMustache.call(depth0, "name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</p>\n  <p>Email: ");
-    stack1 = helpers._triageMustache.call(depth0, "email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("</p>\n  <h3>Template</h3>\n  <pre>\n    {{paper-text label=\"Name\" value=name}}\n    {{paper-text label=\"E-mail\" type=\"email\" value=email}}\n    {{paper-text label=\"Password\" type=\"password\"}}\n    {{paper-text label=\"E-mail\" type=\"email\" disabled=true}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/toolbar', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>Toolbars</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n<div class=\"doc-content\">\n  ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n  <p>\"md-toolbar-tools\" is a class that centers your elements in the toolbar.</p>\n\n  <h3>Template</h3>\n  <pre>\n    {{#paper-toolbar}}\n      &lt;div class=\"md-toolbar-tools\"&gt;\n        {{#paper-button}}Example button{{/paper-button}}\n        {{#paper-button}}Example button{{/paper-button}}\n      &lt;/div&gt;\n    {{/paper-toolbar}}\n  </pre>\n</div>\n");
-    return buffer;
-    }
-  function program5(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n    <div class=\"md-toolbar-tools\">\n      ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-button']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-button']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-button']) { stack1 = blockHelperMissing.call(depth0, 'paper-button', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n      ");
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-button']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-button']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-button']) { stack1 = blockHelperMissing.call(depth0, 'paper-button', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    </div>\n  ");
-    return buffer;
-    }
-  function program6(depth0,data) {
-    
-    
-    data.buffer.push("Example button");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
-  });
-
-});
-define('dummy/templates/typography', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [4,'>= 1.0.0'];
-  helpers = this.merge(helpers, Ember['default'].Handlebars.helpers); data = data || {};
-    var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function", blockHelperMissing=helpers.blockHelperMissing;
-
-  function program1(depth0,data) {
-    
-    var buffer = '', stack1, helper, options;
-    data.buffer.push("\n  <h2 class=\"md-toolbar-tools\">\n    ");
-    stack1 = (helper = helpers['paper-sidenav-toggle'] || (depth0 && depth0['paper-sidenav-toggle']),options={hash:{
-      'class': ("menu-sidenav-toggle")
-    },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-sidenav-toggle", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n    <span>HTML Elements</span>\n  </h2>\n");
-    return buffer;
-    }
-  function program2(depth0,data) {
-    
-    var buffer = '', helper, options;
-    data.buffer.push("\n      ");
-    data.buffer.push(escapeExpression((helper = helpers['paper-icon'] || (depth0 && depth0['paper-icon']),options={hash:{
-      'icon': ("menu")
-    },hashTypes:{'icon': "STRING"},hashContexts:{'icon': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-icon", options))));
-    data.buffer.push("\n    ");
-    return buffer;
-    }
-
-  function program4(depth0,data) {
-    
-    
-    data.buffer.push("\n<div class=\"doc-content\">\n  <h3>Headings</h3>\n  <div class=\"preview-block\">\n    <h1>&lt;h1&gt;</h1>\n    <h2>&lt;h2&gt;</h2>\n    <h3>&lt;h3&gt;</h3>\n    <h4>&lt;h4&gt;</h4>\n    <h5>&lt;h5&gt;</h5>\n    <h6>&lt;h6&gt;</h6>\n  </div>\n\n  <h3>Formatting</h3>\n  <div class=\"preview-block\">\n    <p><u>&lt;u&gt;Underlined&lt;u&gt;</u></p>\n\n    <p><b>&lt;b&gt;Bold&lt;b&gt;</b></p>\n\n    <p><strong>&lt;strong&gt;Strong&lt;strong&gt;</strong></p>\n\n    <p><i>&lt;italic&gt;Italic&lt;italic&gt;</i></p>\n\n    <p><em>&lt;em&gt;Em&lt;em&gt;</em></p>\n\n    <p><s>&lt;s&gt;Strikethrough&lt;s&gt;</s></p>\n\n    <p><small>&lt;small&gt;Small&lt;small&gt;</small></p>\n\n    <p><mark>&lt;mark&gt;Mark&lt;mark&gt;</mark></p>\n  </div>\n\n  <h3>Subtitles</h3>\n  <div class=\"preview-block\">\n    <h1>&lt;h1&gt; <small>Subtitle</small></h1>\n    <h2>&lt;h2&gt; <small>Subtitle</small></h2>\n    <h3>&lt;h3&gt; <small>Subtitle</small></h3>\n    <h4>&lt;h4&gt; <small>Subtitle</small></h4>\n    <h5>&lt;h5&gt; <small>Subtitle</small></h5>\n    <h6>&lt;h6&gt; <small>Subtitle</small></h6>\n  </div>\n\n  <h3>Description</h3>\n  <div class=\"preview-block\">\n    <dl>\n      <dt>Description lists</dt>\n      <dd>A description list is perfect for defining terms.</dd>\n      <dt>Euismod</dt>\n      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n      <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n      <dt>Malesuada porta</dt>\n      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n    </dl>\n  </div>\n\n  <h3>Quotes</h3>\n  <div class=\"preview-block\">\n    <blockquote>&lt;blockquote&gt;</blockquote>\n  </div>\n\n  <h2>Addresses</h2>\n\n  <address>\n    <strong>Googleplex</strong><br>\n    1600 Amphitheatre Pkwy<br>\n    Mountain View, CA 94043<br>\n    <abbr title=\"Phone\">P:</abbr> (650) 253-0000\n  </address>\n\n  <h2>Code</h2>\n\n  <h3>Multi-line code blocks</h3>\n  <p>\n  Use &lt;pre&gt; for multi-line code blocks.\n  <pre>\n  &lt;p&gt;This is the first line of code&lt;/p&gt;\n  &lt;p&gt;This is the second line of code&lt;/p&gt;\n  </pre>\n  </p>\n\n  <h3>Inline code blocks</h3>\n  <p>Code blocks like <code>&lt;main&gt;</code> could be displayed inline.</p>\n\n  <h2>Tables</h2>\n\n  <h3>Basic table</h3>\n\n  <table>\n    <thead>\n      <tr>\n        <th>#</th>\n        <th>First Name</th>\n        <th>Last Name</th>\n        <th>Username</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>1</td>\n        <td>Larry</td>\n        <td>Page</td>\n        <td>+LarryPage</td>\n      </tr>\n      <tr>\n        <td>2</td>\n        <td>Sergey</td>\n        <td>Brin</td>\n        <td>+SergeyBrin</td>\n      </tr>\n      <tr>\n        <td>3</td>\n        <td>Eric</td>\n        <td>Schmidt</td>\n        <td>+EricSchmidt</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n");
-    }
-
-    options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}
-    if (helper = helpers['paper-toolbar']) { stack1 = helper.call(depth0, options); }
-    else { helper = (depth0 && depth0['paper-toolbar']); stack1 = typeof helper === functionType ? helper.call(depth0, options) : helper; }
-    if (!helpers['paper-toolbar']) { stack1 = blockHelperMissing.call(depth0, 'paper-toolbar', {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data}); }
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n\n");
-    stack1 = (helper = helpers['paper-content'] || (depth0 && depth0['paper-content']),options={hash:{
-      'classNames': ("md-padding")
-    },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "paper-content", options));
-    if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-    data.buffer.push("\n");
-    return buffer;
-    
+  module('JSHint - controllers');
+  test('controllers/switch.js should pass jshint', function() { 
+    ok(true, 'controllers/switch.js should pass jshint.'); 
   });
 
 });
@@ -2564,65 +8025,125 @@ define('dummy/tests/helpers/resolver', ['exports', 'ember/resolver', 'dummy/conf
   exports['default'] = resolver;
 
 });
+define('dummy/tests/helpers/resolver.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - helpers');
+  test('helpers/resolver.js should pass jshint', function() { 
+    ok(true, 'helpers/resolver.js should pass jshint.'); 
+  });
+
+});
 define('dummy/tests/helpers/start-app', ['exports', 'ember', 'dummy/app', 'dummy/router', 'dummy/config/environment'], function (exports, Ember, Application, Router, config) {
 
   'use strict';
 
+
+
+  exports['default'] = startApp;
   function startApp(attrs) {
-    var App;
+    var application;
 
     var attributes = Ember['default'].merge({}, config['default'].APP);
     attributes = Ember['default'].merge(attributes, attrs); // use defaults, but you can override;
 
-    Router['default'].reopen({
-      location: 'none'
+    Ember['default'].run(function () {
+      application = Application['default'].create(attributes);
+      application.setupForTesting();
+      application.injectTestHelpers();
     });
 
-    Ember['default'].run(function() {
-      App = Application['default'].create(attributes);
-      App.setupForTesting();
-      App.injectTestHelpers();
-    });
-
-    App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
-
-    return App;
+    return application;
   }
-  exports['default'] = startApp;
+
+});
+define('dummy/tests/helpers/start-app.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - helpers');
+  test('helpers/start-app.js should pass jshint', function() { 
+    ok(true, 'helpers/start-app.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/router.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - .');
+  test('router.js should pass jshint', function() { 
+    ok(true, 'router.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/routes/application.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - routes');
+  test('routes/application.js should pass jshint', function() { 
+    ok(true, 'routes/application.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/routes/divider.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - routes');
+  test('routes/divider.js should pass jshint', function() { 
+    ok(true, 'routes/divider.js should pass jshint.'); 
+  });
 
 });
 define('dummy/tests/test-helper', ['dummy/tests/helpers/resolver', 'ember-qunit'], function (resolver, ember_qunit) {
 
+	'use strict';
+
+	ember_qunit.setResolver(resolver['default']);
+
+});
+define('dummy/tests/test-helper.jshint', function () {
+
   'use strict';
 
-  ember_qunit.setResolver(resolver['default']);
-
-  document.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>');
-
-  QUnit.config.urlConfig.push({ id: 'nocontainer', label: 'Hide container'});
-  var containerVisibility = QUnit.urlParams.nocontainer ? 'hidden' : 'visible';
-  document.getElementById('ember-testing-container').style.visibility = containerVisibility;
+  module('JSHint - .');
+  test('test-helper.js should pass jshint', function() { 
+    ok(true, 'test-helper.js should pass jshint.'); 
+  });
 
 });
 define('dummy/tests/unit/components/base-focusable-test', ['ember-qunit'], function (ember_qunit) {
 
   'use strict';
 
-  ember_qunit.moduleForComponent('base-focusable', 'BaseFocusableComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("base-focusable", "BaseFocusableComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/base-focusable-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/base-focusable-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/base-focusable-test.js should pass jshint.'); 
   });
 
 });
@@ -2630,23 +8151,31 @@ define('dummy/tests/unit/components/paper-button-test', ['ember-qunit'], functio
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-button', 'PaperButtonComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-button", "PaperButtonComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
+  });
 
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
 
+});
+define('dummy/tests/unit/components/paper-button-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-button-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-button-test.js should pass jshint.'); 
   });
 
 });
@@ -2654,21 +8183,31 @@ define('dummy/tests/unit/components/paper-checkbox-test', ['ember-qunit'], funct
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-checkbox', 'PaperCheckboxComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-checkbox", "PaperCheckboxComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-checkbox-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-checkbox-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-checkbox-test.js should pass jshint.'); 
   });
 
 });
@@ -2676,43 +8215,31 @@ define('dummy/tests/unit/components/paper-content-test', ['ember-qunit'], functi
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-content', 'PaperContentComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-content", "PaperContentComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
   });
 
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
 });
-define('dummy/tests/unit/components/paper-drawer-test', ['ember-qunit'], function (ember_qunit) {
+define('dummy/tests/unit/components/paper-content-test.jshint', function () {
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-drawer', 'PaperDrawerComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
-
-  ember_qunit.test('it renders', function() {
-    expect(2);
-
-    // creates the component instance
-    var component = this.subject();
-    equal(component._state, 'preRender');
-
-    // appends the component to the page
-    this.append();
-    equal(component._state, 'inDOM');
+  module('JSHint - unit/components');
+  test('unit/components/paper-content-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-content-test.js should pass jshint.'); 
   });
 
 });
@@ -2720,65 +8247,31 @@ define('dummy/tests/unit/components/paper-radio-test', ['ember-qunit'], function
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-radio', 'PaperRadioComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-radio", "PaperRadioComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
   });
 
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
 });
-define('dummy/tests/unit/components/paper-ripple-test', ['ember-qunit'], function (ember_qunit) {
+define('dummy/tests/unit/components/paper-radio-test.jshint', function () {
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-ripple', 'PaperRippleComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
-
-  ember_qunit.test('it renders', function() {
-    expect(2);
-
-    // creates the component instance
-    var component = this.subject();
-    equal(component._state, 'preRender');
-
-    // appends the component to the page
-    this.append();
-    equal(component._state, 'inDOM');
-  });
-
-});
-define('dummy/tests/unit/components/paper-shadow-test', ['ember-qunit'], function (ember_qunit) {
-
-  'use strict';
-
-  ember_qunit.moduleForComponent('paper-shadow', 'PaperShadowComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
-
-  ember_qunit.test('it renders', function() {
-    expect(2);
-
-    // creates the component instance
-    var component = this.subject();
-    equal(component._state, 'preRender');
-
-    // appends the component to the page
-    this.append();
-    equal(component._state, 'inDOM');
+  module('JSHint - unit/components');
+  test('unit/components/paper-radio-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-radio-test.js should pass jshint.'); 
   });
 
 });
@@ -2786,21 +8279,31 @@ define('dummy/tests/unit/components/paper-sidenav-test', ['ember-qunit'], functi
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-sidenav', 'PaperSidenavComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-sidenav", "PaperSidenavComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-sidenav-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-sidenav-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-sidenav-test.js should pass jshint.'); 
   });
 
 });
@@ -2808,21 +8311,31 @@ define('dummy/tests/unit/components/paper-text-test', ['ember-qunit'], function 
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-text', 'PaperTextComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-text", "PaperTextComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-text-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-text-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-text-test.js should pass jshint.'); 
   });
 
 });
@@ -2830,21 +8343,31 @@ define('dummy/tests/unit/components/paper-toggle-test', ['ember-qunit'], functio
 
   'use strict';
 
-  ember_qunit.moduleForComponent('paper-toggle', 'PaperToggleComponent', {
-    // specify the other units that are required for this test
-    // needs: ['component:foo', 'helper:bar']
-  });
+  ember_qunit.moduleForComponent("paper-toggle", "PaperToggleComponent", {});
 
-  ember_qunit.test('it renders', function() {
-    expect(2);
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
 
     // creates the component instance
     var component = this.subject();
-    equal(component._state, 'preRender');
+    assert.equal(component._state, "preRender");
 
     // appends the component to the page
     this.append();
-    equal(component._state, 'inDOM');
+    assert.equal(component._state, "inDOM");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-toggle-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-toggle-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-toggle-test.js should pass jshint.'); 
   });
 
 });
@@ -2854,9 +8377,9 @@ define('dummy/tests/unit/initializers/events-test', ['ember', 'dummy/initializer
 
   var container, application;
 
-  qunit.module('EventsInitializer', {
-    beforeEach: function() {
-      Ember['default'].run(function() {
+  qunit.module("EventsInitializer", {
+    beforeEach: function beforeEach() {
+      Ember['default'].run(function () {
         application = Ember['default'].Application.create();
         container = application.__container__;
         application.deferReadiness();
@@ -2865,11 +8388,41 @@ define('dummy/tests/unit/initializers/events-test', ['ember', 'dummy/initializer
   });
 
   // Replace this with your real tests.
-  qunit.test('it works', function(assert) {
+  qunit.test("it works", function (assert) {
     events.initialize(container, application);
 
     // you would normally confirm the results of the initializer here
     assert.ok(true);
+  });
+
+});
+define('dummy/tests/unit/initializers/events-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/initializers');
+  test('unit/initializers/events-test.js should pass jshint', function() { 
+    ok(true, 'unit/initializers/events-test.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/views/application.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - views');
+  test('views/application.js should pass jshint', function() { 
+    ok(true, 'views/application.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/views/button.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - views');
+  test('views/button.js should pass jshint', function() { 
+    ok(true, 'views/button.js should pass jshint.'); 
   });
 
 });
@@ -2878,7 +8431,7 @@ define('dummy/views/application', ['exports', 'ember'], function (exports, Ember
   'use strict';
 
   exports['default'] = Ember['default'].View.extend({
-    classNames:['ember-app']
+    classNames: ["ember-app"]
   });
 
 });
@@ -2888,8 +8441,8 @@ define('dummy/views/button', ['exports', 'ember'], function (exports, Ember) {
 
   exports['default'] = Ember['default'].View.extend({
     actions: {
-      targetButton: function() {
-        alert('You pressed a target button. -from view');
+      targetButton: function targetButton() {
+        alert("You pressed a target button. -from view");
       }
     }
   });
@@ -2923,7 +8476,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true});
+  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.15.f27adb61"});
 }
 
 /* jshint ignore:end */

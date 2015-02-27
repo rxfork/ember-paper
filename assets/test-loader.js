@@ -18,10 +18,22 @@ define("ember-cli/test-loader",
 
         for (moduleName in requirejs.entries) {
           if (this.shouldLoadModule(moduleName)) {
-            require(moduleName);
+            this.require(moduleName);
           }
         }
       }
+    };
+
+    TestLoader.prototype.require = function(moduleName) {
+      try {
+        require(moduleName);
+      } catch(e) {
+        this.moduleLoadFailure(moduleName, e);
+      }
+    };
+
+    TestLoader.prototype.moduleLoadFailure = function(moduleName, error) {
+      console.error('Error loading: ' + moduleName, error.stack);
     };
 
     TestLoader.load = function() {

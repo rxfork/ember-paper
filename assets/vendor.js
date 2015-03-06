@@ -66537,9 +66537,9 @@ define('ember-paper/components/paper-backdrop', ['exports', 'ember'], function (
 
   exports['default'] = Ember['default'].Component.extend({
     tagName: 'md-backdrop',
-    classNames:['paper-backdrop','md-opaque','md-default-theme'],
+    classNames: ['paper-backdrop', 'md-opaque', 'md-default-theme'],
 
-    click: function(evt){
+    click: function(evt) {
       Ember['default'].$(evt.target).trigger('collapseSidenav');
       return false;
     }
@@ -66600,32 +66600,33 @@ define('ember-paper/components/paper-checkbox', ['exports', 'ember-paper/compone
 
   var KEY_CODE_SPACE = 32;
 
-  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
-    tagName:'md-checkbox',
-    classNames:['md-checkbox','md-default-theme'],
-    classNameBindings:['checked:md-checked'],
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'], {
+    tagName: 'md-checkbox',
+    classNames: ['md-checkbox', 'md-default-theme'],
+    classNameBindings: ['checked:md-checked'],
+
+    //Alow element to be focusable by supplying a tabindex 0
+    attributeBindings: ['tabindex'],
+    tabindex: function() {
+      return this.get('disabled') ? '-1' : '0';
+    }.property('disabled'),
+
+    checked: false,
+    toggle: true,
 
     /* RippleMixin overrides */
     center: true,
     dimBackground: false,
-    rippleContainerSelector:'.md-container',
+    rippleContainerSelector: '.md-container',
 
-    //Alow element to be focusable by supplying a tabindex 0
-    attributeBindings:['tabindex'],
-    tabindex:function(){
-      return this.get('disabled') ? '-1' : '0';
-    }.property('disabled'),
-    checked:false,
-
-    toggle:true,
-
-    click:function(){
-      if(!this.get('disabled')){
+    click: function() {
+      if (!this.get('disabled')) {
         this.toggleProperty('checked');
       }
     },
-    keyPress:function(ev){
-      if(ev.which === KEY_CODE_SPACE) {
+
+    keyPress: function(ev) {
+      if (ev.which === KEY_CODE_SPACE) {
         this.click();
       }
     }
@@ -66730,22 +66731,21 @@ define('ember-paper/components/paper-nav-container', ['exports', 'ember', 'ember
 
   exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName: 'md-nav-container',
-    classNames:['paper-nav-container'],
+    classNames: ['paper-nav-container'],
     classNameBindings: ['open:sidenav-expanded'],
 
     open: false,
 
     // Custom events
-
-    toggleSidenav: function(){
+    toggleSidenav: function() {
       this.toggleProperty('open');
     },
 
-    expandSidenav: function(){
+    expandSidenav: function() {
       this.set('open', true);
     },
 
-    collapseSidenav: function(){
+    collapseSidenav: function() {
       this.set('open', false);
     }
   });
@@ -66755,28 +66755,29 @@ define('ember-paper/components/paper-radio', ['exports', 'ember', 'ember-paper/c
 
   'use strict';
 
-  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
-    tagName:'md-radio-button',
-    classNames:['md-radio-button','md-default-theme'],
-    classNameBindings:['checked:md-checked'],
-    toggle:false,
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'], {
+    tagName: 'md-radio-button',
+    classNames: ['md-radio-button', 'md-default-theme'],
+    classNameBindings: ['checked:md-checked'],
+    toggle: false,
+    selected: null,
 
     center: true,
-    rippleContainerSelector:'.md-container',
+    rippleContainerSelector: '.md-container',
 
     checked: function() {
       return this.get('value') === this.get('selected');
     }.property('value', 'selected'),
 
-    checkedDidChange: Ember['default'].observer('checked',function() {
-      if(this.get('checked')){
+    checkedDidChange: Ember['default'].observer('checked', function() {
+      if (this.get('checked')) {
         this.set('selected', this.get('value'));
       }
     }),
 
-    click:function(){
-      if(this.toggle){
-        this.set('selected', this.get('checked')?null:this.get('value'));
+    click: function() {
+      if (this.get('toggle')) {
+        this.set('selected', this.get('checked') ? null : this.get('value'));
       } else {
         this.set('selected', this.get('value'));
       }
@@ -66790,10 +66791,10 @@ define('ember-paper/components/paper-sidenav-toggle', ['exports', 'ember'], func
 
   exports['default'] = Ember['default'].Component.extend({
     tagName: 'md-sidenav-toggle',
-    classNames:['paper-sidenav-toggle'],
-    toggle:true,
+    classNames: ['paper-sidenav-toggle'],
+    toggle: true,
 
-    click: function(evt){
+    click: function(evt) {
       var eventName;
       if (this.get('toggle')) {
         eventName = 'toggleSidenav';
@@ -66812,7 +66813,7 @@ define('ember-paper/components/paper-sidenav', ['exports', 'ember', 'ember-paper
 
   exports['default'] = Ember['default'].Component.extend(FlexMixin['default'], {
     tagName: 'md-sidenav',
-    classNames:['paper-sidenav']
+    classNames: ['paper-sidenav']
   });
 
 });
@@ -67210,28 +67211,6 @@ define('ember-paper/mixins/ripple-mixin', ['exports', 'ember'], function (export
       }
     }
 
-  });
-
-});
-define('ember-paper/mixins/shadow-mixin', ['exports', 'ember'], function (exports, Ember) {
-
-  'use strict';
-
-  exports['default'] = Ember['default'].Mixin.create({
-    classNameBindings:[
-      'raised:md-raised'
-    ],
-    raised:false,
-    animatedShadow:true,
-    bottomShadowCSS:Ember['default'].computed('z',function(){
-      var raised = this.get('raised'),
-        disabled = this.get('disabled');
-      if(!raised || disabled){
-        return;
-      }
-      var z = this.get('z');
-      return z?'paper-shadow-bottom-z-'+z:'';
-    })
   });
 
 });

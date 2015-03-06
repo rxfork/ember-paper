@@ -452,16 +452,6 @@ define('dummy/ember-paper/tests/modules/ember-paper/mixins/ripple-mixin.jshint',
   });
 
 });
-define('dummy/ember-paper/tests/modules/ember-paper/mixins/shadow-mixin.jshint', function () {
-
-  'use strict';
-
-  module("JSHint - modules/ember-paper/mixins");
-  test("modules/ember-paper/mixins/shadow-mixin.js should pass jshint", function () {
-    ok(true, "modules/ember-paper/mixins/shadow-mixin.js should pass jshint.");
-  });
-
-});
 define('dummy/initializers/app-version', ['exports', 'dummy/config/environment', 'ember'], function (exports, config, Ember) {
 
   'use strict';
@@ -3355,46 +3345,6 @@ define('dummy/templates/components/paper-nav-container', ['exports'], function (
   'use strict';
 
   exports['default'] = Ember.HTMLBars.template((function() {
-    var child0 = (function() {
-      return {
-        isHTMLBars: true,
-        blockParams: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        build: function build(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("  ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        render: function render(context, env, contextualElement) {
-          var dom = env.dom;
-          var hooks = env.hooks, inline = hooks.inline;
-          dom.detectNamespace(contextualElement);
-          var fragment;
-          if (env.useFragmentCache && dom.canClone) {
-            if (this.cachedFragment === null) {
-              fragment = this.build(dom);
-              if (this.hasRendered) {
-                this.cachedFragment = fragment;
-              } else {
-                this.hasRendered = true;
-              }
-            }
-            if (this.cachedFragment) {
-              fragment = dom.cloneNode(this.cachedFragment, true);
-            }
-          } else {
-            fragment = this.build(dom);
-          }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          inline(env, morph0, context, "paper-backdrop", [], {"classNames": "md-sidenav-backdrop"});
-          return fragment;
-        }
-      };
-    }());
     return {
       isHTMLBars: true,
       blockParams: 0,
@@ -3406,13 +3356,13 @@ define('dummy/templates/components/paper-nav-container', ['exports'], function (
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       render: function render(context, env, contextualElement) {
         var dom = env.dom;
-        var hooks = env.hooks, content = hooks.content, get = hooks.get, block = hooks.block;
+        var hooks = env.hooks, content = hooks.content, inline = hooks.inline;
         dom.detectNamespace(contextualElement);
         var fragment;
         if (env.useFragmentCache && dom.canClone) {
@@ -3430,11 +3380,11 @@ define('dummy/templates/components/paper-nav-container', ['exports'], function (
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
+        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
         var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
         var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
         content(env, morph0, context, "yield");
-        block(env, morph1, context, "if", [get(env, context, "open")], {}, child0, null);
+        inline(env, morph1, context, "paper-backdrop", [], {"classBinding": "open:ng-enter:ng-leave :md-sidenav-backdrop"});
         return fragment;
       }
     };
@@ -3812,7 +3762,7 @@ define('dummy/templates/components/paper-text', ['exports'], function (exports) 
         var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
         element(env, element0, context, "bind-attr", [], {"for": get(env, context, "inputElementId")});
         content(env, morph0, context, "label");
-        inline(env, morph1, context, "input", [], {"id": get(env, context, "inputElementId"), "type": get(env, context, "type"), "value": get(env, context, "value"), "focus-in": "focusIn", "focus-out": "focusOut", "disabled": get(env, context, "disabled")});
+        inline(env, morph1, context, "input", [], {"id": get(env, context, "inputElementId"), "type": get(env, context, "type"), "value": get(env, context, "value"), "focus-in": "focusIn", "focus-out": "focusOut", "disabled": get(env, context, "disabled"), "required": get(env, context, "required")});
         return fragment;
       }
     };
@@ -8179,7 +8129,7 @@ define('dummy/tests/unit/components/paper-button-test.jshint', function () {
   });
 
 });
-define('dummy/tests/unit/components/paper-checkbox-test', ['ember-qunit'], function (ember_qunit) {
+define('dummy/tests/unit/components/paper-checkbox-test', ['ember', 'ember-qunit'], function (Ember, ember_qunit) {
 
   'use strict';
 
@@ -8193,8 +8143,91 @@ define('dummy/tests/unit/components/paper-checkbox-test', ['ember-qunit'], funct
     assert.equal(component._state, "preRender");
 
     // appends the component to the page
-    this.append();
+    this.render();
     assert.equal(component._state, "inDOM");
+  });
+
+  ember_qunit.test("should set checked css class", function (assert) {
+    var component = this.subject();
+    this.render();
+
+    Ember['default'].run(function () {
+      component.set("checked", true);
+    });
+
+    assert.ok(this.$().hasClass("md-checked"));
+  });
+
+  ember_qunit.test("element should be focusable if not disabled", function (assert) {
+    var component = this.subject();
+
+    assert.equal(this.$().attr("tabindex"), "0");
+  });
+
+  ember_qunit.test("element should not be focusable if disabled", function (assert) {
+    var component = this.subject();
+    this.render();
+
+    Ember['default'].run(function () {
+      component.set("disabled", true);
+    });
+
+    assert.equal(this.$().attr("tabindex"), "-1");
+  });
+
+  ember_qunit.test("it is possible to check and set checked to true", function (assert) {
+    var component = this.subject();
+
+    this.$().trigger("click");
+
+    assert.ok(component.get("checked"));
+  });
+
+  ember_qunit.test("it is possible to uncheck and set checked to false", function (assert) {
+    var component = this.subject();
+
+    Ember['default'].run(function () {
+      component.set("checked", true);
+    });
+
+    this.$().trigger("click");
+
+    assert.ok(!component.get("checked"));
+  });
+
+  ember_qunit.test("it is possible to check using spacebar", function (assert) {
+    var component = this.subject();
+
+    var e = $.Event("keypress");
+    e.which = 32; // # Some key code value
+    this.$().trigger(e);
+
+    assert.ok(component.get("checked"));
+  });
+
+  ember_qunit.test("it is possible to uncheck using spacebar", function (assert) {
+    var component = this.subject();
+
+    Ember['default'].run(function () {
+      component.set("checked", true);
+    });
+
+    var e = $.Event("keypress");
+    e.which = 32; // # Some key code value
+    this.$().trigger(e);
+
+    assert.ok(!component.get("checked"));
+  });
+
+  ember_qunit.test("blockless version should set label inside", function (assert) {
+    var component = this.subject();
+    this.render();
+
+    Ember['default'].run(function () {
+      component.set("label", "Button");
+    });
+
+    assert.equal(this.$(".md-label").html().trim(), "Button");
   });
 
   // specify the other units that are required for this test
@@ -8243,7 +8276,71 @@ define('dummy/tests/unit/components/paper-content-test.jshint', function () {
   });
 
 });
-define('dummy/tests/unit/components/paper-radio-test', ['ember-qunit'], function (ember_qunit) {
+define('dummy/tests/unit/components/paper-nav-container-test', ['ember', 'ember-qunit'], function (Ember, ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent("paper-nav-container", "PaperNavContainerComponent", {});
+
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(3);
+
+    // creates the component instance
+    var component = this.subject();
+    assert.equal(component._state, "preRender");
+
+    // appends the component to the page
+    this.render();
+    assert.equal(component._state, "inDOM");
+    assert.equal(component.get("element").tagName, "md-nav-container".toUpperCase(), "matches `md-nav-container`");
+  });
+
+  ember_qunit.test("expandSidenav event sets open property to true", function (assert) {
+    assert.expect(2);
+    var component = this.subject();
+    assert.equal(component.get("open"), false, "default value for open prop is false");
+
+    Ember['default'].run(component, "expandSidenav");
+    assert.equal(component.get("open"), true, "expandSidenav event sets open prop to true");
+  });
+
+  ember_qunit.test("toggleSidenav event sets open property from false to true", function (assert) {
+    assert.expect(3);
+    var component = this.subject();
+    assert.equal(component.get("open"), false, "default value for open prop is false");
+
+    Ember['default'].run(component, "toggleSidenav");
+    assert.equal(component.get("open"), true, "toggleSidenav event sets open prop to true");
+
+    Ember['default'].run(component, "toggleSidenav");
+    assert.equal(component.get("open"), false, "toggleSidenav event sets open prop to false");
+  });
+
+  ember_qunit.test("collapseSidenav event sets open property to false", function (assert) {
+    assert.expect(1);
+    var component = this.subject();
+
+    component.set("open", true);
+
+    Ember['default'].run(component, "collapseSidenav");
+    assert.equal(component.get("open"), false, "collapseSidenav event sets open prop to false");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-nav-container-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-nav-container-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-nav-container-test.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/unit/components/paper-radio-test', ['ember', 'ember-qunit'], function (Ember, ember_qunit) {
 
   'use strict';
 
@@ -8257,8 +8354,67 @@ define('dummy/tests/unit/components/paper-radio-test', ['ember-qunit'], function
     assert.equal(component._state, "preRender");
 
     // appends the component to the page
-    this.append();
+    this.render();
     assert.equal(component._state, "inDOM");
+  });
+
+  ember_qunit.test("should set checked css class", function (assert) {
+    var component = this.subject();
+    this.render();
+
+    Ember['default'].run(function () {
+      component.set("checked", true);
+    });
+
+    assert.ok(this.$().hasClass("md-checked"));
+  });
+
+  ember_qunit.test("it is possible to check and set selected property to value", function (assert) {
+    var component = this.subject();
+
+    assert.ok(!component.get("selected"));
+
+    var value = "some value";
+
+    Ember['default'].run(function () {
+      component.set("value", value);
+    });
+
+    this.$().trigger("click");
+
+    assert.equal(component.get("selected"), value);
+  });
+
+  ember_qunit.test("it isn't possible to uncheck and set selected property to null", function (assert) {
+    var component = this.subject();
+
+    var value = "some value";
+
+    Ember['default'].run(function () {
+      component.set("value", value);
+      component.set("selected", value);
+    });
+
+    this.$().trigger("click");
+
+    //still has value
+    assert.equal(component.get("selected"), value);
+  });
+
+  ember_qunit.test("it is possible to uncheck and set selected property to null if toggle is true", function (assert) {
+    var component = this.subject();
+
+    var value = "some value";
+
+    Ember['default'].run(function () {
+      component.set("value", value);
+      component.set("selected", value);
+      component.set("toggle", true);
+    });
+
+    this.$().trigger("click");
+
+    assert.equal(component.get("selected"), null);
   });
 
   // specify the other units that are required for this test
@@ -8279,18 +8435,19 @@ define('dummy/tests/unit/components/paper-sidenav-test', ['ember-qunit'], functi
 
   'use strict';
 
-  ember_qunit.moduleForComponent("paper-sidenav", "PaperSidenavComponent", {});
+  ember_qunit.moduleForComponent("paper-sidenav", {});
 
   ember_qunit.test("it renders", function (assert) {
-    assert.expect(2);
+    assert.expect(3);
 
     // creates the component instance
     var component = this.subject();
     assert.equal(component._state, "preRender");
 
-    // appends the component to the page
-    this.append();
+    // renders the component to the page
+    this.render();
     assert.equal(component._state, "inDOM");
+    assert.equal(component.get("element").tagName, "md-sidenav".toUpperCase(), "matches `md-sidenav`");
   });
 
   // specify the other units that are required for this test
@@ -8304,6 +8461,103 @@ define('dummy/tests/unit/components/paper-sidenav-test.jshint', function () {
   module('JSHint - unit/components');
   test('unit/components/paper-sidenav-test.js should pass jshint', function() { 
     ok(true, 'unit/components/paper-sidenav-test.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/unit/components/paper-sidenav-toggle-test', ['ember', 'ember-qunit'], function (Ember, ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent("paper-sidenav-toggle", "PaperSidenavToggleComponent", {});
+
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(3);
+
+    // creates the component instance
+    var component = this.subject();
+    assert.equal(component._state, "preRender");
+
+    // appends the component to the page
+    this.render();
+    assert.equal(component._state, "inDOM");
+    assert.equal(component.get("element").tagName, "md-sidenav-toggle".toUpperCase(), "matches `md-sidenav-toggle`");
+  });
+
+  ember_qunit.test("when clicked triggers `toggleSidenav` event by default", function (assert) {
+    assert.expect(1);
+    var component = this.subject();
+    var didFire = false;
+
+    var $component = this.$();
+    Ember['default'].run(function () {
+      $component.on("toggleSidenav", function () {
+        didFire = true;
+      });
+      $component.trigger("click");
+    });
+
+    assert.ok(didFire, "toggleSidenav event fired");
+  });
+
+  ember_qunit.test("when clicked triggers `expandSidenav` event if toggle is false", function (assert) {
+    assert.expect(1);
+    var component = this.subject({ toggle: false });
+    var didFire = false;
+
+    var $component = this.$();
+    Ember['default'].run(function () {
+      $component.on("expandSidenav", function () {
+        didFire = true;
+      });
+      $component.trigger("click");
+    });
+
+    assert.ok(didFire, "expandSidenav event fired");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-sidenav-toggle-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-sidenav-toggle-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-sidenav-toggle-test.js should pass jshint.'); 
+  });
+
+});
+define('dummy/tests/unit/components/paper-switch-test', ['ember-qunit'], function (ember_qunit) {
+
+  'use strict';
+
+  ember_qunit.moduleForComponent("paper-switch", "PaperToggleComponent", {});
+
+  ember_qunit.test("it renders", function (assert) {
+    assert.expect(2);
+
+    // creates the component instance
+    var component = this.subject();
+    assert.equal(component._state, "preRender");
+
+    // appends the component to the page
+    this.render();
+    assert.equal(component._state, "inDOM");
+  });
+
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+
+});
+define('dummy/tests/unit/components/paper-switch-test.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - unit/components');
+  test('unit/components/paper-switch-test.js should pass jshint', function() { 
+    ok(true, 'unit/components/paper-switch-test.js should pass jshint.'); 
   });
 
 });
@@ -8339,38 +8593,6 @@ define('dummy/tests/unit/components/paper-text-test.jshint', function () {
   });
 
 });
-define('dummy/tests/unit/components/paper-toggle-test', ['ember-qunit'], function (ember_qunit) {
-
-  'use strict';
-
-  ember_qunit.moduleForComponent("paper-toggle", "PaperToggleComponent", {});
-
-  ember_qunit.test("it renders", function (assert) {
-    assert.expect(2);
-
-    // creates the component instance
-    var component = this.subject();
-    assert.equal(component._state, "preRender");
-
-    // appends the component to the page
-    this.append();
-    assert.equal(component._state, "inDOM");
-  });
-
-  // specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
-
-});
-define('dummy/tests/unit/components/paper-toggle-test.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - unit/components');
-  test('unit/components/paper-toggle-test.js should pass jshint', function() { 
-    ok(true, 'unit/components/paper-toggle-test.js should pass jshint.'); 
-  });
-
-});
 define('dummy/tests/unit/initializers/events-test', ['ember', 'dummy/initializers/events', 'qunit'], function (Ember, events, qunit) {
 
   'use strict';
@@ -8387,12 +8609,35 @@ define('dummy/tests/unit/initializers/events-test', ['ember', 'dummy/initializer
     }
   });
 
-  // Replace this with your real tests.
-  qunit.test("it works", function (assert) {
+  qunit.test("it registers sidenav events", function (assert) {
     events.initialize(container, application);
 
-    // you would normally confirm the results of the initializer here
-    assert.ok(true);
+    var customEvents = application.get("customEvents");
+
+    assert.ok(customEvents);
+    assert.deepEqual(customEvents, {
+      toggleSidenav: "toggleSidenav",
+      expandSidenav: "expandSidenav",
+      collapseSidenav: "collapseSidenav"
+    });
+  });
+
+  qunit.test("it doesn't override any previously set events", function (assert) {
+    application.set("customEvents", {
+      aCustomEvent: "aCustomEvent"
+    });
+
+    events.initialize(container, application);
+
+    var customEvents = application.get("customEvents");
+
+    assert.ok(customEvents);
+    assert.deepEqual(customEvents, {
+      aCustomEvent: "aCustomEvent",
+      toggleSidenav: "toggleSidenav",
+      expandSidenav: "expandSidenav",
+      collapseSidenav: "collapseSidenav"
+    });
   });
 
 });
@@ -8476,7 +8721,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.15.f27adb61"});
+  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.16.abe1f9db"});
 }
 
 /* jshint ignore:end */

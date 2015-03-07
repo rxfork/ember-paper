@@ -6414,7 +6414,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
               fragment = this.build(dom);
             }
             var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-            content(env, morph0, context, "isDisabled");
+            content(env, morph0, context, "booleanProp1");
             return fragment;
           }
         };
@@ -6595,11 +6595,11 @@ define('dummy/templates/switch', ['exports'], function (exports) {
           var morph2 = dom.createMorphAt(element0,2,3);
           var morph3 = dom.createMorphAt(element0,3,4);
           var morph4 = dom.createMorphAt(element0,4,5);
-          block(env, morph0, context, "paper-switch", [], {"checked": get(env, context, "booleanProp1"), "disabled": get(env, context, "isDisabled")}, child0, null);
+          block(env, morph0, context, "paper-switch", [], {"checked": get(env, context, "booleanProp1")}, child0, null);
           block(env, morph1, context, "paper-switch", [], {"checked": get(env, context, "booleanProp2")}, child1, null);
           block(env, morph2, context, "paper-switch", [], {"disabled": true}, child2, null);
           block(env, morph3, context, "paper-switch", [], {"noink": true}, child3, null);
-          inline(env, morph4, context, "paper-switch", [], {"label": "Blockless version", "checked": get(env, context, "isDisabled")});
+          inline(env, morph4, context, "paper-switch", [], {"label": "Blockless version"});
           return fragment;
         }
       };

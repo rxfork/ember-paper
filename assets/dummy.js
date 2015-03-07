@@ -6414,7 +6414,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
               fragment = this.build(dom);
             }
             var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-            content(env, morph0, context, "booleanProp1");
+            content(env, morph0, context, "isDisabled");
             return fragment;
           }
         };
@@ -6595,11 +6595,11 @@ define('dummy/templates/switch', ['exports'], function (exports) {
           var morph2 = dom.createMorphAt(element0,2,3);
           var morph3 = dom.createMorphAt(element0,3,4);
           var morph4 = dom.createMorphAt(element0,4,5);
-          block(env, morph0, context, "paper-switch", [], {"checked": get(env, context, "booleanProp1")}, child0, null);
+          block(env, morph0, context, "paper-switch", [], {"checked": get(env, context, "booleanProp1"), "disabled": get(env, context, "isDisabled")}, child0, null);
           block(env, morph1, context, "paper-switch", [], {"checked": get(env, context, "booleanProp2")}, child1, null);
           block(env, morph2, context, "paper-switch", [], {"disabled": true}, child2, null);
           block(env, morph3, context, "paper-switch", [], {"noink": true}, child3, null);
-          inline(env, morph4, context, "paper-switch", [], {"label": "Blockless version"});
+          inline(env, morph4, context, "paper-switch", [], {"label": "Blockless version", "checked": get(env, context, "isDisabled")});
           return fragment;
         }
       };
@@ -8280,7 +8280,10 @@ define('dummy/tests/unit/components/paper-nav-container-test', ['ember', 'ember-
 
   'use strict';
 
-  ember_qunit.moduleForComponent("paper-nav-container", "PaperNavContainerComponent", {});
+  ember_qunit.moduleForComponent("paper-nav-container", "PaperNavContainerComponent", {
+    // specify the other units that are required for this test
+    needs: ["component:paper-backdrop"]
+  });
 
   ember_qunit.test("it renders", function (assert) {
     assert.expect(3);
@@ -8325,9 +8328,6 @@ define('dummy/tests/unit/components/paper-nav-container-test', ['ember', 'ember-
     Ember['default'].run(component, "collapseSidenav");
     assert.equal(component.get("open"), false, "collapseSidenav event sets open prop to false");
   });
-
-  // specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
 
 });
 define('dummy/tests/unit/components/paper-nav-container-test.jshint', function () {
@@ -8721,7 +8721,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.16.abe1f9db"});
+  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.17.6e3d9149"});
 }
 
 /* jshint ignore:end */

@@ -63753,17 +63753,6 @@ define("ember/container-debug-adapter",
     },
 
     /**
-     * Get all defined modules.
-     *
-     * @method _getEntries
-     * @return {Array} the list of registered modules.
-     * @private
-     */
-    _getEntries: function() {
-      return requirejs.entries;
-    },
-
-    /**
       Returns the available classes a given type.
 
       @method catalogEntriesByType
@@ -63771,7 +63760,7 @@ define("ember/container-debug-adapter",
       @return {Array} An array of classes.
     */
     catalogEntriesByType: function(type) {
-      var entries = this._getEntries(),
+      var entries = requirejs.entries,
           module,
           types = Ember.A();
 
@@ -63779,39 +63768,24 @@ define("ember/container-debug-adapter",
         return this.shortname;
       };
 
-      var prefix = this.namespace.modulePrefix;
-
       for(var key in entries) {
-        if(entries.hasOwnProperty(key) && key.indexOf(type) !== -1) {
-          // Check if it's a pod module
-          var name = getPod(type, key, this.namespace.podModulePrefix || prefix);
-          if (!name) {
-            // Not pod
-            name = key.split(type + 's/').pop();
+        if(entries.hasOwnProperty(key) && key.indexOf(type) !== -1)
+        {
+          // // TODO return the name instead of the module itself
+          // module = require(key, null, null, true);
 
-            // Support for different prefix (such as ember-cli addons).
-            // Uncomment the code below when
-            // https://github.com/ember-cli/ember-resolver/pull/80 is merged.
+          // if (module && module['default']) { module = module['default']; }
+          // module.shortname = key.split(type +'s/').pop();
+          // module.toString = makeToString;
 
-            //var match = key.match('^/?(.+)/' + type);
-            //if (match && match[1] !== prefix) {
-              // Different prefix such as an addon
-              //name = match[1] + '@' + name;
-            //}
-          }
-          types.addObject(name);
+          // types.push(module);
+          types.push(key.split(type +'s/').pop());
         }
       }
+
       return types;
     }
   });
-
-  function getPod(type, key, prefix) {
-    var match = key.match(new RegExp('^/?' + prefix + '/(.+)/' + type + '$'));
-    if (match) {
-      return match[1];
-    }
-  }
 
   ContainerDebugAdapter['default'] = ContainerDebugAdapter;
   return ContainerDebugAdapter;
@@ -63828,12 +63802,11 @@ define("ember/container-debug-adapter",
   Ember.Application.initializer({
     name: 'container-debug-adapter',
 
-    initialize: function(container, app) {
+    initialize: function(container) {
       var ContainerDebugAdapter = require('ember/container-debug-adapter');
       var Resolver = require('ember/resolver');
 
       container.register('container-debug-adapter:main', ContainerDebugAdapter);
-      app.inject('container-debug-adapter:main', 'namespace', 'application:main');
     }
   });
 }());
@@ -66817,24 +66790,91 @@ define('ember-paper/components/paper-sidenav', ['exports', 'ember', 'ember-paper
   });
 
 });
-define('ember-paper/components/paper-switch', ['exports', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, BaseFocusable, RippleMixin) {
+define('ember-paper/components/paper-switch', ['exports', 'ember', 'ember-paper/components/base-focusable', 'ember-paper/mixins/ripple-mixin'], function (exports, Ember, BaseFocusable, RippleMixin) {
 
   'use strict';
 
-  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'],{
-    tagName:'md-switch',
-    classNames:['paper-switch','md-default-theme'],
-    classNameBindings:['checked:md-checked'],
-    toggle:true,
+  exports['default'] = BaseFocusable['default'].extend(RippleMixin['default'], {
+    tagName: 'md-switch',
+    classNames: ['paper-switch', 'md-default-theme'],
+    classNameBindings: ['checked:md-checked', 'dragging:md-dragging'],
+    toggle: true,
 
     center: true,
-    rippleContainerSelector:'.md-thumb',
+    rippleContainerSelector: '.md-thumb',
 
-    click:function(){
-      if(!this.get('disabled')){
+    checked: false,
+    disabled: false,
+
+    dragging: false,
+    dragAmount: null,
+    switchWidth: null,
+
+    _setupSwitchDragging: function() {
+      // Don't set up anything if the switch is disabled
+      if (this.get('disabled')) { return; }
+
+      this.set('switchWidth', this.$('.md-bar').width());
+
+      // Enable dragging the switch
+      var element = this.get('element')[0] || this.get('element');
+      var thumbElement = element.getElementsByClassName('md-thumb-container')[0];
+      var thumbElementHammer = new Hammer(thumbElement);
+      this.thumbElementHammer = thumbElementHammer;
+      thumbElementHammer.get('pan').set({ threshold: 1 });
+      thumbElementHammer.on('panstart', Ember['default'].run.bind(this, this._dragStart));
+      thumbElementHammer.on('panmove', Ember['default'].run.bind(this, this._drag));
+      thumbElementHammer.on('panend', Ember['default'].run.bind(this, this._dragEnd));
+
+      // Allow the switch to be clicked to toggle the value
+      var switchHammer = new Hammer(element);
+      this.switchHammer = switchHammer;
+      switchHammer.on('tap', Ember['default'].run.bind(this, this._dragEnd));
+    }.on('didInsertElement').observes('disabled'),
+
+    onWillDestroyElement: function() {
+      if (this.switchHammer) {
+        this.switchHammer.destroy();
+      }
+      if (this.thumbElementHammer) {
+        this.switchHammer.destroy();
+      }
+    }.on('willDestroyElement'),
+
+    _dragStart: function() {
+      this.set('dragging', true);
+    },
+
+    _drag: function(event) {
+      if (this.get('disabled')) { return; }
+
+      // Get the amount amount the switch has been dragged
+      var percent = event.deltaX / this.get('switchWidth');
+      percent = this.get('checked') ? 1 + percent : percent;
+      this.set('dragAmount', percent);
+
+      // Make sure that the switch isn't moving past the edges
+      var translate = Math.max(0, Math.min(1, percent));
+      var transformProp = 'translate3d(' + (100 * translate) + '%, 0, 0)';
+      this.$('.md-thumb-container').css('transform', transformProp);
+      this.$('.md-thumb-container').css('-webkit-transform', transformProp);
+    },
+
+    _dragEnd: function() {
+      if (this.get('disabled')) { return; }
+
+      if ((!this.get('dragging')) ||
+           (this.get('checked') && this.get('dragAmount') < 0.5) ||
+           (!this.get('checked') && this.get('dragAmount') > 0.5)) {
         this.toggleProperty('checked');
       }
+
+      // Cleanup
+      this.$('.md-thumb-container').removeAttr('style');
+      this.set('dragging', false);
+      this.set('dragAmount', null);
     }
+
   });
 
 });

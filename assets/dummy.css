@@ -3077,7 +3077,7 @@ md-nav-container {
 
 @media screen and (min-width: 850px) {
   md-nav-container > md-backdrop {
-    display: none; } }
+    visibility: hidden; } }
 
 md-nav-container md-backdrop {
   pointer-events: none; }

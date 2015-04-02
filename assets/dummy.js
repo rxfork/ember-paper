@@ -174,7 +174,7 @@ define('dummy/controllers/icons', ['exports', 'ember'], function (exports, Ember
   'use strict';
 
   exports['default'] = Ember['default'].Controller.extend({
-    icons: ["access-alarms", "access-time", "accessibility", "account-box", "account-circle", "adb", "add", "add-alarm", "add-box", "add-circle", "add-circle-outline", "airplane-mode-off", "airplane-mode-on", "android", "apps", "archive", "arrow-back", "arrow-drop-down", "arrow-drop-down-circle", "arrow-drop-up", "arrow-forward", "attachment", "auto-fix", "backspace", "backup", "beenhere", "block", "bluetooth", "bluetooth-audio", "bluetooth-connected", "bluetooth-disabled", "bluetooth-searching", "bold", "book", "bookmark", "bookmark-outline", "brightness-auto", "brightness-high", "brightness-low", "brightness-medium", "bug-report", "cake", "call", "call-end", "call-made", "call-merge", "call-missed", "call-received", "call-split", "camera", "camera-alt", "camera-roll", "cancel", "cast", "cast-connected", "chat", "check", "check-box", "check-box-blank", "check-box-outline", "check-box-outline-blank", "check-circle", "check-circle-blank", "check-circle-outline", "check-circle-outline-blank", "chevron-left", "chevron-right", "chromecast", "circles", "circles-add", "circles-extended", "clear", "close", "close-caption", "cloud", "cloud-circle", "cloud-done", "cloud-download", "cloud-off", "cloud-queue", "cloud-upload", "comment", "communities", "content-copy", "content-cut", "content-paste", "create", "credit-card", "crop", "crop-free", "crop-landscape", "crop-portrait", "crop-square", "data-usage", "delete", "developer-mode", "dialpad", "directions", "directions-bike", "directions-bus", "directions-car", "directions-subway", "directions-train", "directions-transit", "directionswalk", "disc-full", "do-not-disturb", "dock", "domain", "done", "done-all", "drafts", "drive", "drive-apk", "drive-audio", "drive-code", "drive-document", "drive-drawing", "drive-eta", "drive-file", "drive-font", "drive-form", "drive-fusiontable", "drive-image", "drive-ms-excel", "drive-ms-powerpoint", "drive-ms-word", "drive-pdf", "drive-presentation", "drive-script", "drive-site", "drive-spreadsheet", "drive-video", "drive-zip", "earth", "email", "error", "event", "exit-to-app", "expand-less", "expand-more", "explore", "extension", "fast-forward", "fast-rewind", "favorite", "favorite-outline", "file-download", "file-upload", "filter", "flag", "flash-auto", "flash-off", "flash-on", "flights", "flip-to-back", "flip-to-front", "folder", "folder-mydrive", "folder-shared", "forum", "forward", "fullscreen", "fullscreen-exit", "gamepad", "games", "gesture", "glass", "gmail", "google", "google-plus", "gps-fixed", "gps-not-fixed", "gps-off", "group", "group-add", "hangout", "hangout-video", "hangout-video-off", "headset", "headset-mic", "help", "high-quality", "history", "home", "hotel", "https", "image", "import-export", "inbox", "info", "info-outline", "invert-colors", "italics", "keep", "keyboard", "keyboard-alt", "keyboard-arrow-down", "keyboard-arrow-left", "keyboard-arrow-right", "keyboard-arrow-up", "keyboard-backspace", "keyboard-capslock", "keyboard-control", "keyboard-hide", "keyboard-return", "keyboard-tab", "keyboard-voice", "label", "label-outline", "landscape", "language", "laptop", "launch", "link", "list", "live-help", "location", "location-city", "location-disabled", "location-searching", "lock", "lock-open", "lock-outline", "loop", "mail", "map", "mark-unread", "memory", "menu", "message", "messenger", "mic", "none", "off", "mms", "mood", "more", "more-horiz", "more-vert", "mouse", "movie", "nest-protect", "nest-thermostat", "network-cell", "network-wifi", "news", "nfc", "notifications", "notifications-none", "notifications-off", "notifications-on", "notifications-paused", "pages", "palette", "panorama", "party-mode", "pause", "pause-circle-fill", "pause-circle-outline", "people", "person", "person-add", "person-location", "person-outline", "phone", "phone2", "phone-bluetooth-speaker", "phone-forwarded", "phone-in-talk", "phone-locked", "phone-missed", "phone-paused", "photo", "photo-album", "photo-library", "place", "play-arrow", "play-circle-fill", "play-circle-outline", "play-download", "play-install", "plus-one", "poll", "polymer", "portrait", "post-blogger", "post-facebook", "post-gplus", "post-instagram", "post-linkedin", "post-pinterest", "post-tumblr", "post-twitter", "print", "public", "queue", "radio-button-off", "radio-button-on", "receipt", "refresh", "reminder", "remove", "remove-circle", "remove-circle-outline", "replay", "reply", "reply-all", "report", "ring-volume", "rotate-left", "rotate-right", "satellite", "save", "schedule", "school", "screen-lock-landscape", "screen-lock-portrait", "screen-lock-rotation", "screen-rotation", "sd-card", "sd-storage", "search", "select-all", "send", "settings", "settings-application", "settings-bluetooth", "settings-cell", "settings-phone", "settings-power", "settings-voice", "share", "share-alt", "shopping-basket", "shopping-cart", "shuffle", "signal-cellular-1-bar", "signal-cellular-2-bar", "signal-cellular-3-bar", "signal-cellular-4-bar", "signal-wifi-1-bar", "signal-wifi-2-bar", "signal-wifi-3-bar", "signal-wifi-4-bar", "sim-card-alert", "skip-next", "skip-previous", "slideshow", "sms", "sms-failed", "sort", "speaker", "star", "star-half", "star-outline", "star-rate", "stop", "storage", "store", "swap-driving-apps", "swap-horiz", "swap-vert", "swap-vert-circle", "switch-camera", "switch-video", "sync", "sync-disabled", "sync-green", "sync-problem", "sync-problem-red", "system-update", "tab", "tab-unselected", "tablet", "tag-faces", "tap-and-play", "terrain", "text-format", "text-sms", "theaters", "thumbs-down", "thumbs-up", "time-to-leave", "timelapse", "timer", "today", "traffic", "translate", "tv", "underline", "undo", "unfold-less", "unfold-more", "unknown-1", "unknown-3", "unknown-4", "unknown-5", "unknown-6", "unknown-7", "unkown-2", "usb", "vibration", "video-youtube", "videocam", "videocam-off", "view-array", "view-column", "view-headline", "view-list", "view-module", "view-quilt", "view-stream", "visibility", "visibility-off", "voice", "voicemail", "volume-down", "volume-mute", "volume-off", "volume-up", "vpn", "warning", "watch", "wb-auto", "wb-cloudy", "wb-incandescent", "wb-irradescent", "wb-sunny", "web", "whatshot", "wifi-tethering", "work"]
+    icons: Ember['default'].A(["access-alarms", "access-time", "accessibility", "account-box", "account-circle", "adb", "add", "add-alarm", "add-box", "add-circle", "add-circle-outline", "airplane-mode-off", "airplane-mode-on", "android", "apps", "archive", "arrow-back", "arrow-drop-down", "arrow-drop-down-circle", "arrow-drop-up", "arrow-forward", "attachment", "auto-fix", "backspace", "backup", "beenhere", "block", "bluetooth", "bluetooth-audio", "bluetooth-connected", "bluetooth-disabled", "bluetooth-searching", "bold", "book", "bookmark", "bookmark-outline", "brightness-auto", "brightness-high", "brightness-low", "brightness-medium", "bug-report", "cake", "call", "call-end", "call-made", "call-merge", "call-missed", "call-received", "call-split", "camera", "camera-alt", "camera-roll", "cancel", "cast", "cast-connected", "chat", "check", "check-box", "check-box-blank", "check-box-outline", "check-box-outline-blank", "check-circle", "check-circle-blank", "check-circle-outline", "check-circle-outline-blank", "chevron-left", "chevron-right", "chromecast", "circles", "circles-add", "circles-extended", "clear", "close", "close-caption", "cloud", "cloud-circle", "cloud-done", "cloud-download", "cloud-off", "cloud-queue", "cloud-upload", "comment", "communities", "content-copy", "content-cut", "content-paste", "create", "credit-card", "crop", "crop-free", "crop-landscape", "crop-portrait", "crop-square", "data-usage", "delete", "developer-mode", "dialpad", "directions", "directions-bike", "directions-bus", "directions-car", "directions-subway", "directions-train", "directions-transit", "directionswalk", "disc-full", "do-not-disturb", "dock", "domain", "done", "done-all", "drafts", "drive", "drive-apk", "drive-audio", "drive-code", "drive-document", "drive-drawing", "drive-eta", "drive-file", "drive-font", "drive-form", "drive-fusiontable", "drive-image", "drive-ms-excel", "drive-ms-powerpoint", "drive-ms-word", "drive-pdf", "drive-presentation", "drive-script", "drive-site", "drive-spreadsheet", "drive-video", "drive-zip", "earth", "email", "error", "event", "exit-to-app", "expand-less", "expand-more", "explore", "extension", "fast-forward", "fast-rewind", "favorite", "favorite-outline", "file-download", "file-upload", "filter", "flag", "flash-auto", "flash-off", "flash-on", "flights", "flip-to-back", "flip-to-front", "folder", "folder-mydrive", "folder-shared", "forum", "forward", "fullscreen", "fullscreen-exit", "gamepad", "games", "gesture", "glass", "gmail", "google", "google-plus", "gps-fixed", "gps-not-fixed", "gps-off", "group", "group-add", "hangout", "hangout-video", "hangout-video-off", "headset", "headset-mic", "help", "high-quality", "history", "home", "hotel", "https", "image", "import-export", "inbox", "info", "info-outline", "invert-colors", "italics", "keep", "keyboard", "keyboard-alt", "keyboard-arrow-down", "keyboard-arrow-left", "keyboard-arrow-right", "keyboard-arrow-up", "keyboard-backspace", "keyboard-capslock", "keyboard-control", "keyboard-hide", "keyboard-return", "keyboard-tab", "keyboard-voice", "label", "label-outline", "landscape", "language", "laptop", "launch", "link", "list", "live-help", "location", "location-city", "location-disabled", "location-searching", "lock", "lock-open", "lock-outline", "loop", "mail", "map", "mark-unread", "memory", "menu", "message", "messenger", "mic", "none", "off", "mms", "mood", "more", "more-horiz", "more-vert", "mouse", "movie", "nest-protect", "nest-thermostat", "network-cell", "network-wifi", "news", "nfc", "notifications", "notifications-none", "notifications-off", "notifications-on", "notifications-paused", "pages", "palette", "panorama", "party-mode", "pause", "pause-circle-fill", "pause-circle-outline", "people", "person", "person-add", "person-location", "person-outline", "phone", "phone2", "phone-bluetooth-speaker", "phone-forwarded", "phone-in-talk", "phone-locked", "phone-missed", "phone-paused", "photo", "photo-album", "photo-library", "place", "play-arrow", "play-circle-fill", "play-circle-outline", "play-download", "play-install", "plus-one", "poll", "polymer", "portrait", "post-blogger", "post-facebook", "post-gplus", "post-instagram", "post-linkedin", "post-pinterest", "post-tumblr", "post-twitter", "print", "public", "queue", "radio-button-off", "radio-button-on", "receipt", "refresh", "reminder", "remove", "remove-circle", "remove-circle-outline", "replay", "reply", "reply-all", "report", "ring-volume", "rotate-left", "rotate-right", "satellite", "save", "schedule", "school", "screen-lock-landscape", "screen-lock-portrait", "screen-lock-rotation", "screen-rotation", "sd-card", "sd-storage", "search", "select-all", "send", "settings", "settings-application", "settings-bluetooth", "settings-cell", "settings-phone", "settings-power", "settings-voice", "share", "share-alt", "shopping-basket", "shopping-cart", "shuffle", "signal-cellular-1-bar", "signal-cellular-2-bar", "signal-cellular-3-bar", "signal-cellular-4-bar", "signal-wifi-1-bar", "signal-wifi-2-bar", "signal-wifi-3-bar", "signal-wifi-4-bar", "sim-card-alert", "skip-next", "skip-previous", "slideshow", "sms", "sms-failed", "sort", "speaker", "star", "star-half", "star-outline", "star-rate", "stop", "storage", "store", "swap-driving-apps", "swap-horiz", "swap-vert", "swap-vert-circle", "switch-camera", "switch-video", "sync", "sync-disabled", "sync-green", "sync-problem", "sync-problem-red", "system-update", "tab", "tab-unselected", "tablet", "tag-faces", "tap-and-play", "terrain", "text-format", "text-sms", "theaters", "thumbs-down", "thumbs-up", "time-to-leave", "timelapse", "timer", "today", "traffic", "translate", "tv", "underline", "undo", "unfold-less", "unfold-more", "unknown-1", "unknown-3", "unknown-4", "unknown-5", "unknown-6", "unknown-7", "unkown-2", "usb", "vibration", "video-youtube", "videocam", "videocam-off", "view-array", "view-column", "view-headline", "view-list", "view-module", "view-quilt", "view-stream", "visibility", "visibility-off", "voice", "voicemail", "volume-down", "volume-mute", "volume-off", "volume-up", "vpn", "warning", "watch", "wb-auto", "wb-cloudy", "wb-incandescent", "wb-irradescent", "wb-sunny", "web", "whatshot", "wifi-tethering", "work"])
   });
 
 });
@@ -183,7 +183,7 @@ define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember)
   'use strict';
 
   exports['default'] = Ember['default'].Controller.extend({
-    listData: [{
+    listData: Ember['default'].A([{
       face: "tomster.png",
       who: "tomster",
       what: "a message for you",
@@ -208,7 +208,7 @@ define('dummy/controllers/list', ['exports', 'ember'], function (exports, Ember)
       who: "tomster",
       what: "a message for you",
       notes: "this is a message for you about ember"
-    }]
+    }])
   });
 
 });
@@ -457,34 +457,17 @@ define('dummy/initializers/app-version', ['exports', 'dummy/config/environment',
   'use strict';
 
   var classify = Ember['default'].String.classify;
+  var registered = false;
 
   exports['default'] = {
     name: "App Version",
     initialize: function initialize(container, application) {
-      var appName = classify(application.toString());
-      Ember['default'].libraries.register(appName, config['default'].APP.version);
+      if (!registered) {
+        var appName = classify(application.toString());
+        Ember['default'].libraries.register(appName, config['default'].APP.version);
+        registered = true;
+      }
     }
-  };
-
-});
-define('dummy/initializers/events', ['exports'], function (exports) {
-
-  'use strict';
-
-  exports.initialize = initialize;
-
-  function initialize(container, application) {
-    var customEvents = application.get("customEvents") || {};
-    Ember.String.w("toggle expand collapse").forEach(function (prefix) {
-      var name = Ember.String.fmt("%@Sidenav", prefix);
-      customEvents[name] = name;
-    });
-    application.set("customEvents", customEvents);
-  }
-
-  exports['default'] = {
-    name: "events",
-    initialize: initialize
   };
 
 });
@@ -519,7 +502,7 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     location: config['default'].locationType
   });
 
-  Router.map(function () {
+  exports['default'] = Router.map(function () {
     this.route("introduction");
     this.route("button");
     this.route("card");
@@ -534,8 +517,6 @@ define('dummy/router', ['exports', 'ember', 'dummy/config/environment'], functio
     this.route("toolbar");
     this.route("icons");
   });
-
-  exports['default'] = Router;
 
 });
 define('dummy/routes/application', ['exports', 'ember'], function (exports, Ember) {
@@ -579,6 +560,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var child0 = (function() {
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
@@ -641,11 +623,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child0 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Introduction");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Introduction");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -674,11 +659,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child1 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Sidenav");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Sidenav");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -707,11 +695,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child2 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Typography");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Typography");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -740,11 +731,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child3 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("List");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("List");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -773,11 +767,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child4 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Divider");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Divider");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -806,11 +803,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child5 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Card");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Card");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -839,11 +839,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child6 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Button");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Button");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -872,11 +875,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child7 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Checkbox");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Checkbox");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -905,11 +911,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child8 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Switch");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Switch");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -938,11 +947,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child9 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Radio");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Radio");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -971,11 +983,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child10 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Text Field");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Text Field");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -1004,11 +1019,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child11 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Toolbar");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Toolbar");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -1037,11 +1055,14 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var child12 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
-                var el0 = dom.createTextNode("Icons");
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("Icons");
+                dom.appendChild(el0, el1);
                 return el0;
               },
               render: function render(context, env, contextualElement) {
@@ -1069,6 +1090,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
@@ -1084,54 +1106,80 @@ define('dummy/templates/application', ['exports'], function (exports) {
               var el3 = dom.createTextNode("\n        ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n          ");
               dom.appendChild(el2, el3);
               var el3 = dom.createElement("li");
+              var el4 = dom.createComment("");
+              dom.appendChild(el3, el4);
               dom.appendChild(el2, el3);
               var el3 = dom.createTextNode("\n        ");
               dom.appendChild(el2, el3);
@@ -1164,19 +1212,19 @@ define('dummy/templates/application', ['exports'], function (exports) {
                 fragment = this.build(dom);
               }
               var element0 = dom.childAt(fragment, [1, 1]);
-              var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),-1,-1);
-              var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),-1,-1);
-              var morph2 = dom.createMorphAt(dom.childAt(element0, [5]),-1,-1);
-              var morph3 = dom.createMorphAt(dom.childAt(element0, [7]),-1,-1);
-              var morph4 = dom.createMorphAt(dom.childAt(element0, [9]),-1,-1);
-              var morph5 = dom.createMorphAt(dom.childAt(element0, [11]),-1,-1);
-              var morph6 = dom.createMorphAt(dom.childAt(element0, [13]),-1,-1);
-              var morph7 = dom.createMorphAt(dom.childAt(element0, [15]),-1,-1);
-              var morph8 = dom.createMorphAt(dom.childAt(element0, [17]),-1,-1);
-              var morph9 = dom.createMorphAt(dom.childAt(element0, [19]),-1,-1);
-              var morph10 = dom.createMorphAt(dom.childAt(element0, [21]),-1,-1);
-              var morph11 = dom.createMorphAt(dom.childAt(element0, [23]),-1,-1);
-              var morph12 = dom.createMorphAt(dom.childAt(element0, [25]),-1,-1);
+              var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),0,0);
+              var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),0,0);
+              var morph2 = dom.createMorphAt(dom.childAt(element0, [5]),0,0);
+              var morph3 = dom.createMorphAt(dom.childAt(element0, [7]),0,0);
+              var morph4 = dom.createMorphAt(dom.childAt(element0, [9]),0,0);
+              var morph5 = dom.createMorphAt(dom.childAt(element0, [11]),0,0);
+              var morph6 = dom.createMorphAt(dom.childAt(element0, [13]),0,0);
+              var morph7 = dom.createMorphAt(dom.childAt(element0, [15]),0,0);
+              var morph8 = dom.createMorphAt(dom.childAt(element0, [17]),0,0);
+              var morph9 = dom.createMorphAt(dom.childAt(element0, [19]),0,0);
+              var morph10 = dom.createMorphAt(dom.childAt(element0, [21]),0,0);
+              var morph11 = dom.createMorphAt(dom.childAt(element0, [23]),0,0);
+              var morph12 = dom.createMorphAt(dom.childAt(element0, [25]),0,0);
               block(env, morph0, context, "link-to", ["index"], {}, child0, null);
               block(env, morph1, context, "link-to", ["sidenav"], {}, child1, null);
               block(env, morph2, context, "link-to", ["typography"], {}, child2, null);
@@ -1196,6 +1244,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -1203,9 +1252,11 @@ define('dummy/templates/application', ['exports'], function (exports) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
+            dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -1229,9 +1280,9 @@ define('dummy/templates/application', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[2]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-            var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+            var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
+            dom.insertBoundary(fragment, null);
             block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
             block(env, morph1, context, "paper-content", [], {}, child1, null);
             return fragment;
@@ -1241,12 +1292,15 @@ define('dummy/templates/application', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("    ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -1272,7 +1326,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             content(env, morph0, context, "outlet");
             return fragment;
           }
@@ -1280,6 +1334,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -1287,7 +1342,11 @@ define('dummy/templates/application', ['exports'], function (exports) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -1313,8 +1372,8 @@ define('dummy/templates/application', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          var morph1 = dom.createMorphAt(fragment,3,3,contextualElement);
           block(env, morph0, context, "paper-sidenav", [], {"classNames": "md-sidenav-left md-whiteframe-z2", "flex-layout": "column", "flex": true}, child0, null);
           block(env, morph1, context, "paper-content", [], {"flex-layout": "column", "flex": true}, child1, null);
           return fragment;
@@ -1323,12 +1382,13 @@ define('dummy/templates/application', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -1366,8 +1426,8 @@ define('dummy/templates/application', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-nav-container", [], {"open": get(env, context, "drawerOpen"), "classNames": "ember-app"}, child0, null);
         return fragment;
       }
@@ -1384,12 +1444,15 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -1415,7 +1478,7 @@ define('dummy/templates/button', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -1423,6 +1486,7 @@ define('dummy/templates/button', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -1433,6 +1497,8 @@ define('dummy/templates/button', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -1467,7 +1533,7 @@ define('dummy/templates/button', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -1477,11 +1543,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Button with action");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Button with action");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1510,11 +1579,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Primary (noink)");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Primary (noink)");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1543,11 +1615,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("disabled");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("disabled");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1576,11 +1651,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child3 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("warn");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("warn");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1609,11 +1687,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child4 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Button with action");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Button with action");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1642,11 +1723,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child5 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Primary");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Primary");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1675,11 +1759,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child6 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("disabled");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("disabled");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1708,11 +1795,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child7 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("warn");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("warn");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1741,11 +1831,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child8 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Button with target");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Button with target");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1774,11 +1867,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child9 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Button with bubble");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Button with bubble");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1807,11 +1903,14 @@ define('dummy/templates/button', ['exports'], function (exports) {
       var child10 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Button no bubble");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Button no bubble");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -1839,6 +1938,7 @@ define('dummy/templates/button', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -1851,11 +1951,19 @@ define('dummy/templates/button', ['exports'], function (exports) {
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n    ");
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -1865,11 +1973,19 @@ define('dummy/templates/button', ['exports'], function (exports) {
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n    ");
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -1879,9 +1995,15 @@ define('dummy/templates/button', ['exports'], function (exports) {
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n    ");
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -1890,6 +2012,8 @@ define('dummy/templates/button', ['exports'], function (exports) {
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -1937,18 +2061,18 @@ define('dummy/templates/button', ['exports'], function (exports) {
           var element1 = dom.childAt(element0, [1]);
           var element2 = dom.childAt(element0, [3]);
           var element3 = dom.childAt(element0, [5]);
-          var morph0 = dom.createMorphAt(element1,0,1);
-          var morph1 = dom.createMorphAt(element1,1,2);
-          var morph2 = dom.createMorphAt(element1,2,3);
-          var morph3 = dom.createMorphAt(element1,3,4);
-          var morph4 = dom.createMorphAt(element2,0,1);
-          var morph5 = dom.createMorphAt(element2,1,2);
-          var morph6 = dom.createMorphAt(element2,2,3);
-          var morph7 = dom.createMorphAt(element2,3,4);
-          var morph8 = dom.createMorphAt(element3,0,1);
-          var morph9 = dom.createMorphAt(element3,1,2);
-          var morph10 = dom.createMorphAt(element3,2,3);
-          var morph11 = dom.createMorphAt(dom.childAt(element0, [7]),0,1);
+          var morph0 = dom.createMorphAt(element1,1,1);
+          var morph1 = dom.createMorphAt(element1,3,3);
+          var morph2 = dom.createMorphAt(element1,5,5);
+          var morph3 = dom.createMorphAt(element1,7,7);
+          var morph4 = dom.createMorphAt(element2,1,1);
+          var morph5 = dom.createMorphAt(element2,3,3);
+          var morph6 = dom.createMorphAt(element2,5,5);
+          var morph7 = dom.createMorphAt(element2,7,7);
+          var morph8 = dom.createMorphAt(element3,1,1);
+          var morph9 = dom.createMorphAt(element3,3,3);
+          var morph10 = dom.createMorphAt(element3,5,5);
+          var morph11 = dom.createMorphAt(dom.childAt(element0, [7]),1,1);
           block(env, morph0, context, "paper-button", [], {"action": "flatButton"}, child0, null);
           block(env, morph1, context, "paper-button", [], {"noink": true, "classNames": "md-primary"}, child1, null);
           block(env, morph2, context, "paper-button", [], {"disabled": true}, child2, null);
@@ -1967,16 +2091,15 @@ define('dummy/templates/button', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -2000,9 +2123,10 @@ define('dummy/templates/button', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,1,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding demo-buttons"}, child1, null);
         return fragment;
@@ -2020,12 +2144,15 @@ define('dummy/templates/card', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -2051,7 +2178,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -2059,6 +2186,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -2069,6 +2197,8 @@ define('dummy/templates/card', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -2103,7 +2233,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -2115,6 +2245,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           var child0 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -2161,6 +2292,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
@@ -2174,7 +2306,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
               dom.appendChild(el0, el1);
               var el1 = dom.createTextNode("\n");
               dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -2198,8 +2330,8 @@ define('dummy/templates/card', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
-              var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,3,3,contextualElement);
+              dom.insertBoundary(fragment, null);
               block(env, morph0, context, "paper-card-content", [], {}, child0, null);
               return fragment;
             }
@@ -2209,6 +2341,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           var child0 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -2255,6 +2388,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
@@ -2268,7 +2402,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
               dom.appendChild(el0, el1);
               var el1 = dom.createTextNode("\n");
               dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -2292,8 +2426,8 @@ define('dummy/templates/card', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
-              var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,3,3,contextualElement);
+              dom.insertBoundary(fragment, null);
               block(env, morph0, context, "paper-card-content", [], {}, child0, null);
               return fragment;
             }
@@ -2303,6 +2437,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           var child0 = (function() {
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
@@ -2349,6 +2484,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
@@ -2362,7 +2498,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
               dom.appendChild(el0, el1);
               var el1 = dom.createTextNode("\n");
               dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -2386,8 +2522,8 @@ define('dummy/templates/card', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
-              var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,3,3,contextualElement);
+              dom.insertBoundary(fragment, null);
               block(env, morph0, context, "paper-card-content", [], {}, child0, null);
               return fragment;
             }
@@ -2395,18 +2531,17 @@ define('dummy/templates/card', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -2430,10 +2565,11 @@ define('dummy/templates/card', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2,3]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-            var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
-            var morph2 = dom.createMorphAt(fragment,2,3,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+            var morph1 = dom.createMorphAt(fragment,1,1,contextualElement);
+            var morph2 = dom.createMorphAt(fragment,2,2,contextualElement);
+            dom.insertBoundary(fragment, null);
+            dom.insertBoundary(fragment, 0);
             block(env, morph0, context, "paper-card", [], {}, child0, null);
             block(env, morph1, context, "paper-card", [], {}, child1, null);
             block(env, morph2, context, "paper-card", [], {}, child2, null);
@@ -2443,6 +2579,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -2451,6 +2588,8 @@ define('dummy/templates/card', ['exports'], function (exports) {
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","doc-content");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n\n  ");
           dom.appendChild(el1, el2);
@@ -2491,7 +2630,7 @@ define('dummy/templates/card', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),1,1);
           block(env, morph0, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child0, null);
           return fragment;
         }
@@ -2499,16 +2638,17 @@ define('dummy/templates/card', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -2532,9 +2672,10 @@ define('dummy/templates/card', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -2552,12 +2693,15 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -2583,7 +2727,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -2591,6 +2735,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -2601,6 +2746,8 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -2635,7 +2782,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -2645,6 +2792,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -2652,7 +2800,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("A checkbox: ");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -2676,8 +2824,8 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[1]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+            dom.insertBoundary(fragment, null);
             content(env, morph0, context, "value1");
             return fragment;
           }
@@ -2687,11 +2835,14 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
         var child0 = (function() {
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
-              var el0 = dom.createTextNode("yep");
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("yep");
+              dom.appendChild(el0, el1);
               return el0;
             },
             render: function render(context, env, contextualElement) {
@@ -2720,11 +2871,14 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
         var child1 = (function() {
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
-              var el0 = dom.createTextNode("nope");
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("nope");
+              dom.appendChild(el0, el1);
               return el0;
             },
             render: function render(context, env, contextualElement) {
@@ -2752,6 +2906,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -2759,7 +2914,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("A checkbox: ");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -2783,8 +2938,8 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[1]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+            dom.insertBoundary(fragment, null);
             block(env, morph0, context, "if", [get(env, context, "value2")], {}, child0, child1);
             return fragment;
           }
@@ -2793,11 +2948,14 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Checkbox (disabled)");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Checkbox (disabled)");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -2826,11 +2984,14 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       var child3 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Checkbox (disabled and checked)");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Checkbox (disabled and checked)");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -2859,11 +3020,14 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       var child4 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Checkbox (no ink)");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Checkbox (no ink)");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -2891,6 +3055,7 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -2900,15 +3065,27 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
           dom.setAttribute(el1,"class","doc-content");
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n  ");
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n  ");
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n\n  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n\n  ");
           dom.appendChild(el1, el2);
@@ -2950,12 +3127,12 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
             fragment = this.build(dom);
           }
           var element0 = dom.childAt(fragment, [0]);
-          var morph0 = dom.createMorphAt(element0,0,1);
-          var morph1 = dom.createMorphAt(element0,1,2);
-          var morph2 = dom.createMorphAt(element0,2,3);
-          var morph3 = dom.createMorphAt(element0,3,4);
-          var morph4 = dom.createMorphAt(element0,4,5);
-          var morph5 = dom.createMorphAt(element0,5,6);
+          var morph0 = dom.createMorphAt(element0,1,1);
+          var morph1 = dom.createMorphAt(element0,3,3);
+          var morph2 = dom.createMorphAt(element0,5,5);
+          var morph3 = dom.createMorphAt(element0,7,7);
+          var morph4 = dom.createMorphAt(element0,9,9);
+          var morph5 = dom.createMorphAt(element0,11,11);
           block(env, morph0, context, "paper-checkbox", [], {"checked": get(env, context, "value1")}, child0, null);
           block(env, morph1, context, "paper-checkbox", [], {"checked": get(env, context, "value2")}, child1, null);
           block(env, morph2, context, "paper-checkbox", [], {"disabled": true}, child2, null);
@@ -2968,16 +3145,15 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -3001,9 +3177,10 @@ define('dummy/templates/checkbox', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,1,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -3019,12 +3196,13 @@ define('dummy/templates/components/base-focusable', ['exports'], function (expor
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -3050,8 +3228,8 @@ define('dummy/templates/components/base-focusable', ['exports'], function (expor
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         return fragment;
       }
@@ -3067,12 +3245,15 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -3098,7 +3279,7 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
           content(env, morph0, context, "yield");
           return fragment;
         }
@@ -3107,12 +3288,15 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
           var el1 = dom.createTextNode("    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -3138,7 +3322,7 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
           content(env, morph0, context, "label");
           return fragment;
         }
@@ -3146,6 +3330,7 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3153,6 +3338,8 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("span");
         var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
@@ -3180,7 +3367,7 @@ define('dummy/templates/components/paper-button', ['exports'], function (exports
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [0]);
-        var morph0 = dom.createMorphAt(element0,0,-1);
+        var morph0 = dom.createMorphAt(element0,1,1);
         element(env, element0, context, "bind-attr", [], {"type": get(env, context, "type"), "disabled": get(env, context, "disabled")});
         block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
         return fragment;
@@ -3197,6 +3384,7 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3207,6 +3395,8 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","md-label");
           var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -3235,7 +3425,7 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           content(env, morph0, context, "yield");
           return fragment;
         }
@@ -3244,6 +3434,7 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3254,6 +3445,8 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","md-label");
           var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -3282,7 +3475,7 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           content(env, morph0, context, "label");
           return fragment;
         }
@@ -3290,6 +3483,7 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3307,7 +3501,7 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -3331,8 +3525,8 @@ define('dummy/templates/components/paper-checkbox', ['exports'], function (expor
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[2]); }
-        var morph0 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
         block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
         return fragment;
       }
@@ -3347,14 +3541,17 @@ define('dummy/templates/components/paper-nav-container', ['exports'], function (
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -3380,9 +3577,9 @@ define('dummy/templates/components/paper-nav-container', ['exports'], function (
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, 0);
         content(env, morph0, context, "yield");
         inline(env, morph1, context, "paper-backdrop", [], {"classBinding": "open:ng-enter:ng-leave :md-sidenav-backdrop"});
         return fragment;
@@ -3399,6 +3596,7 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3409,6 +3607,8 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","md-label");
           var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -3437,7 +3637,7 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           content(env, morph0, context, "yield");
           return fragment;
         }
@@ -3446,6 +3646,7 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3456,6 +3657,8 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","md-label");
           var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -3484,7 +3687,7 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           content(env, morph0, context, "label");
           return fragment;
         }
@@ -3492,6 +3695,7 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3514,7 +3718,7 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -3538,8 +3742,8 @@ define('dummy/templates/components/paper-radio', ['exports'], function (exports)
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[2]); }
-        var morph0 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
         block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
         return fragment;
       }
@@ -3555,6 +3759,7 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
     var child0 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3565,6 +3770,8 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","md-label");
           var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -3593,7 +3800,7 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           content(env, morph0, context, "yield");
           return fragment;
         }
@@ -3602,6 +3809,7 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3612,6 +3820,8 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","md-label");
           var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -3640,7 +3850,7 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           content(env, morph0, context, "label");
           return fragment;
         }
@@ -3648,6 +3858,7 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
@@ -3684,7 +3895,7 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -3708,8 +3919,8 @@ define('dummy/templates/components/paper-switch', ['exports'], function (exports
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[4]); }
-        var morph0 = dom.createMorphAt(fragment,3,4,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,4,4,contextualElement);
+        dom.insertBoundary(fragment, null);
         block(env, morph0, context, "if", [get(env, context, "template")], {}, child0, child1);
         return fragment;
       }
@@ -3724,14 +3935,19 @@ define('dummy/templates/components/paper-text', ['exports'], function (exports) 
   exports['default'] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("label");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -3758,8 +3974,8 @@ define('dummy/templates/components/paper-text', ['exports'], function (exports) 
           fragment = this.build(dom);
         }
         var element0 = dom.childAt(fragment, [0]);
-        var morph0 = dom.createMorphAt(element0,-1,-1);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(element0,0,0);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
         element(env, element0, context, "bind-attr", [], {"for": get(env, context, "inputElementId")});
         content(env, morph0, context, "label");
         inline(env, morph1, context, "input", [], {"id": get(env, context, "inputElementId"), "type": get(env, context, "type"), "value": get(env, context, "value"), "focus-in": "focusIn", "focus-out": "focusOut", "disabled": get(env, context, "disabled"), "required": get(env, context, "required")});
@@ -3778,12 +3994,15 @@ define('dummy/templates/divider', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -3809,7 +4028,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -3817,6 +4036,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -3827,6 +4047,8 @@ define('dummy/templates/divider', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -3861,7 +4083,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -3875,6 +4097,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               var child0 = (function() {
                 return {
                   isHTMLBars: true,
+                  revision: "Ember@1.11.0",
                   blockParams: 0,
                   cachedFragment: null,
                   hasRendered: false,
@@ -3918,6 +4141,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               var child1 = (function() {
                 return {
                   isHTMLBars: true,
+                  revision: "Ember@1.11.0",
                   blockParams: 0,
                   cachedFragment: null,
                   hasRendered: false,
@@ -3926,15 +4150,21 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                     var el1 = dom.createTextNode("            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("h3");
+                    var el2 = dom.createComment("");
+                    dom.appendChild(el1, el2);
                     dom.appendChild(el0, el1);
                     var el1 = dom.createTextNode("\n            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("h4");
+                    var el2 = dom.createComment("");
+                    dom.appendChild(el1, el2);
                     dom.appendChild(el0, el1);
                     var el1 = dom.createTextNode("\n            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("p");
                     var el2 = dom.createTextNode("\n              ");
+                    dom.appendChild(el1, el2);
+                    var el2 = dom.createComment("");
                     dom.appendChild(el1, el2);
                     var el2 = dom.createTextNode("\n            ");
                     dom.appendChild(el1, el2);
@@ -3963,9 +4193,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                     } else {
                       fragment = this.build(dom);
                     }
-                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),-1,-1);
-                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),-1,-1);
-                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),0,1);
+                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,0);
+                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),0,0);
+                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),1,1);
                     content(env, morph0, context, "item.what");
                     content(env, morph1, context, "item.who");
                     content(env, morph2, context, "item.notes");
@@ -3975,16 +4205,17 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               }());
               return {
                 isHTMLBars: true,
+                revision: "Ember@1.11.0",
                 blockParams: 0,
                 cachedFragment: null,
                 hasRendered: false,
                 build: function build(dom) {
                   var el0 = dom.createDocumentFragment();
-                  var el1 = dom.createTextNode("");
+                  var el1 = dom.createComment("");
                   dom.appendChild(el0, el1);
                   var el1 = dom.createTextNode("\n");
                   dom.appendChild(el0, el1);
-                  var el1 = dom.createTextNode("");
+                  var el1 = dom.createComment("");
                   dom.appendChild(el0, el1);
                   return el0;
                 },
@@ -4008,9 +4239,10 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                   } else {
                     fragment = this.build(dom);
                   }
-                  if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-                  var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-                  var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                  var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+                  var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+                  dom.insertBoundary(fragment, null);
+                  dom.insertBoundary(fragment, 0);
                   block(env, morph0, context, "paper-tile-left", [], {}, child0, null);
                   block(env, morph1, context, "paper-tile-content", [], {}, child1, null);
                   return fragment;
@@ -4019,14 +4251,17 @@ define('dummy/templates/divider', ['exports'], function (exports) {
             }());
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
                 var el0 = dom.createDocumentFragment();
-                var el1 = dom.createTextNode("");
+                var el1 = dom.createComment("");
                 dom.appendChild(el0, el1);
                 var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createComment("");
                 dom.appendChild(el0, el1);
                 var el1 = dom.createTextNode("\n");
                 dom.appendChild(el0, el1);
@@ -4052,9 +4287,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                 } else {
                   fragment = this.build(dom);
                 }
-                if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-                var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-                var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+                var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+                dom.insertBoundary(fragment, 0);
                 block(env, morph0, context, "paper-item", [], {}, child0, null);
                 content(env, morph1, context, "paper-divider");
                 return fragment;
@@ -4063,14 +4298,13 @@ define('dummy/templates/divider', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
               var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -4094,8 +4328,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+              dom.insertBoundary(fragment, null);
+              dom.insertBoundary(fragment, 0);
               block(env, morph0, context, "each", [get(env, context, "listData")], {"keyword": "item"}, child0, null);
               return fragment;
             }
@@ -4103,14 +4338,13 @@ define('dummy/templates/divider', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -4134,8 +4368,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+            dom.insertBoundary(fragment, null);
+            dom.insertBoundary(fragment, 0);
             block(env, morph0, context, "paper-list", [], {}, child0, null);
             return fragment;
           }
@@ -4148,6 +4383,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               var child0 = (function() {
                 return {
                   isHTMLBars: true,
+                  revision: "Ember@1.11.0",
                   blockParams: 0,
                   cachedFragment: null,
                   hasRendered: false,
@@ -4191,6 +4427,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               var child1 = (function() {
                 return {
                   isHTMLBars: true,
+                  revision: "Ember@1.11.0",
                   blockParams: 0,
                   cachedFragment: null,
                   hasRendered: false,
@@ -4199,15 +4436,21 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                     var el1 = dom.createTextNode("            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("h3");
+                    var el2 = dom.createComment("");
+                    dom.appendChild(el1, el2);
                     dom.appendChild(el0, el1);
                     var el1 = dom.createTextNode("\n            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("h4");
+                    var el2 = dom.createComment("");
+                    dom.appendChild(el1, el2);
                     dom.appendChild(el0, el1);
                     var el1 = dom.createTextNode("\n            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("p");
                     var el2 = dom.createTextNode("\n              ");
+                    dom.appendChild(el1, el2);
+                    var el2 = dom.createComment("");
                     dom.appendChild(el1, el2);
                     var el2 = dom.createTextNode("\n            ");
                     dom.appendChild(el1, el2);
@@ -4236,9 +4479,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                     } else {
                       fragment = this.build(dom);
                     }
-                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),-1,-1);
-                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),-1,-1);
-                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),0,1);
+                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,0);
+                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),0,0);
+                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),1,1);
                     content(env, morph0, context, "item.what");
                     content(env, morph1, context, "item.who");
                     content(env, morph2, context, "item.notes");
@@ -4248,16 +4491,17 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               }());
               return {
                 isHTMLBars: true,
+                revision: "Ember@1.11.0",
                 blockParams: 0,
                 cachedFragment: null,
                 hasRendered: false,
                 build: function build(dom) {
                   var el0 = dom.createDocumentFragment();
-                  var el1 = dom.createTextNode("");
+                  var el1 = dom.createComment("");
                   dom.appendChild(el0, el1);
                   var el1 = dom.createTextNode("\n");
                   dom.appendChild(el0, el1);
-                  var el1 = dom.createTextNode("");
+                  var el1 = dom.createComment("");
                   dom.appendChild(el0, el1);
                   return el0;
                 },
@@ -4281,9 +4525,10 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                   } else {
                     fragment = this.build(dom);
                   }
-                  if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-                  var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-                  var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                  var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+                  var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+                  dom.insertBoundary(fragment, null);
+                  dom.insertBoundary(fragment, 0);
                   block(env, morph0, context, "paper-tile-left", [], {}, child0, null);
                   block(env, morph1, context, "paper-tile-content", [], {}, child1, null);
                   return fragment;
@@ -4292,14 +4537,17 @@ define('dummy/templates/divider', ['exports'], function (exports) {
             }());
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
                 var el0 = dom.createDocumentFragment();
-                var el1 = dom.createTextNode("");
+                var el1 = dom.createComment("");
                 dom.appendChild(el0, el1);
                 var el1 = dom.createTextNode("        ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createComment("");
                 dom.appendChild(el0, el1);
                 var el1 = dom.createTextNode("\n");
                 dom.appendChild(el0, el1);
@@ -4325,9 +4573,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
                 } else {
                   fragment = this.build(dom);
                 }
-                if (this.cachedFragment) { dom.repairClonedNode(fragment,[0]); }
-                var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-                var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+                var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+                dom.insertBoundary(fragment, 0);
                 block(env, morph0, context, "paper-item", [], {}, child0, null);
                 inline(env, morph1, context, "paper-divider", [], {"inset": true});
                 return fragment;
@@ -4336,14 +4584,13 @@ define('dummy/templates/divider', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
               var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -4367,8 +4614,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+              dom.insertBoundary(fragment, null);
+              dom.insertBoundary(fragment, 0);
               block(env, morph0, context, "each", [get(env, context, "listData")], {"keyword": "item"}, child0, null);
               return fragment;
             }
@@ -4376,14 +4624,13 @@ define('dummy/templates/divider', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -4407,8 +4654,9 @@ define('dummy/templates/divider', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+            dom.insertBoundary(fragment, null);
+            dom.insertBoundary(fragment, 0);
             block(env, morph0, context, "paper-list", [], {}, child0, null);
             return fragment;
           }
@@ -4416,6 +4664,7 @@ define('dummy/templates/divider', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -4431,6 +4680,8 @@ define('dummy/templates/divider', ['exports'], function (exports) {
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n");
           dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("h4");
@@ -4438,6 +4689,8 @@ define('dummy/templates/divider', ['exports'], function (exports) {
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -4479,8 +4732,8 @@ define('dummy/templates/divider', ['exports'], function (exports) {
             fragment = this.build(dom);
           }
           var element2 = dom.childAt(fragment, [0]);
-          var morph0 = dom.createMorphAt(element2,2,3);
-          var morph1 = dom.createMorphAt(element2,5,6);
+          var morph0 = dom.createMorphAt(element2,3,3);
+          var morph1 = dom.createMorphAt(element2,7,7);
           block(env, morph0, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child0, null);
           block(env, morph1, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child1, null);
           return fragment;
@@ -4489,16 +4742,17 @@ define('dummy/templates/divider', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -4522,9 +4776,10 @@ define('dummy/templates/divider', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -4542,12 +4797,15 @@ define('dummy/templates/icons', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -4573,7 +4831,7 @@ define('dummy/templates/icons', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -4581,6 +4839,7 @@ define('dummy/templates/icons', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -4591,6 +4850,8 @@ define('dummy/templates/icons', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -4625,7 +4886,7 @@ define('dummy/templates/icons', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -4635,6 +4896,7 @@ define('dummy/templates/icons', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -4646,9 +4908,13 @@ define('dummy/templates/icons', ['exports'], function (exports) {
             dom.setAttribute(el1,"class","icon-tile");
             var el2 = dom.createTextNode("\n        ");
             dom.appendChild(el1, el2);
+            var el2 = dom.createComment("");
+            dom.appendChild(el1, el2);
             var el2 = dom.createTextNode("\n        ");
             dom.appendChild(el1, el2);
             var el2 = dom.createElement("p");
+            var el3 = dom.createComment("");
+            dom.appendChild(el2, el3);
             dom.appendChild(el1, el2);
             var el2 = dom.createTextNode("\n      ");
             dom.appendChild(el1, el2);
@@ -4678,8 +4944,8 @@ define('dummy/templates/icons', ['exports'], function (exports) {
               fragment = this.build(dom);
             }
             var element0 = dom.childAt(fragment, [1]);
-            var morph0 = dom.createMorphAt(element0,0,1);
-            var morph1 = dom.createMorphAt(dom.childAt(element0, [2]),-1,-1);
+            var morph0 = dom.createMorphAt(element0,1,1);
+            var morph1 = dom.createMorphAt(dom.childAt(element0, [3]),0,0);
             inline(env, morph0, context, "paper-icon", [], {"icon": get(env, context, "icon")});
             content(env, morph1, context, "icon");
             return fragment;
@@ -4688,6 +4954,7 @@ define('dummy/templates/icons', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -4740,6 +5007,8 @@ define('dummy/templates/icons', ['exports'], function (exports) {
           var el1 = dom.createElement("div");
           var el2 = dom.createTextNode("\n");
           dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("  ");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
@@ -4767,7 +5036,7 @@ define('dummy/templates/icons', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [15]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [15]),1,1);
           block(env, morph0, context, "each", [get(env, context, "icons")], {"keyword": "icon"}, child0, null);
           return fragment;
         }
@@ -4775,16 +5044,17 @@ define('dummy/templates/icons', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -4808,9 +5078,10 @@ define('dummy/templates/icons', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding icon-demo"}, child1, null);
         return fragment;
@@ -4828,12 +5099,15 @@ define('dummy/templates/index', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -4859,7 +5133,7 @@ define('dummy/templates/index', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -4867,6 +5141,7 @@ define('dummy/templates/index', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -4877,6 +5152,8 @@ define('dummy/templates/index', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -4911,7 +5188,7 @@ define('dummy/templates/index', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -4920,6 +5197,7 @@ define('dummy/templates/index', ['exports'], function (exports) {
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -5202,16 +5480,17 @@ define('dummy/templates/index', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -5235,9 +5514,10 @@ define('dummy/templates/index', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -5255,12 +5535,15 @@ define('dummy/templates/list', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -5286,7 +5569,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -5294,6 +5577,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -5304,6 +5588,8 @@ define('dummy/templates/list', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -5338,7 +5624,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -5352,6 +5638,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
               var child0 = (function() {
                 return {
                   isHTMLBars: true,
+                  revision: "Ember@1.11.0",
                   blockParams: 0,
                   cachedFragment: null,
                   hasRendered: false,
@@ -5395,6 +5682,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
               var child1 = (function() {
                 return {
                   isHTMLBars: true,
+                  revision: "Ember@1.11.0",
                   blockParams: 0,
                   cachedFragment: null,
                   hasRendered: false,
@@ -5403,15 +5691,21 @@ define('dummy/templates/list', ['exports'], function (exports) {
                     var el1 = dom.createTextNode("            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("h3");
+                    var el2 = dom.createComment("");
+                    dom.appendChild(el1, el2);
                     dom.appendChild(el0, el1);
                     var el1 = dom.createTextNode("\n            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("h4");
+                    var el2 = dom.createComment("");
+                    dom.appendChild(el1, el2);
                     dom.appendChild(el0, el1);
                     var el1 = dom.createTextNode("\n            ");
                     dom.appendChild(el0, el1);
                     var el1 = dom.createElement("p");
                     var el2 = dom.createTextNode("\n              ");
+                    dom.appendChild(el1, el2);
+                    var el2 = dom.createComment("");
                     dom.appendChild(el1, el2);
                     var el2 = dom.createTextNode("\n            ");
                     dom.appendChild(el1, el2);
@@ -5440,9 +5734,9 @@ define('dummy/templates/list', ['exports'], function (exports) {
                     } else {
                       fragment = this.build(dom);
                     }
-                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),-1,-1);
-                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),-1,-1);
-                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),0,1);
+                    var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,0);
+                    var morph1 = dom.createMorphAt(dom.childAt(fragment, [3]),0,0);
+                    var morph2 = dom.createMorphAt(dom.childAt(fragment, [5]),1,1);
                     content(env, morph0, context, "item.what");
                     content(env, morph1, context, "item.who");
                     content(env, morph2, context, "item.notes");
@@ -5452,16 +5746,17 @@ define('dummy/templates/list', ['exports'], function (exports) {
               }());
               return {
                 isHTMLBars: true,
+                revision: "Ember@1.11.0",
                 blockParams: 0,
                 cachedFragment: null,
                 hasRendered: false,
                 build: function build(dom) {
                   var el0 = dom.createDocumentFragment();
-                  var el1 = dom.createTextNode("");
+                  var el1 = dom.createComment("");
                   dom.appendChild(el0, el1);
                   var el1 = dom.createTextNode("\n");
                   dom.appendChild(el0, el1);
-                  var el1 = dom.createTextNode("");
+                  var el1 = dom.createComment("");
                   dom.appendChild(el0, el1);
                   return el0;
                 },
@@ -5485,9 +5780,10 @@ define('dummy/templates/list', ['exports'], function (exports) {
                   } else {
                     fragment = this.build(dom);
                   }
-                  if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-                  var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-                  var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+                  var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+                  var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+                  dom.insertBoundary(fragment, null);
+                  dom.insertBoundary(fragment, 0);
                   block(env, morph0, context, "paper-tile-left", [], {}, child0, null);
                   block(env, morph1, context, "paper-tile-content", [], {}, child1, null);
                   return fragment;
@@ -5496,14 +5792,13 @@ define('dummy/templates/list', ['exports'], function (exports) {
             }());
             return {
               isHTMLBars: true,
+              revision: "Ember@1.11.0",
               blockParams: 0,
               cachedFragment: null,
               hasRendered: false,
               build: function build(dom) {
                 var el0 = dom.createDocumentFragment();
-                var el1 = dom.createTextNode("");
-                dom.appendChild(el0, el1);
-                var el1 = dom.createTextNode("");
+                var el1 = dom.createComment("");
                 dom.appendChild(el0, el1);
                 return el0;
               },
@@ -5527,8 +5822,9 @@ define('dummy/templates/list', ['exports'], function (exports) {
                 } else {
                   fragment = this.build(dom);
                 }
-                if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-                var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+                var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+                dom.insertBoundary(fragment, null);
+                dom.insertBoundary(fragment, 0);
                 block(env, morph0, context, "paper-item", [], {}, child0, null);
                 return fragment;
               }
@@ -5536,14 +5832,13 @@ define('dummy/templates/list', ['exports'], function (exports) {
           }());
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
               var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
@@ -5567,8 +5862,9 @@ define('dummy/templates/list', ['exports'], function (exports) {
               } else {
                 fragment = this.build(dom);
               }
-              if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+              dom.insertBoundary(fragment, null);
+              dom.insertBoundary(fragment, 0);
               block(env, morph0, context, "each", [get(env, context, "listData")], {"keyword": "item"}, child0, null);
               return fragment;
             }
@@ -5576,14 +5872,13 @@ define('dummy/templates/list', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("");
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -5607,8 +5902,9 @@ define('dummy/templates/list', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1]); }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+            dom.insertBoundary(fragment, null);
+            dom.insertBoundary(fragment, 0);
             block(env, morph0, context, "paper-list", [], {}, child0, null);
             return fragment;
           }
@@ -5616,6 +5912,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -5624,6 +5921,8 @@ define('dummy/templates/list', ['exports'], function (exports) {
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","doc-content");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -5664,7 +5963,7 @@ define('dummy/templates/list', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),1,1);
           block(env, morph0, context, "paper-content", [], {"classNames": "md-whiteframe-z1 list-demo"}, child0, null);
           return fragment;
         }
@@ -5672,16 +5971,17 @@ define('dummy/templates/list', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -5705,9 +6005,10 @@ define('dummy/templates/list', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -5725,12 +6026,15 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -5756,7 +6060,7 @@ define('dummy/templates/radio', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -5764,6 +6068,7 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -5774,6 +6079,8 @@ define('dummy/templates/radio', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -5808,7 +6115,7 @@ define('dummy/templates/radio', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -5818,11 +6125,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("A radio button");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("A radio button");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -5851,11 +6161,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Toggable radio button");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Toggable radio button");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -5884,11 +6197,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Disabled radio button");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Disabled radio button");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -5917,11 +6233,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child3 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Radio button 1");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Radio button 1");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -5950,11 +6269,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child4 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Radio button 2");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Radio button 2");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -5983,11 +6305,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       var child5 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode("Radio button 3");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("Radio button 3");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -6015,6 +6340,7 @@ define('dummy/templates/radio', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6029,14 +6355,20 @@ define('dummy/templates/radio', ['exports'], function (exports) {
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -6054,14 +6386,20 @@ define('dummy/templates/radio', ['exports'], function (exports) {
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -6071,10 +6409,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("Selected value: ");
           dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n\n  ");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("p");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -6118,14 +6460,14 @@ define('dummy/templates/radio', ['exports'], function (exports) {
           var element0 = dom.childAt(fragment, [0]);
           var element1 = dom.childAt(element0, [1]);
           var element2 = dom.childAt(element0, [5]);
-          var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),-1,-1);
-          var morph1 = dom.createMorphAt(dom.childAt(element1, [3]),-1,-1);
-          var morph2 = dom.createMorphAt(dom.childAt(element1, [5]),-1,-1);
-          var morph3 = dom.createMorphAt(dom.childAt(element2, [1]),-1,-1);
-          var morph4 = dom.createMorphAt(dom.childAt(element2, [3]),-1,-1);
-          var morph5 = dom.createMorphAt(dom.childAt(element2, [5]),-1,-1);
-          var morph6 = dom.createMorphAt(dom.childAt(element0, [7]),0,-1);
-          var morph7 = dom.createMorphAt(dom.childAt(element0, [9]),-1,-1);
+          var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),0,0);
+          var morph1 = dom.createMorphAt(dom.childAt(element1, [3]),0,0);
+          var morph2 = dom.createMorphAt(dom.childAt(element1, [5]),0,0);
+          var morph3 = dom.createMorphAt(dom.childAt(element2, [1]),0,0);
+          var morph4 = dom.createMorphAt(dom.childAt(element2, [3]),0,0);
+          var morph5 = dom.createMorphAt(dom.childAt(element2, [5]),0,0);
+          var morph6 = dom.createMorphAt(dom.childAt(element0, [7]),1,1);
+          var morph7 = dom.createMorphAt(dom.childAt(element0, [9]),0,0);
           block(env, morph0, context, "paper-radio", [], {}, child0, null);
           block(env, morph1, context, "paper-radio", [], {"toggle": true}, child1, null);
           block(env, morph2, context, "paper-radio", [], {"disabled": true}, child2, null);
@@ -6140,16 +6482,17 @@ define('dummy/templates/radio', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -6173,9 +6516,10 @@ define('dummy/templates/radio', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -6193,12 +6537,15 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -6224,7 +6571,7 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -6232,6 +6579,7 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6242,6 +6590,8 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -6276,7 +6626,7 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -6285,6 +6635,7 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6342,16 +6693,17 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -6375,9 +6727,10 @@ define('dummy/templates/sidenav', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -6395,12 +6748,15 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -6426,7 +6782,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -6434,6 +6790,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6444,6 +6801,8 @@ define('dummy/templates/switch', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -6478,7 +6837,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -6488,12 +6847,15 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode(" ");
             dom.appendChild(el0, el1);
@@ -6519,7 +6881,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             content(env, morph0, context, "booleanProp1");
             return fragment;
           }
@@ -6528,12 +6890,15 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       var child1 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode(" ");
             dom.appendChild(el0, el1);
@@ -6559,7 +6924,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             content(env, morph0, context, "booleanProp2");
             return fragment;
           }
@@ -6568,11 +6933,14 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       var child2 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode(" Disabled switch ");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode(" Disabled switch ");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -6601,11 +6969,14 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       var child3 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
-            var el0 = dom.createTextNode(" Noink switch ");
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode(" Noink switch ");
+            dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
@@ -6633,6 +7004,7 @@ define('dummy/templates/switch', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6645,13 +7017,23 @@ define('dummy/templates/switch', ['exports'], function (exports) {
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n    ");
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n\n    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -6696,11 +7078,11 @@ define('dummy/templates/switch', ['exports'], function (exports) {
             fragment = this.build(dom);
           }
           var element0 = dom.childAt(fragment, [0, 1]);
-          var morph0 = dom.createMorphAt(element0,0,1);
-          var morph1 = dom.createMorphAt(element0,1,2);
-          var morph2 = dom.createMorphAt(element0,2,3);
-          var morph3 = dom.createMorphAt(element0,3,4);
-          var morph4 = dom.createMorphAt(element0,4,5);
+          var morph0 = dom.createMorphAt(element0,1,1);
+          var morph1 = dom.createMorphAt(element0,3,3);
+          var morph2 = dom.createMorphAt(element0,5,5);
+          var morph3 = dom.createMorphAt(element0,7,7);
+          var morph4 = dom.createMorphAt(element0,9,9);
           block(env, morph0, context, "paper-switch", [], {"checked": get(env, context, "booleanProp1")}, child0, null);
           block(env, morph1, context, "paper-switch", [], {"checked": get(env, context, "booleanProp2")}, child1, null);
           block(env, morph2, context, "paper-switch", [], {"disabled": true}, child2, null);
@@ -6712,16 +7094,17 @@ define('dummy/templates/switch', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -6745,9 +7128,10 @@ define('dummy/templates/switch', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -6765,12 +7149,15 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -6796,7 +7183,7 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -6804,6 +7191,7 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6814,6 +7202,8 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -6848,7 +7238,7 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -6857,6 +7247,7 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -6871,18 +7262,26 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("li");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n  ");
           dom.appendChild(el2, el3);
@@ -6892,11 +7291,15 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("Name: ");
           dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("p");
           var el3 = dom.createTextNode("Email: ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
@@ -6940,12 +7343,12 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
           }
           var element0 = dom.childAt(fragment, [0]);
           var element1 = dom.childAt(element0, [1]);
-          var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),-1,-1);
-          var morph1 = dom.createMorphAt(dom.childAt(element1, [3]),-1,-1);
-          var morph2 = dom.createMorphAt(dom.childAt(element1, [5]),-1,-1);
-          var morph3 = dom.createMorphAt(dom.childAt(element1, [7]),-1,-1);
-          var morph4 = dom.createMorphAt(dom.childAt(element0, [3]),0,-1);
-          var morph5 = dom.createMorphAt(dom.childAt(element0, [5]),0,-1);
+          var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),0,0);
+          var morph1 = dom.createMorphAt(dom.childAt(element1, [3]),0,0);
+          var morph2 = dom.createMorphAt(dom.childAt(element1, [5]),0,0);
+          var morph3 = dom.createMorphAt(dom.childAt(element1, [7]),0,0);
+          var morph4 = dom.createMorphAt(dom.childAt(element0, [3]),1,1);
+          var morph5 = dom.createMorphAt(dom.childAt(element0, [5]),1,1);
           inline(env, morph0, context, "paper-text", [], {"label": "Name", "value": get(env, context, "name")});
           inline(env, morph1, context, "paper-text", [], {"label": "E-mail", "type": "email", "value": get(env, context, "email")});
           inline(env, morph2, context, "paper-text", [], {"label": "Password", "type": "password"});
@@ -6958,16 +7361,17 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -6991,9 +7395,10 @@ define('dummy/templates/textfield', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -7011,12 +7416,15 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -7042,7 +7450,7 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -7050,6 +7458,7 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7060,6 +7469,8 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -7094,7 +7505,7 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -7105,11 +7516,14 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
         var child0 = (function() {
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
-              var el0 = dom.createTextNode("Example button");
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("Example button");
+              dom.appendChild(el0, el1);
               return el0;
             },
             render: function render(context, env, contextualElement) {
@@ -7138,11 +7552,14 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
         var child1 = (function() {
           return {
             isHTMLBars: true,
+            revision: "Ember@1.11.0",
             blockParams: 0,
             cachedFragment: null,
             hasRendered: false,
             build: function build(dom) {
-              var el0 = dom.createTextNode("Example button");
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode("Example button");
+              dom.appendChild(el0, el1);
               return el0;
             },
             render: function render(context, env, contextualElement) {
@@ -7170,6 +7587,7 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
         }());
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
@@ -7181,7 +7599,11 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
             dom.setAttribute(el1,"class","md-toolbar-tools");
             var el2 = dom.createTextNode("\n      ");
             dom.appendChild(el1, el2);
+            var el2 = dom.createComment("");
+            dom.appendChild(el1, el2);
             var el2 = dom.createTextNode("\n      ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createComment("");
             dom.appendChild(el1, el2);
             var el2 = dom.createTextNode("\n    ");
             dom.appendChild(el1, el2);
@@ -7211,8 +7633,8 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
               fragment = this.build(dom);
             }
             var element0 = dom.childAt(fragment, [1]);
-            var morph0 = dom.createMorphAt(element0,0,1);
-            var morph1 = dom.createMorphAt(element0,1,2);
+            var morph0 = dom.createMorphAt(element0,1,1);
+            var morph1 = dom.createMorphAt(element0,3,3);
             block(env, morph0, context, "paper-button", [], {}, child0, null);
             block(env, morph1, context, "paper-button", [], {}, child1, null);
             return fragment;
@@ -7221,6 +7643,7 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7229,6 +7652,8 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
           var el1 = dom.createElement("div");
           dom.setAttribute(el1,"class","doc-content");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
           dom.appendChild(el1, el2);
@@ -7275,7 +7700,7 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [0]),1,1);
           block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
           return fragment;
         }
@@ -7283,16 +7708,15 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -7316,9 +7740,10 @@ define('dummy/templates/toolbar', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,1,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,1,1,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -7336,12 +7761,15 @@ define('dummy/templates/typography', ['exports'], function (exports) {
       var child0 = (function() {
         return {
           isHTMLBars: true,
+          revision: "Ember@1.11.0",
           blockParams: 0,
           cachedFragment: null,
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
@@ -7367,7 +7795,7 @@ define('dummy/templates/typography', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
             inline(env, morph0, context, "paper-icon", [], {"icon": "menu"});
             return fragment;
           }
@@ -7375,6 +7803,7 @@ define('dummy/templates/typography', ['exports'], function (exports) {
       }());
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7385,6 +7814,8 @@ define('dummy/templates/typography', ['exports'], function (exports) {
           var el1 = dom.createElement("h2");
           dom.setAttribute(el1,"class","md-toolbar-tools");
           var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("    ");
           dom.appendChild(el1, el2);
@@ -7419,7 +7850,7 @@ define('dummy/templates/typography', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),0,1);
+          var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
           block(env, morph0, context, "paper-sidenav-toggle", [], {"class": "menu-sidenav-toggle"}, child0, null);
           return fragment;
         }
@@ -7428,6 +7859,7 @@ define('dummy/templates/typography', ['exports'], function (exports) {
     var child1 = (function() {
       return {
         isHTMLBars: true,
+        revision: "Ember@1.11.0",
         blockParams: 0,
         cachedFragment: null,
         hasRendered: false,
@@ -7973,16 +8405,17 @@ define('dummy/templates/typography', ['exports'], function (exports) {
     }());
     return {
       isHTMLBars: true,
+      revision: "Ember@1.11.0",
       blockParams: 0,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("");
+        var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         return el0;
       },
@@ -8006,9 +8439,10 @@ define('dummy/templates/typography', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        if (this.cachedFragment) { dom.repairClonedNode(fragment,[0,2]); }
-        var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-        var morph1 = dom.createMorphAt(fragment,1,2,contextualElement);
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        var morph1 = dom.createMorphAt(fragment,2,2,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
         block(env, morph0, context, "paper-toolbar", [], {}, child0, null);
         block(env, morph1, context, "paper-content", [], {"classNames": "md-padding"}, child1, null);
         return fragment;
@@ -8185,7 +8619,7 @@ define('dummy/tests/unit/components/base-focusable-test', ['ember-qunit'], funct
     assert.equal(component._state, "preRender");
 
     // appends the component to the page
-    this.append();
+    this.render();
     assert.equal(component._state, "inDOM");
   });
 
@@ -8217,7 +8651,7 @@ define('dummy/tests/unit/components/paper-button-test', ['ember-qunit'], functio
     assert.equal(component._state, "preRender");
 
     // appends the component to the page
-    this.append();
+    this.render();
     assert.equal(component._state, "inDOM");
   });
 
@@ -8239,16 +8673,16 @@ define('dummy/tests/unit/components/paper-checkbox-test', ['ember', 'ember-qunit
 
   'use strict';
 
-  ember_qunit.moduleForComponent("paper-checkbox", "PaperCheckboxComponent", {});
+  ember_qunit.moduleForComponent("paper-checkbox", {});
 
   ember_qunit.test("it renders", function (assert) {
     assert.expect(2);
 
-    // creates the component instance
+    // Creates the component instance
     var component = this.subject();
     assert.equal(component._state, "preRender");
 
-    // appends the component to the page
+    // Renders the component to the page
     this.render();
     assert.equal(component._state, "inDOM");
   });
@@ -8336,7 +8770,7 @@ define('dummy/tests/unit/components/paper-checkbox-test', ['ember', 'ember-qunit
     assert.equal(this.$(".md-label").html().trim(), "Button");
   });
 
-  // specify the other units that are required for this test
+  // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar']
 
 });
@@ -8364,7 +8798,7 @@ define('dummy/tests/unit/components/paper-content-test', ['ember-qunit'], functi
     assert.equal(component._state, "preRender");
 
     // appends the component to the page
-    this.append();
+    this.render();
     assert.equal(component._state, "inDOM");
   });
 
@@ -8404,7 +8838,7 @@ define('dummy/tests/unit/components/paper-nav-container-test', ['ember', 'ember-
     assert.equal(component.get("element").tagName, "md-nav-container".toUpperCase(), "matches `md-nav-container`");
   });
 
-  ember_qunit.test("expandSidenav event sets open property to true", function (assert) {
+  ember_qunit.test("expandSidenav call sets open property to true", function (assert) {
     assert.expect(2);
     var component = this.subject();
     assert.equal(component.get("open"), false, "default value for open prop is false");
@@ -8413,7 +8847,7 @@ define('dummy/tests/unit/components/paper-nav-container-test', ['ember', 'ember-
     assert.equal(component.get("open"), true, "expandSidenav event sets open prop to true");
   });
 
-  ember_qunit.test("toggleSidenav event sets open property from false to true", function (assert) {
+  ember_qunit.test("toggleSidenav call sets open property from false to true", function (assert) {
     assert.expect(3);
     var component = this.subject();
     assert.equal(component.get("open"), false, "default value for open prop is false");
@@ -8425,7 +8859,7 @@ define('dummy/tests/unit/components/paper-nav-container-test', ['ember', 'ember-
     assert.equal(component.get("open"), false, "toggleSidenav event sets open prop to false");
   });
 
-  ember_qunit.test("collapseSidenav event sets open property to false", function (assert) {
+  ember_qunit.test("collapseSidenav call sets open property to false", function (assert) {
     assert.expect(1);
     var component = this.subject();
 
@@ -8589,36 +9023,41 @@ define('dummy/tests/unit/components/paper-sidenav-toggle-test', ['ember', 'ember
     assert.equal(component.get("element").tagName, "md-sidenav-toggle".toUpperCase(), "matches `md-sidenav-toggle`");
   });
 
-  ember_qunit.test("when clicked triggers `toggleSidenav` event by default", function (assert) {
+  ember_qunit.test("when clicked triggers `toggleSidenav` on navContainer", function (assert) {
     assert.expect(1);
     var component = this.subject();
+
     var didFire = false;
+    component.set("navContainer", Ember['default'].Object.create({
+      toggleSidenav: function toggleSidenav() {
+        didFire = true;
+      }
+    }));
 
     var $component = this.$();
     Ember['default'].run(function () {
-      $component.on("toggleSidenav", function () {
-        didFire = true;
-      });
       $component.trigger("click");
     });
 
-    assert.ok(didFire, "toggleSidenav event fired");
+    assert.ok(didFire, "toggleSidenav called");
   });
 
-  ember_qunit.test("when clicked triggers `expandSidenav` event if toggle is false", function (assert) {
+  ember_qunit.test("when clicked triggers `expandSidenav` if toggle is false on navContainer", function (assert) {
     assert.expect(1);
     var component = this.subject({ toggle: false });
     var didFire = false;
+    component.set("navContainer", Ember['default'].Object.create({
+      expandSidenav: function expandSidenav() {
+        didFire = true;
+      }
+    }));
 
     var $component = this.$();
     Ember['default'].run(function () {
-      $component.on("expandSidenav", function () {
-        didFire = true;
-      });
       $component.trigger("click");
     });
 
-    assert.ok(didFire, "expandSidenav event fired");
+    assert.ok(didFire, "expandSidenav called");
   });
 
   // specify the other units that are required for this test
@@ -8676,12 +9115,12 @@ define('dummy/tests/unit/components/paper-text-test', ['ember-qunit'], function 
   ember_qunit.test("it renders", function (assert) {
     assert.expect(2);
 
-    // creates the component instance
+    // Creates the component instance
     var component = this.subject();
     assert.equal(component._state, "preRender");
 
     // appends the component to the page
-    this.append();
+    this.render();
     assert.equal(component._state, "inDOM");
   });
 
@@ -8696,64 +9135,6 @@ define('dummy/tests/unit/components/paper-text-test.jshint', function () {
   module('JSHint - unit/components');
   test('unit/components/paper-text-test.js should pass jshint', function() { 
     ok(true, 'unit/components/paper-text-test.js should pass jshint.'); 
-  });
-
-});
-define('dummy/tests/unit/initializers/events-test', ['ember', 'dummy/initializers/events', 'qunit'], function (Ember, events, qunit) {
-
-  'use strict';
-
-  var container, application;
-
-  qunit.module("EventsInitializer", {
-    beforeEach: function beforeEach() {
-      Ember['default'].run(function () {
-        application = Ember['default'].Application.create();
-        container = application.__container__;
-        application.deferReadiness();
-      });
-    }
-  });
-
-  qunit.test("it registers sidenav events", function (assert) {
-    events.initialize(container, application);
-
-    var customEvents = application.get("customEvents");
-
-    assert.ok(customEvents);
-    assert.deepEqual(customEvents, {
-      toggleSidenav: "toggleSidenav",
-      expandSidenav: "expandSidenav",
-      collapseSidenav: "collapseSidenav"
-    });
-  });
-
-  qunit.test("it doesn't override any previously set events", function (assert) {
-    application.set("customEvents", {
-      aCustomEvent: "aCustomEvent"
-    });
-
-    events.initialize(container, application);
-
-    var customEvents = application.get("customEvents");
-
-    assert.ok(customEvents);
-    assert.deepEqual(customEvents, {
-      aCustomEvent: "aCustomEvent",
-      toggleSidenav: "toggleSidenav",
-      expandSidenav: "expandSidenav",
-      collapseSidenav: "collapseSidenav"
-    });
-  });
-
-});
-define('dummy/tests/unit/initializers/events-test.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - unit/initializers');
-  test('unit/initializers/events-test.js should pass jshint', function() { 
-    ok(true, 'unit/initializers/events-test.js should pass jshint.'); 
   });
 
 });
@@ -8827,7 +9208,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.19.3de5a0d3"});
+  require("dummy/app")["default"].create({"LOG_ACTIVE_GENERATION":true,"LOG_VIEW_LOOKUPS":true,"name":"ember-paper","version":"0.0.21.53081a69"});
 }
 
 /* jshint ignore:end */
